@@ -40,3 +40,10 @@ pipenv install google-cloud-storage
 pip list
 python3 lr.py
 source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git commit -m "first commit"
+git config --global user.mail "borowiec.k@gmail.com"
+git config --global user.name "Konrad Borowiec"
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/KonuTech/mlops-zoomcamp-project.git
+git push -u origin main
