@@ -9,7 +9,7 @@ deployment = Deployment.build_from_flow(
         "taxi_type": "green",
         "run_id": "e1efc53e9bd149078b0c12aeaa6365df",
     },
-    schedule=CronSchedule(cron="0 3 2 * *"),
+    schedule=CronSchedule(cron="0 3 1 * *"),
     work_queue_name="ml",
 )
 

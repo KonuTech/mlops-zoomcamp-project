@@ -110,3 +110,85 @@
 2023-06-17 15:18:22,263 - INFO -  * Debugger PIN: 131-354-247
 2023-06-17 15:18:22,287 - DEBUG - Received JSON data: {'PULocationID': 10, 'DOLocationID': 50, 'trip_distance': 40}
 2023-06-17 15:18:22,345 - INFO - 127.0.0.1 - - [17/Jun/2023 15:18:22] "POST /predict HTTP/1.1" 200 -
+2023-06-17 18:14:22,399 - DEBUG - Received JSON data: {'PULocationID': 10, 'DOLocationID': 50, 'trip_distance': 40}
+2023-06-17 18:14:22,461 - INFO - 127.0.0.1 - - [17/Jun/2023 18:14:22] "POST /predict HTTP/1.1" 200 -
+2023-06-17 18:15:32,146 - INFO - 127.0.0.1 - - [17/Jun/2023 18:15:32] "[33mGET /?vscodeBrowserReqId=1687025731941 HTTP/1.1[0m" 404 -
+2023-06-17 18:15:45,676 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 18:15:45,677 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 18:15:46,631 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 18:15:46,632 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 18:15:47,565 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2023-06-17 18:15:47,566 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2023-06-17 18:15:47,569 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-06-17 18:15:47,653 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-06-17 18:15:47,656 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2023-06-17 18:15:47,794 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:15:47,837 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:15:47,856 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:15:47,877 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:15:47,883 - DEBUG - Starting new HTTPS connection (2): storage.googleapis.com:443
+2023-06-17 18:15:47,885 - DEBUG - Starting new HTTPS connection (3): storage.googleapis.com:443
+2023-06-17 18:15:47,888 - DEBUG - Starting new HTTPS connection (4): storage.googleapis.com:443
+2023-06-17 18:15:47,893 - DEBUG - Starting new HTTPS connection (5): storage.googleapis.com:443
+2023-06-17 18:15:47,916 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2FMLmodel?alt=media HTTP/1.1" 200 489
+2023-06-17 18:15:47,935 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fconda.yaml?alt=media HTTP/1.1" 200 234
+2023-06-17 18:15:47,943 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fpython_env.yaml?alt=media HTTP/1.1" 200 122
+2023-06-17 18:15:47,967 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Frequirements.txt?alt=media HTTP/1.1" 200 113
+2023-06-17 18:15:47,969 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fmodel.xgb?alt=media HTTP/1.1" 200 4636128
+2023-06-17 18:15:48,414 - DEBUG - Model loaded: gs://mlops-zoomcamp/2/8e97a22aff684e69aaabdb7cf04fec30/artifacts/models_mlflow
+2023-06-17 18:16:23,833 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 18:16:23,834 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 18:16:24,819 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 18:16:24,820 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 18:16:25,779 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2023-06-17 18:16:25,780 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2023-06-17 18:16:25,783 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-06-17 18:16:25,857 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-06-17 18:16:25,860 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2023-06-17 18:16:25,914 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:16:26,030 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:16:26,049 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:16:26,066 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:16:26,072 - DEBUG - Starting new HTTPS connection (2): storage.googleapis.com:443
+2023-06-17 18:16:26,076 - DEBUG - Starting new HTTPS connection (3): storage.googleapis.com:443
+2023-06-17 18:16:26,085 - DEBUG - Starting new HTTPS connection (4): storage.googleapis.com:443
+2023-06-17 18:16:26,092 - DEBUG - Starting new HTTPS connection (5): storage.googleapis.com:443
+2023-06-17 18:16:26,092 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2FMLmodel?alt=media HTTP/1.1" 200 489
+2023-06-17 18:16:26,112 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fconda.yaml?alt=media HTTP/1.1" 200 234
+2023-06-17 18:16:26,122 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fmodel.xgb?alt=media HTTP/1.1" 200 4636128
+2023-06-17 18:16:26,127 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fpython_env.yaml?alt=media HTTP/1.1" 200 122
+2023-06-17 18:16:26,131 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Frequirements.txt?alt=media HTTP/1.1" 200 113
+2023-06-17 18:16:26,490 - DEBUG - Model loaded: gs://mlops-zoomcamp/2/8e97a22aff684e69aaabdb7cf04fec30/artifacts/models_mlflow
+2023-06-17 18:16:26,605 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:9696
+2023-06-17 18:16:26,606 - INFO - [33mPress CTRL+C to quit[0m
+2023-06-17 18:16:26,607 - INFO -  * Restarting with stat
+2023-06-17 18:16:28,508 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 18:16:28,509 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 18:16:29,452 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 18:16:29,452 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 18:16:30,413 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2023-06-17 18:16:30,414 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2023-06-17 18:16:30,417 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-06-17 18:16:30,505 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-06-17 18:16:30,509 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2023-06-17 18:16:30,561 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:16:30,580 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:16:30,599 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:16:30,618 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 18:16:30,625 - DEBUG - Starting new HTTPS connection (2): storage.googleapis.com:443
+2023-06-17 18:16:30,628 - DEBUG - Starting new HTTPS connection (3): storage.googleapis.com:443
+2023-06-17 18:16:30,632 - DEBUG - Starting new HTTPS connection (4): storage.googleapis.com:443
+2023-06-17 18:16:30,637 - DEBUG - Starting new HTTPS connection (5): storage.googleapis.com:443
+2023-06-17 18:16:30,681 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fpython_env.yaml?alt=media HTTP/1.1" 200 122
+2023-06-17 18:16:30,683 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Frequirements.txt?alt=media HTTP/1.1" 200 113
+2023-06-17 18:16:30,770 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2FMLmodel?alt=media HTTP/1.1" 200 489
+2023-06-17 18:16:30,776 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fconda.yaml?alt=media HTTP/1.1" 200 234
+2023-06-17 18:16:30,876 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fmodel.xgb?alt=media HTTP/1.1" 200 4636128
+2023-06-17 18:16:31,229 - DEBUG - Model loaded: gs://mlops-zoomcamp/2/8e97a22aff684e69aaabdb7cf04fec30/artifacts/models_mlflow
+2023-06-17 18:16:31,330 - WARNING -  * Debugger is active!
+2023-06-17 18:16:31,331 - INFO -  * Debugger PIN: 131-354-247
+2023-06-17 18:16:46,610 - DEBUG - Received JSON data: {'PULocationID': 10, 'DOLocationID': 50, 'trip_distance': 40}
+2023-06-17 18:16:46,674 - INFO - 127.0.0.1 - - [17/Jun/2023 18:16:46] "POST /predict HTTP/1.1" 200 -
+2023-06-17 18:16:57,932 - DEBUG - Received JSON data: {'PULocationID': 10, 'DOLocationID': 50, 'trip_distance': 40}
+2023-06-17 18:16:57,996 - INFO - 127.0.0.1 - - [17/Jun/2023 18:16:57] "POST /predict HTTP/1.1" 200 -
