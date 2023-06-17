@@ -10,9 +10,6 @@ from sklearn.metrics import mean_squared_error
 import mlflow
 import xgboost as xgb
 from prefect import flow, task
-# from prefect_gcp import GcsBucket
-# from prefect.filesystems import GCS
-# from prefect.artifacts import create_markdown_artifact
 from datetime import date
 from google.cloud import storage
 
@@ -31,10 +28,6 @@ def download_validation_data(bucket_name, artifact_path, destination_path):
     bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(artifact_path)
     blob.download_to_filename(destination_path)
-
-    bucket_name ='mlops-zoomcamp'
-    artifact_path = 'data/green_tripdata_2021-02.parquet'
-    destination_path = "/home/konradballegro/orchestration/_test/green_tripdata_2021-02.parquet"
 
 
 @task(retries=3, retry_delay_seconds=2)
