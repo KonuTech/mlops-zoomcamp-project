@@ -160,7 +160,9 @@ def main_flow_gs(
     """The main training pipeline"""
 
     # MLflow settings
-    mlflow.set_tracking_uri("sqlite:///mlflow.db")
+    # mlflow.set_tracking_uri("sqlite:///mlflow.db")
+    TRACKING_SERVER_HOST = "34.77.180.77"
+    mlflow.set_tracking_uri(f"http://{TRACKING_SERVER_HOST}:5000")
     mlflow.set_experiment("nyc-taxi-experiment")
 
     # Load data from GCS
