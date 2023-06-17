@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 import mlflow
 from flask import Flask, request, jsonify
 
-TRACKING_SERVER_HOST = "34.77.180.77"
+# TRACKING_SERVER_HOST = "34.77.180.77"
 RUN_ID = '8e97a22aff684e69aaabdb7cf04fec30'
 
 # Configure logging
@@ -14,7 +14,7 @@ logging.basicConfig(filename="app.log", level=logging.DEBUG,
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Configure MLflow
-mlflow.set_tracking_uri(f"http://{TRACKING_SERVER_HOST}:5000")
+# mlflow.set_tracking_uri(f"http://{TRACKING_SERVER_HOST}:5000")
 logged_model = f'gs://mlops-zoomcamp/2/{RUN_ID}/artifacts/models_mlflow'
 model = mlflow.pyfunc.load_model(logged_model)
 logging.debug("Model loaded: %s", logged_model)

@@ -52,3 +52,61 @@
 2023-06-17 15:06:42,103 - INFO -  * Debugger PIN: 131-354-247
 2023-06-17 15:06:58,380 - DEBUG - Received JSON data: {'PULocationID': 10, 'DOLocationID': 50, 'trip_distance': 40}
 2023-06-17 15:06:58,446 - INFO - 127.0.0.1 - - [17/Jun/2023 15:06:58] "POST /predict HTTP/1.1" 200 -
+2023-06-17 15:17:58,874 - INFO -  * Detected change in '/home/konradballegro/web-service/predict.py', reloading
+2023-06-17 15:17:59,182 - INFO -  * Restarting with stat
+2023-06-17 15:18:00,726 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 15:18:00,727 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 15:18:01,673 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 15:18:01,673 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 15:18:02,613 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2023-06-17 15:18:02,614 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2023-06-17 15:18:02,617 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-06-17 15:18:02,708 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-06-17 15:18:02,712 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2023-06-17 15:18:02,775 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 15:18:02,899 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 15:18:02,919 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 15:18:02,937 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 15:18:02,945 - DEBUG - Starting new HTTPS connection (2): storage.googleapis.com:443
+2023-06-17 15:18:02,947 - DEBUG - Starting new HTTPS connection (3): storage.googleapis.com:443
+2023-06-17 15:18:02,950 - DEBUG - Starting new HTTPS connection (4): storage.googleapis.com:443
+2023-06-17 15:18:02,955 - DEBUG - Starting new HTTPS connection (5): storage.googleapis.com:443
+2023-06-17 15:18:02,965 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2FMLmodel?alt=media HTTP/1.1" 200 489
+2023-06-17 15:18:03,005 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fpython_env.yaml?alt=media HTTP/1.1" 200 122
+2023-06-17 15:18:03,013 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fconda.yaml?alt=media HTTP/1.1" 200 234
+2023-06-17 15:18:03,043 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Frequirements.txt?alt=media HTTP/1.1" 200 113
+2023-06-17 15:18:03,056 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fmodel.xgb?alt=media HTTP/1.1" 200 4636128
+2023-06-17 15:18:03,405 - DEBUG - Model loaded: gs://mlops-zoomcamp/2/8e97a22aff684e69aaabdb7cf04fec30/artifacts/models_mlflow
+2023-06-17 15:18:03,411 - WARNING -  * Debugger is active!
+2023-06-17 15:18:03,412 - INFO -  * Debugger PIN: 131-354-247
+2023-06-17 15:18:08,159 - DEBUG - Received JSON data: {'PULocationID': 10, 'DOLocationID': 50, 'trip_distance': 40}
+2023-06-17 15:18:08,222 - INFO - 127.0.0.1 - - [17/Jun/2023 15:18:08] "POST /predict HTTP/1.1" 200 -
+2023-06-17 15:18:17,715 - INFO -  * Detected change in '/home/konradballegro/web-service/test.py', reloading
+2023-06-17 15:18:18,031 - INFO -  * Restarting with stat
+2023-06-17 15:18:19,601 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 15:18:19,601 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 15:18:20,615 - DEBUG - Checking None for explicit credentials as part of auth process...
+2023-06-17 15:18:20,615 - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2023-06-17 15:18:21,562 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2023-06-17 15:18:21,563 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2023-06-17 15:18:21,566 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-06-17 15:18:21,646 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-06-17 15:18:21,648 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2023-06-17 15:18:21,783 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 15:18:21,830 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 15:18:21,851 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 15:18:21,869 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/mlops-zoomcamp/o?projection=noAcl&prefix=2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2F&delimiter=%2F&prettyPrint=false HTTP/1.1" 200 4729
+2023-06-17 15:18:21,876 - DEBUG - Starting new HTTPS connection (2): storage.googleapis.com:443
+2023-06-17 15:18:21,879 - DEBUG - Starting new HTTPS connection (3): storage.googleapis.com:443
+2023-06-17 15:18:21,886 - DEBUG - Starting new HTTPS connection (4): storage.googleapis.com:443
+2023-06-17 15:18:21,889 - DEBUG - Starting new HTTPS connection (5): storage.googleapis.com:443
+2023-06-17 15:18:21,926 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fconda.yaml?alt=media HTTP/1.1" 200 234
+2023-06-17 15:18:21,932 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Frequirements.txt?alt=media HTTP/1.1" 200 113
+2023-06-17 15:18:21,938 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2FMLmodel?alt=media HTTP/1.1" 200 489
+2023-06-17 15:18:21,941 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fmodel.xgb?alt=media HTTP/1.1" 200 4636128
+2023-06-17 15:18:21,952 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/mlops-zoomcamp/o/2%2F8e97a22aff684e69aaabdb7cf04fec30%2Fartifacts%2Fmodels_mlflow%2Fpython_env.yaml?alt=media HTTP/1.1" 200 122
+2023-06-17 15:18:22,256 - DEBUG - Model loaded: gs://mlops-zoomcamp/2/8e97a22aff684e69aaabdb7cf04fec30/artifacts/models_mlflow
+2023-06-17 15:18:22,263 - WARNING -  * Debugger is active!
+2023-06-17 15:18:22,263 - INFO -  * Debugger PIN: 131-354-247
+2023-06-17 15:18:22,287 - DEBUG - Received JSON data: {'PULocationID': 10, 'DOLocationID': 50, 'trip_distance': 40}
+2023-06-17 15:18:22,345 - INFO - 127.0.0.1 - - [17/Jun/2023 15:18:22] "POST /predict HTTP/1.1" 200 -

@@ -9,7 +9,7 @@ ride = {
 url = 'http://127.0.0.1:9696/predict'
 try:
     response = requests.post(url, json=ride)
-    print(response)
+    # print(response)
     response.raise_for_status()  # Raise an exception if the request was not successful
     result = response.json()
     print(result)
