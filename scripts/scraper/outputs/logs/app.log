@@ -34,3 +34,292 @@
 2023-06-19 13:23:59,726 - [file_logger] - [INFO] - End of scraping manufacturers
 2023-06-19 13:23:59,727 - [file_logger] - [INFO] - Appending the data...
 2023-06-19 13:23:59,753 - [file_logger] - [INFO] - Appended data saved as offers.csv
+2023-06-19 13:47:06,357 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-19 13:47:06,358 - [file_logger] - [INFO] - Starting scraping cars...
+2023-06-19 13:47:06,358 - [file_logger] - [INFO] - Start of scraping the manufacturer: acura
+2023-06-19 13:47:06,902 - [file_logger] - [ERROR] - Error list index out of range while searching for last_page_num
+2023-06-19 13:47:06,903 - [file_logger] - [INFO] - Manufacturer has: 1 subpages
+2023-06-19 13:47:06,903 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-19 13:47:07,390 - [file_logger] - [INFO] - Found 15 links
+2023-06-19 13:47:07,391 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-3-5-benzyna-310-moc-zamiana-ID6FAZEa.html
+2023-06-19 13:47:07,392 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-tlx-ID6FAfNx.html
+2023-06-19 13:47:07,394 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-acura-mdx-awd-a-spec-bezwypadkowy-ID6Fyw3a.html
+2023-06-19 13:47:07,394 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-acura-rdx-ID6EUWr3.html
+2023-06-19 13:47:07,397 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-rezerwacja-kamery-360-blis-acc-3xklima-ID6FzgPT.html
+2023-06-19 13:47:07,397 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-drugi-wlasciciel-bezywpadkowy-pakiet-sorona-indywidualna-tapicerka-ID6FcOTi.html
+2023-06-19 13:47:07,398 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-sprzedam-acure-tl-2008r-3-2-automat-gaz-ID6Fz71c.html
+2023-06-19 13:47:07,403 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-advancetech-ID6Fz6LX.html
+2023-06-19 13:47:08,410 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-nsx-2020-acura-nsx-hybryda-4x4-automat-ID6FAfQI.html
+2023-06-19 13:47:08,852 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tsx-acura-tsx-2-4-l-benzyna-gaz-2005-rok-ID6FAdUF.html
+2023-06-19 13:47:08,906 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-acura-mdx-awd-a-spec-bezwypadkowy-ID6Fyw3a.html
+2023-06-19 13:47:08,907 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-wersja-technology-7-osob-gaz-lpg-4x4-sw-awd-ID6EAv6f.html
+2023-06-19 13:47:08,942 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rl-lpg-ID6Fz2sE.html
+2023-06-19 13:47:09,022 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-werja-technology-gaz-lpg-4x4-3-7-v6-300-km-7osob-automat-navi-ID6ESl2x.html
+2023-06-19 13:47:09,054 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-acura-tlx-fv23-ID6EPQgm.html
+2023-06-19 13:47:09,101 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-p-aws-310km-advance-max-wyposazenie-ID6ETYUy.html
+2023-06-19 13:47:09,930 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-p-aws-310km-advance-max-wyposazenie-ID6ETYUy.html
+2023-06-19 13:47:10,333 - [file_logger] - [INFO] - Saving acura offers
+2023-06-19 13:47:10,333 - [file_logger] - [INFO] - Found 13 offers
+2023-06-19 13:47:10,345 - [file_logger] - [INFO] - Saved acura offers
+2023-06-19 13:47:10,345 - [file_logger] - [INFO] - End of scraping the manufacturer: acura
+2023-06-19 13:47:10,347 - [file_logger] - [INFO] - End of scraping manufacturers
+2023-06-19 13:47:10,347 - [file_logger] - [INFO] - Appending the data...
+2023-06-19 13:47:10,364 - [file_logger] - [INFO] - Appended data saved as offers.csv
+2023-06-19 13:47:21,049 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-19 13:47:21,050 - [file_logger] - [INFO] - Starting scraping cars...
+2023-06-19 13:47:21,050 - [file_logger] - [INFO] - Start of scraping the manufacturer: acura
+2023-06-19 13:47:21,506 - [file_logger] - [ERROR] - Error list index out of range while searching for last_page_num
+2023-06-19 13:47:21,506 - [file_logger] - [INFO] - Manufacturer has: 1 subpages
+2023-06-19 13:47:21,506 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-19 13:47:21,987 - [file_logger] - [INFO] - Found 15 links
+2023-06-19 13:47:21,989 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-3-5-benzyna-310-moc-zamiana-ID6FAZEa.html
+2023-06-19 13:47:21,991 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-tlx-ID6FAfNx.html
+2023-06-19 13:47:21,993 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-acura-mdx-awd-a-spec-bezwypadkowy-ID6Fyw3a.html
+2023-06-19 13:47:21,995 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-acura-rdx-ID6EUWr3.html
+2023-06-19 13:47:21,998 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-rezerwacja-kamery-360-blis-acc-3xklima-ID6FzgPT.html
+2023-06-19 13:47:22,000 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-drugi-wlasciciel-bezywpadkowy-pakiet-sorona-indywidualna-tapicerka-ID6FcOTi.html
+2023-06-19 13:47:22,003 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-sprzedam-acure-tl-2008r-3-2-automat-gaz-ID6Fz71c.html
+2023-06-19 13:47:22,005 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-advancetech-ID6Fz6LX.html
+2023-06-19 13:47:23,244 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-nsx-2020-acura-nsx-hybryda-4x4-automat-ID6FAfQI.html
+2023-06-19 13:47:23,509 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tsx-acura-tsx-2-4-l-benzyna-gaz-2005-rok-ID6FAdUF.html
+2023-06-19 13:47:23,655 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-wersja-technology-7-osob-gaz-lpg-4x4-sw-awd-ID6EAv6f.html
+2023-06-19 13:47:23,671 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rl-lpg-ID6Fz2sE.html
+2023-06-19 13:47:23,734 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-werja-technology-gaz-lpg-4x4-3-7-v6-300-km-7osob-automat-navi-ID6ESl2x.html
+2023-06-19 13:47:23,756 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-acura-tlx-fv23-ID6EPQgm.html
+2023-06-19 13:47:23,801 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-p-aws-310km-advance-max-wyposazenie-ID6ETYUy.html
+2023-06-19 13:47:25,338 - [file_logger] - [INFO] - Saving acura offers
+2023-06-19 13:47:25,338 - [file_logger] - [INFO] - Found 15 offers
+2023-06-19 13:47:25,349 - [file_logger] - [INFO] - Saved acura offers
+2023-06-19 13:47:25,349 - [file_logger] - [INFO] - End of scraping the manufacturer: acura
+2023-06-19 13:47:25,351 - [file_logger] - [INFO] - End of scraping manufacturers
+2023-06-19 13:47:25,351 - [file_logger] - [INFO] - Appending the data...
+2023-06-19 13:47:25,368 - [file_logger] - [INFO] - Appended data saved as offers.csv
+2023-06-19 13:58:16,634 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-19 13:58:16,635 - [file_logger] - [INFO] - Starting scraping cars...
+2023-06-19 13:58:16,635 - [file_logger] - [INFO] - Start of scraping the manufacturer: acura
+2023-06-19 13:58:17,613 - [file_logger] - [ERROR] - Error list index out of range while searching for last_page_num
+2023-06-19 13:58:17,614 - [file_logger] - [INFO] - Manufacturer has: 1 subpages
+2023-06-19 13:58:17,614 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-19 13:58:18,147 - [file_logger] - [INFO] - Found 15 links
+2023-06-19 13:58:18,149 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-3-5-benzyna-310-moc-zamiana-ID6FAZEa.html
+2023-06-19 13:58:18,150 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-tlx-ID6FAfNx.html
+2023-06-19 13:58:18,155 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-acura-mdx-awd-a-spec-bezwypadkowy-ID6Fyw3a.html
+2023-06-19 13:58:18,157 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-acura-rdx-ID6EUWr3.html
+2023-06-19 13:58:18,159 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-rezerwacja-kamery-360-blis-acc-3xklima-ID6FzgPT.html
+2023-06-19 13:58:18,160 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-drugi-wlasciciel-bezywpadkowy-pakiet-sorona-indywidualna-tapicerka-ID6FcOTi.html
+2023-06-19 13:58:18,166 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-sprzedam-acure-tl-2008r-3-2-automat-gaz-ID6Fz71c.html
+2023-06-19 13:58:18,169 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-advancetech-ID6Fz6LX.html
+2023-06-19 13:58:19,694 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-nsx-2020-acura-nsx-hybryda-4x4-automat-ID6FAfQI.html
+2023-06-19 13:58:19,756 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tsx-acura-tsx-2-4-l-benzyna-gaz-2005-rok-ID6FAdUF.html
+2023-06-19 13:58:19,876 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-wersja-technology-7-osob-gaz-lpg-4x4-sw-awd-ID6EAv6f.html
+2023-06-19 13:58:19,907 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-drugi-wlasciciel-bezywpadkowy-pakiet-sorona-indywidualna-tapicerka-ID6FcOTi.html
+2023-06-19 13:58:19,909 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rl-lpg-ID6Fz2sE.html
+2023-06-19 13:58:20,032 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-werja-technology-gaz-lpg-4x4-3-7-v6-300-km-7osob-automat-navi-ID6ESl2x.html
+2023-06-19 13:58:20,061 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-acura-tlx-fv23-ID6EPQgm.html
+2023-06-19 13:58:20,210 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-p-aws-310km-advance-max-wyposazenie-ID6ETYUy.html
+2023-06-19 13:58:21,343 - [file_logger] - [INFO] - Saving acura offers
+2023-06-19 13:58:21,343 - [file_logger] - [INFO] - Found 14 offers
+2023-06-19 13:58:21,353 - [file_logger] - [INFO] - Saved acura offers
+2023-06-19 13:58:21,354 - [file_logger] - [INFO] - End of scraping the manufacturer: acura
+2023-06-19 13:58:21,355 - [file_logger] - [INFO] - End of scraping manufacturers
+2023-06-19 13:58:21,355 - [file_logger] - [INFO] - Appending the data...
+2023-06-19 13:58:21,368 - [file_logger] - [INFO] - Appended data saved as offers.csv
+2023-06-19 13:59:25,715 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-19 13:59:25,715 - [file_logger] - [INFO] - Starting scraping cars...
+2023-06-19 13:59:25,715 - [file_logger] - [INFO] - Start of scraping the manufacturer: acura
+2023-06-19 13:59:26,337 - [file_logger] - [ERROR] - Error list index out of range while searching for last_page_num
+2023-06-19 13:59:26,338 - [file_logger] - [INFO] - Manufacturer has: 1 subpages
+2023-06-19 13:59:26,338 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-19 13:59:27,031 - [file_logger] - [INFO] - Found 15 links
+2023-06-19 13:59:27,033 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-3-5-benzyna-310-moc-zamiana-ID6FAZEa.html
+2023-06-19 13:59:27,035 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-tlx-ID6FAfNx.html
+2023-06-19 13:59:27,037 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-acura-mdx-awd-a-spec-bezwypadkowy-ID6Fyw3a.html
+2023-06-19 13:59:27,039 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-acura-rdx-ID6EUWr3.html
+2023-06-19 13:59:27,042 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-rezerwacja-kamery-360-blis-acc-3xklima-ID6FzgPT.html
+2023-06-19 13:59:27,045 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-drugi-wlasciciel-bezywpadkowy-pakiet-sorona-indywidualna-tapicerka-ID6FcOTi.html
+2023-06-19 13:59:27,048 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-sprzedam-acure-tl-2008r-3-2-automat-gaz-ID6Fz71c.html
+2023-06-19 13:59:27,050 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-advancetech-ID6Fz6LX.html
+2023-06-19 13:59:28,041 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-nsx-2020-acura-nsx-hybryda-4x4-automat-ID6FAfQI.html
+2023-06-19 13:59:28,593 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tsx-acura-tsx-2-4-l-benzyna-gaz-2005-rok-ID6FAdUF.html
+2023-06-19 13:59:28,717 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-wersja-technology-7-osob-gaz-lpg-4x4-sw-awd-ID6EAv6f.html
+2023-06-19 13:59:28,835 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rl-lpg-ID6Fz2sE.html
+2023-06-19 13:59:28,898 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-werja-technology-gaz-lpg-4x4-3-7-v6-300-km-7osob-automat-navi-ID6ESl2x.html
+2023-06-19 13:59:28,925 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-acura-tlx-fv23-ID6EPQgm.html
+2023-06-19 13:59:28,973 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-p-aws-310km-advance-max-wyposazenie-ID6ETYUy.html
+2023-06-19 13:59:30,272 - [file_logger] - [INFO] - Saving acura offers
+2023-06-19 13:59:30,272 - [file_logger] - [INFO] - Found 15 offers
+2023-06-19 13:59:30,284 - [file_logger] - [INFO] - Saved acura offers
+2023-06-19 13:59:30,284 - [file_logger] - [INFO] - End of scraping the manufacturer: acura
+2023-06-19 13:59:30,286 - [file_logger] - [INFO] - End of scraping manufacturers
+2023-06-19 13:59:30,286 - [file_logger] - [INFO] - Appending the data...
+2023-06-19 13:59:30,304 - [file_logger] - [INFO] - Appended data saved as offers.csv
+2023-06-19 14:00:06,238 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-19 14:00:06,238 - [file_logger] - [INFO] - Starting scraping cars...
+2023-06-19 14:00:06,238 - [file_logger] - [INFO] - Start of scraping the manufacturer: acura
+2023-06-19 14:00:06,853 - [file_logger] - [ERROR] - Error list index out of range while searching for last_page_num
+2023-06-19 14:00:06,854 - [file_logger] - [INFO] - Manufacturer has: 1 subpages
+2023-06-19 14:00:06,854 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-19 14:00:07,533 - [file_logger] - [INFO] - Found 15 links
+2023-06-19 14:00:07,534 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-3-5-benzyna-310-moc-zamiana-ID6FAZEa.html
+2023-06-19 14:00:07,537 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-tlx-ID6FAfNx.html
+2023-06-19 14:00:07,540 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-acura-mdx-awd-a-spec-bezwypadkowy-ID6Fyw3a.html
+2023-06-19 14:00:07,543 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-acura-rdx-ID6EUWr3.html
+2023-06-19 14:00:07,545 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-rezerwacja-kamery-360-blis-acc-3xklima-ID6FzgPT.html
+2023-06-19 14:00:07,546 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-drugi-wlasciciel-bezywpadkowy-pakiet-sorona-indywidualna-tapicerka-ID6FcOTi.html
+2023-06-19 14:00:07,551 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-sprzedam-acure-tl-2008r-3-2-automat-gaz-ID6Fz71c.html
+2023-06-19 14:00:07,554 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-advancetech-ID6Fz6LX.html
+2023-06-19 14:00:09,068 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-nsx-2020-acura-nsx-hybryda-4x4-automat-ID6FAfQI.html
+2023-06-19 14:00:09,189 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tsx-acura-tsx-2-4-l-benzyna-gaz-2005-rok-ID6FAdUF.html
+2023-06-19 14:00:09,235 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-wersja-technology-7-osob-gaz-lpg-4x4-sw-awd-ID6EAv6f.html
+2023-06-19 14:00:09,287 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rl-lpg-ID6Fz2sE.html
+2023-06-19 14:00:09,330 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-werja-technology-gaz-lpg-4x4-3-7-v6-300-km-7osob-automat-navi-ID6ESl2x.html
+2023-06-19 14:00:09,349 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-acura-tlx-fv23-ID6EPQgm.html
+2023-06-19 14:00:09,376 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-p-aws-310km-advance-max-wyposazenie-ID6ETYUy.html
+2023-06-19 14:00:10,901 - [file_logger] - [INFO] - Saving acura offers
+2023-06-19 14:00:10,902 - [file_logger] - [INFO] - Found 15 offers
+2023-06-19 14:00:10,913 - [file_logger] - [INFO] - Saved acura offers
+2023-06-19 14:00:10,914 - [file_logger] - [INFO] - End of scraping the manufacturer: acura
+2023-06-19 14:00:10,915 - [file_logger] - [INFO] - Start of scraping the manufacturer: aixam
+2023-06-19 14:00:11,754 - [file_logger] - [INFO] - Manufacturer has: 4 subpages
+2023-06-19 14:00:11,754 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-19 14:00:13,111 - [file_logger] - [INFO] - Found 32 links
+2023-06-19 14:00:13,113 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-bez-prawa-jazdy-b-czterokolowiec-lekki-l6e-ID6FB9uR.html
+2023-06-19 14:00:13,115 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterololowiec-lekki-l6e-bp-kamera-wspomaganie-transport-jak-nowy-ID6FzKkr.html
+2023-06-19 14:00:13,118 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-a741-ID6Fvi6k.html
+2023-06-19 14:00:13,120 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterololowiec-lekki-l6e-bp-kamera-wspomaganie-transport-jak-nowy-ID6FzA1v.html
+2023-06-19 14:00:13,123 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-bez-prawa-jazdy-am-l6e-zarejestrowany-ID6FAHG5.html
+2023-06-19 14:00:13,125 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-bez-prawa-jazdy-microcar-od-14-lat-super-stan-ID6FvBun.html
+2023-06-19 14:00:13,126 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a751-sprzedam-aixam-a751-microcar-l7e-b1-od-16-lat-ID6FzSOF.html
+2023-06-19 14:00:13,129 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FzDMq.html
+2023-06-19 14:00:13,755 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-wlasciciel-od-2015-roku-ID6FzMrq.html
+2023-06-19 14:00:13,858 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-gti-s9-2021-l6e-am-od-14-roku-zycia-kamera-abs-ID6Fks28.html
+2023-06-19 14:00:14,271 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-2019-l6e-am-od-14-roku-zycia-kamera-cofania-ID6Fks29.html
+2023-06-19 14:00:14,342 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-bez-prawa-jazdy-am-l6e-zarejestrowany-ID6FAHG5.html
+2023-06-19 14:00:14,344 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FAa6z.html
+2023-06-19 14:00:14,358 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-diesel-kubota-500-ID6Fx6rV.html
+2023-06-19 14:00:14,396 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-gto-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FyJdm.html
+2023-06-19 14:00:14,492 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-bez-prawa-jazdy-b-czterokolowiec-lekki-l6e-ID6FzBiY.html
+2023-06-19 14:00:14,529 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-ID6FpSYh.html
+2023-06-19 14:00:14,966 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-evo-od-14-lat-nowy-gwarancja-ID6FAVU5.html
+2023-06-19 14:00:15,265 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a751-piekny-aixa-okazja-4-osobowy-l7e-na-pj-b1-ID6Fue3c.html
+2023-06-19 14:00:15,405 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-crossline-2018r-l6e-am-od-14-roku-zycia-kamera-ID6FxWBH.html
+2023-06-19 14:00:15,421 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-kubota-z482-sprzedaz-serwis-cz-wa-ID6FqX2Q.html
+2023-06-19 14:00:15,446 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-emotion-crossover-kat-l6e-bez-prawa-jazdy-ID6FylAe.html
+2023-06-19 14:00:15,702 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-city-sport-niski-przebieg-jak-nowy-kat-l6e-do-350kg-ID6FzJTi.html
+2023-06-19 14:00:15,998 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-l6e-pb-13-000km-ID6Fylvm.html
+2023-06-19 14:00:16,195 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-pierwszy-wlasciciel-w-kraju-ID6Fyl9D.html
+2023-06-19 14:00:16,276 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-nowy-od-14-lat-abs-ebd-gwarancja-ID6FwGjZ.html
+2023-06-19 14:00:16,396 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-crossline-premium-l6e-2018-diesel-ID6FyhTM.html
+2023-06-19 14:00:16,501 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-emotion-crossover-kat-l6e-bez-prawa-jazdy-ID6FylAe.html
+2023-06-19 14:00:16,503 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-2018r-model-mega-sprawny-z-niemiec-ID6FyhQf.html
+2023-06-19 14:00:17,031 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-sport-s9-2018-l6e-am-od-14-roku-zycia-kamera-ID6FibM1.html
+2023-06-19 14:00:17,074 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-s9-2017-l6e-am-od-14-roku-zycia-ID6FibLZ.html
+2023-06-19 14:00:17,174 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-pierwszy-wlasciciel-w-polsce-stan-bardzo-dobry-ID6Fqs7J.html
+2023-06-19 14:00:17,197 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-l6e-pb-13-000km-ID6Fylvm.html
+2023-06-19 14:00:17,198 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-kat-am-b1-350kg-bez-prawojazdy-ID6FB0lP.html
+2023-06-19 14:00:17,505 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-pierwszy-wlasciciel-w-kraju-ID6Fyl9D.html
+2023-06-19 14:00:17,509 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-sport-l6e-am-od-14-roku-zycia-ID6Fzk6A.html
+2023-06-19 14:00:23,272 - [file_logger] - [ERROR] - Error 504 Server Error: Gateway Time-out for url: https://www.otomoto.pl/osobowe/oferta/aixam-aixam-bez-prawa-jazdy-microcar-od-14-lat-super-stan-ID6FvBun.html while fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-bez-prawa-jazdy-microcar-od-14-lat-super-stan-ID6FvBun.html
+2023-06-19 14:00:24,491 - [file_logger] - [ERROR] - Error 504 Server Error: Gateway Time-out for url: https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-diesel-kubota-500-ID6Fx6rV.html while fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-diesel-kubota-500-ID6Fx6rV.html
+2023-06-19 14:00:24,762 - [file_logger] - [ERROR] - Error 504 Server Error: Gateway Time-out for url: https://www.otomoto.pl/osobowe/oferta/aixam-coupe-ID6FpSYh.html while fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-ID6FpSYh.html
+2023-06-19 14:00:27,312 - [file_logger] - [ERROR] - Error 504 Server Error: Gateway Time-out for url: https://www.otomoto.pl/osobowe/oferta/aixam-city-pierwszy-wlasciciel-w-polsce-stan-bardzo-dobry-ID6Fqs7J.html while fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-pierwszy-wlasciciel-w-polsce-stan-bardzo-dobry-ID6Fqs7J.html
+2023-06-19 14:00:27,518 - [file_logger] - [INFO] - Scraping page: 2
+2023-06-19 14:00:28,982 - [file_logger] - [INFO] - Found 32 links
+2023-06-19 14:00:28,984 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-mega-elektryk-pojazd-elektryczny-nowe-akumulatory-ID6FzkoG.html
+2023-06-19 14:00:28,987 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-ID6FuD4N.html
+2023-06-19 14:00:28,988 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-kubota-mini-auto-ID6FAZlv.html
+2023-06-19 14:00:28,991 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ligier-ixo-zarejestrowany-ID6FzYh2.html
+2023-06-19 14:00:28,995 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-400-evo-diesel-kubota-l6e-bez-prawa-jazdy-kat-b-alu-ID6FAXK0.html
+2023-06-19 14:00:28,997 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-chatenet-barooder-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6FAXK1.html
+2023-06-19 14:00:28,999 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-grecav-eke-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6FAXJZ.html
+2023-06-19 14:00:29,000 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-city-sport-od-14-lat-nowy-gwarancja-ID6FglrO.html
+2023-06-19 14:00:29,889 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-gti-od-14-lat-szary-mat-nowy-ID6FggWU.html
+2023-06-19 14:00:30,219 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-crossline-l7e-ID6Fydbh.html
+2023-06-19 14:00:30,363 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterololowiec-lekki-l6e-bp-kamera-wspomaganie-transport-ID6Fpu9v.html
+2023-06-19 14:00:30,429 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-sport-od-14-lat-nowy-gwarancja-ID6FAVNi.html
+2023-06-19 14:00:30,613 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-ID6FwedE.html
+2023-06-19 14:00:30,862 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-crossline-ID6Ft4Ue.html
+2023-06-19 14:00:30,895 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-microcar-zarejestrowany-ID6FAPIy.html
+2023-06-19 14:00:30,951 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FANwF.html
+2023-06-19 14:00:31,067 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FANfD.html
+2023-06-19 14:00:31,070 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-ID6Fya1R.html
+2023-06-19 14:00:31,224 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-jdm-xheos-super-stan-l6e-350kg-transport-gratis-ligier-microcar-ID6FwldQ.html
+2023-06-19 14:00:31,367 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-crossline-l6e-ID6FzNHK.html
+2023-06-19 14:00:31,522 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-a741-2005r-l6e-bez-prawa-jazdy-b-od-14-lat-na-am-raty-ID6Fxs0Z.html
+2023-06-19 14:00:31,652 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-mega-multitrac-l6e-microcar-bez-prawojazdy-ID6Fwl0r.html
+2023-06-19 14:00:31,753 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-400diesel-ozarow-maz-dla-14-latka-ID6FsHnj.html
+2023-06-19 14:00:31,916 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-wersja-pack-od-14-roku-wroclaw-2023-ID6Eq9AY.html
+2023-06-19 14:00:32,041 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-ID6Fya1R.html
+2023-06-19 14:00:32,044 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-gti-od-14-lat-nowy-gwarancja-ID6FggOL.html
+2023-06-19 14:00:32,152 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-500-4-500-4-bez-prawka-349kg-4kw-400cm-alufelgi-wlkp-ID6EX1cT.html
+2023-06-19 14:00:32,251 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-tasso-domino-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6Fy0lN.html
+2023-06-19 14:00:32,461 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-mega-multitrack-elektryk-4kw-microcar-ID6FAvKi.html
+2023-06-19 14:00:32,688 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-aixam-crossover-premium-od-14-roku-zycia-wroclaw-nowy-model-2023-ID6Fk4eR.html
+2023-06-19 14:00:32,898 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-gto-gto-alu15-kubota-ledy-l6e-bez-prawkab-oplacony-transport-ID6FAuBW.html
+2023-06-19 14:00:33,026 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-minauto-nowy-model-2023-zamiast-skutera-od-14-lat-ID6FAsi0.html
+2023-06-19 14:00:33,283 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-microcar-jdm-transport-czterokolowiec-lekki-ID6FyZqp.html
+2023-06-19 14:00:34,561 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-minauto-nowy-model-2023-zamiast-skutera-od-14-lat-ID6FAsi0.html
+2023-06-19 14:00:34,974 - [file_logger] - [INFO] - Scraping page: 3
+2023-06-19 14:00:35,934 - [file_logger] - [INFO] - Found 32 links
+2023-06-19 14:00:35,936 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-alu-kubota-abs-ledy-navi-l6e-bez-prawkab-oplacony-transport-ID6FArxW.html
+2023-06-19 14:00:35,938 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ID6FtBSK.html
+2023-06-19 14:00:35,940 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-s9-l6emale-autko6kwnowy-model-ID6FAom9.html
+2023-06-19 14:00:35,942 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-super-stan-zapraszam-ID6FAnpz.html
+2023-06-19 14:00:35,943 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-city-sport-od-14-roku-zycia-bez-prawa-jazdy-ID6FtDdH.html
+2023-06-19 14:00:35,945 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-coupe-gti-od-14-roku-zycia-wroclaw-nowy-model-2023-ID6F61FN.html
+2023-06-19 14:00:35,947 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-ID6FxSb3.html
+2023-06-19 14:00:35,949 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-microcar-aixam-500-4-super-luxe-bez-prawo-jazdy-od-14-roku-zycia-ID6Ex3CJ.html
+2023-06-19 14:00:37,419 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-crossline-evo-od-14-roku-zycia-klimatyzacja-nowy-model-2023-ID6FwF3F.html
+2023-06-19 14:00:37,482 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-wersja-pack-od-14-roku-wroclaw-2023-ID6Fur5C.html
+2023-06-19 14:00:37,537 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-ligier-x-too-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6FxPgQ.html
+2023-06-19 14:00:37,571 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-aixam-crossover-2019-zarejestrowany-kamera-cofania-prywatnie-ID6FviKd.html
+2023-06-19 14:00:37,953 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-gto-aixam-gto-klimatyzacja-salon-polska-ID6EEf0C.html
+2023-06-19 14:00:37,994 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-city-kubota-po-duzym-serwisie-ID6FzF8u.html
+2023-06-19 14:00:38,021 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-ligier-x-too-r-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6Fz3Ri.html
+2023-06-19 14:00:38,042 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-s8-abs-l6e-am-od-14-roku-zycia-ID6FzyZE.html
+2023-06-19 14:00:38,477 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-chatenet-ch-26-microcar-transport-gratis-ID6Fxf4v.html
+2023-06-19 14:00:38,623 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-kat-l6e-przygotowany-do-rejestracji-ID6FrJFI.html
+2023-06-19 14:00:38,849 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-l6e-super-stan-ID6FuPtE.html
+2023-06-19 14:00:38,914 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-a741-sport-edition-bez-prawa-jazdy-b-transport-kamera-ID6Fm4Jy.html
+2023-06-19 14:00:39,210 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-coupe-gti-skora-ID6FxEIO.html
+2023-06-19 14:00:39,342 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-crossover-ID6FyZdh.html
+2023-06-19 14:00:39,444 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-aixam-coup-kubota-ID6FxE62.html
+2023-06-19 14:00:39,523 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a721-aixam-a721-jedyne-11000km-kat-l6e-ID6FxDPu.html
+2023-06-19 14:00:39,615 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-czterokolowiec-lekki-l6e-ID6FxDKM.html
+2023-06-19 14:00:39,642 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-zarjestrowany-kubota-ID6FxDAc.html
+2023-06-19 14:00:39,686 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-gto-gti-gwarancja-najnowszy-model-ID6FxDxA.html
+2023-06-19 14:00:40,357 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-400-31000km-l6e-super-stan-ID6FxDuB.html
+2023-06-19 14:00:40,530 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ID6FqSBR.html
+2023-06-19 14:00:40,830 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-pack-nowy-od-14-lat-gwarancja-ID6FhfQu.html
+2023-06-19 14:00:40,902 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterololowiec-lekki-l6e-bp-kamera-wspomaganie-transport-stan-idealny-ID6FyQ0x.html
+2023-06-19 14:00:40,929 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-microcar-jazda-bez-prawka-ID6FxyPg.html
+2023-06-19 14:00:42,005 - [file_logger] - [INFO] - Scraping page: 4
+2023-06-19 14:00:42,712 - [file_logger] - [INFO] - Found 20 links
+2023-06-19 14:00:42,714 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-minauto-access-auto-od-14-lat-od-importera-ID6DXuSk.html
+2023-06-19 14:00:42,717 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-miniauto-gt-cross-1-wlasciciel-2017-automat-ID6FjzWz.html
+2023-06-19 14:00:42,720 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-gto-aixam-s8-2013-kubota-l6e-bez-prawkab-zadbany-transport-ID6FzXfr.html
+2023-06-19 14:00:42,722 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ID6FzVXF.html
+2023-06-19 14:00:42,725 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-aixam-coup-2013-kubota-piekny-zadbany-transport-ID6FzVu6.html
+2023-06-19 14:00:42,727 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterololowiec-lekki-l6e-stan-idealny-transport-pod-dom-gwarancja-ID6F7uiX.html
+2023-06-19 14:00:42,728 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-ID6FzVf2.html
+2023-06-19 14:00:42,731 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-microcar-ID6FzWxr.html
+2023-06-19 14:00:43,947 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-aixam-cupe-sprowadzony-zarejestrowany-kt-l6e-do-350-kg-10-szt-w-oferci-ID6FyG82.html
+2023-06-19 14:00:44,035 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-aixam-crossover-jeden-z-najwiekszch-kt-l6e-do-350-kg-ID6FyG6E.html
+2023-06-19 14:00:44,225 - [file_logger] - [ERROR] - Error 'NoneType' object has no attribute 'text' while fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ID6FzVXF.html
+2023-06-19 14:00:44,227 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-klima-abs-ID6FzWcA.html
+2023-06-19 14:00:44,306 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterokolowiec-lekki-l6e-idealny-stan-zarejestrowany-kamera-ID6FyFNG.html
+2023-06-19 14:00:44,422 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-bez-prawajazdy-ID6FyEV3.html
+2023-06-19 14:00:44,539 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-casalini-ydea-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6Fxh2a.html
+2023-06-19 14:00:44,571 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-town-life-diesel-bez-prawa-jazdy-kat-b-ID6Fxh29.html
+2023-06-19 14:00:44,647 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-microcar-okazja-doinwestowany-ID6FzM84.html
+2023-06-19 14:00:44,719 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ID6FzNPQ.html
+2023-06-19 14:00:44,777 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-741-ID6FzNN1.html
+2023-06-19 14:00:44,919 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-aixam-s8-coupe-l6e-ID6FzK3C.html
+2023-06-19 14:00:45,254 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-2-ID6Fzq2m.html
+2023-06-19 14:00:46,276 - [file_logger] - [INFO] - Saving aixam offers
+2023-06-19 14:00:46,276 - [file_logger] - [INFO] - Found 105 offers
+2023-06-19 14:00:46,294 - [file_logger] - [INFO] - Saved aixam offers
+2023-06-19 14:00:46,294 - [file_logger] - [INFO] - End of scraping the manufacturer: aixam
+2023-06-19 14:00:46,296 - [file_logger] - [INFO] - End of scraping manufacturers
+2023-06-19 14:00:46,296 - [file_logger] - [INFO] - Appending the data...
+2023-06-19 14:00:46,337 - [file_logger] - [INFO] - Appended data saved as offers.csv

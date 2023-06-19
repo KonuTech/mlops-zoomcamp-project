@@ -687,3 +687,4 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 make setup
 spark-shell
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+/home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/python3.8

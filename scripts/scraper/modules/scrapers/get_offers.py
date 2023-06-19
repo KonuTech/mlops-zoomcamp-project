@@ -89,6 +89,8 @@ class OfferScraper:
 
             batch = self.new_line(main_features=batch)
 
+            batch['epoch'] = int(time.time())
+
             time.sleep(0.25)
 
             return batch
