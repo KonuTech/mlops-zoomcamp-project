@@ -628,3 +628,62 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 printenv
 shell-script
 spark-shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+printenv
+jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git add .bash_history 
+git add .bashrc 
+git add .gitignore 
+git add Makefile 
+git add mlops-zoomcamp/
+git status
+git add .gitignore 
+git status
+git add .gitignore 
+git add notebooks/spark_test.ipynb 
+git add .gitignore 
+git status
+git commit -m "installed spark"
+git push
+git status
+git add .env
+git add .gitignore
+git commit -m "added .env"
+git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+spark-shell
+ls
+jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+make pyspark-install 
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ls
+make
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+make
+make spark-install 
+make pyspark-install 
+make
+java which
+which java
+spark-shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+spark-sehll
+spark-shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+spark-shell
+which java
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+make setup
+spark-shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate

@@ -1,3 +1,8 @@
+setup:
+	make java-install && \
+	make spark-install && \
+	make pyspark-install
+
 java-install:
 	mkdir -p spark
 	wget https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz -P ~/spark
@@ -14,11 +19,5 @@ spark-install:
 	echo 'export PATH="${SPARK_HOME}/bin:${PATH}"' >> ~/.bashrc
 
 pyspark-install:
-	export PYTHONPATH="${SPARK_HOME}/python/:$PYTHONPATH"; \
-	export PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH"
-
-enable-apis:
-	gcloud services enable \
-	iam.googleapis.com \
-	compute.googleapis.com \
-	bigquery.googleapis.com
+	echo 'export PYTHONPATH="${SPARK_HOME}/python/:$PYTHONPATH"' >> ~/.bashrc
+	echo 'export PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH"' >> ~/.bashrc
