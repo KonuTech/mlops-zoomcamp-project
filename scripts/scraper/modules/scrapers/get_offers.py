@@ -140,11 +140,28 @@ class OfferScraper:
         file_logger.info(f"Found {len(self.manufacturer)} offers")
         console_logger.info(f"Found {len(self.manufacturer)} offers")
 
-        df = pd.DataFrame(self.manufacturer)
-        df.to_csv(
-            os.path.join(self.path_data_directory, f"{manufacturer.strip()}.csv"),
-            index=False,
-        )
+        file_path = os.path.join(self.path_data_directory, f"{manufacturer.strip()}.csv")
+
+        if os.path.isfile(file_path):
+            # Load existing CSV file
+            existing_df = pd.read_csv(file_path)
+
+            # Filter out duplicates based on 'id' column
+            existing_ids = existing_df['id'].tolist()
+            new_rows = [row for row in self.manufacturer if row['id'] not in existing_ids]
+            new_df = pd.DataFrame(new_rows)
+
+            # Append new rows to existing data
+            df = pd.concat([existing_df, new_df], ignore_index=True)
+        else:
+            # Create new DataFrame if the file doesn't exist
+            df = pd.DataFrame(self.manufacturer)
+
+        # Drop duplicates based on 'id' column
+        df.drop_duplicates(subset='id', inplace=True)
+
+        # Save the DataFrame to a CSV file
+        df.to_csv(file_path, index=False)
 
         file_logger.info(f"Saved {manufacturer} offers")
 
