@@ -208,3 +208,236 @@ git add .gitconfig
 git commit -m "third commit"
 git push -u origin main
 pip list
+source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git add requirements.txt web-service/
+git status
+git add .prefect/
+git status
+git commit -m "sixth commit"
+git push -u origin master
+git status
+git push
+pipenv lock
+mkdir scoring-batch
+ls
+rm scoring-batch/
+mkdir batch-scoring
+ls
+rm mlruns
+rm -r mlruns
+git status
+git add web-service/
+git add scoring-batch/
+git status
+git commit -m "seventh commit"
+git push -u origin main
+git status
+pipenv
+pipenv --dev
+pipenv lock --dev
+pipenv --graph
+pipenv graph
+pipenv check
+pipenv
+pipenv lock
+pipenv --virtual
+pipenv --venv
+pipenv --envs
+pipenv update
+pipenv install notebook
+pip freeze > requirements.txt 
+cd orchestration/
+ls
+python3 orchestrate_gs.py 
+cd
+jupyter notebook
+pipenv shell
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd notebooks/
+ls
+cd outputs/
+ls -lah
+ls -las
+source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+python3 orchestration/orchestrate_gs.py 
+cd orchestration/
+python3 orchestrate_gs.py 
+ls
+python3 lr.py
+python3 orchestrate_gs.py 
+python3 lr.py
+cd
+git status
+git add .bash_history .prefect/ lr.py
+git status
+git add orchestration/
+git status
+ls
+rm mlflow.db 
+ls
+git status
+git add temp
+git status
+git commit -m "fourth commit"
+git branch -M main
+git push -u origin main
+cd orchestration/
+ls
+rm -rf mlruns
+rm mlflow.db 
+git status
+git add orchestrate
+cd
+git status
+git add orchestration/
+git status
+git commit -m "fifth commit"
+git push -u origin main
+cd orchestration/
+python3 orchestrate_gs.py 
+cd
+git clone https://github.com/DataTalksClub/mlops-zoomcamp.git
+pip list
+pip freeze > requirements.txt
+cd mlops-zoomcamp/04-deployment/web-service-mlflow/
+ls
+flask --run predict.py 
+flask --app predict.py 
+flask run
+python3 predict.py 
+cd
+cd web-service/
+ls -lah
+python3 test.py
+python3 predict.py 
+python3 test.py
+cd
+git status
+git add requirements.txt 
+git add requirements_old.txt 
+git add Pipfile 
+git add mlops-zoomcamp/
+git add scoring-batch/
+git add web-service/
+git add .prefect/
+git status
+git commit -m "eighth commit"
+git push -u origin main
+git status
+source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+cd mlops-zoomcamp/04-deployment/web-service-mlflow/
+ls
+python3 test.pt
+python3 test.py
+pip list
+python3 test.py
+pip list
+python3 test.py
+cd 
+mkdir web-service
+cd web-service
+ls
+ls -lah
+python predict.py
+source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+prefect server start
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+cd
+ls
+mkdir notebooks
+ls
+ls-lah
+ls -lah
+cd notebooks/
+mkdir outputs
+mkdir inputs
+cd
+cd orchestration/
+python orchestrate_gs.py 
+cd
+git status
+git add notebooks
+git add .prefect/
+git add mlops-zoomcamp/
+git add orchestration/
+git commit -m "nineth commit"
+git status
+git push
+git status
+htop
+git status
+git add .bash_history 
+git add mlops-zoomcamp/
+git add notebooks/
+git status
+git add notebooks/
+git status
+git add .gitignore 
+git commit -m "tenth commit"
+git push
+git checkout -- /home/konradballegro/notebooks/outputs/predictions.parquet
+git status
+git push
+git checkout /home/konradballegro/notebooks/outputs/predictions.parquet
+git status
+git add notebooks/
+git commit -m "tenth commit"
+git push
+cd notebooks/
+ls
+cd outpus
+cd outputs
+ls -lah
+ls
+git status
+git rm notebooks/outputs/predictions.parquet
+git push
+git reset HEAD~
+git status
+git add predictions.parquet 
+cd
+git push
+git status
+git restore notebooks/outputs/predictions.parquet
+git push
+git restore --staged notebooks/outputs/predictions.parquet
+git status
+git restore notebooks/outputs/predictions.parquet
+git status
+git rm notebooks/outputs/predictions.parquet
+git status
+git push
+git reset HEAD~
+git status
+git add notebooks/starter.ipynb 
+git commit -m "tenth commit"
+git status
+git push
+pipenv shell
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pipenv install --dev pylint
+ls
+pipenv lock
+pipenv lock --three
+pylint --version
+pip list
+pip freeze > requirements.txt
+pylint --recursive=y
+which pylint
+python
+which python
+pip list env
+pip env list
+conda env list
+pip env list
+ls ..
+ls -lah ..
+ls ubuntu
+ls ../ubuntu
+ls -lah ../ubunut
+ls -lah ../ubuntu

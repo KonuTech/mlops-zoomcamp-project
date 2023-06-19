@@ -164,19 +164,18 @@ def main_flow_gs(
     # gcs_block = GCS.load("mlops-zoomcamp")
     # gcs_block
 
-
     # Download data from GCP Bucket Store
     download_train_data(
-        bucket_name='mlops-zoomcamp',
-        artifact_path='data/green_tripdata_2021-01.parquet',
-        destination_path= "/home/konradballegro/orchestration/data/green_tripdata_2021-01.parquet"
-        )
-    
+        bucket_name="mlops-zoomcamp",
+        artifact_path="data/green_tripdata_2021-01.parquet",
+        destination_path="/home/konradballegro/orchestration/data/green_tripdata_2021-01.parquet",
+    )
+
     download_validation_data(
-        bucket_name='mlops-zoomcamp',
-        artifact_path='data/green_tripdata_2021-02.parquet',
-        destination_path= "/home/konradballegro/orchestration/data/green_tripdata_2021-02.parquet"
-        )
+        bucket_name="mlops-zoomcamp",
+        artifact_path="data/green_tripdata_2021-02.parquet",
+        destination_path="/home/konradballegro/orchestration/data/green_tripdata_2021-02.parquet",
+    )
 
     # Load it now from folder
     df_train = read_data(train_path)

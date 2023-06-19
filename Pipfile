@@ -9,9 +9,12 @@ mlflow = "*"
 scikit-learn = "*"
 google-cloud-storage = "*"
 prefect-gcp = "*"
-notebook = "*"
 
 [dev-packages]
+notebook = "*"
+pylint = "*"
+black = "*"
+isort = "*"
 
 [requires]
 python_version = "3.8"
