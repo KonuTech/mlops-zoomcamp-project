@@ -9,6 +9,7 @@ mlflow = "*"
 scikit-learn = "*"
 google-cloud-storage = "*"
 prefect-gcp = "*"
+lxml = "*"
 
 [dev-packages]
 notebook = "*"
