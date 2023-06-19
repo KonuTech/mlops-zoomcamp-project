@@ -441,3 +441,190 @@ ls ubuntu
 ls ../ubuntu
 ls -lah ../ubunut
 ls -lah ../ubuntu
+pipenv shell
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pylint --recursive=y
+pylint --recursive=y /home/konradballegro/mlops-zoomcamp/06-best-practices/code/
+pip list
+pipenv install --dev black isort
+black --diff /home/konradballegro/mlops-zoomcamp/06-best-practices/code/tests/model_test.py
+black --diff /home/konradballegro/mlops-zoomcamp/06-best-practices/code/model.py
+black --diff /home/konradballegro/orchestration/orchestrate_gs.py
+black /home/konradballegro/orchestration/orchestrate_gs.py
+pylint /home/konradballegro/orchestration/models
+pylint /home/konradballegro/orchestration
+make
+touch Makefile
+make
+make run
+git status
+git add .
+git status
+git reset
+git status
+git add Makefile 
+git add .bash_history 
+git add .gitignore 
+git add Pipfile 
+git add mlops-zoomcamp/
+git add orchestration/
+git add requirements.txt 
+git status
+git add .gitignore 
+git commit -m "eleventh commit"
+git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
+touch env
+make install-pyspark
+nano .bashrc
+spark-shell
+source .bashrc
+which java
+make add-java 
+which java
+java --version
+export JAVA_HOME="${HOME}/spark/jdk-11.0.2"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+java --version
+which java
+make add-java
+source .bashrc
+which java
+make add-java
+which java
+make add-java
+which java
+source ~/.bashrc
+which java
+gitenv shell
+pipenv shell
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ls -lah
+ls
+ls -a
+ls -la
+ls
+make install-java
+git status
+which JAVA
+java --version
+git status
+make install-spark
+git status
+spark shell
+spark-shell
+pip list
+spark
+source .bashrc
+spark-shell
+source .bashrc
+spark-shell
+./bin/spark-shell
+/usr/local/spark/bin/spark-shell
+printenv
+printenv | grep PATH
+Spark
+spark
+spark-shell
+cd %SPARK_HOME%/bin
+echo $PATH
+echo $PYTHONPATH
+echo $SPARK_HOME 
+java --version
+export JAVA_HOME="${HOME}/spark/jdk-11.0.2"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+java --version
+source .bashrc
+printenv
+which java
+java --version
+export JAVA_HOME="${HOME}/spark/jdk-11.0.2"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+java --version
+which java
+source .bashrc
+which java
+make install-java
+which java
+export JAVA_HOME="${HOME}/spark/jdk-11.0.2"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+which java
+java --version
+export SPARK_HOME="${HOME}/spark/spark-3.3.2-bin-hadoop3"
+export PATH="${SPARK_HOME}/bin:${PATH}"
+spark-shell
+which spark
+spark --version
+spark-version
+spark-shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+spark-shell
+spark-version
+which spark
+which java
+make add-java 
+which java
+java --version
+make add-java 
+java --version
+make add-java 
+make add-java
+which java
+export JAVA_HOME="${HOME}/spark/jdk-11.0.2"
+which java
+export PATH="${JAVA_HOME}/bin:${PATH}"
+which java
+java --version
+echo java --version
+which java
+make add-java
+source .bashrc
+make add-java
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+make add-java
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+make add-java
+which java
+java --version
+make pyspark-install 
+spark-shell
+export JAVA_HOME="${HOME}/spark/jdk-11.0.2" && export PATH="${JAVA_HOME}/bin:${PATH}" && java --version && which java
+spark-sehll
+spark-shell
+make spark-add 
+spark-shell
+export SPARK_HOME="${HOME}/spark/spark-3.3.2-bin-hadoop3"
+export PATH="${SPARK_HOME}/bin:${PATH}"
+spark-shell
+make spark-add 
+spark-shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+spark-shell
+make spark-add 
+spark-shell
+make java-add 
+spark-shell
+make spark-add 
+spark-shell
+printenv
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+spark-shell
+make
+make java-add
+spark-shell
+make java-install 
+spark-shell
+make spark-install
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+spark-shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+touch .env
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+spark-shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+printenv
+shell-script
+spark-shell

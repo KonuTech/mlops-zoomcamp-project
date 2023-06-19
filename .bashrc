@@ -115,3 +115,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export JAVA_HOME="/home/konradballegro/spark/jdk-11.0.2"
+export PATH="/bin:/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin:/home/konradballegro/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export SPARK_HOME="/home/konradballegro/spark/spark-3.3.2-bin-hadoop3"
+export PATH="/bin:/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin:/home/konradballegro/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export JAVA_HOME="/home/konradballegro/spark/jdk-11.0.2"
+export PATH="/home/konradballegro/spark/jdk-11.0.2/bin:/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin:/bin:/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin:/home/konradballegro/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export SPARK_HOME="/home/konradballegro/spark/spark-3.3.2-bin-hadoop3"
+export PATH="/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/bin:/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin:/bin:/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin:/home/konradballegro/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+source ~/.env
