@@ -143,6 +143,9 @@ class ManufacturerScraper:
         console_logger.info('Appending the data...')
         file_logger.info('Appending the data...')
 
+        # Update self.header_en
+        # self.offers.header_en = self.get_header_en()
+
         filenames = [
             os.path.join(self.path_data_directory, f'{manufacturer.strip()}.csv') for manufacturer in self.manufacturers
         ]
@@ -152,6 +155,7 @@ class ManufacturerScraper:
         for f, filename in enumerate(filenames):
             try:
                 data = pd.read_csv(filename)
+                data.columns = self.offers.header_en
                 combined_data.append(data)
 
             except Exception as e:

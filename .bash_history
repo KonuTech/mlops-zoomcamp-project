@@ -688,3 +688,66 @@ make setup
 spark-shell
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/python3.8
+jupyter notebook
+git status
+git ls -lah notebooks
+ls -lah notebooks
+git status
+git add .bash_history 
+git add .bashrc
+git add .env
+git add Makefile 
+git add mlops-zoomcamp/
+git add notebooks/
+git status
+git commit -m "installed spark"
+git push
+ls
+mkdir flows
+mkdir scripts
+ls
+ls scripts
+mkdir scraper
+cd scripts
+cd scraper
+ls
+ls modules
+ls
+python3 main.py
+pip show lxml
+pipenv shell
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pipenv install lxml
+pwd
+cd /home/konradballegro/scripts/scraper
+ls
+python3 main.py
+cd ..
+cd
+git status
+git add Pipfile 
+git add mlops-zoomcamp/
+git add scripts/
+git commit -m "added scraper"
+git push
+python3 main.py
+cd /home/konradballegro/scripts/scraper
+ls
+python3 main.py
+cd inputs
+ls
+cd header.txt > header_copy.txt
+python3 main.py
+cd ..
+python3 main.py
+cd
+git status
+git add .bash_history 
+git ad mlops-zoomcamp/
+git add mlops-zoomcamp/
+git add scripts
+git status
+git add mlops-zoomcamp/
+git status
+git commit -m "added scraper"
+git push

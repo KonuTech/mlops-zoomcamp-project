@@ -10,33 +10,42 @@ from bs4 import BeautifulSoup
 from utils.logger import console_logger
 from utils.logger import file_logger
 
-
 PATH_DATA = 'data'
-PATH_HEADER_FILE = 'header.txt'
+PATH_HEADER_FILE_PL = 'header_pl.txt'
+PATH_HEADER_FILE_EN = 'header_en.txt'
 MAX_THREADS = 8
 
 
 class OfferScraper:
     """
-    Scraps offers related to manufacturer name
+    Scrapes offers related to manufacturer name
     Args:
         path_data_directory: path to a directory where data will be stored
-        path_header_file: path to file with features
+        path_header_file_pl: path to file with features
     """
 
-    def __init__(self, path_data_directory=PATH_DATA, path_header_file=PATH_HEADER_FILE, max_threads=MAX_THREADS):
-        self.path_header_file = os.path.join(os.getcwd(), 'inputs', path_header_file)
+    def __init__(
+        self,
+        path_data_directory=PATH_DATA,
+        path_header_file_pl=PATH_HEADER_FILE_PL,
+        path_header_file_en=PATH_HEADER_FILE_EN,
+        max_threads=MAX_THREADS
+    ):
         self.path_data_directory = os.path.join(os.getcwd(), 'outputs', path_data_directory)
+        self.path_header_file_pl = os.path.join(os.getcwd(), 'inputs', path_header_file_pl)
+        self.path_header_file_en = os.path.join(os.getcwd(), 'inputs', path_header_file_en)
         self.max_threads = max_threads
-        self.header = self.get_header()
+        self.header_pl = self.get_header(self.path_header_file_pl)
+        self.header_en = self.get_header(self.path_header_file_en)
         self.manufacturer = []
 
-    def get_header(self) -> list:
+    def get_header(self, header_file_path) -> list:
         """
-        Gets a list of column names
+        Gets a list of column names from the given header file path
+        :param header_file_path: path to the header file
         :return: a list of column names
         """
-        with open(self.path_header_file, 'r', encoding='utf-8') as file:
+        with open(header_file_path, 'r', encoding='utf-8') as file:
             header = [x.strip() for x in file.readlines()]
 
         return header
@@ -47,7 +56,7 @@ class OfferScraper:
         :param main_features:   a dictionary of column names and according values
         :return:                a key, value dictionary
         """
-        row = {column: main_features.get(column, None) for column in self.header}
+        row = {column: main_features.get(column, None) for column in self.header_pl}
 
         return row
 
@@ -101,7 +110,7 @@ class OfferScraper:
     def get_offers(self, links: list) -> None:
         """
         Gets a row of data for each offer link per manufacturer
-        :param links: a link to the offer
+        :param links: a list of links to the offers
         :return: None
         """
         max_workers = max(self.max_threads, 1)
@@ -126,7 +135,7 @@ class OfferScraper:
 
     def clear_list(self) -> None:
         """
-        Clears manufacturer list
+        Clears the manufacturer list
         :return: None
         """
         self.manufacturer = []
