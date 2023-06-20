@@ -16,6 +16,8 @@ notebook = "*"
 pylint = "*"
 black = "*"
 isort = "*"
+seaborn = "*"
+ydata-profiling = "*"
 
 [requires]
 python_version = "3.8"
