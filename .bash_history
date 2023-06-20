@@ -751,3 +751,79 @@ git add mlops-zoomcamp/
 git status
 git commit -m "added scraper"
 git push
+python3 /home/konradballegro/scripts/scraper/main.py
+cd /home/konradballegro/scripts/scraper/
+python3 main.py
+cd
+git status
+git add .bash_history 
+git add mlops-zoomcamp/
+git add scripts/
+git status
+git commit -m "scraper - added English header"
+git push
+ls
+cd /home/konradballegro/scripts/scraper/modules/scrapers
+black .
+cd ..
+ls
+cd scrapers/
+ls
+cd ..
+ls
+cd ..
+ls
+python3 main.py
+cd /home/konradballegro/scripts/scraper/modules/scrapers
+ls
+pylint .
+isort .
+pylint .
+cd ..
+ls
+python3 main.py
+cd
+git status
+git add scripts/
+git commit -m "scraper - update"
+git push
+cd /home/konradballegro/scripts/scraper/modules/scrapers
+ls
+cd ..
+ls
+cd ..
+python3 main.py
+cd
+git status
+git add scripts
+git commit -m "scraper - update"
+git push
+git status
+git add scripts/
+git commit -m "scraper - update"
+git push
+git status
+cd /home/konradballegro/scripts/scraper
+ls
+python3 main.py
+git status
+git add scripts
+cd
+git status
+git add scripts
+git commit -m "scraper - added appending of new rows without duplicates"
+git pus
+git push
+cd /home/konradballegro/scripts/scraper
+ls
+python3 main.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+htop
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+htop
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd /home/konradballegro/scripts/scraper/outputs/data
+ls
+ls -lah
