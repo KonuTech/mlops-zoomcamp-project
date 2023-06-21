@@ -869,3 +869,18 @@ cd outputs/
 ls
 mkdir reports
 htop
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd /home/konradballegro/notebooks/outputs
+ls
+mkdir data
+pip list
+cd
+git status
+git add .bash_history notebooks/regression.ipynb notebooks/variable_selection.ipynb
+git status
+git commit -m "added variable selection"
+git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+htop
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
