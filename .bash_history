@@ -827,3 +827,45 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 cd /home/konradballegro/scripts/scraper/outputs/data
 ls
 ls -lah
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git add Pipfile 
+git add notebooks/
+git commit -m "added notebooks"
+git push
+git status
+git add requirements.txt 
+git add scripts/scraper/inputs/manufacturers.txt
+git status
+git .bash_history
+git add .bash_history
+git commit -m "added notebooks"
+git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd /home/konradballegro/scripts/scraper
+ls
+python3 main.py
+ls
+cd outputs
+ls -lah
+cd data
+ls -lah
+cd
+spark-shell
+jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+pip env install --dev seaborn
+pipenv install --dev seaborn
+pip freeze > requirements.txt
+pipenv install --dev ydata-profiling
+git status
+cd /home/konradballegro/notebooks
+ls
+mkdir ouputs/reports
+ls
+mkdir outputs
+cd outputs/
+ls
+mkdir reports
+htop
