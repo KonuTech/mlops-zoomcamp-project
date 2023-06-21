@@ -18,6 +18,7 @@ black = "*"
 isort = "*"
 seaborn = "*"
 ydata-profiling = "*"
+explainerdashboard = "*"
 
 [requires]
 python_version = "3.8"
