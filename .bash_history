@@ -908,3 +908,57 @@ jupyter notebook
 ls
 pipenv shell
 . /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+htop
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd /home/konradballegro/notebooks/outputs/reports
+ls -lah
+touch test
+ls -lah
+rm test
+ls
+cd /home/konradballegro/notebooks/outputs/models
+ls -lah
+cd /home/konradballegro/notebooks/outputs/reports
+ls -lah
+cd /home/konradballegro/notebooks/outputs/data
+ls -lah
+cd /home/konradballegro/notebooks/outputs/models
+ls -lah
+cd /home/konradballegro/notebooks/outputs/reports
+ls -lah
+/home/konradballegro/notebooks/outputs/models
+ls -lah
+/home/konradballegro/notebooks/outputs/models
+cd //
+cd /home/konradballegro/notebooks/outputs/models
+ls
+ls -lah
+/home/konradballegro/notebooks/outputs/models
+cd /home/konradballegro/notebooks/outputs/models
+ls -lah
+cd
+git status
+git add .bash_history mlops-zoomcamp notebooks/champion_selection.ipynb notebooks/explainer.ipynb notebooks/variable_selection.ipynb 
+git status
+git commit -m "trained a regressor v01"
+git push
+cd /home/konradballegro/notebooks/outputs/models
+ls -lah
+cd /home/konradballegro/notebooks/outputs/reports
+ls -lah
+git add notebooks/explainer_xgb.ipynb notebooks/outputs/reports/xgb_explainer.html
+git status
+cd 
+git status
+git add notebooks/outputs/reports/xgb_explainer.html notebooks/explainer_xgb.ipynb notebooks/outputs/models/ notebooks/outputs/reports/xgb_explainer.html
+git status
+git commit -m "trained a regressor v01"
+git push
+git status
+git add notebooks/outputs/data/offers.csv
+git commit -m "added raw input"
+git push
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
+pipenv shell
