@@ -884,3 +884,27 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 htop
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+htop
+pienv shell
+pipenv shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+git status
+git add .bash_history notebooks/variable_selection.ipynb notebooks/champion_selection.ipynb notebooks/explainer.ipynb notebooks/outputs/data/
+git status
+git commit -m "trained xgboost regressor"
+git push
+pipenv --dev install explainerdashboard
+pipenv install --dev explainerdashboard
+pip list
+pip freeze > requirements.txt
+git status
+git add Pipfile notebooks/champion_selection.ipynb notebooks/explainer.ipynb notebooks/variable_selection.ipynb requirements.txt
+git commit -m "trained diffrent models"
+git push
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
+ls
+pipenv shell
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
