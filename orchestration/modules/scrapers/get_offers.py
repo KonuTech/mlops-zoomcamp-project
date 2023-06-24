@@ -30,13 +30,13 @@ class OfferScraper:
         max_threads=MAX_THREADS,
     ):
         self.path_data_directory = os.path.join(
-            os.getcwd(), "outputs", path_data_directory
+            os.getcwd(), "data", "outputs"
         )
         self.path_header_file_pl = os.path.join(
-            os.getcwd(), "inputs", path_header_file_pl
+            os.getcwd(), "data","inputs", path_header_file_pl
         )
         self.path_header_file_en = os.path.join(
-            os.getcwd(), "inputs", path_header_file_en
+            os.getcwd(), "data","inputs", path_header_file_en
         )
         self.max_threads = max_threads
         self.header_pl = self.get_header(self.path_header_file_pl)

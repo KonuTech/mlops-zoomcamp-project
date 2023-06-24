@@ -1,0 +1,40 @@
+###
+### A complete description of a Prefect Deployment for flow 'otomoto-training-flow'
+###
+name: otomoto-price-prediction
+description: null
+version: f264c3a6e610e2afe4fc7680fe1589d0
+# The work queue that will handle this deployment's runs
+work_queue_name: omoto-price-prediction
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: otomoto-training-flow
+manifest_path: null
+storage: null
+path: /home/konradballegro/orchestration
+entrypoint: otomoto_training.py:otomoto_training_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-06-24T12:18:14.161924+00:00'

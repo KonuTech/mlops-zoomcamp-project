@@ -962,3 +962,48 @@ git push
 . /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
 jupyter notebook
 pipenv shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd orchestration/
+python3 orchestrate_gs.py
+ls -lah
+python3 orchestrate_training.pt
+python3 orchestrate_training.py
+git status
+cd
+git status
+git add .bash_history .prefect/prefect.db notebooks/champion_selection.ipynb notebooks/explainer_xgb.ipynb orchestration/*
+git status
+git reset HEAD~
+git status
+git add orchestration/data/*
+git status
+git add orchestration/models/
+git add orchestration/modules/
+git add orchestration/utils/
+git status
+git add orchestration/orchestrate_training.py
+git add .bash_history notebooks/champion_selection.ipynb notebooks/explainer_xgb.ipynb 
+git commit -m "added orchestrate_training"
+git push
+git pull
+git pull force
+git pull
+git commit -m "added orchestrate_training"
+git push
+git stash
+git pull
+git push
+git stash apply
+git status
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd /home/konradballegro/notebooks/outputs/data
+ls -lah
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+prefect start
+prefect server
+prefect server start
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pipenv shell
