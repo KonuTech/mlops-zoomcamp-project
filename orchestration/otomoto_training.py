@@ -3,7 +3,10 @@ import os
 
 import numpy as np
 import pandas as pd
+import pyspark
 from prefect import flow, task
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, regexp_replace, when
 from sklearn.feature_selection import RFE, RFECV
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import GridSearchCV, ParameterGrid, train_test_split
@@ -49,20 +52,16 @@ def download_offers(bucket_name, source_path, destination_path):
 
 @task(retries=0, retry_delay_seconds=2)
 def read_data():
-    import pyspark
-    from pyspark.sql import SparkSession
-    from pyspark.sql.functions import col, regexp_replace, when
-
     spark = (
         SparkSession.builder.master(SPARK_SESSION_SCOPE)
         .appName(SPARK_SESSION_NAME)
         .getOrCreate()
     )
 
-    df = spark.read.option("header", "true").option("inferSchema", "True").csv(OFFERS)
+    return spark.read.option("header", "true").option("inferSchema", "True").csv(OFFERS)
 
-    selected_features = SELECTED_FEATURES
 
+def filter_data(df):
     df_filtered = df.select(
         col("Price").cast("float").alias("Price"),
         "Offer from",
@@ -179,12 +178,14 @@ def read_data():
     X_train["Mileage"] = subset_scaled[:, 0]
     X_train["Power"] = subset_scaled[:, 1]
 
-    # corr_matrix = X_train.corr(method="spearman").abs()
-    # upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(np.bool))
-    # to_drop = [column for column in upper.columns if any(upper[column] > 0.90)]
-    # X_train = X_train.drop(to_drop, axis=1)
-    # X_val = X_val.drop(to_drop, axis=1)
-    # X_test = X_test.drop(to_drop, axis=1)
+    corr_matrix = X_train.corr(method="spearman").abs()
+    upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(np.bool))
+    to_drop = [column for column in upper.columns if any(upper[column] > 0.90)]
+    X_train = X_train.drop(to_drop, axis=1)
+    X_val = X_val.drop(to_drop, axis=1)
+    X_test = X_test.drop(to_drop, axis=1)
+
+    selected_features = SELECTED_FEATURES
 
     X_train = X_train[selected_features]
     X_val = X_val[selected_features]
@@ -194,13 +195,6 @@ def read_data():
     regressors.update({"XGBoost": XGBRegressor(n_jobs=-1)})
 
     parameters = {}
-
-    # parameters.update({"XGBoost": {"n_estimators": [100, 200],
-    #                             "max_depth": [3, 5, 8],
-    #                             "learning_rate": [0.01, 0.1],
-    #                             "subsample": [0.5, 0.8],
-    #                             "colsample_bytree": [0.5, 0.8]}})
-
     parameters.update(
         {
             "XGBoost": {
@@ -214,12 +208,10 @@ def read_data():
     )
 
     results = {}
-
     for regressor_label, regressor in regressors.items():
         print("\n" + f"Teraz trenuje: {regressor_label}")
 
         steps = [("regressor", regressor)]
-
         pipeline = Pipeline(steps=steps, verbose=1)
 
         param_grid = parameters[regressor_label]  # Access the parameter grid correctly
@@ -235,14 +227,12 @@ def read_data():
         )
 
         gscv.fit(X_train, np.ravel(y_train))
-
         best_params = gscv.best_params_
         best_score = gscv.best_score_
 
         regressor.set_params(**best_params)
 
         y_pred = gscv.predict(X_val)
-
         scoring = mean_squared_error(y_val, y_pred)
 
         result = {
@@ -261,10 +251,11 @@ def read_data():
     # Fit the regressor to the training data
     model.fit(X_train, y_train)
 
-    # model = XGBRegressor()
+    # loading saved model
     model.load_model(MODEL_PATH)
     y_pred = model.predict(X_test)
 
+    # scoring
     mse = mean_squared_error(y_test, y_pred)
     r2 = r2_score(y_test, y_pred)
 
@@ -280,7 +271,8 @@ def otomoto_training_flow():
         destination_path=os.path.join(DESTINATION_PATH, FILE_NAME),
     )
 
-    read_data()
+    data_input = read_data()
+    filter_data(df=data_input)
 
 
 if __name__ == "__main__":
