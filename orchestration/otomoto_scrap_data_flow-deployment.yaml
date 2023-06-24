@@ -1,0 +1,40 @@
+###
+### A complete description of a Prefect Deployment for flow 'otomoto-scrap-data-flow'
+###
+name: otomoto-scrap-data
+description: null
+version: 348bf84bc2fadd9667873e6aeee33ad3
+# The work queue that will handle this deployment's runs
+work_queue_name: otomoto-scrap-data
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: otomoto-scrap-data-flow
+manifest_path: null
+storage: null
+path: /home/konradballegro/orchestration
+entrypoint: otomoto_scrap_data.py:otomoto_scrap_data_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-06-24T14:37:37.730865+00:00'
