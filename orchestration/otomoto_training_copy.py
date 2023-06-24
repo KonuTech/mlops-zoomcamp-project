@@ -1,4 +1,3 @@
-import json
 import os
 
 import numpy as np
@@ -15,34 +14,14 @@ os.environ[
     "GOOGLE_APPLICATION_CREDENTIALS"
 ] = "/home/konradballegro/.ssh/ny-rides-konrad-b5129a6f2e66.json"
 
-with open("/home/konradballegro/orchestration/config/config.json") as json_file:
-    config = json.load(json_file)
-    BUCKET_NAME = config["BUCKET_NAME"]
-    SOURCE_PATH = config["SOURCE_PATH"]
-    DESTINATION_PATH = config["DESTINATION_PATH"]
-    FILE_NAME = config["FILE_NAME"]
-    SPARK_SESSION_SCOPE = config["SPARK_SESSION_SCOPE"]
-    SPARK_SESSION_NAME = config["SPARK_SESSION_NAME"]
-    MODEL_PATH = config["MODEL_PATH"]
-    OFFERS = config["OFFERS"]
-    OFFERS_FILTERED = config["OFFERS_FILTERED"]
-    SELECTED_FEATURES = config["SELECTED_FEATURES"]
-    DISTINCT_COLUMNS = config["DISTINCT_COLUMNS"]
-    COLUMNS_TO_DROP = config["COLUMNS_TO_DROP"]
-    DOOR_COLUMNS = config["DOOR_COLUMNS"]
-    BODY_COLUMNS = config["BODY_COLUMNS"]
-    FUEL_COLUMNS = config["FUEL_COLUMNS"]
-    BRAND_COLUMNS = config["BRAND_COLUMNS"]
-    YEAR_COLUMNS = config["YEAR_COLUMNS"]
 
-
-# Copy offercs.csv from GCP bucket to VM
+# Copy offers.csv from GCP bucket to VM
 @task(retries=0, retry_delay_seconds=2)
 def download_offers(bucket_name, source_path, destination_path):
     from google.cloud import storage
 
     storage_client = storage.Client()
-    bucket = storage_client.bucket(BUCKET_NAME)
+    bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(source_path)
     blob.download_to_filename(destination_path)
 
@@ -54,14 +33,40 @@ def read_data():
     from pyspark.sql.functions import col, regexp_replace, when
 
     spark = (
-        SparkSession.builder.master(SPARK_SESSION_SCOPE)
-        .appName(SPARK_SESSION_NAME)
+        SparkSession.builder.master("local[*]")
+        .appName("otomoto_preprocessing")
         .getOrCreate()
     )
 
-    df = spark.read.option("header", "true").option("inferSchema", "True").csv(OFFERS)
+    df = (
+        spark.read.option("header", "true")
+        .option("inferSchema", "True")
+        .csv("/home/konradballegro/orchestration/data/inputs/offers.csv")
+    )
 
-    selected_features = SELECTED_FEATURES
+    selected_features = [
+        "Mileage",
+        "Power",
+        "Offer_from_Osoby_prywatnej",
+        "Vehicle_brand_Mercedes-Benz",
+        "Gearbox_Manualna",
+        "Number_of_doors_2",
+        # "Number_of_doors_3",
+        "Number_of_doors_5",
+        "Fuel_type_Benzyna",
+        "Fuel_type_Benzyna+LPG",
+        "Fuel_type_Hybryda",
+        "Body_type_SUV",
+        "Body_type_Minivan",
+        "Body_type_Coupe",
+        # "price_per_mileage",
+        # "power_to_price_ratio",
+        # "brand_ratio",
+        # "production_year_category",
+        # "fuel_type_ratio",
+        # "body_type_ratio",
+        # "door_number_ratio",
+    ]
 
     df_filtered = df.select(
         col("Price").cast("float").alias("Price"),
@@ -101,7 +106,16 @@ def read_data():
         & (df["Number of doors"].isNotNull())
     )
 
-    distinct_columns = DISTINCT_COLUMNS
+    distinct_columns = [
+        "Offer from",
+        "Condition",
+        "Vehicle brand",
+        "Year of production",
+        "Fuel type",
+        "Gearbox",
+        "Body type",
+        "Number of doors",
+    ]
 
     for column in distinct_columns:
         distinct_values = (
@@ -113,8 +127,20 @@ def read_data():
                 column_name, when(df_filtered[column] == value, 1).otherwise(0)
             )
 
-    columns_to_drop = COLUMNS_TO_DROP
-
+    columns_to_drop = [
+        "Offer from",
+        "Condition",
+        "Vehicle brand",
+        "Vehicle model",
+        "Year of production",
+        "Fuel type",
+        "Gearbox",
+        "Body type",
+        "Number of doors",
+        "URL path",
+        "ID",
+        "Epoch",
+    ]
     df_filtered = df_filtered.drop(*columns_to_drop).filter(
         df_filtered["Price"].isNotNull()
     )
@@ -129,11 +155,112 @@ def read_data():
     df_pandas["power_to_price_ratio"] = df_pandas["Power"] / df_pandas["Price"]
 
     # Number of Brands
-    brand_columns = BRAND_COLUMNS
+    brand_columns = [
+        "Vehicle_brand_Infiniti",
+        "Vehicle_brand_Lexus",
+        "Vehicle_brand_Jaguar",
+        "Vehicle_brand_Maserati",
+        "Vehicle_brand_Jeep",
+        "Vehicle_brand_Lancia",
+        "Vehicle_brand_Kia",
+        "Vehicle_brand_Hyundai",
+        "Vehicle_brand_Honda",
+        "Vehicle_brand_Lamborghini",
+        "Vehicle_brand_Ligier",
+        "Vehicle_brand_Isuzu",
+        "Vehicle_brand_Land_Rover",
+        "Vehicle_brand_Mercedes-Benz",
+        "Vehicle_brand_McLaren",
+        "Vehicle_brand_Lada",
+        "Vehicle_brand_Iveco",
+        "Vehicle_brand_Mazda",
+        "Vehicle_brand_Maybach",
+        "Vehicle_brand_Peugeot",
+        "Vehicle_brand_Mitsubishi",
+        "Vehicle_brand_Microcar",
+        "Vehicle_brand_MINI",
+        "Vehicle_brand_Opel",
+        "Vehicle_brand_Polonez",
+        "Vehicle_brand_Porsche",
+        "Vehicle_brand_Nissan",
+        "Vehicle_brand_Tarpan",
+        "Vehicle_brand_Rover",
+        "Vehicle_brand_Rolls-Royce",
+        "Vehicle_brand_Tata",
+        "Vehicle_brand_Saab",
+        "Vehicle_brand_SsangYong",
+        "Vehicle_brand_Seat",
+        "Vehicle_brand_Renault",
+        "Vehicle_brand_Tesla",
+        "Vehicle_brand_Suzuki",
+        "Vehicle_brand_Smart",
+        "Vehicle_brand_Skoda",
+        "Vehicle_brand_Toyota",
+        "Vehicle_brand_Syrena",
+        "Vehicle_brand_Subaru",
+        "Vehicle_brand_Volkswagen",
+        "Vehicle_brand_Żuk",
+        "Vehicle_brand_Volvo",
+        "Vehicle_brand_RAM",
+        "Vehicle_brand_Cupra",
+        "Vehicle_brand_Abarth",
+        "Vehicle_brand_Wartburg",
+        "Vehicle_brand_Alpine",
+        "Vehicle_brand_DS_Automobiles",
+        "Vehicle_brand_Inny",
+    ]
     df_pandas["brand_ratio"] = df_pandas[brand_columns].sum(axis=1) / len(brand_columns)
 
     # Production Year Category
-    # year_columns = YEAR_COLUMNS
+    # year_columns = [
+    #     "Year_of_production_2016",
+    #     "Year_of_production_2012",
+    #     "Year_of_production_2020",
+    #     "Year_of_production_2019",
+    #     "Year_of_production_2017",
+    #     "Year_of_production_2014",
+    #     "Year_of_production_1984",
+    #     "Year_of_production_2013",
+    #     "Year_of_production_2005",
+    #     "Year_of_production_2000",
+    #     "Year_of_production_2002",
+    #     "Year_of_production_2018",
+    #     "Year_of_production_2009",
+    #     "Year_of_production_1995",
+    #     "Year_of_production_2006",
+    #     "Year_of_production_2004",
+    #     "Year_of_production_2011",
+    #     "Year_of_production_1992",
+    #     "Year_of_production_2022",
+    #     "Year_of_production_2008",
+    #     "Year_of_production_1999",
+    #     "Year_of_production_1994",
+    #     "Year_of_production_2007",
+    #     "Year_of_production_2023",
+    #     "Year_of_production_2021",
+    #     "Year_of_production_2015",
+    #     "Year_of_production_1998",
+    #     "Year_of_production_2001",
+    #     "Year_of_production_2010",
+    #     "Year_of_production_2003",
+    #     "Year_of_production_1991",
+    #     "Year_of_production_1987",
+    #     "Year_of_production_1989",
+    #     "Year_of_production_1961",
+    #     "Year_of_production_1997",
+    #     "Year_of_production_1996",
+    #     "Year_of_production_1986",
+    #     "Year_of_production_1993",
+    #     "Year_of_production_1990",
+    #     "Year_of_production_1982",
+    #     "Year_of_production_1981",
+    #     "Year_of_production_1957",
+    #     "Year_of_production_1978",
+    #     "Year_of_production_1974",
+    #     "Year_of_production_1983",
+    #     "Year_of_production_1985",
+    #     "Year_of_production_1979",
+    # ]
     # df_pandas["production_year_category"] = pd.cut(
     #     df_pandas[year_columns].sum(axis=1),
     #     bins=[1950, 1990, 2000, 2010, 2025],
@@ -141,24 +268,49 @@ def read_data():
     # )
 
     # Fuel Type Count
-    fuel_columns = FUEL_COLUMNS
+    fuel_columns = [
+        "Fuel_type_Benzyna",
+        "Fuel_type_Benzyna+LPG",
+        "Fuel_type_Diesel",
+        "Fuel_type_Elektryczny",
+        "Fuel_type_Hybryda",
+    ]
     df_pandas["fuel_type_ratio"] = df_pandas[fuel_columns].sum(axis=1) / len(
         fuel_columns
     )
 
     # Body Type Count
-    body_columns = BODY_COLUMNS
+    body_columns = [
+        "Body_type_Kabriolet",
+        "Body_type_SUV",
+        "Body_type_Sedan",
+        "Body_type_Auta_małe",
+        "Body_type_Coupe",
+        "Body_type_Minivan",
+        "Body_type_Kompakt",
+        "Body_type_Auta_miejskie",
+        "Body_type_Kombi",
+    ]
     df_pandas["body_type_ratio"] = df_pandas[body_columns].sum(axis=1) / len(
         body_columns
     )
 
     # Door Count
-    door_columns = DOOR_COLUMNS
+    door_columns = [
+        "Number_of_doors_3",
+        "Number_of_doors_5",
+        "Number_of_doors_4",
+        "Number_of_doors_2",
+        "Number_of_doors_6",
+    ]
     df_pandas["door_number_ratio"] = df_pandas[door_columns].sum(axis=1) / len(
         door_columns
     )
 
-    df_pandas.to_csv(OFFERS_FILTERED, index=False)
+    df_pandas.to_csv(
+        "/home/konradballegro/orchestration/data/outputs/offers_filtered.csv",
+        index=False,
+    )
 
     y = df_pandas["Price"].to_numpy().reshape(-1, 1)
     transformer = QuantileTransformer(output_distribution="normal")
@@ -262,7 +414,7 @@ def read_data():
     model.fit(X_train, y_train)
 
     # model = XGBRegressor()
-    model.load_model(MODEL_PATH)
+    model.load_model("/home/konradballegro/orchestration/models/xgb_copy.model")
     y_pred = model.predict(X_test)
 
     mse = mean_squared_error(y_test, y_pred)
@@ -274,10 +426,15 @@ def read_data():
 
 @flow
 def otomoto_training_flow():
+    bucket_name = "mlops-zoomcamp"
+    source_path = "data/training/outputs"
+    destination_path = "/home/konradballegro/orchestration/data/inputs"
+    file_name = "offers.csv"
+
     download_offers(
-        bucket_name=BUCKET_NAME,
-        source_path=os.path.join(SOURCE_PATH, FILE_NAME),
-        destination_path=os.path.join(DESTINATION_PATH, FILE_NAME),
+        bucket_name=bucket_name,
+        source_path=f"{source_path}/{file_name}",
+        destination_path=f"{destination_path}/{file_name}",
     )
 
     read_data()
