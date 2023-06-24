@@ -1,0 +1,40 @@
+###
+### A complete description of a Prefect Deployment for flow 'otomoto-scraping-flow'
+###
+name: otomoto-scraping
+description: null
+version: 1dc8f90a01bcc511a7cd0777abfec161
+# The work queue that will handle this deployment's runs
+work_queue_name: otomoto-scraping
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: otomoto-scraping-flow
+manifest_path: null
+storage: null
+path: /home/konradballegro/orchestration
+entrypoint: otomoto_scraping.py:otomoto_scraping_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-06-24T16:00:38.527157+00:00'
