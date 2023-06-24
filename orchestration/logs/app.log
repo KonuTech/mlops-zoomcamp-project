@@ -1379,3 +1379,85 @@
 2023-06-24 15:03:58,938 - [file_logger] - [INFO] - Manufacturer has: 1 subpages
 2023-06-24 15:03:58,940 - [file_logger] - [INFO] - Scraping page: 1
 2023-06-24 15:04:47,236 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-24 16:00:38,353 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-24 16:01:07,384 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-24 16:01:10,145 - [file_logger] - [INFO] - Starting scraping cars...
+2023-06-24 16:01:10,146 - [file_logger] - [INFO] - Start of scraping the manufacturer: abarth
+2023-06-24 16:01:10,982 - [file_logger] - [INFO] - Manufacturer has: 2 subpages
+2023-06-24 16:01:10,984 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-24 16:01:11,380 - [file_logger] - [INFO] - Found 32 links
+2023-06-24 16:01:11,382 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-stan-idealny-ID6FBXcO.html
+2023-06-24 16:01:11,382 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-595c-cabrio-giallo-modena-1-wl-salon-pl-serwis-aso-bezwypadkowy-ID6FBQA2.html
+2023-06-24 16:01:11,387 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-abarth-500-cabrio-ID6FBupW.html
+2023-06-24 16:01:11,397 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-punto-evo-abarth-punto-evo-super-sport-sabelty-ID6FBomo.html
+2023-06-24 16:01:11,401 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-1-4-multiair-abarth-klimatronic-tempomat-ID6FzIeB.html
+2023-06-24 16:01:11,402 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-695-fiat-695-1-4-16v-180-km-turbo-abarth-rivale-ID6FyKzF.html
+2023-06-24 16:01:11,403 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-1-4t-155-km-zadbany-nowy-rozrzad-po-duzym-serwisie-dwa-kpl-opon-ID6FB2Hl.html
+2023-06-24 16:01:11,405 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-695-abarth-500-cabrio-695-c-rivale-175th-anniversary-manual-3400km-ID6FvsaO.html
+2023-06-24 16:01:12,809 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-pista-200-km-doinwestowany-ID6FA4DQ.html
+2023-06-24 16:01:12,840 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-gwarancja-serwis-ID6Fz5tZ.html
+2023-06-24 16:01:13,134 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-competizione-1-4-t-jet-180-km-polski-salon-ID6Fyza5.html
+2023-06-24 16:01:13,203 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-do-sprzedania-abarth-595-turismo-ID6F7oJe.html
+2023-06-24 16:01:13,280 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-turismo-4700-przebiegu-ID6FeQ8t.html
+2023-06-24 16:01:13,439 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-1-4-benzynamanualklimaserwisgwarancja-w-cenie-ID6FdK6x.html
+2023-06-24 16:01:13,442 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-punto-evo-ID6FydpZ.html
+2023-06-24 16:01:13,444 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-salon-polska-bezwypadkowy-ID6Fxe60.html
+2023-06-24 16:01:13,774 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-ID6FfKu7.html
+2023-06-24 16:01:13,870 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-cabrio-ID6Fyo3r.html
+2023-06-24 16:01:14,372 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-fiat-abarth-punto-ID6FAGU0.html
+2023-06-24 16:01:14,428 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-1-4-16v-t-jet-145-km-scorpione-nowy-w-cenie-uzywanego-ID6ECeqs.html
+2023-06-24 16:01:14,666 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-ID6FuSjK.html
+2023-06-24 16:01:15,037 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-turbo-180-km-panorama-skora-beats-by-dre-bezwypadkowy-ID6FuTun.html
+2023-06-24 16:01:15,039 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-abarth-595-automat-165-km-29216-km-ID6EtHlV.html
+2023-06-24 16:01:15,069 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-abarth-fiat-punto-grande-1-4t-155km-ID6FyJp7.html
+2023-06-24 16:01:15,432 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-competizione-ID6F80Xn.html
+2023-06-24 16:01:15,639 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-turismo-160km-ID6FyXIK.html
+2023-06-24 16:01:16,053 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-monster-yamaha-1-of-2000-panorama-navi-alcantara-ID6Fyb8H.html
+2023-06-24 16:01:16,096 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-super-stan-faktura-vat-23-ID6Fsu4Q.html
+2023-06-24 16:01:16,210 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-abarth-500c-cabrio-automat-maly-przebieg-bogate-wyposazenie-ID6Fvcbd.html
+2023-06-24 16:01:16,691 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-ID6FzMQG.html
+2023-06-24 16:01:16,693 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-sprzedam-abarth-500-155km-ID6FpmOr.html
+2023-06-24 16:01:16,730 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-polski-salon-serwis-wyjatkowy-stan-ID6FxZOT.html
+2023-06-24 16:01:18,060 - [file_logger] - [INFO] - Scraping page: 2
+2023-06-24 16:01:18,449 - [file_logger] - [INFO] - Found 8 links
+2023-06-24 16:01:18,451 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-pista-krajowy-ID6Fu69A.html
+2023-06-24 16:01:18,452 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-akrapovic-ID6Fsaht.html
+2023-06-24 16:01:18,454 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-ladny-abarcik-595-ID6F3Q20.html
+2023-06-24 16:01:18,456 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-terka-cabrio-fiat-500-2016-ID6F5yw3.html
+2023-06-24 16:01:18,456 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-abarth-500c-automat-cabrio-ID6FB0yh.html
+2023-06-24 16:01:18,461 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-124-abarth-124-spider-ID6Foq8b.html
+2023-06-24 16:01:18,466 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-124-cabrio-automat-stan-idealny-ID6Fya91.html
+2023-06-24 16:01:18,476 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-fiat-500-abarth-ID6FAoJa.html
+2023-06-24 16:01:20,569 - [file_logger] - [INFO] - Saving abarth offers
+2023-06-24 16:01:20,570 - [file_logger] - [INFO] - Found 40 offers
+2023-06-24 16:01:20,623 - [file_logger] - [INFO] - Saved abarth offers
+2023-06-24 16:01:20,626 - [file_logger] - [INFO] - End of scraping the manufacturer: abarth
+2023-06-24 16:01:20,629 - [file_logger] - [INFO] - Start of scraping the manufacturer: acura
+2023-06-24 16:01:21,183 - [file_logger] - [ERROR] - Error list index out of range while searching for last_page_num
+2023-06-24 16:01:21,184 - [file_logger] - [INFO] - Manufacturer has: 1 subpages
+2023-06-24 16:01:21,186 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-24 16:01:21,633 - [file_logger] - [INFO] - Found 15 links
+2023-06-24 16:01:21,635 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-3-5-benzyna-310-moc-zamiana-ID6FAZEa.html
+2023-06-24 16:01:21,635 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-piekna-acura-rdx-w-perfekcyjnym-stanie-wersja-a-spec-ID6Fbe1r.html
+2023-06-24 16:01:21,638 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-acura-mdx-awd-a-spec-bezwypadkowy-ID6Fyw3a.html
+2023-06-24 16:01:21,639 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tsx-acura-tsx-2-4-l-benzyna-gaz-2005-rok-ID6FAdUF.html
+2023-06-24 16:01:21,642 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-tlx-ID6FAfNx.html
+2023-06-24 16:01:21,645 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-wersja-technology-7-osob-gaz-lpg-4x4-sw-awd-ID6EAv6f.html
+2023-06-24 16:01:21,647 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rl-lpg-ID6Fz2sE.html
+2023-06-24 16:01:21,653 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-werja-technology-gaz-lpg-4x4-3-7-v6-300-km-7osob-automat-navi-ID6ESl2x.html
+2023-06-24 16:01:23,025 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-acura-tlx-fv23-ID6EPQgm.html
+2023-06-24 16:01:23,028 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-nsx-2020-acura-nsx-hybryda-4x4-automat-ID6FAfQI.html
+2023-06-24 16:01:23,363 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-integra-2023-acura-integra-a-spec-benzyna-automat-ID6FtmyE.html
+2023-06-24 16:01:23,384 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-acura-rdx-ID6EUWr3.html
+2023-06-24 16:01:23,458 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-rezerwacja-kamery-360-blis-acc-3xklima-ID6FzgPT.html
+2023-06-24 16:01:23,481 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-sprzedam-acure-tl-2008r-3-2-automat-gaz-ID6Fz71c.html
+2023-06-24 16:01:23,529 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-advancetech-ID6Fz6LX.html
+2023-06-24 16:01:24,787 - [file_logger] - [INFO] - Saving acura offers
+2023-06-24 16:01:24,788 - [file_logger] - [INFO] - Found 15 offers
+2023-06-24 16:01:24,826 - [file_logger] - [INFO] - Saved acura offers
+2023-06-24 16:01:24,827 - [file_logger] - [INFO] - End of scraping the manufacturer: acura
+2023-06-24 16:01:24,830 - [file_logger] - [INFO] - End of scraping manufacturers
+2023-06-24 16:01:24,831 - [file_logger] - [INFO] - Appending the data...
+2023-06-24 16:01:24,882 - [file_logger] - [INFO] - Appended data saved as offers.csv
+2023-06-24 16:03:33,770 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-24 16:05:04,958 - [file_logger] - [INFO] - Initializing a scraper

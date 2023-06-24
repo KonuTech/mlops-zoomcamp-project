@@ -1007,3 +1007,8 @@ prefect server start
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 . /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
 pipenv shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+ls
+cd orchestration/
+ls -lah
