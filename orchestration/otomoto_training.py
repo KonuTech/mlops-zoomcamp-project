@@ -299,13 +299,17 @@ def hyperparameters_gridsearch(
         x_scaled_train = scaler.transform(x_train)
         y_transformed_train = y_train.reshape(-1, 1)
 
-        gscv.fit(x_scaled_train, np.ravel(y_transformed_train))
+        selected_feature_indices = [x_train.columns.get_loc(feature) for feature in selected_features]
+        x_train_selected = x_scaled_train[:, selected_feature_indices]
+
+        gscv.fit(x_train_selected, np.ravel(y_transformed_train))
         best_params = gscv.best_params_
         best_score = gscv.best_score_
 
         regressor.set_params(**best_params)
 
-        y_pred = gscv.predict(x_scaled_val)
+        x_val_selected = x_scaled_val[:, selected_feature_indices]
+        y_pred = gscv.predict(x_val_selected)
         scoring = r2_score(y_transformed_val, y_pred)
 
         hyperparameters = {
@@ -327,39 +331,46 @@ def hyperparameters_gridsearch(
 
 
 @task(retries=0, retry_delay_seconds=2)
-def model_training(x_train, y_train, hyperparameters, scaler):
+def model_training(x_train, y_train, selected_features, hyperparameters, scaler):
     logger.info("Training the model...")
     x_scaled_train = scaler.transform(x_train)
     y_transformed_train = y_train.reshape(-1, 1)
 
+    selected_feature_indices = [x_train.columns.get_loc(feature) for feature in selected_features]
+    x_train_selected = x_scaled_train[:, selected_feature_indices]
+
     model = XGBRegressor(**hyperparameters["XGBoost"]["Best Parameters"])
-    model.fit(x_scaled_train, np.ravel(y_transformed_train))
+    model.fit(x_train_selected, np.ravel(y_transformed_train))
 
     logger.info("Model training completed")
     return model
 
 
 @task(retries=0, retry_delay_seconds=2)
-def model_evaluation(model, x_test, y_test, scaler):
+def model_evaluation(model, x_test, y_test, selected_features, scaler):
     logger.info("Evaluating the model...")
 
     # Apply the same transformations to the test data using the pipeline
     x_scaled_test = scaler.transform(x_test)
 
+    selected_feature_indices = [x_test.columns.get_loc(feature) for feature in selected_features]
+    x_test_selected = x_scaled_test[:, selected_feature_indices]
+
     # Reshape y_test to match the expected format
     y_transformed_test = y_test.reshape(-1, 1)
 
     # Predict using the trained model in the pipeline
-    y_pred = model.predict(x_scaled_test)
+    y_pred = model.predict(x_test_selected)
 
     # Inverse transform the predicted values using the target scaler
     # y_pred = pipeline.named_steps["transformer"].(y_pred_transformed)
-    pd.DataFrame(x_scaled_test).to_csv(
-        "/home/konradballegro/notebooks/outputs/data/x_scaled_test.csv",
+    pd.DataFrame(x_test_selected).to_csv(
+        "/home/konradballegro/notebooks/outputs/data/x_test_selected.csv",
         index=False,
     )
     pd.DataFrame(y_transformed_test).to_csv(
-        "/home/konradballegro/notebooks/outputs/data/y_transformed_test.csv", index=False
+        "/home/konradballegro/notebooks/outputs/data/y_transformed_test.csv",
+        index=False,
     )
     pd.DataFrame(y_pred).to_csv(
         "/home/konradballegro/notebooks/outputs/data/y_pred.csv", index=False
@@ -444,7 +455,11 @@ def otomoto_training_flow():
 
     # Train the model
     model_trained = model_training(
-        x_train=X_train, y_train=y_train, hyperparameters=hyperparameters, scaler=scaler
+        x_train=X_train,
+        y_train=y_train,
+        selected_features=selected_features,
+        hyperparameters=hyperparameters,
+        scaler=scaler,
     )
 
     # Evaluate the model
@@ -452,6 +467,7 @@ def otomoto_training_flow():
         model=model_trained,
         x_test=X_test,
         y_test=y_test,
+        selected_features=selected_features,
         scaler=scaler,
     )
 
