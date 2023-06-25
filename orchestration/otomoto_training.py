@@ -1,15 +1,18 @@
 import json
+import logging
 import os
+from functools import reduce
 
 import numpy as np
 import pandas as pd
 import pyspark
+from google.cloud import storage
 from prefect import flow, task
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, regexp_replace, when
 from sklearn.feature_selection import RFE, RFECV
 from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.model_selection import GridSearchCV, ParameterGrid, train_test_split
+from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import QuantileTransformer, StandardScaler
 from xgboost import XGBRegressor
@@ -17,61 +20,76 @@ from xgboost import XGBRegressor
 os.environ[
     "GOOGLE_APPLICATION_CREDENTIALS"
 ] = "/home/konradballegro/.ssh/ny-rides-konrad-b5129a6f2e66.json"
+CONFIG_PATH = "/home/konradballegro/orchestration/config/config.json"
 
-with open("/home/konradballegro/orchestration/config/config.json") as json_file:
+with open(CONFIG_PATH) as json_file:
     config = json.load(json_file)
-    BUCKET_NAME = config["BUCKET_NAME"]
-    SOURCE_PATH = config["SOURCE_PATH"]
-    DESTINATION_PATH = config["DESTINATION_PATH"]
-    FILE_NAME = config["FILE_NAME"]
-    SPARK_SESSION_SCOPE = config["SPARK_SESSION_SCOPE"]
-    SPARK_SESSION_NAME = config["SPARK_SESSION_NAME"]
-    HEADER = config["HEADER"]
-    INFER_SCHEMA = config["INFER_SCHEMA"]
-    OFFERS_PATH = config["OFFERS_PATH"]
-    OFFERS_PREPROCESSED_PATH = config["OFFERS_PREPROCESSED_PATH"]
-    TARGET_NAME = config["TARGET_NAME"]
-    TARGET_OUTPUT_DISTRIBUTION = config["TARGET_OUTPUT_DISTRIBUTION"]
-    SELECTED_FEATURES = config["SELECTED_FEATURES"]
-    DISTINCT_COLUMNS = config["DISTINCT_COLUMNS"]
-    COLUMNS_TO_DROP = config["COLUMNS_TO_DROP"]
-    DOOR_COLUMNS = config["DOOR_COLUMNS"]
-    BODY_COLUMNS = config["BODY_COLUMNS"]
-    FUEL_COLUMNS = config["FUEL_COLUMNS"]
-    BRAND_COLUMNS = config["BRAND_COLUMNS"]
-    YEAR_COLUMNS = config["YEAR_COLUMNS"]
-    REMAINDER_SIZE = config["REMAINDER_SIZE"]
-    TEST_SIZE = config["TEST_SIZE"]
-    RANDOM_STATE = config["RANDOM_STATE"]
-    MODEL_PATH = config["MODEL_PATH"]
-    REGRESSOR_PARAMETERS = config["REGRESSOR_PARAMETERS"]
-    METRIC = config["METRIC"]
+
+# Extracting config variables
+BUCKET_NAME = config["BUCKET_NAME"]
+SOURCE_PATH = config["SOURCE_PATH"]
+DESTINATION_PATH = config["DESTINATION_PATH"]
+FILE_NAME = config["FILE_NAME"]
+SPARK_SESSION_SCOPE = config["SPARK_SESSION_SCOPE"]
+SPARK_SESSION_NAME = config["SPARK_SESSION_NAME"]
+HEADER = config["HEADER"]
+INFER_SCHEMA = config["INFER_SCHEMA"]
+OFFERS_PATH = config["OFFERS_PATH"]
+OFFERS_PREPROCESSED_PATH = config["OFFERS_PREPROCESSED_PATH"]
+TARGET_NAME = config["TARGET_NAME"]
+TARGET_OUTPUT_DISTRIBUTION = config["TARGET_OUTPUT_DISTRIBUTION"]
+SELECTED_FEATURES = config["SELECTED_FEATURES"]
+DISTINCT_COLUMNS = config["DISTINCT_COLUMNS"]
+COLUMNS_TO_DROP = config["COLUMNS_TO_DROP"]
+DOOR_COLUMNS = config["DOOR_COLUMNS"]
+BODY_COLUMNS = config["BODY_COLUMNS"]
+FUEL_COLUMNS = config["FUEL_COLUMNS"]
+BRAND_COLUMNS = config["BRAND_COLUMNS"]
+YEAR_COLUMNS = config["YEAR_COLUMNS"]
+REMAINDER_SIZE = config["REMAINDER_SIZE"]
+TEST_SIZE = config["TEST_SIZE"]
+RANDOM_STATE = config["RANDOM_STATE"]
+MODEL_PATH = config["MODEL_PATH"]
+REGRESSOR_GRID = config["REGRESSOR_GRID"]
+METRIC = config["METRIC"]
+
+# Create logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+
+# Create logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
 
 # Copy offercs.csv from GCP bucket to VM
 @task(retries=0, retry_delay_seconds=2)
 def offers_download(bucket_name, source_path, destination_path):
-    from google.cloud import storage
-
+    logger.info(f"Downloading file from bucket '{bucket_name}' to '{destination_path}'")
     storage_client = storage.Client()
-    bucket = storage_client.bucket(BUCKET_NAME)
+    bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(source_path)
     blob.download_to_filename(destination_path)
+    logger.info("File downloaded successfully")
 
 
 @task(retries=0, retry_delay_seconds=2)
-def spark_session_create(spark_session_scope, spark_session_name):
+def session_create(spark_session_scope, spark_session_name):
+    logger.info("Creating Spark session...")
     session = (
         SparkSession.builder.master(spark_session_scope)
         .appName(spark_session_name)
         .getOrCreate()
     )
-
+    logger.info("Spark session created")
     return session
 
 
 @task(retries=0, retry_delay_seconds=2)
 def data_read(spark_session, header, infer_schema, file_name):
+    logger.info(f"Reading data from file: '{file_name}'")
     return (
         spark_session.read.option("header", header)
         .option("inferSchema", infer_schema)
@@ -81,29 +99,31 @@ def data_read(spark_session, header, infer_schema, file_name):
 
 @task(retries=0, retry_delay_seconds=2)
 def data_filter(df):
-    df_filtered = df.filter(
-        (df["Currency"] == "PLN")
-        & (df["Country of origin"] == "Polska")
-        & (df["Accident-free"].isNotNull())
-        & (df["Price"].isNotNull())
-        & (df["Offer from"].isNotNull())
-        & (df["Condition"].isNotNull())
-        & (df["Condition"] == "Używane")
-        & (df["Vehicle brand"].isNotNull())
-        & (df["Year of production"].isNotNull())
-        & (df["Mileage"].isNotNull())
-        & (df["Fuel type"].isNotNull())
-        & (df["Power"].isNotNull())
-        & (df["Gearbox"].isNotNull())
-        & (df["Body type"].isNotNull())
-        & (df["Number of doors"].isNotNull())
-    )
-
-    return df_filtered
+    logger.info("Filtering data...")
+    conditions = [
+        (df["Currency"] == "PLN"),
+        (df["Country of origin"] == "Polska"),
+        df["Accident-free"].isNotNull(),
+        df["Price"].isNotNull(),
+        df["Offer from"].isNotNull(),
+        df["Condition"].isNotNull(),
+        (df["Condition"] == "Używane"),
+        df["Vehicle brand"].isNotNull(),
+        df["Year of production"].isNotNull(),
+        df["Mileage"].isNotNull(),
+        df["Fuel type"].isNotNull(),
+        df["Power"].isNotNull(),
+        df["Gearbox"].isNotNull(),
+        df["Body type"].isNotNull(),
+        df["Number of doors"].isNotNull(),
+    ]
+    logger.info("Data filtered")
+    return df.filter(reduce(lambda a, b: a & b, conditions))
 
 
 @task(retries=0, retry_delay_seconds=2)
-def data_clean(df):
+def data_preprocessing(df):
+    logger.info("Preprocessing data...")
     df_cleaned = df.select(
         col("Price").cast("float").alias("Price"),
         "Offer from",
@@ -125,12 +145,12 @@ def data_clean(df):
         "ID",
         "Epoch",
     )
-
+    logger.info("Data preprocessed")
     return df_cleaned
 
 
 @task(retries=0, retry_delay_seconds=2)
-def features_engineer(
+def features_engineering(
     df,
     distinct_columns,
     columns_to_drop,
@@ -140,6 +160,7 @@ def features_engineer(
     door_columns,
     offers_preprocessed_path,
 ):
+    logger.info("Performing feature engineering...")
     for column in distinct_columns:
         distinct_values = (
             df.select(column).distinct().rdd.flatMap(lambda x: x).collect()
@@ -162,14 +183,6 @@ def features_engineer(
     df_pd["brand_count"] = df_pd[brand_columns].sum(axis=1)
     df_pd["brand_ratio"] = df_pd[brand_columns].sum(axis=1) / len(brand_columns)
 
-    # Production Year Category
-    # year_columns = YEAR_COLUMNS
-    # df_pd["production_year_category"] = pd.cut(
-    #     df_pd[year_columns].sum(axis=1),
-    #     bins=[1950, 1990, 2000, 2010, 2025],
-    #     labels=["Older", "Mid-range", "Newer", "Future"],
-    # )
-
     # Fuel Type Count
     df_pd["fuel_type_count"] = df_pd[fuel_columns].sum(axis=1)
     df_pd["fuel_type_ratio"] = df_pd[fuel_columns].sum(axis=1) / len(fuel_columns)
@@ -183,25 +196,15 @@ def features_engineer(
     df_pd["door_number_ratio"] = df_pd[door_columns].sum(axis=1) / len(door_columns)
 
     df_pd.to_csv(offers_preprocessed_path, index=False)
-
+    logger.info("Feature engineering completed")
     return df_pd
 
 
 @task(retries=0, retry_delay_seconds=2)
-def target_transform(df, target_name, target_output_distribution):
-    y = df[target_name].to_numpy().reshape(-1, 1)
-    transformer = QuantileTransformer(output_distribution=target_output_distribution)
-    y_transformed = transformer.fit_transform(y)
-    y = y_transformed
-
-    return df
-
-
-@task(retries=0, retry_delay_seconds=2)
 def data_split(df, target_name, remainder_size, test_size, random_state):
+    logger.info("Splitting data into train and test sets...")
+
     y = df[target_name].to_numpy().reshape(-1, 1)
-    print("y.min()", y.min())
-    print("y.max()", y.max())
     X = df.loc[:, ~df.columns.isin([target_name])]
     X_train, X_remain, y_train, y_remain = train_test_split(
         X, y, test_size=remainder_size, random_state=random_state
@@ -210,56 +213,67 @@ def data_split(df, target_name, remainder_size, test_size, random_state):
         X_remain, y_remain, test_size=test_size, random_state=random_state
     )
 
+    logger.info("Data split completed")
     return X_train, X_val, X_test, y_train, y_val, y_test
 
 
 @task(retries=0, retry_delay_seconds=2)
-def data_scale(x_train):
-    subset = x_train[["Mileage", "Power"]]
+def feature_selection(x_train, y_train, target_output_distribution):
+    logger.info("Performing feature selection...")
+
     scaler = StandardScaler()
-    subset_scaled = scaler.fit_transform(subset)
-    x_train["Mileage"] = subset_scaled[:, 0]
-    x_train["Power"] = subset_scaled[:, 1]
+    transformer = QuantileTransformer(output_distribution=target_output_distribution)
+    selector = RFECV(
+        estimator=XGBRegressor(random_state=RANDOM_STATE),
+        step=50,
+        cv=5,
+        scoring=METRIC,
+        n_jobs=-1,
+        verbose=1,
+    )
 
-    return x_train
+    pipeline = Pipeline(
+        steps=[
+            ("scaler", scaler),
+            ("transformer", transformer),
+            ("selector", selector),
+        ],
+        verbose=1,
+    )
+
+    x_transformed = x_train.copy()
+    x_transformed[["Mileage", "Power"]] = scaler.fit_transform(
+        x_train[["Mileage", "Power"]]
+    )
+
+    y_transformed = transformer.fit_transform(y_train)
+
+    pipeline.fit(x_transformed, y_transformed)
+
+    selected_features = [
+        feature
+        for feature, selected in zip(
+            x_train.columns, pipeline.named_steps["selector"].support_
+        )
+        if selected
+    ]
+
+    logger.info("Feature selection completed")
+    return pipeline, selected_features
 
 
 @task(retries=0, retry_delay_seconds=2)
-def correlated_drop(x_train, x_val, x_test):
-    corr_matrix = x_train.corr(method="spearman").abs()
-    upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(np.bool))
-    to_drop = [column for column in upper.columns if any(upper[column] > 0.90)]
-    x_train = x_train.drop(to_drop, axis=1)
-    x_val = x_val.drop(to_drop, axis=1)
-    x_test = x_test.drop(to_drop, axis=1)
+def hyperparameters_gridsearch(x_train, y_train, x_val, y_val, regressor_grid, metric):
+    logger.info("Starting hyperparameter grid search...")
 
-    return x_train, x_val, x_test
-
-
-@task(retries=0, retry_delay_seconds=2)
-def features_select(x_train, x_val, x_test, selected_features):
-    x_train = x_train[selected_features]
-    x_val = x_val[selected_features]
-    x_test = x_test[selected_features]
-
-    return x_train, x_val, x_test
-
-
-@task(retries=0, retry_delay_seconds=2)
-def hyperparameters_gridsearch(
-    x_train, y_train, x_val, y_val, regressor_parameters, metric
-):
-    regressors = {}
-    regressors.update({"XGBoost": XGBRegressor(n_jobs=-1)})
-
-    parameters = {}
-    parameters.update(regressor_parameters)
-
+    regressors = {"XGBoost": XGBRegressor(n_jobs=-1)}
+    parameters = regressor_grid
     results = {}
+
     for regressor_label, regressor in regressors.items():
-        print(f"Now training: {regressor_label}")
+        logger.info(f"Now training: {regressor_label}")
         steps = [("regressor", regressor)]
-        pipeline = Pipeline(steps=steps, verbose=1)
+        pipeline = Pipeline(steps=steps)
         param_grid = parameters[regressor_label]
 
         gscv = GridSearchCV(
@@ -268,7 +282,6 @@ def hyperparameters_gridsearch(
             cv=5,
             n_jobs=-1,
             verbose=1,
-            # scoring="neg_root_mean_squared_error",
             scoring=metric,
         )
 
@@ -288,30 +301,61 @@ def hyperparameters_gridsearch(
             "Val": scoring,
         }
 
-        print("Val:", "{:.4f}".format(hyperparameters["Val"]))
+        logger.info(f"Validation results for {regressor_label}:")
+        logger.info(f"  - Best Parameters: {best_params}")
+        logger.info(f"  - Train Score: {best_score:.4f}")
+        logger.info(f"  - Validation Score: {scoring:.4f}")
 
-        results.update({regressor_label: hyperparameters})
+        results[regressor_label] = hyperparameters
 
-        return results
+    logger.info("Hyperparameter grid search completed")
+    return results
 
 
 @task(retries=0, retry_delay_seconds=2)
-def model_train(x_train, y_train, x_test, y_test, hyperparameters):
-    model = XGBRegressor(**hyperparameters["XGBoost"]["Best Parameters"])
+def model_training(x_train, y_train, hyperparameters):
+    logger.info("Training the model...")
 
-    # Fit the regressor to the training data
+    model = XGBRegressor(**hyperparameters["XGBoost"]["Best Parameters"])
     model.fit(x_train, y_train)
 
-    # loading saved model
-    # model.load_model(MODEL_PATH)
-    y_pred = model.predict(x_test)
+    logger.info("Model training completed")
+    return model
 
-    # scoring
-    mse = mean_squared_error(y_test, y_pred)
-    r2 = r2_score(y_test, y_pred)
 
-    print("Mean Squared Error:", mse)
-    print("R2:", r2)
+@task(retries=0, retry_delay_seconds=2)
+def model_evaluation(model, x_test, y_test, pipeline):
+    logger.info("Evaluating the model...")
+    
+    # Apply the same transformations to the test data using the pipeline
+    x_test_transformed = pipeline.named_steps["scaler"].transform(x_test)
+    
+    # Reshape y_test to match the expected format
+    y_test_reshaped = y_test.reshape(-1, 1)
+    
+    # Predict using the trained model in the pipeline
+    y_pred = model.predict(x_test_transformed)
+    
+    # Inverse transform the predicted values using the target scaler
+    # y_pred = pipeline.named_steps["transformer"].(y_pred_transformed)
+
+    # Calculate evaluation metrics
+    mse = mean_squared_error(y_test_reshaped, y_pred)
+    r2 = r2_score(y_test_reshaped, y_pred)
+
+    logger.info(f"MSE: {mse}")
+    logger.info(f"R^2: {r2}")
+    logger.info("Model evaluation completed")
+
+    # Return any evaluation results as needed
+    return mse, r2
+
+
+
+
+@task(retries=0, retry_delay_seconds=2)
+def model_saving(model, model_path):
+    model.save_model(model_path)
 
 
 @flow
@@ -322,7 +366,7 @@ def otomoto_training_flow():
         destination_path=os.path.join(DESTINATION_PATH, FILE_NAME),
     )
 
-    session = spark_session_create(
+    session = session_create(
         spark_session_scope=SPARK_SESSION_SCOPE, spark_session_name=SPARK_SESSION_NAME
     )
 
@@ -335,10 +379,10 @@ def otomoto_training_flow():
 
     data_filtered = data_filter(df=data_input)
 
-    data_cleaned = data_clean(df=data_filtered)
+    data_preprocessed = data_preprocessing(df=data_filtered)
 
-    data_engineered = features_engineer(
-        df=data_cleaned,
+    data_engineered = features_engineering(
+        df=data_preprocessed,
         distinct_columns=DISTINCT_COLUMNS,
         columns_to_drop=COLUMNS_TO_DROP,
         brand_columns=BRAND_COLUMNS,
@@ -348,48 +392,50 @@ def otomoto_training_flow():
         offers_preprocessed_path=OFFERS_PREPROCESSED_PATH,
     )
 
-    data_transformed = target_transform(
-        df=data_engineered,
-        target_name=TARGET_NAME,
-        target_output_distribution=TARGET_OUTPUT_DISTRIBUTION,
-    )
+    # train_data, test_data = data_split(data_engineered, TEST_SIZE, RANDOM_STATE)
 
     X_train, X_val, X_test, y_train, y_val, y_test = data_split(
-        df=data_transformed,
+        df=data_engineered,
         target_name=TARGET_NAME,
         remainder_size=REMAINDER_SIZE,
         test_size=TEST_SIZE,
         random_state=RANDOM_STATE,
     )
 
-    X_train = data_scale(x_train=X_train)
-
-    X_train, X_val, X_test = correlated_drop(
-        x_train=X_train, x_val=X_val, x_test=X_test
-    )
-
-    X_train, X_val, X_test = features_select(
-        x_train=X_train, x_val=X_val, x_test=X_test, selected_features=SELECTED_FEATURES
+    pipeline, selected_features = feature_selection(
+        x_train=X_train,
+        y_train=y_train,
+        target_output_distribution=TARGET_OUTPUT_DISTRIBUTION,
     )
 
     hyperparameters = hyperparameters_gridsearch(
         x_train=X_train,
-        x_val=X_val,
         y_train=y_train,
+        x_val=X_val,
         y_val=y_val,
-        regressor_parameters=REGRESSOR_PARAMETERS,
+        regressor_grid=REGRESSOR_GRID,
         metric=METRIC,
     )
 
-    model_train(
-        x_train=X_train,
+    # Train the model
+    model_trained = model_training(
+        x_train=X_train, y_train=y_train, hyperparameters=hyperparameters
+    )
+
+    # Evaluate the model
+    model_evaluation(
+        model=model_trained,
         x_test=X_test,
-        y_train=y_train,
         y_test=y_test,
-        hyperparameters=hyperparameters,
+        pipeline=pipeline,
+    )
+
+    # Save the model
+    model_saving(
+        model=model_trained,
+        model_path=MODEL_PATH,
     )
 
 
 if __name__ == "__main__":
-    print("hello world")
     otomoto_training_flow()

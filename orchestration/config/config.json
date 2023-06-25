@@ -5,17 +5,17 @@
     "FILE_NAME": "offers.csv",
     "SPARK_SESSION_SCOPE": "local[*]",
     "SPARK_SESSION_NAME": "otomoto_preprocessing",
-    "MODEL_PATH": "/home/konradballegro/orchestration/models/xgb_copy.model",
+    "MODEL_PATH": "/home/konradballegro/orchestration/models/xgb.model",
     "OFFERS_PATH": "/home/konradballegro/orchestration/data/inputs/offers.csv",
     "HEADER": "true",
     "INFER_SCHEMA": "true",
     "OFFERS_PREPROCESSED_PATH": "/home/konradballegro/orchestration/data/outputs/offers_filtered.csv",
     "TARGET_NAME": "Price",
     "TARGET_OUTPUT_DISTRIBUTION": "normal",
-    "REMAINDER_SIZE": 0.3,
+    "REMAINDER_SIZE": 0.7,
     "TEST_SIZE": 0.5,
     "RANDOM_STATE": 42,
-    "REGRESSOR_PARAMETERS": {
+    "REGRESSOR_GRID": {
         "XGBoost": {
             "colsample_bytree": [
                 0.5
