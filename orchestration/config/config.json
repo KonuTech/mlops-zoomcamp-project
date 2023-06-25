@@ -6,8 +6,35 @@
     "SPARK_SESSION_SCOPE": "local[*]",
     "SPARK_SESSION_NAME": "otomoto_preprocessing",
     "MODEL_PATH": "/home/konradballegro/orchestration/models/xgb_copy.model",
-    "OFFERS": "/home/konradballegro/orchestration/data/inputs/offers.csv",
-    "OFFERS_FILTERED": "/home/konradballegro/orchestration/data/outputs/offers_filtered.csv",
+    "OFFERS_PATH": "/home/konradballegro/orchestration/data/inputs/offers.csv",
+    "HEADER": "true",
+    "INFER_SCHEMA": "true",
+    "OFFERS_PREPROCESSED_PATH": "/home/konradballegro/orchestration/data/outputs/offers_filtered.csv",
+    "TARGET_NAME": "Price",
+    "TARGET_OUTPUT_DISTRIBUTION": "normal",
+    "REMAINDER_SIZE": 0.3,
+    "TEST_SIZE": 0.5,
+    "RANDOM_STATE": 42,
+    "REGRESSOR_PARAMETERS": {
+        "XGBoost": {
+            "colsample_bytree": [
+                0.5
+            ],
+            "learning_rate": [
+                0.1
+            ],
+            "max_depth": [
+                8
+            ],
+            "n_estimators": [
+                200
+            ],
+            "subsample": [
+                1.0
+            ]
+        }
+    },
+    "METRIC": "r2",
     "SELECTED_FEATURES": [
         "Mileage",
         "Power",

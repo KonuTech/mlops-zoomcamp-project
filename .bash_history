@@ -1012,3 +1012,205 @@ git status
 ls
 cd orchestration/
 ls -lah
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd orchestration/
+ls -lah
+cd
+git status
+git add orchestration/otomoto_training.py
+git add orchestration/otomoto_scraping.py orchestration/models/xgb copy.model orchestration/otomoto_scraping_flow-deployment.yaml orchestration/.prefectignore orchestration/data/inputs/offers.csv
+git add orchestration/otomoto_scraping.py orchestration/otomoto_scraping_flow-deployment.yaml orchestration/.prefectignore orchestration/data/inputs/offers.csv
+git status
+git commit -m "otomoto_training changes"
+git push
+git reset HEAD~
+git status
+git add orchestration/otomoto_scraping.py orchestration/otomoto_scraping_flow-deployment.yaml
+git add orchestration/data/outputs/offers_filtered.csv
+git commit -m "otomoto_training changes"
+git push
+git pull
+git merge
+git status
+git reset HEAD~
+git status
+git pull
+git pull -force
+git pull --force
+git stash
+git pull
+git status
+git add orchestration/.prefectignore
+git status
+git stash
+git pull
+git add orchestration/data/inputs/offers.csv orchestration/otomoto_scraping.py orchestration/otomoto_scraping_flow-deployment.yaml
+git stash
+git pull
+git status
+git add orchestration/otomoto_training.py
+git add orchestration/config/
+git status
+orchestration/otomoto_training_copy.py
+git add orchestration/data/inputs/manufacturers_copy.txt
+git add orchestration/otomoto_training_copy.py
+git status
+git add orchestration/models/xgb_copy.model
+git status
+git commit -m "otomotmot_training changes"
+git push
+git status
+git add orchestration/otomoto_training.py
+git commit -m "otomotmot_training changes"
+git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git add .bash_history notebooks/explainer_xgb.ipynb orchestration/logs/app.log orchestration/otomoto_scrap_data.py orchestration/otomoto_scrap_data_flow-deployment.yaml orchestration/otomoto_training.py
+git status
+git add orchestration/.prefectignore orchestration/data/inputs/manufacturers copy.txt orchestration/otomoto_scraping.py orchestration/otomoto_scraping_flow-deployment.yaml
+git status
+git commit -m "added first vesrion of training flow"
+git push
+git status
+cd /home/konradballegro/orchestration/data/outputs
+ls -lah
+cd /home/konradballegro/orchestration/models
+ls -lah
+htop
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd /home/konradballegro/orchestration/outputs/data
+ls -lah
+cd
+git statys
+git status
+git add scripts
+git status
+git add orchestration/
+git status
+git add .bash_history 
+git add .prefect/prefect.db 
+git status
+git commit -m "added first tasks to otomoto training flow"
+git push
+git status
+git add orchestration/
+git status
+git add requirements_old.txt 
+git commit -m "added otomoto scraping flow"
+git push
+git status
+git add orchestration/
+git add temp
+git status
+git commit -m "changes
+"
+git push
+git status
+git add orchestration/data/inputs/manufacturers.txt
+git add orchestration/logs/app.log
+git add orchestration/data/inputs/manufacturers copy.txt
+git status
+git add orchestration/data/inputs/manufacturers copy.txt
+git status
+git add .gitignore 
+git status
+git commit -m "changes"
+git push
+cd orchestration/
+ls
+black otomoto_training.py
+prefect deployment build -n otomoto-scraping -p default-agent-pool -q otomoto-scraping otomoto_scrap_data.py:otomoto_scraping_flow
+prefect deployment build -n otomoto-scraping -p default-agent-pool -q otomoto-scraping otomoto_scraping.py:otomoto_scraping_flow
+python3 otomoto_scraping.py 
+python3 otomoto_training.py 
+python3 otomoto_scraping.py 
+python3 otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py
+isort otomoto_training.py 
+black otomoto_training.py
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py
+isort otomoto_training.py 
+black otomoto_training.py
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+python3 otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ls
+prefect server start
+pipenv shell
+/home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/python3.8
+ls
+cd orchestration/
+ls -lah
+deployment build -n mlops-gs-test -p default-agent-pool -q mlops-gs orchestrate_gs.py:main_flow_gs
+prefect deployment build -n otomoto-price-prediction -p default-agent-pool -q tomoto-price-prediction orchestrate_training.py:main_flow
+prefect deployment build -n otomoto-price-prediction -p default-agent-pool -q tomoto-price-prediction orchestrate_training.py:otomoto_training_flow
+prefect deployment build -n otomoto-price-prediction -p default-agent-pool -q omoto-price-prediction orchestrate_training.py:otomoto_training_flow
+prefect deployment build -n otomoto-price-prediction -p default-agent-pool -q omoto-price-prediction otomoto_training.py:otomoto_training_flow
+python3 otomoto_training.py 
+python3 lr.py
+python3 otomoto_training.py 
+prefect server stop
+prefect server --help
+python3 otomoto_training.py 
+ls -lah
+python3 otomoto_training.py 
+ls
+ls -lah
+black otomoto_scrap_data.py 
+prefect deployment build -n otomoto-scrap-data -p default-agent-pool -q otomoto-scrap-data otomoto_scrap_data.py:otomoto_scrap_data_flow
+python3 otomoto_scrap_data.py 
+ls -lah
+git status
+git add temp
+git add orchestrate_s3.py 
+git status
+python3 otomoto_scrap_data.py 
+cd
+jupyter notebook
