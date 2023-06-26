@@ -1214,3 +1214,103 @@ git status
 python3 otomoto_scrap_data.py 
 cd
 jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+jupyter notebook
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git add orchestration/otomoto_training.py
+git add orchestration/config/config.json
+git status
+git add orchestration/otomoto_training_copy.py
+git add .bash_history
+git commit -m "otomoto_training changes"
+git push
+cd /home/konradballegro/orchestration/models
+ls -lah
+git status
+cd
+git status
+git add orchestration/config/config.json orchestration/otomoto_training.py
+git commit -m "otomoto_training changes"
+git push
+git status
+git add notebooks/explainer_xgb.ipynb orchestration/models/xgb.model orchestration/otomoto_training.py
+git commit -m "otomoto_training about right"
+git push
+git status
+git add notebooks/outputs/reports/xgb_explainer.html notebooks/explainer_xgb.ipynb orchestration/models/xgb.model orchestration/otomoto_training.py
+git commit -m "otomoto_training about right"
+git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd orchestration/
+python3 otomoto_scrap_data.py 
+python3 otomoto_training.py 
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py 
+isort otomoto_training.py
+black otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py 
+black otomoto_training.py
+python3 otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+htop
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ls
+cd orchestration/
+ls -lah
+cd
+prefect server start

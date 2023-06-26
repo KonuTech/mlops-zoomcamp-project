@@ -1,14 +1,36 @@
+"""
+This script performs the training and evaluation of a machine learning model using data scraped from otomoto.pl .
+
+The following steps are performed in this script:
+
+1. Download the "offers.csv" file from a Google Cloud Storage bucket to a local directory.
+2. Create a Spark session.
+3. Read the data from the "offers.csv" file using Spark.
+4. Filter the data based on specified conditions.
+5. Preprocess the data by cleaning and transforming the columns.
+6. Perform feature engineering to create additional features.
+7. Split the data into train, validation, and test sets.
+8. Perform feature selection using Recursive Feature Elimination with Cross-Validation (RFECV) and XGBoost.
+9. Perform hyperparameter tuning using GridSearchCV on XGBoost.
+10. Train the final model using the selected features and hyperparameters.
+11. Evaluate the model on the test set.
+12. Save the trained model.
+
+Note: The script uses various configuration parameters specified in the "config.json" file.
+
+"""
 import json
 import logging
 import os
 from functools import reduce
+from typing import List, Tuple, Dict
 
 import numpy as np
 import pandas as pd
 import pyspark
 from google.cloud import storage
 from prefect import flow, task
-from pyspark.sql import SparkSession
+from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql.functions import col, regexp_replace, when
 from sklearn.feature_selection import RFE, RFECV
 from sklearn.metrics import mean_squared_error, r2_score
@@ -17,13 +39,16 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import QuantileTransformer, StandardScaler
 from xgboost import XGBRegressor
 
+# Load configuration from config.json
 os.environ[
     "GOOGLE_APPLICATION_CREDENTIALS"
 ] = "/home/konradballegro/.ssh/ny-rides-konrad-b5129a6f2e66.json"
 CONFIG_PATH = "/home/konradballegro/orchestration/config/config.json"
 
+
 with open(CONFIG_PATH) as json_file:
     config = json.load(json_file)
+
 
 # Extracting config variables
 BUCKET_NAME = config["BUCKET_NAME"]
@@ -53,10 +78,12 @@ MODEL_PATH = config["MODEL_PATH"]
 REGRESSOR_GRID = config["REGRESSOR_GRID"]
 METRIC = config["METRIC"]
 
+
 # Create logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+
 
 # Create logger
 logger = logging.getLogger(__name__)
@@ -66,7 +93,19 @@ formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
 # Copy offercs.csv from GCP bucket to VM
 @task(retries=0, retry_delay_seconds=2)
-def offers_download(bucket_name, source_path, destination_path):
+def offers_download(bucket_name: str, source_path: str, destination_path: str) -> None:
+    """
+    Downloads the "offers.csv" file from the specified Google Cloud Storage bucket to the local destination path.
+
+    Args:
+        bucket_name (str): The name of the Google Cloud Storage bucket.
+        source_path (str): The path of the file within the bucket.
+        destination_path (str): The local destination path to save the downloaded file.
+
+    Returns:
+        None
+
+    """
     logger.info(f"Downloading file from bucket '{bucket_name}' to '{destination_path}'")
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
@@ -76,7 +115,18 @@ def offers_download(bucket_name, source_path, destination_path):
 
 
 @task(retries=0, retry_delay_seconds=2)
-def session_create(spark_session_scope, spark_session_name):
+def session_create(spark_session_scope: str, spark_session_name: str) -> SparkSession:
+    """
+    Creates a Spark session with the specified scope and name.
+
+    Args:
+        spark_session_scope (str): The Spark session scope.
+        spark_session_name (str): The Spark session name.
+
+    Returns:
+        session (SparkSession): The created Spark session.
+
+    """
     logger.info("Creating Spark session...")
     session = (
         SparkSession.builder.master(spark_session_scope)
@@ -88,7 +138,22 @@ def session_create(spark_session_scope, spark_session_name):
 
 
 @task(retries=0, retry_delay_seconds=2)
-def data_read(spark_session, header, infer_schema, file_name):
+def data_read(
+    spark_session: SparkSession, header: bool, infer_schema: bool, file_name: str
+) -> DataFrame:
+    """
+    Reads the data from the specified file using the provided Spark session.
+
+    Args:
+        spark_session (SparkSession): The Spark session.
+        header (bool): Whether the file has a header row.
+        infer_schema (bool): Whether to infer the schema of the data.
+        file_name (str): The path of the file to read.
+
+    Returns:
+        df (DataFrame): The Spark DataFrame containing the read data.
+
+    """
     logger.info(f"Reading data from file: '{file_name}'")
     return (
         spark_session.read.option("header", header)
@@ -99,6 +164,16 @@ def data_read(spark_session, header, infer_schema, file_name):
 
 @task(retries=0, retry_delay_seconds=2)
 def data_filter(df):
+    """
+    Filters the data based on specified conditions.
+
+    Args:
+        df (DataFrame): The input Spark DataFrame.
+
+    Returns:
+        filtered_df (DataFrame): The filtered Spark DataFrame.
+
+    """
     logger.info("Filtering data...")
     conditions = [
         (df["Currency"] == "PLN"),
@@ -122,7 +197,17 @@ def data_filter(df):
 
 
 @task(retries=0, retry_delay_seconds=2)
-def data_preprocessing(df):
+def data_preprocess(df: DataFrame) -> DataFrame:
+    """
+    Preprocesses the data by cleaning and transforming the columns.
+
+    Args:
+        df (DataFrame): The input Spark DataFrame.
+
+    Returns:
+        cleaned_df (DataFrame): The preprocessed Spark DataFrame.
+
+    """
     logger.info("Preprocessing data...")
     df_cleaned = df.select(
         col("Price").cast("float").alias("Price"),
@@ -150,16 +235,33 @@ def data_preprocessing(df):
 
 
 @task(retries=0, retry_delay_seconds=2)
-def features_engineering(
-    df,
-    distinct_columns,
-    columns_to_drop,
-    brand_columns,
-    fuel_columns,
-    body_columns,
-    door_columns,
-    offers_preprocessed_path,
-):
+def features_engineer(
+    df: DataFrame,
+    distinct_columns: List[str],
+    columns_to_drop: List[str],
+    brand_columns: List[str],
+    fuel_columns: List[str],
+    body_columns: List[str],
+    door_columns: List[str],
+    offers_preprocessed_path: str,
+) -> DataFrame:
+    """
+        Performs feature engineering to create additional features based on the input DataFrame.
+
+        Args:
+            df (DataFrame): The input Spark DataFrame.
+            distinct_columns (list): A list of columns to perform feature engineering on distinct values.
+            columns_to_drop (list): A list of columns to drop from the DataFrame.
+            brand_columns (list): A list of columns representing different vehicle brands.
+            fuel_columns (list): A list of columns representing different fuel types.
+            body_columns (list): A list of columns representing different body types.
+            door_columns (list): A list of columns representing different number of doors.
+            offers_preprocessed_path ( from __future__ import annotations (python 3.10 feature) str): The path to save the preprocessed offers DataFrame.
+
+    Returns:
+        features_df (DataFrame): Pandas DataFrame with additional engineered features.
+
+    """
     logger.info("Performing feature engineering...")
     for column in distinct_columns:
         distinct_values = (
@@ -201,7 +303,32 @@ def features_engineering(
 
 
 @task(retries=0, retry_delay_seconds=2)
-def data_split(df, target_name, remainder_size, test_size, random_state):
+def data_split(
+    df: DataFrame,
+    target_name: str,
+    remainder_size: float,
+    test_size: float,
+    random_state: int,
+) -> Tuple[DataFrame, DataFrame, DataFrame, DataFrame, DataFrame, DataFrame]:
+    """
+    Splits the data into train, validation, and test sets based on the specified ratios.
+
+    Args:
+        df (DataFrame): The input Pandas DataFrame.
+        target_name (str): The name of target column.
+        remainder_size (float): The ratio of validation and test data.
+        test_size (float): The ratio of test data.
+        random_state (int): The value of random seed.
+
+    Returns:
+        X_train (DataFrame): The train split DataFrame.
+        X_val (DataFrame): The validation split DataFrame.
+        X_test (DataFrame): The test split DataFrame.
+        y_train (DataFrame): The train target split DataFrame.
+        y_val (DataFrame): The validation target split DataFrame.
+        y_test (DataFrame): The test target split DataFrame.
+
+    """
     logger.info("Splitting data into train and test sets...")
 
     y = df[target_name].to_numpy().reshape(-1, 1)
@@ -218,7 +345,25 @@ def data_split(df, target_name, remainder_size, test_size, random_state):
 
 
 @task(retries=0, retry_delay_seconds=2)
-def feature_selection(x_train, y_train, target_output_distribution):
+def features_select(
+    x_train: DataFrame, y_train: DataFrame, target_output_distribution: str
+) -> List[str]:
+    """
+    Performs feature selection using Recursive Feature Elimination with Cross-Validation (RFECV).
+
+    Args:
+        x_train (DataFrame): The train split DataFrame.
+        y_train: The train target split DataFrame.
+        target_output_distribution (str): The name of expected output distribution
+
+    Returns:
+        selected_features (list): The list of selected features.
+        pipeline (): .
+        selected_features (): .
+        scaler (): .
+        transformer (): .
+
+    """
     logger.info("Performing feature selection...")
 
     scaler = StandardScaler()
@@ -267,8 +412,32 @@ def feature_selection(x_train, y_train, target_output_distribution):
 
 @task(retries=0, retry_delay_seconds=2)
 def hyperparameters_gridsearch(
-    x_train, y_train, x_val, y_val, regressor_grid, metric, selected_features, scaler
-):
+    x_train: DataFrame,
+    y_train: DataFrame,
+    x_val: DataFrame,
+    y_val: DataFrame,
+    regressor_grid: Dict,
+    metric: str,
+    selected_features: List[str],
+    scaler: StandardScaler,
+) -> Dict:
+    """
+    Performs hyperparameter tuning using GridSearchCV.
+
+    Args:
+        x_train (DataFrame): The training DataFrame.
+        y_train (): .
+        x_val (): .
+        y_val (): .
+        regressor_grid (): .
+        metric (): .
+        selected_features (): .
+        scaler (): .
+
+    Returns:
+        results: ().
+
+    """
     logger.info("Starting hyperparameter grid search...")
 
     regressors = {"XGBoost": XGBRegressor(n_jobs=-1)}
@@ -299,7 +468,9 @@ def hyperparameters_gridsearch(
         x_scaled_train = scaler.transform(x_train)
         y_transformed_train = y_train.reshape(-1, 1)
 
-        selected_feature_indices = [x_train.columns.get_loc(feature) for feature in selected_features]
+        selected_feature_indices = [
+            x_train.columns.get_loc(feature) for feature in selected_features
+        ]
         x_train_selected = x_scaled_train[:, selected_feature_indices]
 
         gscv.fit(x_train_selected, np.ravel(y_transformed_train))
@@ -331,12 +502,34 @@ def hyperparameters_gridsearch(
 
 
 @task(retries=0, retry_delay_seconds=2)
-def model_training(x_train, y_train, selected_features, hyperparameters, scaler):
+def model_train(
+    x_train: DataFrame,
+    y_train: DataFrame,
+    selected_features: List[str],
+    hyperparameters: Dict,
+    scaler: StandardScaler,
+) -> XGBRegressor:
+    """
+    Trains the final model using the selected features and hyperparameters.
+
+    Args:
+        x_train (DataFrame): The training DataFrame.
+        y_train (): .
+        selected_features (): .
+        hyperparameters (): .
+        scaler (): .
+
+    Returns:
+        model: The trained machine learning model.
+
+    """
     logger.info("Training the model...")
     x_scaled_train = scaler.transform(x_train)
     y_transformed_train = y_train.reshape(-1, 1)
 
-    selected_feature_indices = [x_train.columns.get_loc(feature) for feature in selected_features]
+    selected_feature_indices = [
+        x_train.columns.get_loc(feature) for feature in selected_features
+    ]
     x_train_selected = x_scaled_train[:, selected_feature_indices]
 
     model = XGBRegressor(**hyperparameters["XGBoost"]["Best Parameters"])
@@ -347,13 +540,36 @@ def model_training(x_train, y_train, selected_features, hyperparameters, scaler)
 
 
 @task(retries=0, retry_delay_seconds=2)
-def model_evaluation(model, x_test, y_test, selected_features, scaler):
+def model_evaluate(
+    model: XGBRegressor,
+    x_test: DataFrame,
+    y_test: DataFrame,
+    selected_features: List[str],
+    scaler: StandardScaler,
+) -> Tuple[float, float]:
+    """
+    Evaluates the model on the test set.
+
+    Args:
+        model: The trained machine learning model.
+        x_test (DataFrame): The test DataFrame.
+        y_test (): .
+        selected_features (): .
+        scaler (): .
+
+    Returns:
+        mse (): The evaluation results.
+        r2 (): The evaluation results.
+
+    """
     logger.info("Evaluating the model...")
 
     # Apply the same transformations to the test data using the pipeline
     x_scaled_test = scaler.transform(x_test)
 
-    selected_feature_indices = [x_test.columns.get_loc(feature) for feature in selected_features]
+    selected_feature_indices = [
+        x_test.columns.get_loc(feature) for feature in selected_features
+    ]
     x_test_selected = x_scaled_test[:, selected_feature_indices]
 
     # Reshape y_test to match the expected format
@@ -363,7 +579,6 @@ def model_evaluation(model, x_test, y_test, selected_features, scaler):
     y_pred = model.predict(x_test_selected)
 
     # Inverse transform the predicted values using the target scaler
-    # y_pred = pipeline.named_steps["transformer"].(y_pred_transformed)
     pd.DataFrame(x_test_selected).to_csv(
         "/home/konradballegro/notebooks/outputs/data/x_test_selected.csv",
         index=False,
@@ -383,27 +598,40 @@ def model_evaluation(model, x_test, y_test, selected_features, scaler):
     logger.info(f"R^2: {r2}")
     logger.info("Model evaluation completed")
 
-    # Return any evaluation results as needed
     return mse, r2
 
 
 @task(retries=0, retry_delay_seconds=2)
-def model_saving(model, model_path):
+def model_save(model: XGBRegressor, model_path: str) -> None:
+    """
+    Saves the trained model.
+
+    Args:
+        model: The trained machine learning model.
+        model_path (str): The path to save the model.
+
+    Returns:
+        None
+
+    """
     model.save_model(model_path)
 
 
 @flow
 def otomoto_training_flow():
+    # Download offers.csv file
     offers_download(
         bucket_name=BUCKET_NAME,
         source_path=os.path.join(SOURCE_PATH, FILE_NAME),
         destination_path=os.path.join(DESTINATION_PATH, FILE_NAME),
     )
 
+    # Create Spark session
     session = session_create(
         spark_session_scope=SPARK_SESSION_SCOPE, spark_session_name=SPARK_SESSION_NAME
     )
 
+    # Read data
     data_input = data_read(
         spark_session=session,
         header=HEADER,
@@ -411,11 +639,13 @@ def otomoto_training_flow():
         file_name=OFFERS_PATH,
     )
 
+    # Filter data
     data_filtered = data_filter(df=data_input)
 
-    data_preprocessed = data_preprocessing(df=data_filtered)
+    # Preprocess data
+    data_preprocessed = data_preprocess(df=data_filtered)
 
-    data_engineered = features_engineering(
+    data_engineered = features_engineer(
         df=data_preprocessed,
         distinct_columns=DISTINCT_COLUMNS,
         columns_to_drop=COLUMNS_TO_DROP,
@@ -436,12 +666,14 @@ def otomoto_training_flow():
         random_state=RANDOM_STATE,
     )
 
-    pipeline, selected_features, scaler, transformer = feature_selection(
+    # Perform feature selection
+    pipeline, selected_features, scaler, transformer = features_select(
         x_train=X_train,
         y_train=y_train,
         target_output_distribution=TARGET_OUTPUT_DISTRIBUTION,
     )
 
+    # Perform hyperparameter tuning
     hyperparameters = hyperparameters_gridsearch(
         x_train=X_train,
         y_train=y_train,
@@ -453,8 +685,8 @@ def otomoto_training_flow():
         scaler=scaler,
     )
 
-    # Train the model
-    model_trained = model_training(
+    # Train the final model
+    model_trained = model_train(
         x_train=X_train,
         y_train=y_train,
         selected_features=selected_features,
@@ -463,7 +695,7 @@ def otomoto_training_flow():
     )
 
     # Evaluate the model
-    model_evaluation(
+    model_evaluate(
         model=model_trained,
         x_test=X_test,
         y_test=y_test,
@@ -472,7 +704,7 @@ def otomoto_training_flow():
     )
 
     # Save the model
-    model_saving(
+    model_save(
         model=model_trained,
         model_path=MODEL_PATH,
     )
