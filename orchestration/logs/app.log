@@ -1461,3 +1461,612 @@
 2023-06-24 16:01:24,882 - [file_logger] - [INFO] - Appended data saved as offers.csv
 2023-06-24 16:03:33,770 - [file_logger] - [INFO] - Initializing a scraper
 2023-06-24 16:05:04,958 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-27 16:37:19,134 - [file_logger] - [INFO] - Initializing a scraper
+2023-06-27 16:37:19,780 - [file_logger] - [INFO] - Starting scraping cars...
+2023-06-27 16:37:19,781 - [file_logger] - [INFO] - Start of scraping the manufacturer: abarth
+2023-06-27 16:37:20,534 - [file_logger] - [INFO] - Manufacturer has: 2 subpages
+2023-06-27 16:37:20,535 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-27 16:37:20,876 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:37:20,877 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-abarth-500-cabrio-ID6FBupW.html
+2023-06-27 16:37:20,878 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-pista-krajowy-ID6Fu69A.html
+2023-06-27 16:37:20,880 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-punto-evo-abarth-punto-evo-super-sport-sabelty-ID6FBomo.html
+2023-06-27 16:37:20,883 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-turismo-maly-przebieg-drugi-wlasciciel-ID6FC2SI.html
+2023-06-27 16:37:20,886 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-stan-idealny-ID6FBXcO.html
+2023-06-27 16:37:20,887 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-595c-cabrio-giallo-modena-1-wl-salon-pl-serwis-aso-bezwypadkowy-ID6FBQA2.html
+2023-06-27 16:37:20,893 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-competizione-ID6F80Xn.html
+2023-06-27 16:37:20,903 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-124-abarth-124-spider-ID6Foq8b.html
+2023-06-27 16:37:21,451 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-turismo-160km-ID6FyXIK.html
+2023-06-27 16:37:22,270 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-super-stan-faktura-vat-23-ID6Fsu4Q.html
+2023-06-27 16:37:22,469 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-iwl-salon-pl-biala-perla-ID6Fofmo.html
+2023-06-27 16:37:22,479 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-abarth-doinwestowany-bezwypadkowy-zarejestrowany-super-stan-ID6FC7s6.html
+2023-06-27 16:37:22,481 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-1-4-multiair-abarth-klimatronic-tempomat-ID6FzIeB.html
+2023-06-27 16:37:22,482 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-ID6FC2ne.html
+2023-06-27 16:37:22,515 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-abarth-500c-cabrio-automat-maly-przebieg-bogate-wyposazenie-ID6Fvcbd.html
+2023-06-27 16:37:22,587 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-fiat-500-abarth-2021-ID6FC1yl.html
+2023-06-27 16:37:22,772 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-695-fiat-695-1-4-16v-180-km-turbo-abarth-rivale-ID6FyKzF.html
+2023-06-27 16:37:22,833 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-akrapovic-ID6Fsaht.html
+2023-06-27 16:37:23,042 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-fiat-500-abarth-ID6FAoJa.html
+2023-06-27 16:37:23,773 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-695-abarth-500-cabrio-695-c-rivale-175th-anniversary-manual-3400km-ID6FvsaO.html
+2023-06-27 16:37:23,775 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-pista-200-km-doinwestowany-ID6FA4DQ.html
+2023-06-27 16:37:23,797 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-gwarancja-serwis-ID6Fz5tZ.html
+2023-06-27 16:37:24,112 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-competizione-1-4-t-jet-180-km-polski-salon-ID6Fyza5.html
+2023-06-27 16:37:24,175 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-do-sprzedania-abarth-595-turismo-ID6F7oJe.html
+2023-06-27 16:37:24,230 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-turismo-4700-przebiegu-ID6FeQ8t.html
+2023-06-27 16:37:24,243 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-1-4-benzynamanualklimaserwisgwarancja-w-cenie-ID6FdK6x.html
+2023-06-27 16:37:24,263 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-punto-evo-ID6FydpZ.html
+2023-06-27 16:37:24,311 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-salon-polska-bezwypadkowy-ID6Fxe60.html
+2023-06-27 16:37:24,407 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-ID6FfKu7.html
+2023-06-27 16:37:24,464 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-cabrio-ID6Fyo3r.html
+2023-06-27 16:37:24,711 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-fiat-abarth-punto-ID6FAGU0.html
+2023-06-27 16:37:25,343 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-1-4-16v-t-jet-145-km-scorpione-nowy-w-cenie-uzywanego-ID6ECeqs.html
+2023-06-27 16:37:26,135 - [file_logger] - [INFO] - Scraping page: 2
+2023-06-27 16:37:26,523 - [file_logger] - [INFO] - Found 8 links
+2023-06-27 16:37:26,525 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-ID6FuSjK.html
+2023-06-27 16:37:26,526 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-turbo-180-km-panorama-skora-beats-by-dre-bezwypadkowy-ID6FuTun.html
+2023-06-27 16:37:26,526 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-abarth-595-automat-165-km-29216-km-ID6EtHlV.html
+2023-06-27 16:37:26,530 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-grande-punto-abarth-fiat-punto-grande-1-4t-155km-ID6FyJp7.html
+2023-06-27 16:37:26,531 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-ID6FzMQG.html
+2023-06-27 16:37:26,533 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-ladny-abarcik-595-ID6F3Q20.html
+2023-06-27 16:37:26,533 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-595-abarth-595-terka-cabrio-fiat-500-2016-ID6F5yw3.html
+2023-06-27 16:37:26,542 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/abarth-500-abarth-500c-automat-cabrio-ID6FB0yh.html
+2023-06-27 16:37:28,417 - [file_logger] - [INFO] - Saving abarth offers
+2023-06-27 16:37:28,418 - [file_logger] - [INFO] - Found 40 offers
+2023-06-27 16:37:28,452 - [file_logger] - [INFO] - Saved abarth offers
+2023-06-27 16:37:28,453 - [file_logger] - [INFO] - End of scraping the manufacturer: abarth
+2023-06-27 16:37:28,455 - [file_logger] - [INFO] - Start of scraping the manufacturer: acura
+2023-06-27 16:37:29,458 - [file_logger] - [ERROR] - Error list index out of range while searching for last_page_num
+2023-06-27 16:37:29,458 - [file_logger] - [INFO] - Manufacturer has: 1 subpages
+2023-06-27 16:37:29,459 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-27 16:37:29,805 - [file_logger] - [INFO] - Found 18 links
+2023-06-27 16:37:29,807 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-acura-rdx-a-spec-2-0-272-km-automat-4x4-sh-awd-super-stan-ID6Fs9Si.html
+2023-06-27 16:37:29,810 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tsx-acura-tsx-2-4-w-pedantycznym-stanie-niespotykany-przebieg-31tys-km-ID6FCeN9.html
+2023-06-27 16:37:29,810 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-piekna-acura-rdx-w-perfekcyjnym-stanie-wersja-a-spec-ID6Fbe1r.html
+2023-06-27 16:37:29,811 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-nsx-2017-acura-nsx-hybryda-4x4-automat-ID6FCeaH.html
+2023-06-27 16:37:29,814 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rdx-acura-rdx-ID6EUWr3.html
+2023-06-27 16:37:29,815 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-nsx-2020-acura-nsx-hybryda-4x4-automat-ID6FAfQI.html
+2023-06-27 16:37:29,821 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-integra-2023-acura-integra-a-spec-benzyna-automat-ID6FtmyE.html
+2023-06-27 16:37:29,822 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-rezerwacja-kamery-360-blis-acc-3xklima-ID6FzgPT.html
+2023-06-27 16:37:30,381 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-sprzedam-acure-tl-2008r-3-2-automat-gaz-ID6Fz71c.html
+2023-06-27 16:37:30,912 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-advancetech-ID6Fz6LX.html
+2023-06-27 16:37:30,941 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rlx-3-5-benzyna-310-moc-zamiana-ID6FAZEa.html
+2023-06-27 16:37:31,299 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-acura-mdx-awd-a-spec-bezwypadkowy-ID6Fyw3a.html
+2023-06-27 16:37:31,385 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tsx-acura-tsx-2-4-l-benzyna-gaz-2005-rok-ID6FAdUF.html
+2023-06-27 16:37:31,480 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-tlx-ID6FAfNx.html
+2023-06-27 16:37:31,536 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-wersja-technology-7-osob-gaz-lpg-4x4-sw-awd-ID6EAv6f.html
+2023-06-27 16:37:31,611 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-rl-acura-rl-lpg-ID6Fz2sE.html
+2023-06-27 16:37:31,675 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-mdx-werja-technology-gaz-lpg-4x4-3-7-v6-300-km-7osob-automat-navi-ID6ESl2x.html
+2023-06-27 16:37:31,727 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/acura-tl-acura-tlx-fv23-ID6EPQgm.html
+2023-06-27 16:37:32,929 - [file_logger] - [INFO] - Saving acura offers
+2023-06-27 16:37:32,930 - [file_logger] - [INFO] - Found 18 offers
+2023-06-27 16:37:32,961 - [file_logger] - [INFO] - Saved acura offers
+2023-06-27 16:37:32,962 - [file_logger] - [INFO] - End of scraping the manufacturer: acura
+2023-06-27 16:37:32,964 - [file_logger] - [INFO] - Start of scraping the manufacturer: aixam
+2023-06-27 16:37:33,614 - [file_logger] - [INFO] - Manufacturer has: 4 subpages
+2023-06-27 16:37:33,615 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-27 16:37:34,132 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:37:34,134 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-bez-prawa-jazdy-b-czterokolowiec-lekki-l6e-ID6FBmLI.html
+2023-06-27 16:37:34,135 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-crossline-l6e-21km-ID6FBTFp.html
+2023-06-27 16:37:34,137 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-400-evo-diesel-kubota-l6e-bez-prawa-jazdy-kat-b-alu-ID6FAXK0.html
+2023-06-27 16:37:34,139 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-chatenet-barooder-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6FAXK1.html
+2023-06-27 16:37:34,140 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-grecav-eke-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6FAXJZ.html
+2023-06-27 16:37:34,140 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-wersja-pack-od-14-roku-wroclaw-2023-ID6Eq9AY.html
+2023-06-27 16:37:34,140 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-city-sport-od-14-lat-nowy-gwarancja-ID6FglrO.html
+2023-06-27 16:37:34,141 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-gti-od-14-lat-szary-mat-nowy-ID6FggWU.html
+2023-06-27 16:37:35,500 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-bellier-jade-ID6FClfk.html
+2023-06-27 16:37:35,551 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-400diesel-ozarow-maz-dla-14-latka-ID6FsHnj.html
+2023-06-27 16:37:35,580 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-sport-od-14-lat-nowy-gwarancja-ID6FAVNi.html
+2023-06-27 16:37:35,616 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-jdm-aloes-yanmar-523-sprzedaz-serwis-cz-wa-ID6FChem.html
+2023-06-27 16:37:35,688 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-kubota-400-sprzedaz-serwis-cz-wa-ID6FCh9y.html
+2023-06-27 16:37:35,711 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-bicolour-sprzedaz-serwis-cz-wa-ID6FCgVI.html
+2023-06-27 16:37:35,725 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterololowiec-lekki-l6e-bp-kamera-wspomaganie-transport-jak-nowy-ID6FzA1v.html
+2023-06-27 16:37:35,740 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-minauto-nowy-model-2023-zamiast-skutera-od-14-lat-ID6FAsi0.html
+2023-06-27 16:37:36,363 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-microcar-jdm-transport-czterokolowiec-lekki-ID6FyZqp.html
+2023-06-27 16:37:36,857 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-crossline-ID6Ft4Ue.html
+2023-06-27 16:37:37,105 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-city-sport-od-14-roku-zycia-bez-prawa-jazdy-ID6FtDdH.html
+2023-06-27 16:37:37,107 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-jdm-simpa-titane-ID6FCaH6.html
+2023-06-27 16:37:37,163 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-sv34-0-5-automat-microcar-ID6FBlS8.html
+2023-06-27 16:37:37,185 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-coupe-gti-od-14-roku-zycia-wroclaw-nowy-model-2023-ID6F61FN.html
+2023-06-27 16:37:37,394 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-ID6FC9yO.html
+2023-06-27 16:37:37,412 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-crossline-evo-od-14-roku-zycia-klimatyzacja-nowy-model-2023-ID6FwF3F.html
+2023-06-27 16:37:37,458 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-wersja-pack-od-14-roku-wroclaw-2023-ID6Fur5C.html
+2023-06-27 16:37:37,499 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-tasso-domino-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6FC78w.html
+2023-06-27 16:37:37,640 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-l6e-transport-gwarancja-ligier-microcar-ID6FC6ge.html
+2023-06-27 16:37:37,807 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ID6FzNPQ.html
+2023-06-27 16:37:37,846 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-ligier-microcar-ID6FwldQ.html
+2023-06-27 16:37:37,871 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-ID6FC2gu.html
+2023-06-27 16:37:38,175 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-s8-abs-l6e-am-od-14-roku-zycia-ID6FzyZE.html
+2023-06-27 16:37:38,178 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-mega-multitrac-l6e-microcar-bez-prawojazdy-ID6Fwl0r.html
+2023-06-27 16:37:39,310 - [file_logger] - [INFO] - Scraping page: 2
+2023-06-27 16:37:39,995 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:37:39,997 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-nie-wymaga-prawa-jazdy-ID6Ftovn.html
+2023-06-27 16:37:39,998 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-minauto-cross-crossline-l6e-am-od-14-roku-zycia-ksiazka-alufelgi-ID6FsHKg.html
+2023-06-27 16:37:39,998 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-gti-od-14-lat-nowy-gwarancja-ID6FggOL.html
+2023-06-27 16:37:40,003 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-gti-s9-2021-l6e-am-od-14-roku-zycia-kamera-abs-ID6Fks28.html
+2023-06-27 16:37:40,003 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-2019-l6e-am-od-14-roku-zycia-kamera-cofania-ID6Fks29.html
+2023-06-27 16:37:40,005 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-500-4-500-4-bez-prawka-349kg-4kw-400cm-alufelgi-wlkp-ID6EX1cT.html
+2023-06-27 16:37:40,012 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-bez-prawa-jazdy-b-czterokolowiec-lekki-l6e-ID6FB9uR.html
+2023-06-27 16:37:40,019 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-mega-multitrack-elektryk-4kw-microcar-ID6FAvKi.html
+2023-06-27 16:37:41,193 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FAa6z.html
+2023-06-27 16:37:41,473 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-gto-gto-alu15-kubota-ledy-l6e-bez-prawkab-oplacony-transport-ID6FAuBW.html
+2023-06-27 16:37:41,645 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-bez-prawa-jazdy-b-czterokolowiec-lekki-l6e-ID6FzBiY.html
+2023-06-27 16:37:41,647 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-czterokolowiec-lekki-l6e-ID6FC0xU.html
+2023-06-27 16:37:41,648 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-emotion-czterokolowiec-lekki-l6e-ID6FC0wb.html
+2023-06-27 16:37:41,655 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a751-piekny-aixa-okazja-4-osobowy-l7e-na-pj-b1-ID6Fue3c.html
+2023-06-27 16:37:41,678 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-kubota-z482-sprzedaz-serwis-cz-wa-ID6FqX2Q.html
+2023-06-27 16:37:41,692 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-alu-kubota-abs-ledy-navi-l6e-bez-prawkab-oplacony-transport-ID6FArxW.html
+2023-06-27 16:37:41,980 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ID6FtBSK.html
+2023-06-27 16:37:42,336 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-super-stan-zapraszam-ID6FAnpz.html
+2023-06-27 16:37:42,452 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-mega-truck-l7e-pickup-ciezarowka-ID6FBX7l.html
+2023-06-27 16:37:43,029 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-sport-s9-2018-l6e-am-od-14-roku-zycia-kamera-ID6FibM1.html
+2023-06-27 16:37:43,031 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-s9-2017-l6e-am-od-14-roku-zycia-ID6FibLZ.html
+2023-06-27 16:37:43,032 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-pierwszy-wlasciciel-w-polsce-stan-bardzo-dobry-ID6Fqs7J.html
+2023-06-27 16:37:43,058 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-aixam-crossover-2019-zarejestrowany-kamera-cofania-prywatnie-ID6FviKd.html
+2023-06-27 16:37:43,362 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-sport-l6e-am-od-14-roku-zycia-ID6Fzk6A.html
+2023-06-27 16:37:43,457 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-mega-elektryk-pojazd-elektryczny-nowe-akumulatory-ID6FzkoG.html
+2023-06-27 16:37:43,497 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-sprowadzony-wazne-oplaty-zadbany-ID6FBUdS.html
+2023-06-27 16:37:43,519 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-2020r-l6e-od-14-lat-bez-prawo-jazdy-b-minauto-2020r-ID6FxbOe.html
+2023-06-27 16:37:43,590 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-kat-l6e-od-14-lat-duzy-wybor-transport-pod-dom-ID6FBTeQ.html
+2023-06-27 16:37:43,666 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ligier-ixo-zarejestrowany-ID6FzYh2.html
+2023-06-27 16:37:43,949 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-ligier-x-too-r-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6Fz3Ri.html
+2023-06-27 16:37:43,953 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-aixam-city-2012r-l6e-bez-prawa-jazd-kat-b-ID6FBSIE.html
+2023-06-27 16:37:43,963 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-ID6FBR1t.html
+2023-06-27 16:37:45,003 - [file_logger] - [INFO] - Scraping page: 3
+2023-06-27 16:37:45,565 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:37:45,567 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-a741-ID6Fvi6k.html
+2023-06-27 16:37:45,569 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-kat-l6e-przygotowany-do-rejestracji-ID6FrJFI.html
+2023-06-27 16:37:45,569 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-l6e-super-stan-ID6FuPtE.html
+2023-06-27 16:37:45,570 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-crossover-ID6FyZdh.html
+2023-06-27 16:37:45,574 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-ID6FwedE.html
+2023-06-27 16:37:45,575 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-roadline-aixam-roadline-kat-l6e-super-stan-alufelgi-ID6FoDVJ.html
+2023-06-27 16:37:45,576 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-400-31000km-l6e-super-stan-ID6FxDuB.html
+2023-06-27 16:37:45,577 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a721-aixam-a721-super-stan-kat-l6e-ID6FxDPu.html
+2023-06-27 16:37:46,827 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-microcar-zarejestrowany-ID6FAPIy.html
+2023-06-27 16:37:46,951 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FANwF.html
+2023-06-27 16:37:46,993 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FANfD.html
+2023-06-27 16:37:47,012 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-pack-nowy-od-14-lat-gwarancja-ID6FhfQu.html
+2023-06-27 16:37:47,044 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FBDSA.html
+2023-06-27 16:37:47,055 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-gwarancja-kategoria-l7e-dostarczymy-auto-pod-dom-raty-ID6FBDD0.html
+2023-06-27 16:37:47,071 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-gwarancja-kategoria-l6e-dostarczymy-auto-pod-dom-raty-ID6FBCYJ.html
+2023-06-27 16:37:47,090 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-bez-prawa-jazdy-am-l6e-zarejestrowany-ID6FAHG5.html
+2023-06-27 16:37:47,582 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ligier-ixo-zarejestrowany-ID6FBBCn.html
+2023-06-27 16:37:48,307 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterololowiec-lekki-l6e-bp-kamera-wspomaganie-transport-stan-idealny-ID6FyQ0x.html
+2023-06-27 16:37:48,309 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-minauto-access-auto-od-14-lat-od-importera-ID6DXuSk.html
+2023-06-27 16:37:48,309 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-bez-prawa-jazdy-microcar-od-14-lat-super-stan-ID6FvBun.html
+2023-06-27 16:37:48,318 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-miniauto-gt-cross-1-wlasciciel-2017-automat-ID6FjzWz.html
+2023-06-27 16:37:48,341 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-gto-aixam-s8-2013-kubota-l6e-bez-prawkab-zadbany-transport-ID6FzXfr.html
+2023-06-27 16:37:48,359 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ID6FzVXF.html
+2023-06-27 16:37:48,379 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a751-microcar-aixam-a751-l7e-kat-b1-ID6FBt7W.html
+2023-06-27 16:37:48,590 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-aixam-crossover-premium-od-14-roku-zycia-zarejestrowany-ID6FxciP.html
+2023-06-27 16:37:49,128 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-aixam-coup-2013-kubota-piekny-zadbany-transport-ID6FzVu6.html
+2023-06-27 16:37:49,208 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterololowiec-lekki-l6e-stan-idealny-transport-pod-dom-gwarancja-ID6F7uiX.html
+2023-06-27 16:37:49,400 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-ID6FzVf2.html
+2023-06-27 16:37:49,469 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-microcar-ID6FtfFe.html
+2023-06-27 16:37:49,699 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-microcar-ID6FzWxr.html
+2023-06-27 16:37:49,703 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-coupe-aixam-cupe-sprowadzony-zarejestrowany-kt-l6e-do-350-kg-10-szt-w-oferci-ID6FyG82.html
+2023-06-27 16:37:49,711 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-aixam-crossover-jeden-z-najwiekszch-kt-l6e-do-350-kg-ID6FyG6E.html
+2023-06-27 16:37:50,836 - [file_logger] - [INFO] - Scraping page: 4
+2023-06-27 16:37:51,496 - [file_logger] - [INFO] - Found 23 links
+2023-06-27 16:37:51,498 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-klima-abs-ID6FzWcA.html
+2023-06-27 16:37:51,500 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterokolowiec-lekki-l6e-idealny-stan-zarejestrowany-kamera-ID6FyFNG.html
+2023-06-27 16:37:51,501 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-ligier-dci-ID6FBmPR.html
+2023-06-27 16:37:51,504 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-aixam-bez-prawajazdy-ID6FyEV3.html
+2023-06-27 16:37:51,504 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-town-life-diesel-bez-prawa-jazdy-kat-b-ID6FBkB1.html
+2023-06-27 16:37:51,509 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-jdm-albizia-yanmar-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6FBkB9.html
+2023-06-27 16:37:51,516 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-microcar-m-go-f8-diesel-l6e-bez-prawa-jazdy-kat-b-alu-ID6FBj9b.html
+2023-06-27 16:37:51,517 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-ID6FBiDT.html
+2023-06-27 16:37:52,375 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-741-ID6FzNN1.html
+2023-06-27 16:37:52,957 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-microcar-okazja-doinwestowany-ID6FzM84.html
+2023-06-27 16:37:52,982 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-due-ID6Fd25x.html
+2023-06-27 16:37:53,042 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-aixam-diesel-kubota-500-ID6Fx6rV.html
+2023-06-27 16:37:53,123 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-evo-od-14-lat-nowy-gwarancja-ID6FAVU5.html
+2023-06-27 16:37:53,126 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-czterololowiec-lekki-l6e-bp-kamera-wspomaganie-transport-jak-nowy-ID6FzKkr.html
+2023-06-27 16:37:53,161 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-emotion-crossover-kat-l6e-bez-prawa-jazdy-ID6FylAe.html
+2023-06-27 16:37:53,178 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-city-aixam-city-sport-niski-przebieg-jak-nowy-kat-l6e-do-350kg-ID6FzJTi.html
+2023-06-27 16:37:53,201 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-a741-pierwszy-wlasciciel-w-kraju-ID6Fyl9D.html
+2023-06-27 16:37:54,073 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-nowy-od-14-lat-abs-ebd-gwarancja-ID6FwGjZ.html
+2023-06-27 16:37:54,155 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-crossline-premium-l6e-2018-diesel-ID6FyhTM.html
+2023-06-27 16:37:54,315 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-2018r-model-mega-sprawny-z-niemiec-ID6FyhQf.html
+2023-06-27 16:37:54,564 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-ID6FuD4N.html
+2023-06-27 16:37:54,566 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossline-aixam-kubota-mini-auto-ID6FAZlv.html
+2023-06-27 16:37:54,567 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/aixam-crossover-aixam-crossover-premium-od-14-roku-zycia-wroclaw-nowy-model-2023-ID6Fk4eR.html
+2023-06-27 16:37:55,496 - [file_logger] - [INFO] - Saving aixam offers
+2023-06-27 16:37:55,497 - [file_logger] - [INFO] - Found 119 offers
+2023-06-27 16:37:55,528 - [file_logger] - [INFO] - Saved aixam offers
+2023-06-27 16:37:55,529 - [file_logger] - [INFO] - End of scraping the manufacturer: aixam
+2023-06-27 16:37:55,531 - [file_logger] - [INFO] - Start of scraping the manufacturer: alfa-romeo
+2023-06-27 16:37:56,234 - [file_logger] - [INFO] - Manufacturer has: 45 subpages
+2023-06-27 16:37:56,235 - [file_logger] - [INFO] - Scraping page: 1
+2023-06-27 16:37:56,596 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:37:56,598 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-spider-2-0-150km-klimatyzacja-elektryczny-dach-niski-przebieg-oplaty-ID6FBwLu.html
+2023-06-27 16:37:56,599 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-quadrifoglio-poliftowa-6700-km-przebiegu-ID6FtrCu.html
+2023-06-27 16:37:56,600 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2021-fv23-ID6FCluX.html
+2023-06-27 16:37:56,604 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2-0t-280km-q4-retrofit-veloce-ti-carbon-performance-pakiet-full-ID6FsMZ2.html
+2023-06-27 16:37:56,607 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-turbo-170km-alu-klimatyzacja-led-bezwypadkowa-1wl-pelen-serwis-aso-ID6Fs5LI.html
+2023-06-27 16:37:56,607 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-alfa-romeo-147-ID6FCksv.html
+2023-06-27 16:37:56,609 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-2-jtd-panorama-q4-full-85-000-km-ID6FBRuh.html
+2023-06-27 16:37:56,611 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-doskonalym-stanie-i-bardzo-dobrej-konfiguracji-ID6FBsF2.html
+2023-06-27 16:37:57,782 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-giugiaro-design-bordowa-skora-ID6FChw2.html
+2023-06-27 16:37:58,244 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-1-4-tb-120km-ID6FALBN.html
+2023-06-27 16:37:58,349 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-ID6FBoCM.html
+2023-06-27 16:37:58,551 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-szpera-lsd-aktywne-zawieszenie-fv23-rosso-competizione-ID6FCeEp.html
+2023-06-27 16:37:58,610 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-280km-q4-r-2021-gwarancja-do-2026-jak-nowy-ID6FCezo.html
+2023-06-27 16:37:58,680 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-benzyna-nawigacja-serwis-z-niemiec-po-oplatach-z-gwarancja-ID6FCexi.html
+2023-06-27 16:37:58,682 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-2-0-jtd-ID6FBokH.html
+2023-06-27 16:37:58,708 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-quadrifoglio-verde-510km-ID6Fn12j.html
+2023-06-27 16:37:58,736 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-tb-tjet-120-czarny-sufit-navi-skora-bezwypadkowa-ID6FCebs.html
+2023-06-27 16:37:58,852 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-pierwszy-wlasciciel-w-pl-stan-idealny-zadbany-ID6FBnTb.html
+2023-06-27 16:37:58,910 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-9-nowa-turbina-nowe-tarcze-klocki-laczniki-16v-ID6FyaQo.html
+2023-06-27 16:37:59,145 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-ti-bogate-wyposazenie-przebieg-43-tys-oc-2x-opon-fv23-ID6Fa8xP.html
+2023-06-27 16:37:59,553 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-estrema-280km-wersja-specjalna-od-reki-ID6EJPFu.html
+2023-06-27 16:37:59,950 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-alfa-romeo-mito-1-3-jtdm-distinctive-zadbana-perlowy-braz-ID6FC2eX.html
+2023-06-27 16:38:00,189 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-2-4jtd-200km-jasna-skora-manual-ID6FCbaC.html
+2023-06-27 16:38:00,273 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-51233-demo-czerwone-fotele-veloce-2022r-rabat-64-tys-ID6EDQPb.html
+2023-06-27 16:38:00,328 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-multiair-salon-polska-serwis-aso-klimatronic-tempomat-ID6FyU0E.html
+2023-06-27 16:38:00,407 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-benzyna-klimatyzacja-ID6FC9yV.html
+2023-06-27 16:38:00,446 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-75-tbi-200km-sedan-pozadana-wersja-ID6FjSnJ.html
+2023-06-27 16:38:00,493 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-9-jtdm-150km-ID6FC8wC.html
+2023-06-27 16:38:00,521 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-ID6FtLvC.html
+2023-06-27 16:38:00,772 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-piekna-100-bezwypadkowa-zadbana-stan-ideal-ID6FC2Kb.html
+2023-06-27 16:38:01,137 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-stelvio-2-0-gme-turbo-veloce-q4-280km-at-cesja-leasingu-niska-rata-ID6EKjik.html
+2023-06-27 16:38:01,384 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-1-4-170km-super-stan-ID6Fxicy.html
+2023-06-27 16:38:02,467 - [file_logger] - [INFO] - Scraping page: 2
+2023-06-27 16:38:03,375 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:38:03,377 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-turbo-benzyna-1-wlasciciel-od-nowosci-pelen-serwis-ID6FC23R.html
+2023-06-27 16:38:03,380 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-2-lata-gwarancji-zamiana-1-4tb-155km-alu-17-pdc-dna-6-biegow-ID6FC1Pj.html
+2023-06-27 16:38:03,380 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-280km-q4-veloce-66265-2023r-ID6FpT3t.html
+2023-06-27 16:38:03,385 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-cesja-pierwszy-wlasciciel-salon-pl-aso-70k-km-limit-najmu-ID6FC17B.html
+2023-06-27 16:38:03,386 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-jtdm-2-0-170ps-navi-alus18-skora-okazja-12-2010r-tarnow-ID6FC0yB.html
+2023-06-27 16:38:03,391 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-ti-q4-ID6FC0uC.html
+2023-06-27 16:38:03,392 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-bezawaryjna-od-prawdomownego-fana-i-z-laurka-ID6FtMY4.html
+2023-06-27 16:38:03,393 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-veloce-ti-q4-ID6Fo08F.html
+2023-06-27 16:38:04,390 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-veloce-q4-naped-4x4-2-2-diesel210km-bezwypadkowy-ID6FqEQj.html
+2023-06-27 16:38:04,949 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-super-stan-jak-nowy-ID6FjgSx.html
+2023-06-27 16:38:05,025 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-t-jet-120-tb-niemcy-oplacony-ID6FBZu3.html
+2023-06-27 16:38:05,059 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-1-4-tb-dinstictive-tct-ID6FBYtd.html
+2023-06-27 16:38:05,155 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-okazja-chipp-android-sport-ID6FxcI3.html
+2023-06-27 16:38:05,159 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-1-4-turbo-benzyna-170-km-okazja-ID6FBVkQ.html
+2023-06-27 16:38:05,174 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-46461-veloce-2-0-280km-od-reki-ID6Faadk.html
+2023-06-27 16:38:05,211 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-gt-2-0-gt-150km-bogata-wersja-bertone-2004r-ID6FBS9L.html
+2023-06-27 16:38:05,264 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-pl-salon-1-wlasciciel-fv23-1-4-multiair-bezwypadkowy-ksenon-ID6FBWuE.html
+2023-06-27 16:38:05,525 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-156-youngtimer-legendarny-2-5v6-z-moca-podniesiona-do-212km-super-stan-ID6FxJOF.html
+2023-06-27 16:38:05,566 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2-0-t-veloce-q2-full-wersja-w-stanie-idealnym-ID6FBTFE.html
+2023-06-27 16:38:06,003 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-2-4-automat-skora-bez-rdzy-okazja-ID6FjJ1c.html
+2023-06-27 16:38:06,507 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-2010-2-0-jtdm-170-km-czarny-srodekfotele-kubelkowedna-ID6FBRSJ.html
+2023-06-27 16:38:06,684 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-alfa-romeo-mito-1-4-t-155km-ID6F7f8H.html
+2023-06-27 16:38:06,984 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-dach-panoramiczny-piekny-od-reki-d70285-ID6FBIkB.html
+2023-06-27 16:38:07,019 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-t-multiair-salon-polska-serwis-aso-xenon-klimatronic-ID6FzVfw.html
+2023-06-27 16:38:07,046 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2021-stelvio-veloce-pierwszy-wlasciciel-kupiony-w-polskim-salonie-ID6FBG2W.html
+2023-06-27 16:38:07,082 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-tb-120-km-oryginalny-gaz-niski-udokumentowany-przebieg-ID6FBFAZ.html
+2023-06-27 16:38:07,086 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-sportledynaviskorafullklimatrontempmultifchromy-ID6FBFkA.html
+2023-06-27 16:38:07,125 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-bezwypadek-1-wlasciciel-xenon-serwisowany-ID6F8fFH.html
+2023-06-27 16:38:07,464 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-w-perfekcyjnym-stanie-ID6FvDrB.html
+2023-06-27 16:38:07,481 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-6-jtdm-lift-bezwypadkowa-piekna-serwisowana-ID6FBEyF.html
+2023-06-27 16:38:07,650 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-alfa-romeo-147-1-9jtd-120km-2008-rok-ID6FvqZw.html
+2023-06-27 16:38:08,610 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4tb-135km-sport-klimatronik-tempomat-navi-isofix-serwis-ID6FBAax.html
+2023-06-27 16:38:09,370 - [file_logger] - [INFO] - Scraping page: 3
+2023-06-27 16:38:09,974 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:38:09,976 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-czarna-perla-czwewone-skory-178km-398nm-sedan-tempomat1-9jdm-wroclaw-ID6FBzon.html
+2023-06-27 16:38:09,979 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-xsenon-salon-polska-oryginalny-przebieg-ID6FByPd.html
+2023-06-27 16:38:09,981 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-2-0jtdm-sport-plus-ti-ID6Fxikb.html
+2023-06-27 16:38:09,983 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-od-osoby-prywatnej-ID6FByuO.html
+2023-06-27 16:38:09,987 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-75-tbi-distinctive-salon-polska-serwis-aso-skora-xenon-ID6FAAqy.html
+2023-06-27 16:38:09,989 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-led-1-4t-120ps-climatronic-zobacz-jaka-sliczna-ostrowek1-ID6FfaEl.html
+2023-06-27 16:38:10,004 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-ID6FyFop.html
+2023-06-27 16:38:10,006 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-2010r-ID6FzF1n.html
+2023-06-27 16:38:10,954 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-najlepsza-oferta-czerwca-19-rabatu-dla-firm-ID6FBxrs.html
+2023-06-27 16:38:11,107 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-zadbany-skora-navigacja-ID6FzEUb.html
+2023-06-27 16:38:11,505 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-najlepsza-oferta-czerwca-20-rabatu-dla-firm-ID6FBxjt.html
+2023-06-27 16:38:11,675 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-full-xenon-navi-czarny-metalik-ID6F5DMo.html
+2023-06-27 16:38:11,677 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-stelvio-2-0-turbo-veloce-q4-280km-2023r-ID6FBxsm.html
+2023-06-27 16:38:11,688 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2-0-280-km-at8-q4-veloce-z-polski-serwis-aso-f-vat-23-ID6FAz8L.html
+2023-06-27 16:38:11,745 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-166-3-0-v6-szwajcar-fv23-79800km-ID6FzEzO.html
+2023-06-27 16:38:11,767 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-stelvio-2-0-turbo-super-q4-aut-salon-pl-1wl-ID6FvXcP.html
+2023-06-27 16:38:12,007 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-145-ID6FfNCO.html
+2023-06-27 16:38:12,040 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-benzyna-automat-gwarancja-ID6Fzt2R.html
+2023-06-27 16:38:12,247 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-ti-1-9-150-koni-ID6FwHrV.html
+2023-06-27 16:38:13,025 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-2-0-turbo-super-q4-aut-280-km-1-wla-krajowy-ID6FAyL4.html
+2023-06-27 16:38:13,033 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-klimatyzacja-alufelgi-komputer-elektryka-bezwypadek-gwarancja-ID6Fss9U.html
+2023-06-27 16:38:13,047 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-bezwypadkowy-serwisowany-w-aso-i-szy-wlasciciel-faktura-vat-marza-ID6FCmvw.html
+2023-06-27 16:38:13,063 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-156-1-9-diesel-zamiana-ekonomiczny-oplaty-sprawny-wwa-komis-green-light-ID6FwuIL.html
+2023-06-27 16:38:13,346 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023r-stelvio-2-0-gme-280-km-at-q4-veloce-ID6Fw7hK.html
+2023-06-27 16:38:13,418 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-tb-280km-a8-q4-ti-vesuvio-grey-ID6FzEnI.html
+2023-06-27 16:38:13,464 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-tb-280km-a8-q4-ti-vesuvio-grey-ID6FzEnD.html
+2023-06-27 16:38:13,482 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speziale-1-5-t4-dct7-alfa-red-414-ID6FzEnf.html
+2023-06-27 16:38:14,102 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speciale-mhev-1-5-150km-at7-2022-montreal-green-ID6FzEmQ.html
+2023-06-27 16:38:14,348 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speciale-1-3-280km-at6-phev-ID6FzEno.html
+2023-06-27 16:38:14,350 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-ti-1-5-mhev-180km-at7-ID6FzEnv.html
+2023-06-27 16:38:14,352 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speziale-1-5-t4-dct7-alfa-red-414-ID6FzEn1.html
+2023-06-27 16:38:14,766 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speciale-mhev-1-5-150km-at7-2022-montreal-green-ID6FzEmF.html
+2023-06-27 16:38:15,618 - [file_logger] - [INFO] - Scraping page: 4
+2023-06-27 16:38:16,212 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:38:16,214 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-quadrifoglio-2-9-bi-turbo-v6-510km-at8-demo-salonu-ID6Fodxs.html
+2023-06-27 16:38:16,216 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023r-stelvio-2-0-gme-280-km-at-q4-veloce-ID6Fw7bi.html
+2023-06-27 16:38:16,217 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2023r-giulia-2-0-gme-280-km-at-q4-veloce-ID6Fw7bG.html
+2023-06-27 16:38:16,219 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-1-9-jtdm-150ps-pdc-klima-ID6FzEjV.html
+2023-06-27 16:38:16,219 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-ti-1-5-mhev-180km-at7-ID6Fwt07.html
+2023-06-27 16:38:16,221 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-tb-200km-sprint-demo-moonlight-pearl-ID6FzEgX.html
+2023-06-27 16:38:16,222 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-tb-200km-sprint-demo-moonlight-pearl-ID6FzEgD.html
+2023-06-27 16:38:16,224 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-my23-veloce-2-0-gme-280-km-q4-czerwony-alfa-red-414-ID6FzEg7.html
+2023-06-27 16:38:17,712 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-my23-veloce-2-0-gme-280-km-q4-czerwony-alfa-red-414-ID6FzEgl.html
+2023-06-27 16:38:17,740 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-klimatronik-ekonomiczne-zadbane-ID6FjzuI.html
+2023-06-27 16:38:17,773 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speciale-1-3-280km-at6-phev-ID6Ftm1v.html
+2023-06-27 16:38:17,806 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speciale-phev-280km-q4-pakiet-winter-premium-harman-kardon-ID6FwsZX.html
+2023-06-27 16:38:17,839 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-sportwagon-qtronic-niski-przbeieg-ID6FCmlj.html
+2023-06-27 16:38:17,876 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-quadrifoglio-2-9-biturbo-510-km-niski-przebieg-ID6FCmgF.html
+2023-06-27 16:38:17,897 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-stelvio-w-specjalnej-czerwcowej-ofercie-z-rabatem-az-20-ID6FBvhx.html
+2023-06-27 16:38:17,913 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-ID6FtlCp.html
+2023-06-27 16:38:18,685 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023-competizione-280km-at8-awd-matrix-led-5-lat-gwarancji-ID6FlgFU.html
+2023-06-27 16:38:19,372 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-veloce-oferta-czerwca-rabat-19-ID6FBv66.html
+2023-06-27 16:38:19,373 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-quadrifoglio-2-9-bi-turbo-v6-510km-at8-demo-salonu-ID6FzDZ0.html
+2023-06-27 16:38:19,375 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-2-0-280km-at8-q4-asystent-kierowcy-asystent-premium-ID6FzDUO.html
+2023-06-27 16:38:19,380 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-2-0-280km-at8-q4-asystent-kierowcy-asystent-premium-ID6FzDUk.html
+2023-06-27 16:38:19,432 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-280km-a8-q4-b-tech-serwisowany-bezwypadkowy-oddealera-ID6FBv3d.html
+2023-06-27 16:38:19,444 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-alfa-romeo-147-1-9jtdm-120-km-ID6FzDQL.html
+2023-06-27 16:38:19,468 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-235km-salon-polska-bi-ksenony-skretne-skory-panorama-ID6FzJFh.html
+2023-06-27 16:38:19,694 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-156-alfa-romeo-156-sw-1-9-jtd-zadbana-historia-serwisowa-ID6FCl8E.html
+2023-06-27 16:38:20,312 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-1-9jtdm-progression-ID6FzDLm.html
+2023-06-27 16:38:20,578 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-piekna-tania-alfa-do-sprzedania-ID6FyiKZ.html
+2023-06-27 16:38:20,808 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-2023r-tonale-edizione-speciale-fwd-160km-mild-hybrid-20-km-ID6Foeee.html
+2023-06-27 16:38:20,810 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-ti-2-0t-280-km-q4-hak-szklany-dach-wyprzedaz-2022r-ID6FcC3L.html
+2023-06-27 16:38:20,848 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-2-0t-280-km-q4-szklany-dach-gwarancja-do-2027r-ID6F8zmz.html
+2023-06-27 16:38:21,086 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-ti-2-0t-280-km-q4-wyprzedaz-2022r-5-lat-gwarancji-ID6Fgp5q.html
+2023-06-27 16:38:21,131 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-2022r-tonale-veloce-fwd-160km-hybrid-20-km-ID6FwOrs.html
+2023-06-27 16:38:22,057 - [file_logger] - [INFO] - Scraping page: 5
+2023-06-27 16:38:22,879 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:38:22,881 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-2023r-tonale-sprint-fwd-130km-ID6FwOrA.html
+2023-06-27 16:38:22,882 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-idealny-stan-serwis-aso-2-komplety-kol-ID6FClei.html
+2023-06-27 16:38:22,885 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-2023r-tonale-veloce-1-3-t4-280-km-phev-at6-q4-ID6FwOlf.html
+2023-06-27 16:38:22,889 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-2-0-veloce-ti-280km-ID6F4Bwm.html
+2023-06-27 16:38:22,889 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-turbo-first-edition-z-polskiego-salonu-fv-23-ID6FAxD5.html
+2023-06-27 16:38:22,891 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-2023r-tonale-veloce-1-3-t4-280-km-phev-at6-q4-ID6Fewcb.html
+2023-06-27 16:38:22,892 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-matrix-led-asystent-kierowcy-plus-ID6FCl3W.html
+2023-06-27 16:38:22,894 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-166-3-0-v6-sportronic-szwajcaria-serwisowana-niski-przebieg-ID6FCkSK.html
+2023-06-27 16:38:23,951 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-ID6FweoW.html
+2023-06-27 16:38:24,213 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-ozarow-maz-klima-sprawna-ID6FxZVY.html
+2023-06-27 16:38:24,434 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-156-ozarow-mazowiecki-klima-alufelgi-ID6FCkBQ.html
+2023-06-27 16:38:24,510 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2022r-stelvio-veloce-q4-280km-ID6F8fxw.html
+2023-06-27 16:38:24,531 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023r-stelvio-2-0-gme-280-km-at-q4-veloce-ID6Fw5VE.html
+2023-06-27 16:38:24,558 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2023r-giulia-2-0-gme-280-km-at-q4-veloce-ID6Fw5Vx.html
+2023-06-27 16:38:24,602 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-zarejestrowany-polecam-ID6EEx7j.html
+2023-06-27 16:38:24,645 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-alfa-romeo-giulia-2-0-turbo-rwd-ID6FChhy.html
+2023-06-27 16:38:24,677 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-navi-led-pdc-gwarancja-oplacona-ID6FCkhq.html
+2023-06-27 16:38:24,836 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-ID6FlAOa.html
+2023-06-27 16:38:25,031 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-ID6FlALK.html
+2023-06-27 16:38:25,083 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-nowy-rozrzad-nowe-opony-nowy-akumulator-ID6FCjJK.html
+2023-06-27 16:38:25,338 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-dobrze-wyposazona-150ps-wersja-carbon-po-lift-ID6FCjKD.html
+2023-06-27 16:38:25,673 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-4c-alfa-romeo-4c-scara73-galemotorsport-gms-300km-ID6F5qT2.html
+2023-06-27 16:38:26,094 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-ti-sport-q4-faktura-vat-23-ID6EWi06.html
+2023-06-27 16:38:26,139 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-alfa-147-1-6-120-km-po-oplatach-ID6Fz1N0.html
+2023-06-27 16:38:26,296 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-salon-polska-i-wlasciciel-ID6FCir4.html
+2023-06-27 16:38:26,556 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-wersja-sprint-adas-2-plus-hybryda-130km-20km-kamery-360-ID6F92IJ.html
+2023-06-27 16:38:26,560 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023r-stelvio-2-0-gme-280-km-at-q4-veloce-ID6FvAv9.html
+2023-06-27 16:38:26,565 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-2023r-tonale-edizione-speciale-1-3-t4-280-km-phev-at6-q4-ID6FvAwt.html
+2023-06-27 16:38:26,567 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023r-stelvio-2-0-gme-280-km-at-q4-competizione-ID6FvAwu.html
+2023-06-27 16:38:26,594 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-sprint-2-0-200km-dostepna-od-reki-ID6FBtyR.html
+2023-06-27 16:38:27,055 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-super-1-4-150km-6mt-salon-pl-fv-vat-23-od-reki-ID6FCiXY.html
+2023-06-27 16:38:27,081 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-my23-veloce-q4-2023-lift-280km-pakiety-premium-asystent-hak-zaciski-ID6Fj1Qi.html
+2023-06-27 16:38:28,434 - [file_logger] - [INFO] - Scraping page: 6
+2023-06-27 16:38:29,008 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:38:29,010 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-2-0jtdm-140km-aso-ID6FAVat.html
+2023-06-27 16:38:29,011 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-spider-3-2-v6-salon-polska-r-cars-warszawa-ID6F0t12.html
+2023-06-27 16:38:29,014 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2023r-giulia-veloce-q4-280km-ID6Fobr9.html
+2023-06-27 16:38:29,016 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023r-stelvio-2-0-gme-280-km-at-q4-veloce-ID6FobqL.html
+2023-06-27 16:38:29,017 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-turbo-veloce-ti-q4-aut-ID6ECBD0.html
+2023-06-27 16:38:29,021 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-zobacz-opis-roczna-gwaranja-ID6FpTf6.html
+2023-06-27 16:38:29,029 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-ti-ID6Fz1bB.html
+2023-06-27 16:38:29,033 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-czerwona-skora-280km-euro-car-gdynia-ID6EOCcT.html
+2023-06-27 16:38:29,592 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-q4-veloce-w-idealnym-stanie-ID6FrIaJ.html
+2023-06-27 16:38:29,651 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-piekna-unikatowa-alfa-przebieg-124-000-km-ID6FzBG7.html
+2023-06-27 16:38:30,198 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-perfekt-zadbana-bez-korozji-ID6FAVg3.html
+2023-06-27 16:38:30,344 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-model-giulietta-1-4-tb-16v-super-ID6FuyKE.html
+2023-06-27 16:38:30,591 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-ti-2-0-benzyna-4x4-2022r-ID6Fz129.html
+2023-06-27 16:38:30,645 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-serwis-aso-lift-benzyna-biala-perla-1-4t-ID6FvziB.html
+2023-06-27 16:38:30,674 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-nowy-model-swiatla-led-cyfrowe-zegary-veloce-280-km-ID6Fk2da.html
+2023-06-27 16:38:30,716 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-1-7-turbo-benzyna-200ps-klimatronik-pelny-serwis-zadbana-ID6FAuSe.html
+2023-06-27 16:38:30,841 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-automat-salon-pl-170-km-serwisowany-ID6FAuGM.html
+2023-06-27 16:38:31,030 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-veloce-2-0-280km-q4-ID6F7Ghh.html
+2023-06-27 16:38:31,032 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-200-km-2-0-benzyna-q4-ID6ETCRb.html
+2023-06-27 16:38:31,033 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2023-matrix-led-sprint-280km-at8-awd-alfa-red-5-lat-gwarancji-ID6FCica.html
+2023-06-27 16:38:31,561 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0t-200km-business-q4-salon-pl-serwis-aso-idealny-ID6Fz0LK.html
+2023-06-27 16:38:31,874 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-ti-1-6-jtd-130km-pakiet-winter-pakiet-asystentow-kierowcy-ID6FBszF.html
+2023-06-27 16:38:31,941 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-280-km-at-veloce-q4-2022r-wyprzedaz-rocznika-2022-ID6FBsws.html
+2023-06-27 16:38:32,149 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-1-5-130-km-20km-dct7-mhev-edizione-speciale-2022r-ID6FBsuw.html
+2023-06-27 16:38:32,187 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-super-2-0-200km-ID6FBsu6.html
+2023-06-27 16:38:32,465 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-stelvio-my23-veloce-2-0-gme-280-km-q4-2023r-matrx-led-ID6FBstT.html
+2023-06-27 16:38:32,514 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-stelvio-my23-veloce-2-0-gme-280-km-q4-2023r-matrx-led-ID6FBssc.html
+2023-06-27 16:38:32,598 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-salon-polska-rej-2020-4x4-280km-stan-idealny-fv-vat-ID6FAuiy.html
+2023-06-27 16:38:32,748 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-bardzo-ladne-i-zadbane-od-kobiery-ID6FsQWq.html
+2023-06-27 16:38:32,967 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-2-0-turbo-veloce-q4-po-liftingu-ID6FuvYE.html
+2023-06-27 16:38:32,981 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159jtdm-16v-ID6FzTvi.html
+2023-06-27 16:38:33,250 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-mito-sie-podoba-piekna-zadziorna-ekonomiczna-ID6FB1ut.html
+2023-06-27 16:38:34,421 - [file_logger] - [INFO] - Scraping page: 7
+2023-06-27 16:38:34,981 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:38:34,983 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-business-2-0-200km-dostepny-od-reki-ID6FBrZR.html
+2023-06-27 16:38:34,983 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-automat-diesel-ID6FzB59.html
+2023-06-27 16:38:34,985 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2-2-q4-ID6FzB5e.html
+2023-06-27 16:38:34,986 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-260km-m-t-sw-3-2-v6-q4-2006r-serwis-aso-tap-skorzana-bezwp-ID6FqGoP.html
+2023-06-27 16:38:34,987 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-1-9-jtdm-150km-serwis-polecam-ID6FzB3d.html
+2023-06-27 16:38:34,989 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4i-105km-klimatzacja-welur-serwis-oplacony-ID6FChwn.html
+2023-06-27 16:38:34,991 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-4x4-q4-2-0l-niski-koszt-naprawy-usa-ID6EGqqy.html
+2023-06-27 16:38:34,992 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-maxton-faktura-vat-czarna-brazowe-skory-ID6FBz0s.html
+2023-06-27 16:38:35,517 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-nowa-alfa-romeo-stelvio-veloce-2-0-turbo-280km-ID6Fk1MC.html
+2023-06-27 16:38:36,452 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-panoramiczny-dach-led-skory-xenon-gwarancja-ID6FC1k0.html
+2023-06-27 16:38:36,605 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-super-full-led-matrix-280km-q4-2023-euro-car-gdynia-ID6Fo9JH.html
+2023-06-27 16:38:36,607 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-spider-veloce-klima-auto-w-polsce-po-oplatach-ID6F0yTk.html
+2023-06-27 16:38:36,666 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-4x4-bogata-super-stan-ID6FvBbb.html
+2023-06-27 16:38:36,912 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-turbo-super-q4-200km-ID6ETjDa.html
+2023-06-27 16:38:36,917 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-1-4-tjet-120-km-qv-line-ID6FAsY8.html
+2023-06-27 16:38:36,958 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-brera-alfa-romeo-brera-2-4-240km-560nm-ID6Fye9G.html
+2023-06-27 16:38:36,980 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-1wl-fv-23-polski-salon-280km-pali-jezdzi-ID6FAWxz.html
+2023-06-27 16:38:37,346 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-2-0-140km-tempomat-2x-klimatronik-naglosnienie-ID6FqDhd.html
+2023-06-27 16:38:37,570 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-9-jtdm-automat-ID6FAWq7.html
+2023-06-27 16:38:37,633 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-turbo-sprint-at8-q4-200km-tempomat-adaptacyjny-ID6FCgGK.html
+2023-06-27 16:38:38,437 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-ID6FCgEN.html
+2023-06-27 16:38:38,458 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4t-120km-klimatyzacja-radio-dotykowe-welur-oplacony-z-niemiec-ID6FyZaQ.html
+2023-06-27 16:38:38,551 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-alfa-romeo-147-1-6-ID6FwJVX.html
+2023-06-27 16:38:38,632 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-ID6FCeyq.html
+2023-06-27 16:38:38,637 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-sprint-130km-mhev-kamery-360-felgi-19-najem-1899zl-ID6FAskC.html
+2023-06-27 16:38:38,776 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-2-0jtd-170km-bixenon-alus-navi-skory-climatr-swiezy-import-gwarancja-ID6FArPY.html
+2023-06-27 16:38:38,803 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-sprint-280km-elektryka-foteli-najem-od-2690zl-netto-matrix-led-ID6FAsci.html
+2023-06-27 16:38:38,827 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-sprint-2-0-turbo-ID6ESiRH.html
+2023-06-27 16:38:39,116 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-2-0-jtdm-distinctive-140km-ID6FpNe3.html
+2023-06-27 16:38:39,120 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2-0-turbo-veloce-q4-280km-pakiet-premium-ID6FArNT.html
+2023-06-27 16:38:39,122 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-my2023-diesel-premium-harman-kardon-adas2-ID6Fv48H.html
+2023-06-27 16:38:39,512 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-my2023-21-cali-premium-harman-kardon-adas2-ID6FmYWm.html
+2023-06-27 16:38:40,856 - [file_logger] - [INFO] - Scraping page: 8
+2023-06-27 16:38:41,749 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:38:41,751 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-my2023-21-cali-premium-harman-kardon-adas2-ID6FmYWm.html
+2023-06-27 16:38:41,753 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-2-raty-gratis-najem-od-2690zl-netto-matrix-led-ID6FnW5q.html
+2023-06-27 16:38:41,754 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-tonale-ti-1-6-diesel-130-km-dct-6-pakiet-winter-ID6FzKgk.html
+2023-06-27 16:38:41,757 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-adas-2-plus-ID6FzKgp.html
+2023-06-27 16:38:41,761 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-adas-2-plus-ID6FzKgr.html
+2023-06-27 16:38:41,766 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-adas-2-plus-ID6FzKgm.html
+2023-06-27 16:38:41,769 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-adas-2-plus-ID6FzKgq.html
+2023-06-27 16:38:41,772 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-premium-harman-kardon-ID6FzKgo.html
+2023-06-27 16:38:42,687 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-adas-2-plus-ID6FzKgn.html
+2023-06-27 16:38:42,943 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-premium-harman-kardon-ID6FzKgl.html
+2023-06-27 16:38:42,964 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speciale-1-5-mhev-160km-20km-ev-pakiet-adas-2-plus-ID6FzKgj.html
+2023-06-27 16:38:43,428 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-vulcano-black-czerwona-skora-my23-ID6FzKg0.html
+2023-06-27 16:38:43,461 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-alfa-white-czarna-skora-my23-ID6FzKg4.html
+2023-06-27 16:38:43,534 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-premium-harman-kardon-ID6FzKg9.html
+2023-06-27 16:38:43,602 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-czerwony-alfa-red-czarna-skora-my23-ID6FzKfW.html
+2023-06-27 16:38:43,676 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-czerwony-alfa-red-czarna-skora-hak-my23-ID6FzKfZ.html
+2023-06-27 16:38:43,832 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-czerwony-alfa-red-czarna-skora-my23-ID6FzKg8.html
+2023-06-27 16:38:44,032 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-misano-blue-czarna-skora-my23-ID6FzKgc.html
+2023-06-27 16:38:44,034 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-premium-harman-kardon-ID6FzKgh.html
+2023-06-27 16:38:44,041 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-5-mhev-160km-20km-ev-pakiet-adas-2-plus-ID6FzKg1.html
+2023-06-27 16:38:44,440 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-vulcano-black-czarna-skora-my23-ID6FzKfY.html
+2023-06-27 16:38:44,539 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-alfa-red-szklany-dach-czarna-skora-my23-ID6FzKg2.html
+2023-06-27 16:38:44,829 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-grafitowy-vesuvio-czarna-skora-my23-ID6FzKg7.html
+2023-06-27 16:38:44,951 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-grafitowy-vesuvio-czarna-skora-my23-ID6FzKfS.html
+2023-06-27 16:38:45,287 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-veloce-2-0-gme-280-km-q4-misano-blue-my23-ID6FzKfP.html
+2023-06-27 16:38:45,581 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-veloce-2-0-gme-280-km-q4-szary-vesuvio-my23-ID6FzKfK.html
+2023-06-27 16:38:45,693 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-q4-at-2-0-280-km-alfa-white-szklany-dach-czerwona-skora-my23-ID6FzKfQ.html
+2023-06-27 16:38:45,749 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-veloce-2-0-gme-280-km-q4-alfa-red-pakiet-premium-my23-ID6FzKfN.html
+2023-06-27 16:38:45,847 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-1-3-t4-280-km-phev-pakiet-adas-2-plus-ID6FzKfI.html
+2023-06-27 16:38:45,943 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speciale-1-3-t4-280-km-phev-q4-vesuvio-grey-my23-ID6FzKfJ.html
+2023-06-27 16:38:46,008 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-veloce-2-0-gme-280-km-q4-alfa-white-my23-ID6FzKfL.html
+2023-06-27 16:38:46,045 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-edizione-speciale-1-3-t4-280-km-phev-q4-alfa-red-my23-ID6FzKfM.html
+2023-06-27 16:38:47,515 - [file_logger] - [INFO] - Scraping page: 9
+2023-06-27 16:38:48,132 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:38:48,134 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023r-stelvio-2-0-gme-280-km-at-q4-veloce-ID6Fo8hd.html
+2023-06-27 16:38:48,136 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023r-stelvio-2-0-gme-280-km-at-q4-veloce-ID6Fmjmk.html
+2023-06-27 16:38:48,138 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-giulia-2-2d-bardzo-zadbana-xenon-klima-alu-pelen-serwis-zapraszam-ID6FcYi5.html
+2023-06-27 16:38:48,143 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-multiair-salon-polska-klimatronic-alu-ID6FCfRm.html
+2023-06-27 16:38:48,146 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-mpi-salon-polska-serwis-aso-klima-alu-ID6FBq9P.html
+2023-06-27 16:38:48,148 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-exclusive-2-0-jtdm-140-km-czarna-skora-navi-servis-ID6FzyTE.html
+2023-06-27 16:38:48,150 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-166-ID6FCeZ0.html
+2023-06-27 16:38:48,154 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-alfa-romeo-giulietta-qv-line-1-6-jtdm-q2-ID6FqIsZ.html
+2023-06-27 16:38:49,483 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-lift-2-0t-280km-q4-bogate-wyposazenie-jezdzacy-uszkodzony-z-usa-ID6FyYFX.html
+2023-06-27 16:38:49,621 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-jak-nowa-bezwypadkowa-pierwszy-wlasciciel-bi-xenon-klimatronic-ID6F0XgG.html
+2023-06-27 16:38:49,720 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2-2d-210km-at8-q4-awd-veloce-salonpl-serwisaso-demo-ID6FCeEQ.html
+2023-06-27 16:38:49,912 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-giulia-q4-280km-bogato-wyposazona-po-duzym-serwisie-veloce-ID6Fw7Pr.html
+2023-06-27 16:38:49,914 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-ti-2-0-jtdm-polift-xenony-nawigacja-google-youtube-kola-17-zamiana-ID6FCe2b.html
+2023-06-27 16:38:49,913 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-6-jtdm-120-psekonomicznyklimatyzacjaicd-ID6FBoxp.html
+2023-06-27 16:38:49,918 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-170-km-qv-line-automat-tct-ID6FCdOs.html
+2023-06-27 16:38:49,919 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-veloce-serwisowany-95tys-km-ID6FCdUj.html
+2023-06-27 16:38:50,429 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-alfa-giulia-turbo-veloce-q4-nietuzinkowa-ID6FASQm.html
+2023-06-27 16:38:50,550 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-alfa-romeo-mito-qv-quadrifoglio-verde-170hp-lpg-ID6FzJA7.html
+2023-06-27 16:38:50,743 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-klima-alu-oplacona-ID6FmgAQ.html
+2023-06-27 16:38:50,950 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-9-jtdm-120-km-ID6FCdRc.html
+2023-06-27 16:38:50,952 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-ostatni-lifting-ID6Fxv6Z.html
+2023-06-27 16:38:50,963 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-stelvio-ti-280-km-zadbana-bogata-wersja-wyposazenia-ID6FzxIC.html
+2023-06-27 16:38:50,968 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-turbo-170km-navi-toffi-skory-bezwypadkowa-ID6FtEYD.html
+2023-06-27 16:38:51,326 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-40-zdjec-1-7-tb-170km-jedyna-taka-w-polsce-sport-ID6FvyHJ.html
+2023-06-27 16:38:51,475 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-kombi-1-8benz-szyber-klima-ele-rm-cd-serwis-bardzo-ladna-ID6Fu7s6.html
+2023-06-27 16:38:51,736 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-alfa-romeo-147-2008-rok-stan-dobry-ID6Fzxz1.html
+2023-06-27 16:38:52,142 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-navi-l-e-d-ID6FCdym.html
+2023-06-27 16:38:52,146 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-quadrifoglio-2022-2-9-v6-510km-perla-etna-red-fotele-sparco-ID6EmeBs.html
+2023-06-27 16:38:52,164 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-alfa-romeo-giulia-2-0-turbo-ID6FAolN.html
+2023-06-27 16:38:52,492 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-gt-alfa-gt-2-0-ID6FuVHN.html
+2023-06-27 16:38:52,561 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-competizione-q4-at-2-0-280km-niebieska-czarna-skora-asystent-kierowcy-ID6FyXf2.html
+2023-06-27 16:38:52,686 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-2-4-jtd-bogata-opcja-navi-skora-xenon-szwajcar-ID6EgJzH.html
+2023-06-27 16:38:53,650 - [file_logger] - [INFO] - Scraping page: 10
+2023-06-27 16:38:54,571 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:38:54,573 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-1-4-turbo-120km-maly-przebieg-zadbany-szwajcar-ID6EJVrE.html
+2023-06-27 16:38:54,574 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-2-0-jtdm-170-km-pewny-100-okazja-ID6FyVXv.html
+2023-06-27 16:38:54,577 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2-0-gme-turbo-200km-fv-23-aso-ID6FA7lg.html
+2023-06-27 16:38:54,580 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-2-0-q4-280km-53800km-zamiana-ID6Fwmcs.html
+2023-06-27 16:38:54,583 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-speciale-130km-20km-demo-matrix-full-led-skory-ID6EGCIT.html
+2023-06-27 16:38:54,592 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-ID6FBYww.html
+2023-06-27 16:38:54,593 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-stan-idealny-pierwszy-wlasciciel-ID6F144S.html
+2023-06-27 16:38:54,599 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-2jtdm-180km-skora-grzana-kierownica-fotele-navi-kamera-tempomat-fvat-ID6FpCQb.html
+2023-06-27 16:38:55,310 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2016r-bezwypadkowy-gwarancja-przebiegu-i-serwisu-1-wlasciciel-ID6FAmGT.html
+2023-06-27 16:38:56,022 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-piekna-wloszka-sprzeglo-do-zrobienia-ID6FCbF4.html
+2023-06-27 16:38:56,046 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-w-wersji-veloce-1-3-t4-280-km-phev-2023r-ID6FCc8m.html
+2023-06-27 16:38:56,103 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-stan-fabryczny-1-4b-170km-autmat-led-polecam-ID6FCc3w.html
+2023-06-27 16:38:56,134 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-9jtdm-ID6FyWSD.html
+2023-06-27 16:38:56,196 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-cesja-leasingu-bez-odstepnego-gwarancja-maximum-care-stala-stopa-ID6FgLgP.html
+2023-06-27 16:38:56,235 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-ID6Fzly9.html
+2023-06-27 16:38:56,278 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-salon-polska-1-rej-2019-serwisowany-w-aso-2-komplety-kol-vat-marza-ID6FAOPV.html
+2023-06-27 16:38:56,317 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-turbo-q4-z-polskiego-salonu-fv-23-ID6FAmu5.html
+2023-06-27 16:38:56,543 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-100-bezwypadkowe-100-oryginal-lakier-stan-dla-wymagajacych-klientow-ID6FyWJO.html
+2023-06-27 16:38:56,756 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-166-alfa-romeo-166-2-4-jtd-20v-progression-ID6Fyarp.html
+2023-06-27 16:38:57,363 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-my23-2-0-280-km-ID6FibPs.html
+2023-06-27 16:38:57,400 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-alfa-mito-maly-przebieg-ID6FAOqi.html
+2023-06-27 16:38:57,657 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2023-matrix-led-veloce-280km-at8-awd-vulcano-5-lat-gwarancji-ID6Fp7PL.html
+2023-06-27 16:38:57,868 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-3jtdm-turismo-sport-zadbana-polecam-ID6FznM7.html
+2023-06-27 16:38:57,872 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0-280km-a-t-panorama-kamera-tryby-jazdy-ID6FyWpO.html
+2023-06-27 16:38:57,875 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2019-2-0l-4x4-po-gradobiciu-ID6FCbz7.html
+2023-06-27 16:38:57,878 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2022-quadrifoglio-2-9-v6-510km-pakiet-asystent-5-lat-gwarancji-ID6ERj1e.html
+2023-06-27 16:38:57,903 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4turbo-t-jet-distinctive-145-tys-km-carbon-android-dna-ID6FAlUr.html
+2023-06-27 16:38:57,958 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-156-1-9-jtd-lift-super-stan-zadbany-bez-korozji-klimatronik-ID6FCboo.html
+2023-06-27 16:38:58,239 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-crosswagon-1-9-jtd-150km-manual-crosswagon-q4-przebieg-202-tys-oferta-prywatna-ID6FkZxP.html
+2023-06-27 16:38:58,281 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-ID6Fvt7D.html
+2023-06-27 16:38:58,893 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-veloce-280km-zloty-perlowy-gt-ocra-ID6EToMk.html
+2023-06-27 16:38:59,125 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-1-9-tdi-184-600-km-skora-stan-bardzo-dobry-ID6FCb5S.html
+2023-06-27 16:39:00,083 - [file_logger] - [INFO] - Scraping page: 11
+2023-06-27 16:39:01,198 - [file_logger] - [INFO] - Found 32 links
+2023-06-27 16:39:01,200 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-ID6FCamt.html
+2023-06-27 16:39:01,202 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulietta-2-0-16v-170-km-navi-bose-xenon-alu-18-ID6FAlAi.html
+2023-06-27 16:39:01,204 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-sprint-130-km-ID6Fn7j4.html
+2023-06-27 16:39:01,206 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-veloce-280km-q4-my22-demonstracyjna-ID6FyUOv.html
+2023-06-27 16:39:01,208 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-nowy-model-5-lat-gwarancji-rabat-43000-zl-ID6Fo1RM.html
+2023-06-27 16:39:01,212 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-2-0-280-awd-ID6FzJ80.html
+2023-06-27 16:39:01,222 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-alfa-romeo-mito-1-4-tb-multiair-155km-19-skora-klimatyzacja-ID6FBlNq.html
+2023-06-27 16:39:01,226 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-9jtdm-sedan-ID6FtZzI.html
+2023-06-27 16:39:01,975 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-ID6FvPey.html
+2023-06-27 16:39:02,800 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2023r-stelvio-2-0-gme-280-km-at-q4-veloce-ID6Fp5rD.html
+2023-06-27 16:39:02,831 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-2-0l-awd-ti-q4-ID6FCa41.html
+2023-06-27 16:39:02,899 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-gt-samochod-godny-polecenia-ID6FC9XJ.html
+2023-06-27 16:39:02,917 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-gt-samochod-godny-polecenia-ID6FC9XJ.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-gt-samochod-godny-polecenia-ID6FC9XJ.html
+2023-06-27 16:39:02,919 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-veloce-hak-holowniczy-premium-matrix-led-ID6FyU8I.html
+2023-06-27 16:39:02,931 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-1-5-130-km-t4-gse-hybrid-edizione-speciale-dct-ID6FheHt.html
+2023-06-27 16:39:02,954 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-1-5-130-km-t4-gse-hybrid-edizione-speciale-dct-ID6FheHt.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-1-5-130-km-t4-gse-hybrid-edizione-speciale-dct-ID6FheHt.html
+2023-06-27 16:39:02,956 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-atrakcyjna-cena-ID6FAL90.html
+2023-06-27 16:39:02,974 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-1-9-jtdm-170km-xenon-skora-klimatronic-grz-fotele-tempomat-pdc-alu17-ID6FALYO.html
+2023-06-27 16:39:02,977 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-atrakcyjna-cena-ID6FAL90.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-atrakcyjna-cena-ID6FAL90.html
+2023-06-27 16:39:02,980 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-automat-skora-duzy-wyswietlacz-zwiekszona-moc-ID6FC9C9.html
+2023-06-27 16:39:02,995 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-1-9-jtdm-170km-xenon-skora-klimatronic-grz-fotele-tempomat-pdc-alu17-ID6FALYO.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-1-9-jtdm-170km-xenon-skora-klimatronic-grz-fotele-tempomat-pdc-alu17-ID6FALYO.html
+2023-06-27 16:39:02,997 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-2023r-tonale-edizione-speciale-fwd-160km-mild-hybrid-20-km-ID6Fp4Ge.html
+2023-06-27 16:39:03,000 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-1-5-130-km-t4-gse-hybrid-sprint-dct-ID6Fhek7.html
+2023-06-27 16:39:03,003 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-automat-skora-duzy-wyswietlacz-zwiekszona-moc-ID6FC9C9.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-automat-skora-duzy-wyswietlacz-zwiekszona-moc-ID6FC9C9.html
+2023-06-27 16:39:03,005 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-q4-2-0-280km-gwarancja-faktura-vat-23-ID6FxoC0.html
+2023-06-27 16:39:03,025 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-2023r-tonale-edizione-speciale-fwd-160km-mild-hybrid-20-km-ID6Fp4Ge.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-2023r-tonale-edizione-speciale-fwd-160km-mild-hybrid-20-km-ID6Fp4Ge.html
+2023-06-27 16:39:03,027 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-2-4jtdm-stan-idealny-2kpl-alufelg-ID6FzIU3.html
+2023-06-27 16:39:03,030 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-1-5-130-km-t4-gse-hybrid-sprint-dct-ID6Fhek7.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-1-5-130-km-t4-gse-hybrid-sprint-dct-ID6Fhek7.html
+2023-06-27 16:39:03,032 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-salon-polska-1-wszy-wlasciciel-serwis-aso-ID6FAjXX.html
+2023-06-27 16:39:03,033 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-q4-2-0-280km-gwarancja-faktura-vat-23-ID6FxoC0.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-q4-2-0-280km-gwarancja-faktura-vat-23-ID6FxoC0.html
+2023-06-27 16:39:03,037 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-benzyna-95km-2011r-157-tys-km-klimatronic-tempomat-pdc-oplacona-ID6FzuaQ.html
+2023-06-27 16:39:03,048 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-turbo-155km-klimatronic-skora-grzane-fotele-tempomat-alu-18-ID6FC8Js.html
+2023-06-27 16:39:03,051 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-2-4jtdm-stan-idealny-2kpl-alufelg-ID6FzIU3.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-2-4jtdm-stan-idealny-2kpl-alufelg-ID6FzIU3.html
+2023-06-27 16:39:03,053 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-veloce-ID6Fzu76.html
+2023-06-27 16:39:03,054 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-salon-polska-1-wszy-wlasciciel-serwis-aso-ID6FAjXX.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-salon-polska-1-wszy-wlasciciel-serwis-aso-ID6FAjXX.html
+2023-06-27 16:39:03,055 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-benzyna-95km-2011r-157-tys-km-klimatronic-tempomat-pdc-oplacona-ID6FzuaQ.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-benzyna-95km-2011r-157-tys-km-klimatronic-tempomat-pdc-oplacona-ID6FzuaQ.html
+2023-06-27 16:39:03,059 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-ID6Fzu1u.html
+2023-06-27 16:39:03,062 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-sprint-q4-wnetrze-veloce-ID6ERh6a.html
+2023-06-27 16:39:03,070 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-ID6FtXfw.html
+2023-06-27 16:39:03,075 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-turbo-155km-klimatronic-skora-grzane-fotele-tempomat-alu-18-ID6FC8Js.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-mito-1-4-turbo-155km-klimatronic-skora-grzane-fotele-tempomat-alu-18-ID6FC8Js.html
+2023-06-27 16:39:03,078 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-280km-phev-matrix-led-kamery-360-najem-2900zl-netto-ID6Fi9gX.html
+2023-06-27 16:39:03,086 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-veloce-ID6Fzu76.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-veloce-ID6Fzu76.html
+2023-06-27 16:39:03,088 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-9jtdm-salon-polska-ID6FAJr7.html
+2023-06-27 16:39:03,092 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-ID6Fzu1u.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-ID6Fzu1u.html
+2023-06-27 16:39:03,093 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-sprint-q4-wnetrze-veloce-ID6ERh6a.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-alfa-romeo-stelvio-sprint-q4-wnetrze-veloce-ID6ERh6a.html
+2023-06-27 16:39:03,096 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-1-6b-dudki11-skory-podg-fot-klimatronic-2-str-tempomat-kredyt-okazja-ID6Fk7BC.html
+2023-06-27 16:39:03,098 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-ID6FtXfw.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-giulia-ID6FtXfw.html
+2023-06-27 16:39:03,099 - [file_logger] - [INFO] - Fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-sprint-200km-najem-2690zl-netto-od-reki-ID6Eu9DH.html
+2023-06-27 16:39:03,106 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-280km-phev-matrix-led-kamery-360-najem-2900zl-netto-ID6Fi9gX.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-tonale-veloce-280km-phev-matrix-led-kamery-360-najem-2900zl-netto-ID6Fi9gX.html
+2023-06-27 16:39:03,120 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-9jtdm-salon-polska-ID6FAJr7.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-159-alfa-romeo-159-1-9jtdm-salon-polska-ID6FAJr7.html
+2023-06-27 16:39:03,126 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-sprint-200km-najem-2690zl-netto-od-reki-ID6Eu9DH.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-stelvio-sprint-200km-najem-2690zl-netto-od-reki-ID6Eu9DH.html
+2023-06-27 16:39:03,128 - [file_logger] - [ERROR] - Error 403 Client Error: Forbidden for url: https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-1-6b-dudki11-skory-podg-fot-klimatronic-2-str-tempomat-kredyt-okazja-ID6Fk7BC.html while fetching https://www.otomoto.pl/osobowe/oferta/alfa-romeo-147-1-6b-dudki11-skory-podg-fot-klimatronic-2-str-tempomat-kredyt-okazja-ID6Fk7BC.html
+2023-06-27 16:39:04,490 - [file_logger] - [INFO] - Scraping page: 12

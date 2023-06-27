@@ -1314,3 +1314,32 @@ cd orchestration/
 ls -lah
 cd
 prefect server start
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pipenv install --dev flake8
+touch .flake8
+pipenv uninstall flake8
+git status
+git add .bash_history .prefect/prefect.db notebooks/explainer_xgb.ipynb notebooks/explainer_xgb.ipynb notebooks/outputs/reports/xgb_explainer.html orchestration/otomoto_training.py 
+git status
+git commit -m "added docstrings to otomoto_training"
+git push
+git status
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd
+pipenv shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd orchestration/
+ls
+python3 otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+flake8 otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+prefect server start

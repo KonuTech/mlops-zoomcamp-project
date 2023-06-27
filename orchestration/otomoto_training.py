@@ -25,6 +25,7 @@ import os
 from functools import reduce
 from typing import List, Tuple, Dict
 
+import mlflow
 import numpy as np
 import pandas as pd
 import pyspark
@@ -163,7 +164,7 @@ def data_read(
 
 
 @task(retries=0, retry_delay_seconds=2)
-def data_filter(df):
+def data_filter(df) -> DataFrame:
     """
     Filters the data based on specified conditions.
 
@@ -619,96 +620,105 @@ def model_save(model: XGBRegressor, model_path: str) -> None:
 
 @flow
 def otomoto_training_flow():
-    # Download offers.csv file
-    offers_download(
-        bucket_name=BUCKET_NAME,
-        source_path=os.path.join(SOURCE_PATH, FILE_NAME),
-        destination_path=os.path.join(DESTINATION_PATH, FILE_NAME),
-    )
 
-    # Create Spark session
-    session = session_create(
-        spark_session_scope=SPARK_SESSION_SCOPE, spark_session_name=SPARK_SESSION_NAME
-    )
+    TRACKING_SERVER_HOST = "34.77.180.77"
+    mlflow.set_tracking_uri(f"http://{TRACKING_SERVER_HOST}:5000")
+    mlflow.set_experiment("otomoto-used-car-price-prediction")
 
-    # Read data
-    data_input = data_read(
-        spark_session=session,
-        header=HEADER,
-        infer_schema=INFER_SCHEMA,
-        file_name=OFFERS_PATH,
-    )
+    with mlflow.start_run():
+        mlflow.autolog()
 
-    # Filter data
-    data_filtered = data_filter(df=data_input)
+        # Download offers.csv file
+        offers_download(
+            bucket_name=BUCKET_NAME,
+            source_path=os.path.join(SOURCE_PATH, FILE_NAME),
+            destination_path=os.path.join(DESTINATION_PATH, FILE_NAME),
+        )
 
-    # Preprocess data
-    data_preprocessed = data_preprocess(df=data_filtered)
+        # Create Spark session
+        session = session_create(
+            spark_session_scope=SPARK_SESSION_SCOPE, spark_session_name=SPARK_SESSION_NAME
+        )
 
-    data_engineered = features_engineer(
-        df=data_preprocessed,
-        distinct_columns=DISTINCT_COLUMNS,
-        columns_to_drop=COLUMNS_TO_DROP,
-        brand_columns=BRAND_COLUMNS,
-        fuel_columns=FUEL_COLUMNS,
-        body_columns=BODY_COLUMNS,
-        door_columns=DOOR_COLUMNS,
-        offers_preprocessed_path=OFFERS_PREPROCESSED_PATH,
-    )
+        # Read data
+        data_input = data_read(
+            spark_session=session,
+            header=HEADER,
+            infer_schema=INFER_SCHEMA,
+            file_name=OFFERS_PATH,
+        )
 
-    # train_data, test_data = data_split(data_engineered, TEST_SIZE, RANDOM_STATE)
+        # Filter data
+        data_filtered = data_filter(df=data_input)
 
-    X_train, X_val, X_test, y_train, y_val, y_test = data_split(
-        df=data_engineered,
-        target_name=TARGET_NAME,
-        remainder_size=REMAINDER_SIZE,
-        test_size=TEST_SIZE,
-        random_state=RANDOM_STATE,
-    )
+        # Preprocess data
+        data_preprocessed = data_preprocess(df=data_filtered)
 
-    # Perform feature selection
-    pipeline, selected_features, scaler, transformer = features_select(
-        x_train=X_train,
-        y_train=y_train,
-        target_output_distribution=TARGET_OUTPUT_DISTRIBUTION,
-    )
+        data_engineered = features_engineer(
+            df=data_preprocessed,
+            distinct_columns=DISTINCT_COLUMNS,
+            columns_to_drop=COLUMNS_TO_DROP,
+            brand_columns=BRAND_COLUMNS,
+            fuel_columns=FUEL_COLUMNS,
+            body_columns=BODY_COLUMNS,
+            door_columns=DOOR_COLUMNS,
+            offers_preprocessed_path=OFFERS_PREPROCESSED_PATH,
+        )
 
-    # Perform hyperparameter tuning
-    hyperparameters = hyperparameters_gridsearch(
-        x_train=X_train,
-        y_train=y_train,
-        x_val=X_val,
-        y_val=y_val,
-        regressor_grid=REGRESSOR_GRID,
-        metric=METRIC,
-        selected_features=selected_features,
-        scaler=scaler,
-    )
+        # train_data, test_data = data_split(data_engineered, TEST_SIZE, RANDOM_STATE)
 
-    # Train the final model
-    model_trained = model_train(
-        x_train=X_train,
-        y_train=y_train,
-        selected_features=selected_features,
-        hyperparameters=hyperparameters,
-        scaler=scaler,
-    )
+        X_train, X_val, X_test, y_train, y_val, y_test = data_split(
+            df=data_engineered,
+            target_name=TARGET_NAME,
+            remainder_size=REMAINDER_SIZE,
+            test_size=TEST_SIZE,
+            random_state=RANDOM_STATE,
+        )
 
-    # Evaluate the model
-    model_evaluate(
-        model=model_trained,
-        x_test=X_test,
-        y_test=y_test,
-        selected_features=selected_features,
-        scaler=scaler,
-    )
+        # Perform feature selection
+        pipeline, selected_features, scaler, transformer = features_select(
+            x_train=X_train,
+            y_train=y_train,
+            target_output_distribution=TARGET_OUTPUT_DISTRIBUTION,
+        )
 
-    # Save the model
-    model_save(
-        model=model_trained,
-        model_path=MODEL_PATH,
-    )
+        # Perform hyperparameter tuning
+        hyperparameters = hyperparameters_gridsearch(
+            x_train=X_train,
+            y_train=y_train,
+            x_val=X_val,
+            y_val=y_val,
+            regressor_grid=REGRESSOR_GRID,
+            metric=METRIC,
+            selected_features=selected_features,
+            scaler=scaler,
+        )
 
+        # Train the final model
+        model_trained = model_train(
+            x_train=X_train,
+            y_train=y_train,
+            selected_features=selected_features,
+            hyperparameters=hyperparameters,
+            scaler=scaler,
+        )
+
+        # Evaluate the model
+        model_evaluate(
+            model=model_trained,
+            x_test=X_test,
+            y_test=y_test,
+            selected_features=selected_features,
+            scaler=scaler,
+        )
+
+        # Save the model
+        model_save(
+            model=model_trained,
+            model_path=MODEL_PATH,
+        )
+
+        autolog_run = mlflow.last_active_run()
 
 if __name__ == "__main__":
     otomoto_training_flow()

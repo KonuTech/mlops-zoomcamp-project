@@ -1,15 +1,20 @@
 import os
 
-from modules.scrapers.offers_scraper import ManufacturerScraper
 from google.cloud import storage
 from prefect import flow, task
 
-
-# scrap data directly to GCP bucket
+from modules.scrapers.offers_scraper import ManufacturerScraper
 
 
 @task(retries=0, retry_delay_seconds=2)
-def scrap_data(manufacturers_file, destination_path):
+def scrap_data(manufacturers_file: str, destination_path: str):
+    """
+    Scrapes data for car manufacturers names and saves it to the specified destination path.
+
+    Args:
+        manufacturers_file (str): The path to the file containing car manufacturers names.
+        destination_path (str): The path to the directory where scraped data will be saved.
+    """
     scraper = ManufacturerScraper(
         path_manufacturers_file=manufacturers_file, path_data_directory=destination_path
     )
@@ -18,8 +23,17 @@ def scrap_data(manufacturers_file, destination_path):
 
 
 @task(retries=0, retry_delay_seconds=2)
-def upload_directory_to_bucket(bucket_name, source_directory, destination_directory):
-    """Uploads a directory to the bucket."""
+def upload_directory_to_bucket(
+    bucket_name: str, source_directory: str, destination_directory: str
+):
+    """
+    Uploads a directory to the specified bucket.
+
+    Args:
+        bucket_name (str): The name of the bucket.
+        source_directory (str): The path to the source directory to be uploaded.
+        destination_directory (str): The destination directory in the bucket where the files will be uploaded.
+    """
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
 

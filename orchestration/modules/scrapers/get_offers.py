@@ -29,14 +29,12 @@ class OfferScraper:
         path_header_file_en=PATH_HEADER_FILE_EN,
         max_threads=MAX_THREADS,
     ):
-        self.path_data_directory = os.path.join(
-            os.getcwd(), "data", "outputs"
-        )
+        self.path_data_directory = os.path.join(os.getcwd(), "data", "outputs")
         self.path_header_file_pl = os.path.join(
-            os.getcwd(), "data","inputs", path_header_file_pl
+            os.getcwd(), "data", "inputs", path_header_file_pl
         )
         self.path_header_file_en = os.path.join(
-            os.getcwd(), "data","inputs", path_header_file_en
+            os.getcwd(), "data", "inputs", path_header_file_en
         )
         self.max_threads = max_threads
         self.header_pl = self.get_header(self.path_header_file_pl)
@@ -140,15 +138,19 @@ class OfferScraper:
         file_logger.info(f"Found {len(self.manufacturer)} offers")
         console_logger.info(f"Found {len(self.manufacturer)} offers")
 
-        file_path = os.path.join(self.path_data_directory, f"{manufacturer.strip()}.csv")
+        file_path = os.path.join(
+            self.path_data_directory, f"{manufacturer.strip()}.csv"
+        )
 
         if os.path.isfile(file_path):
             # Load existing CSV file
             existing_df = pd.read_csv(file_path)
 
             # Filter out duplicates based on 'id' column
-            existing_ids = existing_df['id'].tolist()
-            new_rows = [row for row in self.manufacturer if row['id'] not in existing_ids]
+            existing_ids = existing_df["id"].tolist()
+            new_rows = [
+                row for row in self.manufacturer if row["id"] not in existing_ids
+            ]
             new_df = pd.DataFrame(new_rows)
 
             # Append new rows to existing data
@@ -158,7 +160,7 @@ class OfferScraper:
             df = pd.DataFrame(self.manufacturer)
 
         # Drop duplicates based on 'id' column
-        df.drop_duplicates(subset='id', inplace=True)
+        df.drop_duplicates(subset="id", inplace=True)
 
         # Save the DataFrame to a CSV file
         df.to_csv(file_path, index=False)
