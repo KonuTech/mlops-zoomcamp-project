@@ -1,19 +1,16 @@
 import json
+from typing import List, Text
+
 import pandas as pd
 
 
-CONFIG_PATH = "/home/konradballegro/monitoring/config/config.json"
+def load_reference_data(columns: List[Text]) -> pd.DataFrame:
+    REFERECE_PATH = (
+        "/home/konradballegro/monitoring/data/reference/offers_reference.csv"
+    )
+    reference_data = pd.read_csv(REFERECE_PATH)
+    return reference_data.loc[:, columns]
 
-
-with open(CONFIG_PATH) as json_file:
-    config = json.load(json_file)
-
-
-
-
-
-def load_reference_data():
-    pass
 
 def load_current_data():
     pass

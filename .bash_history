@@ -1384,3 +1384,11 @@ ls -lah
 git status
 git commit -m "added mlops tracking"
 git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+/home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/python3.8
+cd orchestration/
+ls
+python3 otomoto_training.py 
+isort otomoto_training.py 
+black otomoto_training.py 
+python3 otomoto_training.py 
