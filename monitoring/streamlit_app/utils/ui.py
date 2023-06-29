@@ -35,7 +35,7 @@ def display_sidebar_header() -> None:
             unsafe_allow_html=True,
         )
         col2.markdown(
-            f"<a style = 'display: block; text-align: center;' href={evidently_docs} > Source code </a>",
+            f"<a style = 'display: block; text-align: center;' href={evidently_docs} > Documentation </a>",
             unsafe_allow_html=True,
         )
         st.header("")

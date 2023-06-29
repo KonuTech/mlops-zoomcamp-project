@@ -64,7 +64,6 @@ FILE_PATH = config["FILE_PATH"]
 FILE_PREPROCESSED_PATH = config["FILE_PREPROCESSED_PATH"]
 TARGET_NAME = config["TARGET_NAME"]
 TARGET_OUTPUT_DISTRIBUTION = config["TARGET_OUTPUT_DISTRIBUTION"]
-SELECTED_FEATURES = config["SELECTED_FEATURES"]
 DISTINCT_COLUMNS = config["DISTINCT_COLUMNS"]
 COLUMNS_TO_DROP = config["COLUMNS_TO_DROP"]
 DOOR_COLUMNS = config["DOOR_COLUMNS"]
@@ -81,6 +80,7 @@ METRIC = config["METRIC"]
 X_TEST_PATH = config["X_TEST_PATH"]
 Y_TEST_PATH = config["Y_TEST_PATH"]
 Y_PRED_PATH = config["Y_PRED_PATH"]
+CURRENT_PATH = config["CURRENT_PATH"]
 
 
 # Create logger
@@ -566,6 +566,7 @@ def model_evaluate(
         r2 (): The evaluation results.
 
     """
+
     logger.info("Evaluating the model...")
 
     # Apply the same transformations to the test data using the pipeline
@@ -576,20 +577,31 @@ def model_evaluate(
     ]
     x_test_selected = x_scaled_test[:, selected_feature_indices]
 
-    # Reshape y_test to match the expected format
-    y_transformed_test = y_test.reshape(-1, 1)
-
-    # Predict using the trained model in the pipeline
+    # Predict using the trained model
     y_pred = model.predict(x_test_selected)
 
-    # Inverse transform the predicted values using the target scaler
-    pd.DataFrame(x_test_selected).to_csv(X_TEST_PATH, index=False)
-    pd.DataFrame(y_transformed_test).to_csv(Y_TEST_PATH, index=False)
-    pd.DataFrame(y_pred).to_csv(Y_PRED_PATH, index=False)
+    # Save CSV files
+    pd.DataFrame(x_test_selected, columns=selected_features).to_csv(
+        X_TEST_PATH, index=False
+    )
+    pd.DataFrame(y_test, columns=["Price"]).to_csv(Y_TEST_PATH, index=False)
+    pd.DataFrame(y_pred, columns=["predictions"]).to_csv(Y_PRED_PATH, index=False)
+
+    # Concatenate the CSV files
+    x_test_selected_df = pd.DataFrame(x_test_selected, columns=selected_features)
+    concatenated_df = pd.concat(
+        [
+            x_test_selected_df,
+            pd.DataFrame(y_test, columns=["Price"]),
+            pd.DataFrame(y_pred, columns=["predictions"]),
+        ],
+        axis=1,
+    )
+    concatenated_df.to_csv(CURRENT_PATH, index=False)
 
     # Calculate evaluation metrics
-    mse = mean_squared_error(y_transformed_test, y_pred)
-    r2 = r2_score(y_transformed_test, y_pred)
+    mse = mean_squared_error(y_test, y_pred)
+    r2 = r2_score(y_test, y_pred)
 
     logger.info(f"MSE: {mse}")
     logger.info(f"R^2: {r2}")

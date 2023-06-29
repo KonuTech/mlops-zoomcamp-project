@@ -13,6 +13,7 @@
     "X_TEST_PATH": "/home/konradballegro/monitoring/data/reference/X_test.csv",
     "Y_TEST_PATH": "/home/konradballegro/monitoring/data/reference/y_test.csv",
     "Y_PRED_PATH": "/home/konradballegro/monitoring/data/reference/y_pred.csv",
+    "CURRENT_PATH": "/home/konradballegro/monitoring/data/current/offers_current.csv",
     "TARGET_NAME": "Price",
     "TARGET_OUTPUT_DISTRIBUTION": "normal",
     "REMAINDER_SIZE": 0.7,
@@ -38,21 +39,6 @@
         }
     },
     "METRIC": "r2",
-    "SELECTED_FEATURES": [
-        "Mileage",
-        "Power",
-        "Offer_from_Osoby_prywatnej",
-        "Vehicle_brand_Mercedes-Benz",
-        "Gearbox_Manualna",
-        "Number_of_doors_2",
-        "Number_of_doors_5",
-        "Fuel_type_Benzyna",
-        "Fuel_type_Benzyna+LPG",
-        "Fuel_type_Hybryda",
-        "Body_type_SUV",
-        "Body_type_Minivan",
-        "Body_type_Coupe"
-    ],
     "DISTINCT_COLUMNS": [
         "Offer from",
         "Condition",
