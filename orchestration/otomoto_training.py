@@ -23,7 +23,7 @@ import json
 import logging
 import os
 from functools import reduce
-from typing import List, Tuple, Dict
+from typing import Dict, List, Tuple
 
 import mlflow
 import numpy as np
@@ -31,7 +31,7 @@ import pandas as pd
 import pyspark
 from google.cloud import storage
 from prefect import flow, task
-from pyspark.sql import SparkSession, DataFrame
+from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql.functions import col, regexp_replace, when
 from sklearn.feature_selection import RFE, RFECV
 from sklearn.metrics import mean_squared_error, r2_score
@@ -60,8 +60,8 @@ SPARK_SESSION_SCOPE = config["SPARK_SESSION_SCOPE"]
 SPARK_SESSION_NAME = config["SPARK_SESSION_NAME"]
 HEADER = config["HEADER"]
 INFER_SCHEMA = config["INFER_SCHEMA"]
-OFFERS_PATH = config["OFFERS_PATH"]
-OFFERS_PREPROCESSED_PATH = config["OFFERS_PREPROCESSED_PATH"]
+FILE_PATH = config["FILE_PATH"]
+FILE_PREPROCESSED_PATH = config["FILE_PREPROCESSED_PATH"]
 TARGET_NAME = config["TARGET_NAME"]
 TARGET_OUTPUT_DISTRIBUTION = config["TARGET_OUTPUT_DISTRIBUTION"]
 SELECTED_FEATURES = config["SELECTED_FEATURES"]
@@ -78,6 +78,9 @@ RANDOM_STATE = config["RANDOM_STATE"]
 MODEL_PATH = config["MODEL_PATH"]
 REGRESSOR_GRID = config["REGRESSOR_GRID"]
 METRIC = config["METRIC"]
+X_TEST_PATH = config["X_TEST_PATH"]
+Y_TEST_PATH = config["Y_TEST_PATH"]
+Y_PRED_PATH = config["Y_PRED_PATH"]
 
 
 # Create logger
@@ -94,7 +97,7 @@ formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
 # Copy offercs.csv from GCP bucket to VM
 @task(retries=0, retry_delay_seconds=2)
-def offers_download(bucket_name: str, source_path: str, destination_path: str) -> None:
+def files_download(bucket_name: str, source_path: str, destination_path: str) -> None:
     """
     Downloads the "offers.csv" file from the specified Google Cloud Storage bucket to the local destination path.
 
@@ -140,7 +143,7 @@ def session_create(spark_session_scope: str, spark_session_name: str) -> SparkSe
 
 @task(retries=0, retry_delay_seconds=2)
 def data_read(
-    spark_session: SparkSession, header: bool, infer_schema: bool, file_name: str
+    spark_session: SparkSession, header: bool, infer_schema: bool, file_path: str
 ) -> DataFrame:
     """
     Reads the data from the specified file using the provided Spark session.
@@ -149,17 +152,17 @@ def data_read(
         spark_session (SparkSession): The Spark session.
         header (bool): Whether the file has a header row.
         infer_schema (bool): Whether to infer the schema of the data.
-        file_name (str): The path of the file to read.
+        file_path (str): The path of the file to read.
 
     Returns:
         df (DataFrame): The Spark DataFrame containing the read data.
 
     """
-    logger.info(f"Reading data from file: '{file_name}'")
+    logger.info(f"Reading data from file: '{file_path}'")
     return (
         spark_session.read.option("header", header)
         .option("inferSchema", infer_schema)
-        .csv(file_name)
+        .csv(file_path)
     )
 
 
@@ -244,7 +247,7 @@ def features_engineer(
     fuel_columns: List[str],
     body_columns: List[str],
     door_columns: List[str],
-    offers_preprocessed_path: str,
+    file_preprocessed_path: str,
 ) -> DataFrame:
     """
         Performs feature engineering to create additional features based on the input DataFrame.
@@ -257,7 +260,7 @@ def features_engineer(
             fuel_columns (list): A list of columns representing different fuel types.
             body_columns (list): A list of columns representing different body types.
             door_columns (list): A list of columns representing different number of doors.
-            offers_preprocessed_path ( from __future__ import annotations (python 3.10 feature) str): The path to save the preprocessed offers DataFrame.
+            file_preprocessed_path (str): The path to save the preprocessed offers DataFrame.
 
     Returns:
         features_df (DataFrame): Pandas DataFrame with additional engineered features.
@@ -298,7 +301,7 @@ def features_engineer(
     df_pd["door_number_count"] = df_pd[door_columns].sum(axis=1)
     df_pd["door_number_ratio"] = df_pd[door_columns].sum(axis=1) / len(door_columns)
 
-    df_pd.to_csv(offers_preprocessed_path, index=False)
+    df_pd.to_csv(file_preprocessed_path, index=False)
     logger.info("Feature engineering completed")
     return df_pd
 
@@ -580,17 +583,10 @@ def model_evaluate(
     y_pred = model.predict(x_test_selected)
 
     # Inverse transform the predicted values using the target scaler
-    pd.DataFrame(x_test_selected).to_csv(
-        "/home/konradballegro/notebooks/outputs/data/x_test_selected.csv",
-        index=False,
-    )
-    pd.DataFrame(y_transformed_test).to_csv(
-        "/home/konradballegro/notebooks/outputs/data/y_transformed_test.csv",
-        index=False,
-    )
-    pd.DataFrame(y_pred).to_csv(
-        "/home/konradballegro/notebooks/outputs/data/y_pred.csv", index=False
-    )
+    pd.DataFrame(x_test_selected).to_csv(X_TEST_PATH, index=False)
+    pd.DataFrame(y_transformed_test).to_csv(Y_TEST_PATH, index=False)
+    pd.DataFrame(y_pred).to_csv(Y_PRED_PATH, index=False)
+
     # Calculate evaluation metrics
     mse = mean_squared_error(y_transformed_test, y_pred)
     r2 = r2_score(y_transformed_test, y_pred)
@@ -620,7 +616,6 @@ def model_save(model: XGBRegressor, model_path: str) -> None:
 
 @flow
 def otomoto_training_flow():
-
     TRACKING_SERVER_HOST = "34.77.180.77"
     mlflow.set_tracking_uri(f"http://{TRACKING_SERVER_HOST}:5000")
     mlflow.set_experiment("otomoto-used-car-price-prediction")
@@ -629,7 +624,7 @@ def otomoto_training_flow():
         mlflow.autolog()
 
         # Download offers.csv file
-        offers_download(
+        files_download(
             bucket_name=BUCKET_NAME,
             source_path=os.path.join(SOURCE_PATH, FILE_NAME),
             destination_path=os.path.join(DESTINATION_PATH, FILE_NAME),
@@ -637,7 +632,8 @@ def otomoto_training_flow():
 
         # Create Spark session
         session = session_create(
-            spark_session_scope=SPARK_SESSION_SCOPE, spark_session_name=SPARK_SESSION_NAME
+            spark_session_scope=SPARK_SESSION_SCOPE,
+            spark_session_name=SPARK_SESSION_NAME,
         )
 
         # Read data
@@ -645,7 +641,7 @@ def otomoto_training_flow():
             spark_session=session,
             header=HEADER,
             infer_schema=INFER_SCHEMA,
-            file_name=OFFERS_PATH,
+            file_path=FILE_PATH,
         )
 
         # Filter data
@@ -662,7 +658,7 @@ def otomoto_training_flow():
             fuel_columns=FUEL_COLUMNS,
             body_columns=BODY_COLUMNS,
             door_columns=DOOR_COLUMNS,
-            offers_preprocessed_path=OFFERS_PREPROCESSED_PATH,
+            file_preprocessed_path=FILE_PREPROCESSED_PATH,
         )
 
         # train_data, test_data = data_split(data_engineered, TEST_SIZE, RANDOM_STATE)
@@ -719,6 +715,7 @@ def otomoto_training_flow():
         )
 
         autolog_run = mlflow.last_active_run()
+
 
 if __name__ == "__main__":
     otomoto_training_flow()

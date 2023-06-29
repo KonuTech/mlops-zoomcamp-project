@@ -1343,3 +1343,44 @@ black otomoto_training.py
 python3 otomoto_training.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 prefect server start
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ls
+prefect server start
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd orchestration/
+ls
+python3 otomoto_training.py
+ls
+isort otomoto_scraping.py 
+black otomoto_scraping.py 
+cd /home/konradballegro/orchestration/modules/scrapers
+ls -lah
+isort get_offers.py 
+black get_offers.py 
+isort offers_scraper.py 
+black offers_scraper.py 
+cd ..
+ls -lah
+python3 otomoto_scraping.py 
+ls
+python3 orchestrate.py
+python3 orchestrate_gd.py
+python3 orchestrate_gs.py
+ls
+python3 otomoto_training.py
+cd /home/konradballegro/orchestration/mlruns
+ls -lah
+cd ..
+ls
+cd /home/konradballegro/orchestration
+ls -lah
+ls
+python3 otomoto_training.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git add .bash_history .prefect/prefect.db orchestration/data/inputs/manufacturers.txt orchestration/logs/app.log orchestration/models/xgb.model orchestration/modules/scrapers/get_offers.py orchestration/modules/scrapers/offers_scraper.py orchestration/otomoto_scraping.py orchestration/otomoto_training.py
+git status
+ls -lah
+git status
+git commit -m "added mlops tracking"
+git push
