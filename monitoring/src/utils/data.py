@@ -1,16 +1,17 @@
-import json
 from typing import List, Text
 
 import pandas as pd
 
 
 def load_reference_data(columns: List[Text]) -> pd.DataFrame:
-    REFERECE_PATH = (
-        "/home/konradballegro/monitoring/data/reference/offers_reference.csv"
-    )
-    reference_data = pd.read_csv(REFERECE_PATH)
-    return reference_data.loc[:, columns]
+    cur_path = "/home/konradballegro/monitoring/data/current/offers_current.csv"
+    cur_data = pd.read_csv(cur_path)
+    current_data = cur_data.loc[:, columns]
+    return current_data
 
 
-def load_current_data():
-    pass
+def load_current_data(columns: List[Text]) -> pd.DataFrame:
+    ref_path = "/home/konradballegro/monitoring/data/current/offers_current.csv"
+    ref_data = pd.read_csv(ref_path)
+    reference_data = ref_data.loc[:, columns]
+    return reference_data

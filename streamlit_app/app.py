@@ -23,20 +23,20 @@ if __name__ == "__main__":
         clicked_model_performance: bool = st.sidebar.button(label="Model performance")
         clicked_target_drift: bool = st.sidebar.button(label="Target drift")
 
-        report_selected: bool = False
+        REPORT_SELECTED: bool = False
         request_url: Text = base_route
-        report_name: Text = ""
+        REPORT_NAME: Text = ""
         if clicked_model_performance:
-            report_selected = True
-            request_url += f"/monior-model?window_size={window_size}"
-            report_name = "Target performance"
+            REPORT_SELECTED = True
+            request_url += f"/monitor-model?window_size={window_size}"
+            REPORT_NAME = "Target performance"
         if clicked_target_drift:
-            report_selected = True
-            request_url += f"/monior-target?window_size={window_size}"
-            report_name = "Target drift"
-        if report_selected:
+            REPORT_SELECTED = True
+            request_url += f"/monitor-target?window_size={window_size}"
+            REPORT_NAME = "Target drift"
+        if REPORT_SELECTED:
             resp: requests.Response = requests.get(request_url)
-            display_header(report_name, window_size)
+            display_header(REPORT_NAME, window_size)
             display_report(resp.content)
         print("hello world")
     except Exception as e:

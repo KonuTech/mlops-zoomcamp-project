@@ -28,7 +28,7 @@ def display_sidebar_header() -> None:
     with st.sidebar:
         st.image(logo, use_column_width=True)
         col1, col2 = st.columns(2)
-        repo_link: Text = "#"
+        repo_link: Text = "https://github.com/KonuTech/mlops-zoomcamp-project"
         evidently_docs: Text = "https://docs.evidentlyai.com"
         col1.markdown(
             f"<a style = 'display: block; text-align: center;' href={repo_link} > Source code </a>",

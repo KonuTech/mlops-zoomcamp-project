@@ -1392,3 +1392,247 @@ python3 otomoto_training.py
 isort otomoto_training.py 
 black otomoto_training.py 
 python3 otomoto_training.py 
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+pipenv install streamlit
+pip list > requirements.txt
+ls -lah
+streamli run /home/konradballegro/monitoring/streamlit_app/app.py
+streamlit run /home/konradballegro/monitoring/streamlit_app/app.py
+streamlit run /home/konradballegro/monitoring/app.py
+ls
+streamlit run streamlit_app/app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+prefect server start
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd orchestration/
+ls -lah
+python3 otomoto_training.py
+ls -lah
+isort otomoto_training.py
+python otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+git status
+ls
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd monitoring/
+ls
+cd /home/konradballegro/monitoring/config
+isort config.py
+black config.py
+isort config.py
+black config.py
+isort config.py
+black config.py
+cd /home/konradballegro/monitoring
+isort app.py
+black app.py
+cd
+git status
+git add .bash_history Pipfile monitoring/
+git status
+git add streamlit_app/
+git add Pipfile_copy requirements_copy.txt orchestration/models/xgb.model
+git status
+git commit -m "monitoring changes"
+git push
+git status
+pip list
+cd /home/konradballegro/streamlit_app/utils
+ls
+isort ui.py
+black ui.py
+cd /home/konradballegro/streamlit_app
+ls
+isort app.py
+black app.py
+cd /home/konradballegro/monitoring
+ls
+isort app.py
+black app.py
+isort app.py
+black app.py
+ls
+cd /home/konradballegro/streamlit_app
+black app.py
+cd /home/konradballegro/monitoring/config
+black config.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+mkdir monitoring
+cd monitoring
+ls
+mkdir config
+mkdir data
+mkdir fastapi
+mkdir models
+mkdir reports
+mkdir src
+mkdir static
+mkdir streamlit_app
+cd src
+ls
+mkdir scripts
+mkd utils
+mkdir utils
+cd ..
+ls
+cd streamlit_app
+touch app.py
+ls
+mkdir static
+mkdir utils
+cd utils
+touch ui.py
+cd ..
+ls
+isort app.py
+black app.py
+cd utils
+ls
+isort ui.py
+black ui.py
+ls
+isort ui.py
+black ui.py
+isort ui.py
+black ui.py
+cd ..
+ls
+isort app.py
+black app.py
+isort app.py
+black app.py
+ls
+streamlit run app.py
+ls -lah
+piplist
+pip list
+fastapi
+xgboost
+streamlit
+ls
+cd ..
+ls
+cd fastapi/
+ls
+isort app.py
+black app.py
+pip list
+psql --help
+sudo apt-get update
+sudo apt-get install postgresql-client
+psql --help
+psql -h 0.0.0.0
+psql -h 0.0.0.0 -U admin
+psql -l
+psql --help
+psql --list
+psql 
+psql \?
+psql -h
+sudo apt-get install postgresql
+sudo service postgresql status
+sudo -i -u postgres
+dpkg -l | grep postgresql
+sudo systemctl restart postgresql
+systemctl list-unit-files | grep postgres
+cd
+sudo apt-get remove --purge postgresql-*
+sudo rm -rf /etc/postgresql/
+sudo rm -rf /var/lib/postgresql/
+sudo apt-get install postgresql
+sudo systemctl status postgresql
+dpkg -l | grep postgresql
+sudo service postgresql status
+sudo -i -u postgres
+psql
+sudo -i -u postgres
+git status
+git add .bash_history .prefect/prefect.db Pipfile requirements.txt orchestration/config/config.json 
+git status
+orchestration/data/green_tripdata_2021-01.parquet orchestration/data/green_tripdata_2021-02.parquet orchestration/data/outputs/abarth.csv orchestration/data/outputs/acura.csv orchestration/data/outputs/offers.csv 
+orchestration/data/green_tripdata_2021-01.parquet orchestration/data/green_tripdata_2021-02.parquet orchestration/data/outputs/abarth.csv orchestration/data/outputs/acura.csv orchestration/data/outputs/offers.csv
+git add orchestration/data/green_tripdata_2021-01.parquet orchestration/data/green_tripdata_2021-02.parquet orchestration/data/outputs/abarth.csv orchestration/data/outputs/acura.csv orchestration/data/outputs/offers.csv
+git status
+git add orchestration/otomoto_training.py orchestration/orchestrate_gs.py orchestration/orchestrate.py orchestration/modules/scrapers/offers_scraper.py orchestration/modules/scrapers/get_offers.py orchestration/models/xgb_copy.model
+git status
+git add orchestration/models/xgb.model orchestration/models/preprocessor.b orchestration/main_flow_gs-deployment.yaml orchestration/main_flow-deployment.yaml
+git status
+git commit -m "changes pre-monitoring"
+git push
+git status
+git add monitoring .
+git status
+git reset HEAD~
+git status
+git add monitoring/
+git status
+git pull
+git stash
+git pull
+git status
+git add monitoring/
+git status
+git commit -m "monitoring init commit"
+git push
+git status
+git add orchestration/config/config.json orchestration/models/xgb.model orchestration/otomoto_training.py 
+git status
+git add .gitignore monitoring/
+git status
+git commit -m "pre monitoring changes"
+git push
+cd /home/konradballegro/monitoring/src/utils
+ls
+isort data.py
+black data.py
+cd /home/konradballegro/monitoring/fastapi/app.py
+black app.py
+isort app.py
+black app.py
+cd /home/konradballegro/monitoring/fastapi
+isort app.py
+black app.py
+/home/konradballegro/monitoring/fastapi
+cd /home/konradballegro/monitoring/fastapi
+ls
+python3 app.py
+ls
+cd
+ls
+cd monitoring/
+ls
+python3 fastapi/app.py
+cd
+ls
+python3 monitoring/fastapi/app.py
+cd monitoring/
+python3 fastapi/app.py
+cd ..
+python3 monitoring/fastapi/app.py
+cd monitoring/
+python3 mfastapi/app.py
+python3 fastapi/app.py
+cd /home/konradballegro/monitoring
+ls
+python3 app.py
+pip list
+pipenv shell
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pipenv install evidently
+cd monitoring/
+ls
+python3 app.py
+uvicorn
+uvicorn app:app --reload
+uvicorn app:app --log-level debug
+ls
+uvicorn app:app --log-level debug

@@ -3,7 +3,7 @@ from typing import Dict, Text
 DATABASE_URI: Text = "postgresql://admin:admin@localhost:5432/monitoring_db"
 DATA_COLUMNS: Dict = {
     "target_col": "Price",
-    "prediction_col": "prediction",
+    "prediction_col": "predictions",
     "num_features": [
         "Mileage",
         "Power",
@@ -41,10 +41,8 @@ DATA_COLUMNS: Dict = {
         "price_per_mileage",
         "power_to_price_ratio",
     ],
-    "cat_features": [""],
 }
 DATA_COLUMNS["columns"] = (
-    DATA_COLUMNS["num_features"]
-    + DATA_COLUMNS["cat_features"]
-    + [DATA_COLUMNS["target_col"], DATA_COLUMNS["prediction_col"]]
+    DATA_COLUMNS["num_features"] +
+    [DATA_COLUMNS["target_col"], DATA_COLUMNS["prediction_col"]]
 )
