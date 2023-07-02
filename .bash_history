@@ -1636,3 +1636,78 @@ uvicorn app:app --reload
 uvicorn app:app --log-level debug
 ls
 uvicorn app:app --log-level debug
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git add monitoring/otomoto_monitoring.py orchestration/data/training/ temp/Pipfile_copy temp/requirements_copy.txt web-app/
+git status
+git reset HEAD~
+git status
+git pull
+git stash
+git pull
+git pull force
+git pull
+git status
+git add mlops-zoomcamp monitoring/app.py scoring-batch/score.py scoring-batch/score_backfill.py scoring-batch/score_deploy.py
+git commit -m "deleted some"
+git push
+git status
+git add monitoring/otomoto_monitoring.py scoring-event/ temp/Pipfile_copy temp/requirements_copy.txt
+git status
+git add .gitignore 
+git status
+git commit -m "added scoring-event"
+git push
+git status
+cd
+mkdir scoring-batch
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd web-scoring/
+ls -lag
+ls -lah
+python3 test.py
+python3 otomoto_scoring_test.py
+python3 test.py
+python3 otomoto_scoring_test.py
+python3 test.py
+python3 predict.py
+python3 test.py
+python3 predict.py
+python3 otomoto_scoring_test.py
+python3 test.py
+python3 otomoto_scoring_test.py
+ls
+isort otomoto_scoring.py
+isort otomoto_scoring_test.py
+black otomoto_scoring.py
+black otomoto_scoring_test.py
+python3 otomoto_scoring_test.py
+black otomoto_scoring.py
+black otomoto_scoring_test.py
+python3 otomoto_scoring_test.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd /home/konradballegro/web-scoring
+ls -lah
+flask run otomoto_scoring.py
+ls -lah
+python3 otomoto_scoring.py
+ls -lah
+python3 predict.py
+python3 otomoto_scoring.py
+python3 predict.py
+python3 otomoto_scoring.py
+python3 predict.py
+python3 otomoto_scoring.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd scoring-event/
+ls -lah
+python3 predict.py 
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd monitoring/
+uvicorn app:app
+ls
+uvicorn otomoto_monitoring:app
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 monitoring/app.py
+streamlit run streamlit_app/app.py
+streamlit run web-app/otomoto_app.py

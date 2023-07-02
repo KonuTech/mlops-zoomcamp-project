@@ -47,7 +47,7 @@ os.environ[
 CONFIG_PATH = "/home/konradballegro/training/config/config.json"
 
 
-with open(CONFIG_PATH) as json_file:
+with open(CONFIG_PATH, encoding="UTF-8") as json_file:
     config = json.load(json_file)
 
 
@@ -81,12 +81,6 @@ X_TEST_PATH = config["X_TEST_PATH"]
 Y_TEST_PATH = config["Y_TEST_PATH"]
 Y_PRED_PATH = config["Y_PRED_PATH"]
 CURRENT_PATH = config["CURRENT_PATH"]
-
-
-# Create logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
 
 # Create logger
