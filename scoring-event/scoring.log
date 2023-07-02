@@ -734,3 +734,384 @@ mlflow.exceptions.MlflowException: dtype of input int64 does not match expected 
 2023-07-02 10:49:09,933 - INFO -  * Debugger PIN: 149-407-935
 2023-07-02 10:49:10,661 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
 2023-07-02 10:49:11,679 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:49:15,747 - WARNING -  * Debugger is active!
+2023-07-02 10:49:15,747 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:49:16,459 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:49:17,522 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:49:21,379 - WARNING -  * Debugger is active!
+2023-07-02 10:49:21,380 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:49:21,958 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:49:23,131 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:49:26,903 - WARNING -  * Debugger is active!
+2023-07-02 10:49:26,904 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:49:27,888 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:49:28,618 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:49:32,293 - WARNING -  * Debugger is active!
+2023-07-02 10:49:32,293 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:49:33,256 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:49:34,013 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:49:37,839 - WARNING -  * Debugger is active!
+2023-07-02 10:49:37,840 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:49:38,836 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:49:39,712 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:49:43,940 - WARNING -  * Debugger is active!
+2023-07-02 10:49:43,940 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:49:44,409 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:49:45,668 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:49:49,586 - WARNING -  * Debugger is active!
+2023-07-02 10:49:49,586 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:49:50,307 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:49:51,318 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:49:55,220 - WARNING -  * Debugger is active!
+2023-07-02 10:49:55,220 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:49:55,906 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:49:56,961 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:00,765 - WARNING -  * Debugger is active!
+2023-07-02 10:50:00,765 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:01,743 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:02,486 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:06,277 - WARNING -  * Debugger is active!
+2023-07-02 10:50:06,277 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:06,768 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:07,893 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:11,664 - WARNING -  * Debugger is active!
+2023-07-02 10:50:11,665 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:12,187 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:13,371 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:17,227 - WARNING -  * Debugger is active!
+2023-07-02 10:50:17,228 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:17,779 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:18,968 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:22,757 - WARNING -  * Debugger is active!
+2023-07-02 10:50:22,757 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:23,309 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:24,507 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:28,424 - WARNING -  * Debugger is active!
+2023-07-02 10:50:28,425 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:29,166 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:30,180 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:33,926 - WARNING -  * Debugger is active!
+2023-07-02 10:50:33,927 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:34,909 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:35,619 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:39,338 - WARNING -  * Debugger is active!
+2023-07-02 10:50:39,338 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:40,077 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:41,015 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:44,797 - WARNING -  * Debugger is active!
+2023-07-02 10:50:44,798 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:45,380 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:46,544 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:50,154 - WARNING -  * Debugger is active!
+2023-07-02 10:50:50,155 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:50,762 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:51,840 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:50:55,567 - WARNING -  * Debugger is active!
+2023-07-02 10:50:55,568 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:50:56,379 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:50:57,302 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:51:01,174 - WARNING -  * Debugger is active!
+2023-07-02 10:51:01,175 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:51:01,779 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:02,936 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:51:06,650 - WARNING -  * Debugger is active!
+2023-07-02 10:51:06,651 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:51:07,723 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:08,261 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:51:12,256 - WARNING -  * Debugger is active!
+2023-07-02 10:51:12,257 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:51:13,656 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:14,961 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:51:18,615 - WARNING -  * Debugger is active!
+2023-07-02 10:51:18,615 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:51:19,290 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:20,344 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:51:24,025 - WARNING -  * Debugger is active!
+2023-07-02 10:51:24,025 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:51:24,417 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:24,760 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:51:28,693 - WARNING -  * Debugger is active!
+2023-07-02 10:51:28,694 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:51:29,060 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:29,122 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:29,175 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:29,184 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pkg_resources/_vendor/pyparsing.py', reloading
+2023-07-02 10:51:29,273 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:29,295 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:29,315 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:29,545 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:30,528 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:51:34,261 - WARNING -  * Debugger is active!
+2023-07-02 10:51:34,261 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:51:35,084 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:35,167 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:35,182 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:35,222 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pkg_resources/_vendor/pyparsing.py', reloading
+2023-07-02 10:51:35,304 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:35,325 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:35,339 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:35,566 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:35,920 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:51:39,939 - WARNING -  * Debugger is active!
+2023-07-02 10:51:39,940 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 10:51:40,171 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 10:51:40,332 - INFO -  * Detected change in '/home/konradballegro/scoring-event/predict.py', reloading
+2023-07-02 10:51:40,694 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 10:51:44,539 - WARNING -  * Debugger is active!
+2023-07-02 10:51:44,539 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:12:32,770 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:9696
+2023-07-02 11:12:32,771 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-02 11:12:32,774 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:12:36,411 - WARNING -  * Debugger is active!
+2023-07-02 11:12:36,412 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:12:48,258 - INFO -  * Detected change in '/home/konradballegro/spark/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip', reloading
+2023-07-02 11:12:48,279 - INFO -  * Detected change in '/home/konradballegro/scoring-event/otomoto_scoring_test.py', reloading
+2023-07-02 11:12:48,354 - INFO - 127.0.0.1 - - [02/Jul/2023 11:12:48] "POST /predict HTTP/1.1" 200 -
+2023-07-02 11:12:49,196 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:12:52,718 - WARNING -  * Debugger is active!
+2023-07-02 11:12:52,719 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:15:07,401 - INFO -  * Detected change in '/home/konradballegro/scoring-event/predict.py', reloading
+2023-07-02 11:15:07,451 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/sklearn/__init__.py', reloading
+2023-07-02 11:15:07,453 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/sklearn/preprocessing/__init__.py', reloading
+2023-07-02 11:15:07,454 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/sklearn/preprocessing/_label.py', reloading
+2023-07-02 11:15:07,457 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/__init__.py', reloading
+2023-07-02 11:15:07,458 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/app.py', reloading
+2023-07-02 11:15:07,462 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/globals.py', reloading
+2023-07-02 11:15:07,464 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/wrappers.py', reloading
+2023-07-02 11:15:07,466 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/__init__.py', reloading
+2023-07-02 11:15:07,466 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/wrappers/__init__.py', reloading
+2023-07-02 11:15:07,470 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/json/__init__.py', reloading
+2023-07-02 11:15:07,489 - INFO -  * Detected change in '/usr/lib/python3.8/os.py', reloading
+2023-07-02 11:15:07,528 - INFO -  * Detected change in '/usr/lib/python3.8/_collections_abc.py', reloading
+2023-07-02 11:15:07,529 - INFO -  * Detected change in '/usr/lib/python3.8/_collections_abc.py', reloading
+2023-07-02 11:15:07,546 - INFO -  * Detected change in '/usr/lib/python3.8/abc.py', reloading
+2023-07-02 11:15:07,549 - INFO -  * Detected change in '/usr/lib/python3.8/_py_abc.py', reloading
+2023-07-02 11:15:07,595 - INFO -  * Detected change in '/usr/lib/python3.8/logging/__init__.py', reloading
+2023-07-02 11:15:07,644 - INFO -  * Detected change in '/usr/lib/python3.8/warnings.py', reloading
+2023-07-02 11:15:07,700 - INFO -  * Detected change in '/usr/lib/python3.8/pickle.py', reloading
+2023-07-02 11:15:08,120 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:15:12,003 - WARNING -  * Debugger is active!
+2023-07-02 11:15:12,003 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:15:14,004 - INFO -  * Detected change in '/home/konradballegro/scoring-event/otomoto_scoring_test.py', reloading
+2023-07-02 11:15:14,751 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:15:18,300 - WARNING -  * Debugger is active!
+2023-07-02 11:15:18,301 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:15:18,956 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/wrappers/__init__.py', reloading
+2023-07-02 11:15:18,956 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/wrappers/response.py', reloading
+2023-07-02 11:15:18,970 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/sansio/response.py', reloading
+2023-07-02 11:15:19,004 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/http.py', reloading
+2023-07-02 11:15:19,050 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/datastructures.py', reloading
+2023-07-02 11:15:19,128 - INFO -  * Detected change in '/usr/lib/python3.8/collections/abc.py', reloading
+2023-07-02 11:15:19,185 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/__init__.py', reloading
+2023-07-02 11:15:19,185 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/__init__.py', reloading
+2023-07-02 11:15:19,195 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/_internal.py', reloading
+2023-07-02 11:15:19,229 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/templating.py', reloading
+2023-07-02 11:15:19,233 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/jinja2/__init__.py', reloading
+2023-07-02 11:15:19,234 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/jinja2/environment.py', reloading
+2023-07-02 11:15:19,271 - INFO -  * Detected change in '/usr/lib/python3.8/zipfile.py', reloading
+2023-07-02 11:15:19,343 - INFO -  * Detected change in '/usr/lib/python3.8/io.py', reloading
+2023-07-02 11:15:19,451 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/jinja2/utils.py', reloading
+2023-07-02 11:15:19,506 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/jinja2/loaders.py', reloading
+2023-07-02 11:15:19,525 - INFO -  * Detected change in '/usr/lib/python3.8/types.py', reloading
+2023-07-02 11:15:19,555 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/routing/rules.py', reloading
+2023-07-02 11:15:19,556 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/routing/rules.py', reloading
+2023-07-02 11:15:19,861 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:15:23,454 - WARNING -  * Debugger is active!
+2023-07-02 11:15:23,454 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:15:23,780 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/__init__.py', reloading
+2023-07-02 11:15:23,780 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/type_check.py', reloading
+2023-07-02 11:15:23,791 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/index_tricks.py', reloading
+2023-07-02 11:15:23,825 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/function_base.py', reloading
+2023-07-02 11:15:23,938 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/nanfunctions.py', reloading
+2023-07-02 11:15:23,938 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/shape_base.py', reloading
+2023-07-02 11:15:23,939 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/stride_tricks.py', reloading
+2023-07-02 11:15:23,939 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/twodim_base.py', reloading
+2023-07-02 11:15:23,939 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/ufunclike.py', reloading
+2023-07-02 11:15:23,939 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/histograms.py', reloading
+2023-07-02 11:15:23,939 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/polynomial.py', reloading
+2023-07-02 11:15:23,939 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/utils.py', reloading
+2023-07-02 11:15:23,939 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/arraysetops.py', reloading
+2023-07-02 11:15:23,940 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/npyio.py', reloading
+2023-07-02 11:15:23,940 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/_iotools.py', reloading
+2023-07-02 11:15:23,940 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/arraypad.py', reloading
+2023-07-02 11:15:23,940 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/_version.py', reloading
+2023-07-02 11:15:23,941 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/matrixlib/__init__.py', reloading
+2023-07-02 11:15:23,941 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/matrixlib/defmatrix.py', reloading
+2023-07-02 11:15:23,980 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/common.py', reloading
+2023-07-02 11:15:24,130 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/dtypes/cast.py', reloading
+2023-07-02 11:15:24,472 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/ops/common.py', reloading
+2023-07-02 11:15:24,494 - INFO -  * Detected change in '/usr/lib/python3.8/textwrap.py', reloading
+2023-07-02 11:15:24,506 - INFO -  * Detected change in '/usr/lib/python3.8/re.py', reloading
+2023-07-02 11:15:24,512 - INFO -  * Detected change in '/usr/lib/python3.8/sre_parse.py', reloading
+2023-07-02 11:15:24,533 - INFO -  * Detected change in '/usr/lib/python3.8/sre_constants.py', reloading
+2023-07-02 11:15:24,611 - INFO -  * Detected change in '/usr/lib/python3.8/sre_compile.py', reloading
+2023-07-02 11:15:24,647 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/_libs/__init__.py', reloading
+2023-07-02 11:15:24,649 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/plotting/__init__.py', reloading
+2023-07-02 11:15:24,649 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/plotting/_core.py', reloading
+2023-07-02 11:15:24,674 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/sklearn/preprocessing/_label.py', reloading
+2023-07-02 11:15:24,685 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/sklearn/base.py', reloading
+2023-07-02 11:15:24,705 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/sklearn/utils/_set_output.py', reloading
+2023-07-02 11:15:24,708 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/sklearn/utils/_available_if.py', reloading
+2023-07-02 11:15:24,717 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/scipy/sparse/__init__.py', reloading
+2023-07-02 11:15:24,718 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/scipy/sparse/_base.py', reloading
+2023-07-02 11:15:25,080 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:15:28,608 - WARNING -  * Debugger is active!
+2023-07-02 11:15:28,609 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:15:30,168 - INFO -  * Detected change in '/home/konradballegro/scoring-event/test.py', reloading
+2023-07-02 11:15:31,177 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:15:34,778 - WARNING -  * Debugger is active!
+2023-07-02 11:15:34,778 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:15:36,940 - INFO -  * Detected change in '/home/konradballegro/scoring-event/otomoto_scoring.py', reloading
+2023-07-02 11:15:36,990 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/__init__.py', reloading
+2023-07-02 11:15:36,991 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/app.py', reloading
+2023-07-02 11:15:36,994 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/json/__init__.py', reloading
+2023-07-02 11:15:36,997 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/globals.py', reloading
+2023-07-02 11:15:36,998 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/wrappers.py', reloading
+2023-07-02 11:15:37,000 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/__init__.py', reloading
+2023-07-02 11:15:37,001 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/wrappers/__init__.py', reloading
+2023-07-02 11:15:37,510 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:15:41,089 - WARNING -  * Debugger is active!
+2023-07-02 11:15:41,089 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:15:41,461 - INFO -  * Detected change in '/usr/lib/python3.8/pickle.py', reloading
+2023-07-02 11:15:41,501 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cuda/cudadrv/drvapi.py', reloading
+2023-07-02 11:15:41,502 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cuda/cudadrv/drvapi.py', reloading
+2023-07-02 11:15:41,568 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cuda/simulator/kernel.py', reloading
+2023-07-02 11:15:41,569 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cuda/decorators.py', reloading
+2023-07-02 11:15:41,569 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cuda/dispatcher.py', reloading
+2023-07-02 11:15:41,569 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/serialize.py', reloading
+2023-07-02 11:15:41,569 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cloudpickle/__init__.py', reloading
+2023-07-02 11:15:41,569 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cloudpickle/cloudpickle.py', reloading
+2023-07-02 11:15:41,569 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cloudpickle/cloudpickle_fast.py', reloading
+2023-07-02 11:15:41,570 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cloudpickle/compat.py', reloading
+2023-07-02 11:15:41,570 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/cuda/compiler.py', reloading
+2023-07-02 11:15:41,571 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/dispatcher.py', reloading
+2023-07-02 11:15:41,645 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/caching.py', reloading
+2023-07-02 11:15:41,687 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/target_extension.py', reloading
+2023-07-02 11:15:41,691 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/registry.py', reloading
+2023-07-02 11:15:41,696 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/descriptors.py', reloading
+2023-07-02 11:15:41,703 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/compat/_optional.py', reloading
+2023-07-02 11:15:41,703 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/compat/_optional.py', reloading
+2023-07-02 11:15:41,726 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/apply.py', reloading
+2023-07-02 11:15:41,755 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/construction.py', reloading
+2023-07-02 11:15:41,843 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/__init__.py', reloading
+2023-07-02 11:15:41,847 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/__init__.py', reloading
+2023-07-02 11:15:41,849 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/numeric.py', reloading
+2023-07-02 11:15:41,866 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/umath.py', reloading
+2023-07-02 11:15:41,875 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/numerictypes.py', reloading
+2023-07-02 11:15:41,904 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/fromnumeric.py', reloading
+2023-07-02 11:15:41,929 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/arrayprint.py', reloading
+2023-07-02 11:15:41,976 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/_asarray.py', reloading
+2023-07-02 11:15:41,978 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/_ufunc_config.py', reloading
+2023-07-02 11:15:41,986 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/overrides.py', reloading
+2023-07-02 11:15:42,008 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/memmap.py', reloading
+2023-07-02 11:15:42,013 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/multiarray.py', reloading
+2023-07-02 11:15:42,025 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/function_base.py', reloading
+2023-07-02 11:15:42,033 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/_machar.py', reloading
+2023-07-02 11:15:42,045 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/getlimits.py', reloading
+2023-07-02 11:15:42,067 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/shape_base.py', reloading
+2023-07-02 11:15:42,081 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/core/einsumfunc.py', reloading
+2023-07-02 11:15:42,110 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/__init__.py', reloading
+2023-07-02 11:15:42,112 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/type_check.py', reloading
+2023-07-02 11:15:42,120 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/index_tricks.py', reloading
+2023-07-02 11:15:42,139 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/function_base.py', reloading
+2023-07-02 11:15:42,224 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/nanfunctions.py', reloading
+2023-07-02 11:15:42,247 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/shape_base.py', reloading
+2023-07-02 11:15:42,263 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/stride_tricks.py', reloading
+2023-07-02 11:15:42,273 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/twodim_base.py', reloading
+2023-07-02 11:15:42,284 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/ufunclike.py', reloading
+2023-07-02 11:15:42,287 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/histograms.py', reloading
+2023-07-02 11:15:42,307 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/polynomial.py', reloading
+2023-07-02 11:15:42,334 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/utils.py', reloading
+2023-07-02 11:15:42,359 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/arraysetops.py', reloading
+2023-07-02 11:15:42,372 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numpy/lib/npyio.py', reloading
+2023-07-02 11:15:42,656 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:15:46,297 - WARNING -  * Debugger is active!
+2023-07-02 11:15:46,297 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:15:50,844 - INFO -  * Detected change in '/home/konradballegro/scoring-event/otomoto_scoring.py', reloading
+2023-07-02 11:15:50,947 - INFO -  * Detected change in '/home/konradballegro/scoring-event/app.py', reloading
+2023-07-02 11:15:51,032 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/__init__.py', reloading
+2023-07-02 11:15:51,032 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/app.py', reloading
+2023-07-02 11:15:51,034 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/json/__init__.py', reloading
+2023-07-02 11:15:51,037 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/globals.py', reloading
+2023-07-02 11:15:51,037 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/wrappers.py', reloading
+2023-07-02 11:15:51,040 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/__init__.py', reloading
+2023-07-02 11:15:51,040 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/werkzeug/wrappers/__init__.py', reloading
+2023-07-02 11:15:51,209 - INFO -  * Detected change in '/home/konradballegro/scoring-event/app.py', reloading
+2023-07-02 11:15:52,076 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:16:19,321 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:9696
+2023-07-02 11:16:19,321 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-02 11:16:19,324 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:16:23,098 - WARNING -  * Debugger is active!
+2023-07-02 11:16:23,099 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:16:23,485 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/reshape/api.py', reloading
+2023-07-02 11:16:23,519 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/groupby/__init__.py', reloading
+2023-07-02 11:16:23,520 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/groupby/numba_.py', reloading
+2023-07-02 11:16:23,520 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/__init__.py', reloading
+2023-07-02 11:16:23,538 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/errors.py', reloading
+2023-07-02 11:16:23,538 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/__init__.py', reloading
+2023-07-02 11:16:23,539 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/abstract.py', reloading
+2023-07-02 11:16:23,539 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/containers.py', reloading
+2023-07-02 11:16:23,539 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/common.py', reloading
+2023-07-02 11:16:23,539 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/functions.py', reloading
+2023-07-02 11:16:23,539 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/__init__.py', reloading
+2023-07-02 11:16:23,540 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/typing/templates.py', reloading
+2023-07-02 11:16:23,541 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/typed_passes.py', reloading
+2023-07-02 11:16:23,560 - INFO -  * Detected change in '/usr/lib/python3.8/copy.py', reloading
+2023-07-02 11:16:23,572 - INFO -  * Detected change in '/usr/lib/python3.8/copyreg.py', reloading
+2023-07-02 11:16:23,581 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/compiler_machinery.py', reloading
+2023-07-02 11:16:23,595 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/compiler_lock.py', reloading
+2023-07-02 11:16:23,631 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/inline_closurecall.py', reloading
+2023-07-02 11:16:23,674 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/stencils/stencil.py', reloading
+2023-07-02 11:16:23,701 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/ir.py', reloading
+2023-07-02 11:16:23,812 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/compiler.py', reloading
+2023-07-02 11:16:23,828 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/targetconfig.py', reloading
+2023-07-02 11:16:23,837 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/utils.py', reloading
+2023-07-02 11:16:23,898 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/interpreter.py', reloading
+2023-07-02 11:16:24,068 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/ir_utils.py', reloading
+2023-07-02 11:16:24,186 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/ssa.py', reloading
+2023-07-02 11:16:24,211 - INFO -  * Detected change in '/usr/lib/python3.8/ctypes/__init__.py', reloading
+2023-07-02 11:16:24,294 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/rewrites/__init__.py', reloading
+2023-07-02 11:16:24,295 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/rewrites/registry.py', reloading
+2023-07-02 11:16:24,361 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/iterators.py', reloading
+2023-07-02 11:16:24,373 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/misc.py', reloading
+2023-07-02 11:16:24,409 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/npytypes.py', reloading
+2023-07-02 11:16:24,727 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:16:28,314 - WARNING -  * Debugger is active!
+2023-07-02 11:16:28,314 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:16:28,629 - INFO - 127.0.0.1 - - [02/Jul/2023 11:16:28] "POST /predict HTTP/1.1" 200 -
+2023-07-02 11:16:33,160 - INFO -  * Detected change in '/home/konradballegro/scoring-event/otomoto_scoring_event.py', reloading
+2023-07-02 11:16:33,160 - INFO -  * Detected change in '/home/konradballegro/scoring-event/app.py', reloading
+2023-07-02 11:16:34,099 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:16:37,610 - WARNING -  * Debugger is active!
+2023-07-02 11:16:37,611 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:16:37,973 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/ops/common.py', reloading
+2023-07-02 11:16:37,973 - INFO -  * Detected change in '/usr/lib/python3.8/sre_constants.py', reloading
+2023-07-02 11:16:37,974 - INFO -  * Detected change in '/usr/lib/python3.8/sre_compile.py', reloading
+2023-07-02 11:16:38,247 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:16:41,647 - WARNING -  * Debugger is active!
+2023-07-02 11:16:41,647 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:16:49,685 - INFO -  * Detected change in '/home/konradballegro/scoring-event/app.py', reloading
+2023-07-02 11:16:49,686 - INFO -  * Detected change in '/home/konradballegro/scoring-event/otomoto_scoring_event.py', reloading
+2023-07-02 11:16:50,337 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:16:53,679 - WARNING -  * Debugger is active!
+2023-07-02 11:16:53,679 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:18:10,587 - INFO -  * Detected change in '/home/konradballegro/scoring-event/app.py', reloading
+2023-07-02 11:18:10,587 - INFO -  * Detected change in '/home/konradballegro/scoring-event/otomoto_scoring_event.py', reloading
+2023-07-02 11:18:11,280 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:18:14,773 - WARNING -  * Debugger is active!
+2023-07-02 11:18:14,773 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:18:45,510 - INFO -  * Detected change in '/home/konradballegro/scoring-event/app.py', reloading
+2023-07-02 11:18:45,568 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/flask/__init__.py', reloading
+2023-07-02 11:18:45,904 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:18:49,554 - WARNING -  * Debugger is active!
+2023-07-02 11:18:49,554 - INFO -  * Debugger PIN: 149-407-935
+2023-07-02 11:18:49,920 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/ssa.py', reloading
+2023-07-02 11:18:49,921 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/rewrites/__init__.py', reloading
+2023-07-02 11:18:49,921 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/rewrites/registry.py', reloading
+2023-07-02 11:18:49,921 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/iterators.py', reloading
+2023-07-02 11:18:49,921 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/numba/core/types/misc.py', reloading
+2023-07-02 11:18:50,229 - INFO -  * Restarting with watchdog (inotify)
+2023-07-02 11:18:53,749 - WARNING -  * Debugger is active!
+2023-07-02 11:18:53,749 - INFO -  * Debugger PIN: 149-407-935
