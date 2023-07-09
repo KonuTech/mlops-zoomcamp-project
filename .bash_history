@@ -1711,3 +1711,108 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 python3 monitoring/app.py
 streamlit run streamlit_app/app.py
 streamlit run web-app/otomoto_app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ls
+mkdir scraping
+ls -lah
+python3 training/otomoto_training.py 
+python3 scraping/otomoto_scraping.py 
+python3 training/otomoto_training.py 
+isort scoring-event/app.py 
+black scoring-event/app.py 
+black scoring-event/config/config.json
+python3 training/otomoto_training.py 
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd monitoring/
+ls -lah
+uvicorn otomoto_monitoring:app
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+cd scoring-event/
+ls -lah
+python3 otomoto_scoring.py
+python3app.py
+python3 app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git staus
+git status
+git add models/
+git add streamlit/
+git add scraping/
+git add training/
+git status
+git add .bash_history .gitignore monitoring/reports/model_performance.html monitoring/reports/target_drift.html orchestration/
+git status
+git add scoring-event/
+git status
+git addd requirements_copy.txt scoring-event/scoring.log streamlit_app/
+git add requirements_copy.txt scoring-event/scoring.log streamlit_app/
+git status
+git add web-service 
+git status
+git commit -m "added scoring of single evnet usinf Flask; projects restructure"
+git push
+git status
+git push
+git rm scoring-event/app.log
+git push
+git reset HEAD~
+git status
+git add models/ scoring-event/
+git status
+git add web-service/
+git add orchestration/
+git status
+git add streamlit_app/
+git add monitoring/
+git status
+git add requirements_copy.txt 
+git add .gitignore 
+git status
+git commit -m "projects restructure"
+git push
+git status
+git add scraping/
+git add streamlit/
+git add training/
+git commit -m "added scoring of an event"
+git push
+python3 scoring-event/otomoto_scoring_event.py 
+black scoring-event/config.json
+black scoring-event/config/config.json
+black scoring-event/app.py
+isort scoring-event/app.py
+black scoring-event/app.py
+python3 scoring-event/otomoto_scoring_event.py 
+git status
+git add .bash_history models/xgb.model scoring-event/app.py scoring-event/otomoto_scoring_event.py training/otomoto_training.py scoring-event/config/ scoring-event/test_data_preprocess.csv scoring-event/test_features_engineer.csv
+git status
+git commit -m "initial scoring-event"
+git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd scoring-event/
+ls
+python3 otomoto_scoring_test.py
+python3 otomoto_scoring_event.py
+cd
+python3 scoring-event/app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd  model
+cd  models
+ls -lah
+cd
+cd streamlit/
+ls -lag
+streamlit run app/app.py
+streamlit run app:app.py
+streamlit run app/app.py
+streamlit run app.py
+cd
+streamlit run streamlist/app.py
+streamlit run streamlit/app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+prefect server start
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+/home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/python3.8
