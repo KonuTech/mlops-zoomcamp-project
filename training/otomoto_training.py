@@ -417,7 +417,8 @@ def hyperparameters_gridsearch(
     regressor_grid: Dict,
     metric: str,
     selected_features: List[str],
-    scaler: StandardScaler,
+    scaler: None,
+    transformer: None,
 ) -> Dict:
     """
     Performs hyperparameter tuning using GridSearchCV.
@@ -431,6 +432,7 @@ def hyperparameters_gridsearch(
         metric (): .
         selected_features (): .
         scaler (): .
+        transformer (): .
 
     Returns:
         results: ().
@@ -440,21 +442,23 @@ def hyperparameters_gridsearch(
 
     regressors = {"XGBoost": XGBRegressor(n_jobs=-1)}
     parameters = regressor_grid
+    print(f"PARAMETRS:, {parameters}")
     results = {}
 
     for regressor_label, regressor in regressors.items():
         logger.info(f"Now training: {regressor_label}")
 
-        # Apply scaling and transformation on validation data
-        x_scaled_val = scaler.transform(x_val)
-        y_transformed_val = y_val.reshape(-1, 1)
-
-        steps = [("regressor", regressor)]
+        steps = [
+            ("scaler", scaler),
+            ("transformer", transformer),
+            ("regressor", regressor),
+        ]
         pipeline = Pipeline(steps=steps)
         param_grid = parameters[regressor_label]
+        print(f"PARAM GRID:, {param_grid}")
 
         gscv = GridSearchCV(
-            regressor,
+            pipeline,
             param_grid,
             cv=5,
             n_jobs=-1,
@@ -462,27 +466,20 @@ def hyperparameters_gridsearch(
             scoring=metric,
         )
 
-        # Apply scaling and transformation on training data within GridSearchCV
-        x_scaled_train = scaler.transform(x_train)
-        y_transformed_train = y_train.reshape(-1, 1)
-
-        selected_feature_indices = [
-            x_train.columns.get_loc(feature) for feature in selected_features
-        ]
-        x_train_selected = x_scaled_train[:, selected_feature_indices]
-
-        gscv.fit(x_train_selected, np.ravel(y_transformed_train))
+        gscv.fit(x_train, y_train)
+        best_estimator = gscv.best_estimator_
         best_params = gscv.best_params_
         best_score = gscv.best_score_
 
-        regressor.set_params(**best_params)
+        # pipeline.set_params(**best_params)
 
-        x_val_selected = x_scaled_val[:, selected_feature_indices]
-        y_pred = gscv.predict(x_val_selected)
-        scoring = r2_score(y_transformed_val, y_pred)
+        # y_pred = gscv.predict(x_val)
+        y_pred = best_estimator.predict(x_val)
+        scoring = r2_score(y_val, y_pred)
 
         hyperparameters = {
             "Regressor": gscv,
+            "Best Estimator": best_estimator,
             "Best Parameters": best_params,
             "Train": best_score,
             "Val": scoring,
@@ -694,6 +691,7 @@ def otomoto_training_flow():
             metric=METRIC,
             selected_features=selected_features,
             scaler=scaler,
+            transformer=transformer
         )
 
         # Train the final model

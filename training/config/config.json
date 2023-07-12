@@ -21,21 +21,11 @@
     "RANDOM_STATE": 42,
     "REGRESSOR_GRID": {
         "XGBoost": {
-            "colsample_bytree": [
-                0.5
-            ],
-            "learning_rate": [
-                0.1
-            ],
-            "max_depth": [
-                8
-            ],
-            "n_estimators": [
-                200
-            ],
-            "subsample": [
-                1.0
-            ]
+            "regressor__colsample_bytree": [0.5],
+            "regressor__learning_rate": [0.1],
+            "regressor__max_depth": [8],
+            "regressor__n_estimators": [200],
+            "regressor__subsample": [1.0]
         }
     },
     "METRIC": "r2",
