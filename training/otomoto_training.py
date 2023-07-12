@@ -34,7 +34,7 @@ from prefect import flow, task
 from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql.functions import col, regexp_replace, when
 from sklearn.feature_selection import RFE, RFECV
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import QuantileTransformer, StandardScaler
@@ -417,8 +417,8 @@ def hyperparameters_gridsearch(
     regressor_grid: Dict,
     metric: str,
     selected_features: List[str],
-    scaler: None,
-    transformer: None,
+    scaler: StandardScaler,
+    transformer: QuantileTransformer,
 ) -> Dict:
     """
     Performs hyperparameter tuning using GridSearchCV.
@@ -466,15 +466,22 @@ def hyperparameters_gridsearch(
             scoring=metric,
         )
 
-        gscv.fit(x_train, y_train)
+        selected_feature_indices = [
+            x_train.columns.get_loc(feature) for feature in selected_features
+        ]
+        x_train_selected = x_train.iloc[:, selected_feature_indices]
+
+        gscv.fit(x_train_selected, np.ravel(y_train))
         best_estimator = gscv.best_estimator_
         best_params = gscv.best_params_
         best_score = gscv.best_score_
 
         # pipeline.set_params(**best_params)
+        regressor.set_params(**best_params)
 
-        # y_pred = gscv.predict(x_val)
-        y_pred = best_estimator.predict(x_val)
+        x_val_selected = x_val.iloc[:, selected_feature_indices]
+        y_pred = gscv.predict(x_val_selected)
+        # y_pred = best_estimator.predict(x_val)
         scoring = r2_score(y_val, y_pred)
 
         hyperparameters = {
@@ -503,6 +510,7 @@ def model_train(
     selected_features: List[str],
     hyperparameters: Dict,
     scaler: StandardScaler,
+    transformer: QuantileTransformer
 ) -> XGBRegressor:
     """
     Trains the final model using the selected features and hyperparameters.
@@ -513,92 +521,48 @@ def model_train(
         selected_features (): .
         hyperparameters (): .
         scaler (): .
+        transformer (): .
 
     Returns:
         model: The trained machine learning model.
 
     """
     logger.info("Training the model...")
-    x_scaled_train = scaler.transform(x_train)
-    y_transformed_train = y_train.reshape(-1, 1)
+    
+    # Create the pipeline
+    steps = [
+        ("scaler", scaler),
+        ("transformer", transformer),
+        ("regressor", XGBRegressor(**hyperparameters["XGBoost"]["Best Parameters"]))
+    ]
+    pipeline = Pipeline(steps=steps)
 
+    # Select the desired features
     selected_feature_indices = [
         x_train.columns.get_loc(feature) for feature in selected_features
     ]
-    x_train_selected = x_scaled_train[:, selected_feature_indices]
+    x_train_selected = x_train.iloc[:, selected_feature_indices]
 
-    model = XGBRegressor(**hyperparameters["XGBoost"]["Best Parameters"])
-    model.fit(x_train_selected, np.ravel(y_transformed_train))
+    # Train the model
+    model = pipeline.fit(x_train_selected, y_train)
+
+    # Perform predictions on the training data
+    y_pred_train = model.predict(x_train_selected)
+
+    # Compute regression metrics
+    mse_train = mean_squared_error(y_train, y_pred_train)
+    rmse_train = np.sqrt(mse_train)
+    mae_train = mean_absolute_error(y_train, y_pred_train)
+    r2_train = r2_score(y_train, y_pred_train)
 
     logger.info("Model training completed")
+    logger.info(f"Training Set Metrics:")
+    logger.info(f"MSE: {mse_train:.4f}")
+    logger.info(f"RMSE: {rmse_train:.4f}")
+    logger.info(f"MAE: {mae_train:.4f}")
+    logger.info(f"R^2: {r2_train:.4f}")
+
     return model
-
-
-@task(retries=0, retry_delay_seconds=2)
-def model_evaluate(
-    model: XGBRegressor,
-    x_test: DataFrame,
-    y_test: DataFrame,
-    selected_features: List[str],
-    scaler: StandardScaler,
-) -> Tuple[float, float]:
-    """
-    Evaluates the model on the test set.
-
-    Args:
-        model: The trained machine learning model.
-        x_test (DataFrame): The test DataFrame.
-        y_test (): .
-        selected_features (): .
-        scaler (): .
-
-    Returns:
-        mse (): The evaluation results.
-        r2 (): The evaluation results.
-
-    """
-
-    logger.info("Evaluating the model...")
-
-    # Apply the same transformations to the test data using the pipeline
-    x_scaled_test = scaler.transform(x_test)
-
-    selected_feature_indices = [
-        x_test.columns.get_loc(feature) for feature in selected_features
-    ]
-    x_test_selected = x_scaled_test[:, selected_feature_indices]
-
-    # Predict using the trained model
-    y_pred = model.predict(x_test_selected)
-
-    # Save CSV files
-    pd.DataFrame(x_test_selected, columns=selected_features).to_csv(
-        X_TEST_PATH, index=False
-    )
-    pd.DataFrame(y_test, columns=["Price"]).to_csv(Y_TEST_PATH, index=False)
-    pd.DataFrame(y_pred, columns=["predictions"]).to_csv(Y_PRED_PATH, index=False)
-
-    # Concatenate the CSV files
-    x_test_selected_df = pd.DataFrame(x_test_selected, columns=selected_features)
-    concatenated_df = pd.concat(
-        [
-            x_test_selected_df,
-            pd.DataFrame(y_test, columns=["Price"]),
-            pd.DataFrame(y_pred, columns=["predictions"]),
-        ],
-        axis=1,
-    )
-    concatenated_df.to_csv(CURRENT_PATH, index=False)
-
-    # Calculate evaluation metrics
-    mse = mean_squared_error(y_test, y_pred)
-    r2 = r2_score(y_test, y_pred)
-
-    logger.info(f"MSE: {mse}")
-    logger.info(f"R^2: {r2}")
-    logger.info("Model evaluation completed")
-
-    return mse, r2
 
 
 @task(retries=0, retry_delay_seconds=2)
@@ -614,7 +578,10 @@ def model_save(model: XGBRegressor, model_path: str) -> None:
         None
 
     """
-    model.save_model(model_path)
+    # Access the underlying XGBRegressor model from the pipeline
+    regressor = model.named_steps["regressor"]
+
+    regressor.save_model(model_path)
 
 
 @flow
@@ -701,15 +668,7 @@ def otomoto_training_flow():
             selected_features=selected_features,
             hyperparameters=hyperparameters,
             scaler=scaler,
-        )
-
-        # Evaluate the model
-        model_evaluate(
-            model=model_trained,
-            x_test=X_test,
-            y_test=y_test,
-            selected_features=selected_features,
-            scaler=scaler,
+            transformer=transformer
         )
 
         # Save the model
