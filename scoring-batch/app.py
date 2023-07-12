@@ -23,7 +23,8 @@ SELECTED_FEATURES = config["SELECTED_FEATURES"]
 
 
 # TRACKING_SERVER_HOST = "34.77.180.77"
-RUN_ID = "ed549f18f6a64334b9873babbcb43dee"
+# RUN_ID = "ed549f18f6a64334b9873babbcb43dee"
+RUN_ID = "12e03b0d8db04dbe99467a2bcde74183"
 
 # Configure logging
 logging.basicConfig(
@@ -36,7 +37,7 @@ logging.basicConfig(
 # Configure MLflow
 # mlflow.set_tracking_uri(f"http://{TRACKING_SERVER_HOST}:5000")
 logged_model = f"gs://mlops-zoomcamp/3/{RUN_ID}/artifacts/model"
-MODEL = mlflow.pyfunc.load_model(logged_model)
+model = mlflow.pyfunc.load_model(logged_model)
 
 logging.debug("Model loaded: %s", logged_model)
 
@@ -113,11 +114,11 @@ def data_preprocess(df: pd.DataFrame) -> pd.DataFrame:
         .astype(str)
         .str.replace(" ", "")
         .str.replace("km", "")
-        .astype(float)
+        .astype(np.float32)  # Convert to float32
     )
     df_cleaned["Fuel type"] = df["Fuel type"]
     df_cleaned["Power"] = (
-        df["Power"].astype(str).str.replace(" ", "").str.replace("KM", "").astype(int)
+        df["Power"].astype(str).str.replace(" ", "").str.replace("KM", "").astype(np.int32)  # Convert to int32
     )
     df_cleaned["Gearbox"] = df["Gearbox"]
     df_cleaned["Body type"] = df["Body type"]
@@ -140,7 +141,7 @@ def features_engineer(
     columns_to_drop: List[str],
     columns_to_add: List[str],
     selected_features: List[str]
-    ) -> np.ndarray:
+    ) -> pd.DataFrame:
     """
     Performs feature engineering to create additional features based on the input DataFrame.
 
@@ -168,6 +169,7 @@ def features_engineer(
 
             # Create a dummy variable for the distinct value
             dummy_variable = (df[column] == value).astype(int)
+            # dummy_variable = (df[column].astype(str) == str(value)).astype(int)
 
             # Assign the dummy variable to the new column
             df[column_name] = dummy_variable
@@ -180,22 +182,30 @@ def features_engineer(
     df = df.drop(columns_to_drop, axis=1)
     df = df.dropna(subset=["Price"])
 
-    # Price per Mileage
-    df["price_per_mileage"] = df["Price"] / df["Mileage"]
-
-    # Power-to-Price Ratio
-    df["power_to_price_ratio"] = df["Power"] / df["Price"]
+   # Iterate over each feature in SELECTED_FEATURES
+    for feature in SELECTED_FEATURES:
+        if feature not in ["Mileage", "Power"]:
+            if feature in df.columns:
+                if df[feature].dtype != np.int32:
+                    df[feature] = df[feature].astype(np.int32)
 
     df = df[selected_features]
     df.to_csv(
         "/home/konradballegro/scoring-batch/test_features_engineer.csv", index=False
     )
-
+    # Log the DataFrame
+    logging.warning("DataFrame type: %s", type(df))
+    # Get the shape of the DataFrame
+    num_rows, num_cols = df.shape
+    logging.warning("Number of rows:%s", num_rows)
+    logging.warning("Number of columns:%s", num_cols)
+    logging.warning("DataFrame:\n%s", df)
     logging.warning("Feature engineering completed")
-    return df.to_numpy()
+
+    return df
 
 
-def prepare_features(json_string: str) -> np.ndarray:
+def prepare_features(json_string: str) -> pd.DataFrame:
     """
     Prepares features by reading, filtering, preprocessing, and performing feature engineering on the data.
 
@@ -224,21 +234,6 @@ def prepare_features(json_string: str) -> np.ndarray:
     return features
 
 
-def predict(features: np.ndarray, model) -> float:
-    """
-    Makes predictions using an XGBoost model based on the input features.
-
-    Args:
-        features (np.ndarray): NumPy array of input features.
-        model: The trained XGBoost model.
-
-    Returns:
-        prediction (float): The predicted value.
-    """
-    preds = model.predict(features)
-    return float(preds)
-
-
 @app.route("/predict", methods=["POST"])
 def predict_endpoint():
     """
@@ -256,15 +251,9 @@ def predict_endpoint():
         logging.debug("Received JSON data: %s", json_string)
 
         features = prepare_features(json_string=json_string)
-        features_df = pd.DataFrame(features)  # Convert NumPy array to Pandas DataFrame
-        predictions = []
+        predictions = model.predict(features)  # Pass the DataFrame as input
 
-        # Loop over each row in the features DataFrame
-        for _, row in features_df.iterrows():
-            pred = predict(row.values.reshape(1, -1), model=MODEL)  # Pass a single row as input
-            predictions.append(pred)  # Append the float prediction directly
-
-        result = {"price": predictions, "model_version": RUN_ID}
+        result = {"price": predictions.tolist(), "model_version": RUN_ID}
 
         return jsonify(result)
     except Exception as e:

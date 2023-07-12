@@ -274,10 +274,10 @@ def features_engineer(
     df_pd = df.toPandas()
 
     # Price per Mileage
-    df_pd["price_per_mileage"] = df_pd["Price"] / df_pd["Mileage"]
+    # df_pd["price_per_mileage"] = df_pd["Price"] / df_pd["Mileage"]
 
     # Power-to-Price Ratio
-    df_pd["power_to_price_ratio"] = df_pd["Power"] / df_pd["Price"]
+    # df_pd["power_to_price_ratio"] = df_pd["Power"] / df_pd["Price"]
 
     # Number of Brands
     df_pd["brand_count"] = df_pd[brand_columns].sum(axis=1)
