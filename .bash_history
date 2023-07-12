@@ -1816,3 +1816,113 @@ pip list
 prefect server start
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/python3.8
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd
+git status
+git add .bash_history 
+git add models/xgb.model 
+git add monitoring/
+git status
+git add data/inputs/header_en.txt
+git add data/inputs/header_en.txt -f
+git status
+git add data/inputs/header_pl.txt -f
+git add data/inputs/iveco.txt -f
+git add data/inputs/offers.txt -f
+git add data/inputs/manufacturers_batch.txt -f
+git add data/inputs/manufacturers.txt -f
+git add data/inputs/offers.txt -f
+git add data/inputs/offers.csv -f
+git add data/inputs/iveco.csv -f
+git status
+git add scoring-event 
+git add
+git status
+git add scoring-batch/
+git status
+git commit -m "added scoring-batch module"
+git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 scoring-event/otomoto_scoring_event.py 
+isort scoring-event/otomoto_scoring_event.py 
+black scoring-event/otomoto_scoring_event.py 
+isort scoring-event/otomoto_scoring_event.py 
+black scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py 
+isort scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py 
+black scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py 
+isort scoring-event/otomoto_scoring_event.py 
+black scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py 
+isort scoring-event/otomoto_scoring_event.py 
+black scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py 
+isort scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py 
+black scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py 
+isort scoring-event/otomoto_scoring_event.py 
+black scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py 
+black scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py 
+ls -lah
+python3 scoring-event/otomoto_scoring_event.py 
+cd /home/konradballegro/data/inputs
+ls -lah
+cd
+python3 scoring-event/otomoto_scoring_event.py 
+cd /home/konradballegro/data/inputs
+ls -lah
+cd
+python3 scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_batch.py 
+python3 scoring-batch/otomoto_scoring_batch.py 
+isort scoring-batch/otomoto_scoring_batch.py 
+black scoring-batch/otomoto_scoring_batch.py 
+isort scoring-batch/otomoto_scoring_batch.py 
+black scoring-batch/otomoto_scoring_batch.py 
+python3 scoring-batch/otomoto_scoring_batch.py 
+python3 scoring-batch/app.py 
+python3 scoring-batch/otomoto_scoring_batch.py 
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 scoring-event/app.py
+python3 scoring-batch/app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd monitoring/
+ls -lah
+uvicorn otomoto_monitoring.py:app
+cd
+ls
+streamlit run streamlit:app.py
+cd streamlit/
+streamlit run streamlit:app.py
+cd
+cd 
+streamlit run app:app
+streamlit run app:app.py
+cd streamlit/
+streamlit run app:app.py
+ls -lah
+streamlit run app.py
+cd
+streamlit run streamlit:app.py
+ls
+streamlit run streamlit:app.py
+cd streamlit/
+streamlit run app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd monitoring/
+ls -lah
+uvicorn otomoto_monitoring.py 
+uvicorn otomoto_monitoring:app
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 training/otomoto_training.py 
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+prefect server start
+pipenv shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ls -lah

@@ -49,7 +49,7 @@ def data_filter(json_string: str) -> pd.DataFrame:
     Filters the data based on specified conditions.
 
     Args:
-        df (pd.DataFrame): The input DataFrame.
+        json_string  (str): The input JSON string.
 
     Returns:
         filtered_df (pd.DataFrame): The filtered DataFrame.
@@ -94,10 +94,10 @@ def data_preprocess(df: pd.DataFrame) -> pd.DataFrame:
     Preprocesses the data by cleaning and transforming the columns.
 
     Args:
-        df (DataFrame): The input Spark DataFrame.
+        df (pd.DataFrame): The input Pandas DataFrame.
 
     Returns:
-        cleaned_df (DataFrame): The preprocessed Spark DataFrame.
+        cleaned_df (pd.DataFrame): The preprocessed Pandas DataFrame.
 
     """
     logging.warning("Preprocessing data...")
@@ -140,19 +140,19 @@ def features_engineer(
     columns_to_drop: List[str],
     columns_to_add: List[str],
     selected_features: List[str]
-) -> np.ndarray:
+    ) -> np.ndarray:
     """
-        Performs feature engineering to create additional features based on the input DataFrame.
+    Performs feature engineering to create additional features based on the input DataFrame.
 
-        Args:
-            df (DataFrame): The input Spark DataFrame.
-            distinct_columns (list): A list of columns to perform feature engineering on distinct values.
-            columns_to_drop (list): A list of columns to drop from the DataFrame.
-            columns_to_add (List[str]): A list of columns to add to the DataFrame if they don't exist.
-            selected_features (List[str]): A list of columns to select as the final set of features.
+    Args:
+        df (pd.DataFrame): The input Pandas DataFrame.
+        distinct_columns (list): A list of columns to perform feature engineering on distinct values.
+        columns_to_drop (list): A list of columns to drop from the DataFrame.
+        columns_to_add (List[str]): A list of columns to add to the DataFrame if they don't exist.
+        selected_features (List[str]): A list of columns to select as the final set of features.
 
-        Returns:
-            features_df (DataFrame): Pandas DataFrame with additional engineered features.
+    Returns:
+        features_df (np.ndarray): NumPy array with additional engineered features.
 
     """
     logging.warning("Performing feature engineering...")
@@ -191,10 +191,8 @@ def features_engineer(
         "/home/konradballegro/scoring-batch/test_features_engineer.csv", index=False
     )
 
-    df = df.to_numpy()
-
     logging.warning("Feature engineering completed")
-    return df
+    return df.to_numpy()
 
 
 def prepare_features(json_string: str) -> np.ndarray:
@@ -202,10 +200,10 @@ def prepare_features(json_string: str) -> np.ndarray:
     Prepares features by reading, filtering, preprocessing, and performing feature engineering on the data.
 
     Args:
-        file_path (str): The path to the input data file.
+        json_string (str): JSON string containing the data.
 
     Returns:
-        features (np.ndarray): DataFrame with prepared features.
+        features (np.ndarray): NumPy array with prepared features.
     """
 
     # Filter data
@@ -243,8 +241,17 @@ def predict(features: np.ndarray, model) -> float:
 
 @app.route("/predict", methods=["POST"])
 def predict_endpoint():
+    """
+    Flask endpoint for making predictions.
+
+    Accepts a POST request with a JSON payload containing data.
+    Prepares the features, makes predictions using the trained model,
+    and returns the predictions as a JSON response.
+
+    Returns:
+        JSON response with predictions and model version.
+    """
     try:
-        print("hello")
         json_string = request.get_json()
         logging.debug("Received JSON data: %s", json_string)
 
