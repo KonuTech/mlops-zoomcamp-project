@@ -1,55 +1,3 @@
-sudo apt-get update
-sudo apt install python3.8-venv
-python3 -m venv mlops-zoomcamp
-source mlops-zoomcamp/bin/activate
-pip install -U pip
-pipenv shell
-. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
-rm -rf mlops-zoomcamp
-pip list
-apt install pipenc
-apt install pipenv
-pipenv shell
-sudo apt install pipenv
-pipenv shell
-pip shell
-sudo pip shell
-source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
-pipenv shell
-gcloud compute firewall-rules create mlflow-tracking-server     --network default     --priority 1000     --direction ingress     --action allow     --target-tags mlflow-tracking-server     --source-ranges 0.0.0.0/0     --rules tcp:5000 \
-clear
-gcloud compute firewall-rules create mlflow-tracking-server-1     --network default     --priority 1000     --direction ingress     --action allow     --target-tags mlflow-tracking-server-1     --source-ranges 0.0.0.0/0     --rules tcp:5000     --enable-logging
-ls
-source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
-pip list
-touch lr.py
-vim lr.py
-cat lr.py
-python3 lr.py
-pipenv shell
-. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
-pipenv install prefect
-pip list
-prefect server start
-. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
-pipenv install mlflow scikit-learn
-pip list
-ls
-python3 lr.py
-pipenv install google-cloud-storage
-pip list
-python3 lr.py
-source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
-git commit -m "first commit"
-git config --global user.mail "borowiec.k@gmail.com"
-git config --global user.name "Konrad Borowiec"
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/KonuTech/mlops-zoomcamp-project.git
-git push -u origin main
-source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
-prefect server start
-python3 lr.py
 pip list
 ls -lah
 echo "# mlops-zoomcamp-project" >> README.md
@@ -1979,3 +1927,74 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 prefect server start
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 python3 scoring-batch/app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+prefect server start
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+prefect server start
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 scoring-batch/otomoto_scoring_batch.py 
+python3 scoring-batch/otomoto_scoring_batch.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 /home/konradballegro/scraping/otomoto_scraping.py
+python3 /home/konradballegro/scoring-batch/otomoto_scoring_batch.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 /home/konradballegro/scraping/otomoto_scraping.py
+python3 /home/konradballegro/training/otomoto_training.py
+git status
+python3 /home/konradballegro/training/otomoto_training.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 /home/konradballegro/training/otomoto_training.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git add .bash_history 
+git add data/inputs/
+git status
+git add monitoring/config/config.py 
+git add scoring-batch/config/config.json 
+git add training/config/config.json 
+git add training/otomoto_training.py 
+git status
+git add data/raw/abarth.csv 
+git status
+git add data/raw/iveco.csv 
+git add data/raw/offers.csv 
+git status
+git add scraping/otomoto_scraping.py
+git add scraping/scrapers/
+git status
+git add monitoring/reports/
+git status
+git add monitoring/src/utils/data.py
+git status
+git commit -m "restructure of a project"
+git push
+git status
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+git push
+git status
+git add data/raw/
+git status
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd streamlit/
+streamlit run app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd monitoring
+uvicorn otomoto_monitoring:app
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 /home/konradballegro/scoring-batch/otomoto_scoring_batch.py
+git status
+git add data/metadata/manufacturers_batch.txt
+git add data/raw/abarth.csv
+git add data/raw/iveco.csv
+git add data/raw/offers.csv
+git add scraping/scrapers/offers_scraper.py
+git add data/raw/
+git status
+git commit -m "added appending for scoring-batch"
+git push
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+python3 scoring-batch/app.py 
+pipenv shell

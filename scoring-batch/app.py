@@ -1,3 +1,4 @@
+import os
 import json
 import logging
 from functools import reduce
@@ -128,7 +129,7 @@ def data_preprocess(df: pd.DataFrame) -> pd.DataFrame:
     df_cleaned["Epoch"] = df["Epoch"]
 
     df.to_csv(
-        "/home/konradballegro/scoring-batch/test_data_preprocess.csv", index=False
+        "/home/konradballegro/data/preprocessed/offers_filtered.csv", index=False
     )
 
     logging.warning("Data preprocessed")
@@ -191,7 +192,7 @@ def features_engineer(
 
     df = df[selected_features]
     df.to_csv(
-        "/home/konradballegro/scoring-batch/test_features_engineer.csv", index=False
+        "/home/konradballegro/data/preprocessed/offers_preprocessed.csv", index=False
     )
     # Log the DataFrame
     logging.warning("DataFrame type: %s", type(df))
@@ -254,6 +255,18 @@ def predict_endpoint():
         predictions = model.predict(features)  # Pass the DataFrame as input
 
         result = {"price": predictions.tolist(), "model_version": RUN_ID}
+
+        # Concatenate features and predictions
+        data_with_predictions = pd.concat([features, pd.DataFrame(predictions, columns=["predictions"])], axis=1)
+        # data_with_predictions = pd.merge(features, pd.DataFrame(predictions, columns=["predictions"]), left_index=True, right_index=True)
+        # Load existing offers.csv file if it exists
+        if os.path.isfile("/home/konradballegro/data/scored/offers_scored.csv"):
+            # existing_data = pd.read_csv("/home/konradballegro/data/preprocessed/offers_preprocessed.csv")
+            existing_data = pd.read_csv("/home/konradballegro/data/preprocessed/offers_filtered.csv")
+            output = pd.concat([existing_data, pd.DataFrame(predictions, columns=["predictions"])], axis=1)
+
+        # Save the concatenated data as offers.csv
+        output.to_csv("/home/konradballegro/data/scored/offers_scored.csv", index=False)
 
         return jsonify(result)
     except Exception as e:
