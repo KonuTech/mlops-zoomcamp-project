@@ -30,7 +30,7 @@ class ManufacturerScraper:
         path_manufacturers_file=PATH_MANUFACTURERS_FILE,
     ):
         self.path_manufacturers_file = os.path.join(
-            os.getcwd(), PATH_DATA, "inputs", path_manufacturers_file
+            os.getcwd(), PATH_DATA, "metadata", path_manufacturers_file
         )
         self.path_data_directory = os.path.join(os.getcwd(), PATH_DATA, "raw")
         self.manufacturers = self.get_manufacturers()

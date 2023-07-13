@@ -31,10 +31,10 @@ class OfferScraper:
     ):
         self.path_data_directory = os.path.join(os.getcwd(), "data", "raw")
         self.path_header_file_pl = os.path.join(
-            os.getcwd(), "data", "inputs", path_header_file_pl
+            os.getcwd(), "data", "metadata", path_header_file_pl
         )
         self.path_header_file_en = os.path.join(
-            os.getcwd(), "data", "inputs", path_header_file_en
+            os.getcwd(), "data", "metadata", path_header_file_en
         )
         self.max_threads = max_threads
         self.header_pl = self.get_header(self.path_header_file_pl)
