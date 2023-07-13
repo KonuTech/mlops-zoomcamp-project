@@ -150,7 +150,6 @@ class ManufacturerScraper:
         Appends offers data and stores it as a static file
         :return: None
         """
-
         console_logger.info("Appending the data...")
         file_logger.info("Appending the data...")
 
@@ -159,23 +158,31 @@ class ManufacturerScraper:
             for manufacturer in self.manufacturers
         ]
 
-        combined_data = []
+        output_file_path = os.path.join(self.path_data_directory, OUTPUT_NAME)
+
+        if os.path.isfile(output_file_path):
+            previous_data = pd.read_csv(output_file_path)
+        else:
+            previous_data = pd.DataFrame()
 
         for f, filename in enumerate(filenames):
             try:
                 data = pd.read_csv(filename)
                 data.columns = self.offers.header_en
-                combined_data.append(data)
+
+                # Append unique rows to the output file
+                unique_rows = data[~data['ID'].isin(previous_data['ID'])]
+                unique_rows.to_csv(
+                    output_file_path,
+                    mode="a",
+                    index=False,
+                    header=not os.path.isfile(output_file_path),
+                    encoding="utf-8"
+                )
+                previous_data = previous_data.append(unique_rows, ignore_index=True)
 
             except Exception as e:
                 file_logger.error(f"Error {e} while searching for {filename}")
-
-        df = pd.concat(combined_data, ignore_index=True)
-        df.to_csv(
-            os.path.join(self.path_data_directory, OUTPUT_NAME),
-            index=False,
-            encoding="utf-8",
-        )
 
         console_logger.info(f"Appended data saved as {OUTPUT_NAME}")
         file_logger.info(f"Appended data saved as {OUTPUT_NAME}")
