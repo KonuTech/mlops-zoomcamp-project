@@ -1,6 +1,6 @@
 from typing import Dict, Text
 
-DATABASE_URI: Text = "postgresql://admin:admin@localhost:5432/monitoring_db"
+# DATABASE_URI: Text = "postgresql://admin:admin@localhost:5432/monitoring_db"
 DATA_COLUMNS: Dict = {
     "target_col": "Price",
     "prediction_col": "predictions",

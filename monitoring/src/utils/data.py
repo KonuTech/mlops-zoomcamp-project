@@ -4,14 +4,14 @@ import pandas as pd
 
 
 def load_reference_data(columns: List[Text]) -> pd.DataFrame:
-    cur_path = "/home/konradballegro/monitoring/data/current/offers_current.csv"
+    cur_path = "/home/konradballegro/data/temp/offers_current.csv"
     cur_data = pd.read_csv(cur_path)
     current_data = cur_data.loc[:, columns]
     return current_data
 
 
 def load_current_data(columns: List[Text]) -> pd.DataFrame:
-    ref_path = "/home/konradballegro/monitoring/data/current/offers_current.csv"
+    ref_path = "/home/konradballegro/data/temp/offers_current.csv"
     ref_data = pd.read_csv(ref_path)
     reference_data = ref_data.loc[:, columns]
     return reference_data

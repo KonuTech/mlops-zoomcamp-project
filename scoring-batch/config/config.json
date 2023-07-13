@@ -1,5 +1,5 @@
 {
-    "FILE_PATH": "/home/konradballegro/data/inputs/offers.csv",
+    "FILE_PATH": "/home/konradballegro/data/raw/offers.csv",
     "DISTINCT_COLUMNS": [
         "Offer from",
         "Condition",

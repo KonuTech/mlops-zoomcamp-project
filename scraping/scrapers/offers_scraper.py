@@ -32,7 +32,7 @@ class ManufacturerScraper:
         self.path_manufacturers_file = os.path.join(
             os.getcwd(), PATH_DATA, "inputs", path_manufacturers_file
         )
-        self.path_data_directory = os.path.join(os.getcwd(), PATH_DATA, "inputs")
+        self.path_data_directory = os.path.join(os.getcwd(), PATH_DATA, "raw")
         self.manufacturers = self.get_manufacturers()
         self.offers = OfferScraper()
 

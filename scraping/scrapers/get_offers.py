@@ -29,7 +29,7 @@ class OfferScraper:
         path_header_file_en=PATH_HEADER_FILE_EN,
         max_threads=MAX_THREADS,
     ):
-        self.path_data_directory = os.path.join(os.getcwd(), "data", "inputs")
+        self.path_data_directory = os.path.join(os.getcwd(), "data", "raw")
         self.path_header_file_pl = os.path.join(
             os.getcwd(), "data", "inputs", path_header_file_pl
         )

@@ -63,8 +63,8 @@ def otomoto_scraping_flow():
 
     upload_directory_to_bucket(
         bucket_name=bucket_name,
-        source_directory="/home/konradballegro/data/",
-        destination_directory=f"{data_directory}/training/",
+        source_directory="/home/konradballegro/data/raw/",
+        destination_directory=f"{data_directory}/raw/",
     )
 
 

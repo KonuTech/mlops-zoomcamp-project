@@ -1926,3 +1926,56 @@ prefect server start
 pipenv shell
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 ls -lah
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ls -lah
+python3 scoring-batch/app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 scoring-batch/otomoto_scoring_event.py 
+python3 scoring-batch/otomoto_scoring_batch.py 
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 training/otomoto_training.py 
+cd
+git status
+git add .bash_history
+git add data/inputs/iveco.csv 
+git add data/inputs/offers.csv 
+git add models/xgb.model 
+git add scoring-batch/app.py
+git add scoring-batch/otomoto_scoring_batch.py 
+git commit -m "improved otomotomo_scoring.batch.py"
+git push
+git status
+python3 training/otomoto_training.py 
+git status
+git add models/xgb.model 
+git add monitoring/data/current/offers_current.csv 
+git add monitoring/data/reference/y_pred.csv 
+git status
+git add training/config/config.json 
+git add training/otomoto_training.py 
+git commit -m "improved hyperparameters_gridsearch"\
+git commit
+git push
+git status
+python3 training/otomoto_training.py 
+git status
+git add models/xgb.model 
+git add training/otomoto_training.py 
+git commit -m "improved otomoto_training.py"
+git push
+python3 training/otomoto_training.py 
+git status
+git add models/xgb.model 
+git add monitoring/data/reference/offers_reference.csv 
+git add scoring-batch/app.py
+git add scoring-batch/config/config.json 
+git add scoring-batch/test_features_engineer.csv 
+git add training/otomoto_training.py 
+git status
+git add data/inputs/offers.csv 
+git commit -m "improved otomoto_scoring_batch"
+git push
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+prefect server start
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 scoring-batch/app.py
