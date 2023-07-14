@@ -140,7 +140,12 @@ class ManufacturerScraper:
         file_logger.info("Starting scraping cars...")
 
         for m, manufacturer in enumerate(self.manufacturers):
-            self.scrap_manufacturer(manufacturer=manufacturer)
+            csv_file_path = os.path.join("data", "raw", f"{manufacturer}.csv")
+            if os.path.isfile(csv_file_path):
+                console_logger.info(f"Skipping scraping for {manufacturer}. CSV file already exists.")
+                file_logger.info(f"Skipping scraping for {manufacturer}. CSV file already exists.")
+            else:
+                self.scrap_manufacturer(manufacturer=manufacturer)
 
         console_logger.info("End of scraping manufacturers")
         file_logger.info("End of scraping manufacturers")

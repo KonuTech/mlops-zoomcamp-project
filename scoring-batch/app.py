@@ -104,7 +104,7 @@ def data_preprocess(df: pd.DataFrame) -> pd.DataFrame:
     """
     logging.warning("Preprocessing data...")
     df_cleaned = pd.DataFrame()
-    df_cleaned["Price"] = df["Price"].astype(float)
+    df_cleaned["Price"] = df["Price"].apply(lambda x: int(float(x.replace(",", ""))) if isinstance(x, str) else int(x))
     df_cleaned["Offer from"] = df["Offer from"]
     df_cleaned["Condition"] = df["Condition"]
     df_cleaned["Vehicle brand"] = df["Vehicle brand"]
@@ -264,9 +264,12 @@ def predict_endpoint():
             # existing_data = pd.read_csv("/home/konradballegro/data/preprocessed/offers_preprocessed.csv")
             existing_data = pd.read_csv("/home/konradballegro/data/preprocessed/offers_filtered.csv")
             output = pd.concat([existing_data, pd.DataFrame(predictions, columns=["predictions"])], axis=1)
+            existing_preprocessed_data = pd.read_csv("/home/konradballegro/data/preprocessed/offers_preprocessed.csv")
+            output_current = pd.concat([existing_preprocessed_data, pd.DataFrame(predictions, columns=["predictions"]), existing_data['Price']], axis=1)
 
         # Save the concatenated data as offers.csv
         output.to_csv("/home/konradballegro/data/scored/offers_scored.csv", index=False)
+        output_current.to_csv("/home/konradballegro/data/scored/offers_scored_current.csv", index=False)
 
         return jsonify(result)
     except Exception as e:

@@ -1,23 +1,3 @@
-pip list
-ls -lah
-echo "# mlops-zoomcamp-project" >> README.md
-git init
-touch .gitignore
-vim .gitignore
-cat .gitignore
-vim .gitignore
-cat .gitignore
-vim .gitignore
-git add README.md
-git add .gitignore
-git add .prefect
-git add .bash_history
-git add .bashrc
-git add Pipfile
-git add lr.py
-git status
-git add .gitignore
-pipenv shell
 . /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
 pip list
 git clone https://github.com/DataTalksClub/mlops-zoomcamp.git
@@ -1998,3 +1978,23 @@ git push
 pip list
 python3 scoring-batch/app.py 
 pipenv shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 scoring-batch/otomoto_scoring_batch.py 
+git status
+git add .bash_history 
+git add data/raw/offers.csv
+git add scoring-batch/
+git status
+fit add data/raw/
+git add data/raw/
+git add data/scored/
+git add data/preprocessed/
+git status
+git commit -m "added saving of scored-batch"
+git push
+git status
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ping 192.168.0.241
+cd
+python3 scoring-batch/app.py 

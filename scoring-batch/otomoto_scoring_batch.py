@@ -20,7 +20,7 @@ def data_read(file_path: str) -> str:
     Returns:
         data_json (str): JSON string containing the read data.
     """
-    df = pd.read_csv(file_path, index_col=False)
+    df = pd.read_csv(file_path, index_col=False, low_memory=False)
     data_json = df.to_json()
     return data_json
 
