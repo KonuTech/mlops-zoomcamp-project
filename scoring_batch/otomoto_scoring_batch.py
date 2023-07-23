@@ -8,7 +8,7 @@ import requests
 sys.path.append("/home/konradballegro/scraping")
 from scrapers.offers_scraper import ManufacturerScraper
 
-CONFIG_PATH = "/home/konradballegro/scoring-batch/config/config.json"
+CONFIG_PATH = "/home/konradballegro/scoring_batch/config/config.json"
 URL = "http://127.0.0.1:9696/predict"
 
 

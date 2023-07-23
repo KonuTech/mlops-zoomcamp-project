@@ -9,14 +9,14 @@ import numpy as np
 import pandas as pd
 from flask import Flask, jsonify, request
 
-CONFIG_PATH = "/home/konradballegro/scoring-batch/config/config.json"
+CONFIG_PATH = "/home/konradballegro/scoring_batch/config/config.json"
 
 
 with open(CONFIG_PATH, encoding="UTF-8") as json_file:
     config = json.load(json_file)
 
 
-FILE_PATH = config["FILE_PATH"]
+# FILE_PATH = config["FILE_PATH"]
 DISTINCT_COLUMNS = config["DISTINCT_COLUMNS"]
 COLUMNS_TO_DROP = config["COLUMNS_TO_DROP"]
 COLUMNS_TO_ADD = config["COLUMNS_TO_ADD"]
@@ -29,7 +29,7 @@ RUN_ID = "12e03b0d8db04dbe99467a2bcde74183"
 
 # Configure logging
 logging.basicConfig(
-    filename="/home/konradballegro/scoring-batch/app.log",
+    filename="/home/konradballegro/scoring_batch/app.log",
     level=logging.WARNING,
     format="%(asctime)s - %(levelname)s - %(message)s",
 )

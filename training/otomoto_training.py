@@ -61,7 +61,7 @@ SPARK_SESSION_NAME = config["SPARK_SESSION_NAME"]
 HEADER = config["HEADER"]
 INFER_SCHEMA = config["INFER_SCHEMA"]
 FILE_PATH = config["FILE_PATH"]
-FILE_PREPROCESSED_PATH = config["FILE_PREPROCESSED_PATH"]
+# FILE_PREPROCESSED_PATH = config["FILE_PREPROCESSED_PATH"]
 TARGET_NAME = config["TARGET_NAME"]
 TARGET_OUTPUT_DISTRIBUTION = config["TARGET_OUTPUT_DISTRIBUTION"]
 DISTINCT_COLUMNS = config["DISTINCT_COLUMNS"]
@@ -240,8 +240,7 @@ def features_engineer(
     brand_columns: List[str],
     fuel_columns: List[str],
     body_columns: List[str],
-    door_columns: List[str],
-    file_preprocessed_path: str,
+    door_columns: List[str]
 ) -> DataFrame:
     """
         Performs feature engineering to create additional features based on the input DataFrame.
@@ -254,7 +253,6 @@ def features_engineer(
             fuel_columns (list): A list of columns representing different fuel types.
             body_columns (list): A list of columns representing different body types.
             door_columns (list): A list of columns representing different number of doors.
-            file_preprocessed_path (str): The path to save the preprocessed offers DataFrame.
 
     Returns:
         features_df (DataFrame): Pandas DataFrame with additional engineered features.
@@ -295,7 +293,6 @@ def features_engineer(
     df_pd["door_number_count"] = df_pd[door_columns].sum(axis=1)
     df_pd["door_number_ratio"] = df_pd[door_columns].sum(axis=1) / len(door_columns)
 
-    df_pd.to_csv(file_preprocessed_path, index=False)
     logger.info("Feature engineering completed")
     return df_pd
 
@@ -628,7 +625,6 @@ def otomoto_training_flow():
             fuel_columns=FUEL_COLUMNS,
             body_columns=BODY_COLUMNS,
             door_columns=DOOR_COLUMNS,
-            file_preprocessed_path=FILE_PREPROCESSED_PATH,
         )
 
         # train_data, test_data = data_split(data_engineered, TEST_SIZE, RANDOM_STATE)

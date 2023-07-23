@@ -1,14 +1,3 @@
-. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
-pip list
-git clone https://github.com/DataTalksClub/mlops-zoomcamp.git
-ls -lah
-cd /home/konradballegro/mlops-zoomcamp/03-orchestration
-ls
-ls -lah
-mkdir data
-python3 orchestrate.py
-pipenv install xgboost
-pip list
 python3 orchestrate.py
 prefect deploy orchestrate.py:main_flow -n taxi_local_data
 prefect deployment orchestrate.py:main_flow -n taxi_local_data
@@ -1998,3 +1987,14 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 ping 192.168.0.241
 cd
 python3 scoring-batch/app.py 
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+cd streamlit/
+streamlit run app.py
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+htop
+pipenv shell
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 /home/konradballegro/scoring-batch/otomoto_scoring_batch.py
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 scoring-batch/app.py 
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate

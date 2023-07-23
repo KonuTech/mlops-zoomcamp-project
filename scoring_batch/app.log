@@ -1,0 +1,72 @@
+2023-07-23 20:16:42,420 - WARNING -  * Debugger is active!
+2023-07-23 20:16:42,421 - INFO -  * Debugger PIN: 527-688-614
+2023-07-23 20:16:44,401 - WARNING - DataFrame type: <class 'pandas.core.frame.DataFrame'>
+2023-07-23 20:16:44,403 - WARNING - Number of rows:4820
+2023-07-23 20:16:44,403 - WARNING - Number of columns:230
+2023-07-23 20:16:44,403 - WARNING - DataFrame:
+           Offer from Category Show offers with VIN number Has registration number Vehicle brand  ...  Price details Currency                                           URL path                                        ID       Epoch
+0               Firmy  Osobowe                         Tak                    None        Nissan  ...    Faktura VAT      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-q...  852f72158b44857697459a880c2f575239514731  1689328015
+1     Osoby prywatnej  Osobowe                         Tak                     Tak        Nissan  ...  Do negocjacji      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-q...  5d3f3216d799e27e9fbc01439ac0c3f7b0b70913  1689328014
+2               Firmy  Osobowe                         Tak                    None        Nissan  ...    Faktura VAT      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-q...  479f398841b5ce890aa190105e59455296fe75b6  1689328015
+3               Firmy  Osobowe                        None                    None        Nissan  ...           None      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-a...  be6c0a6f43f88262a6d69866e994d8df003995f0  1689328015
+4               Firmy  Osobowe                         Tak                     Tak        Nissan  ...  Do negocjacji      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-j...  ba656300054bb0071a5216dc7ace917bfbad7b6d  1689328015
+...               ...      ...                         ...                     ...           ...  ...            ...      ...                                                ...                                       ...         ...
+4815            Firmy  Osobowe                         Tak                    None        Nissan  ...  Do negocjacji      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-q...  f85bb31130a104f0f30fa6744d2b6858f4570d92  1689328917
+4816            Firmy  Osobowe                         Tak                    None        Nissan  ...    Faktura VAT      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-j...  a3516e193dcc3a6b891a06c12dafc22835795f42  1689328918
+4817            Firmy  Osobowe                         Tak                    None        Nissan  ...           None      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-q...  c492e5fa65bf14a64ed69eb5fe3f6083362a0f60  1689328918
+4818            Firmy  Osobowe                         Tak                     Tak        Nissan  ...  Do negocjacji      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-n...  cbbd93e59b8e57ef84a62083d177c4254d396676  1689328918
+4819            Firmy  Osobowe                         Tak                    None        Nissan  ...           None      PLN  https://www.otomoto.pl/osobowe/oferta/nissan-q...  d73c70e8de511b5335e1255fdf1d61659add0c6d  1689328918
+
+[4820 rows x 230 columns]
+2023-07-23 20:16:44,644 - WARNING - Filtering data...
+2023-07-23 20:16:44,657 - WARNING - Data filtered
+2023-07-23 20:16:44,661 - WARNING - Preprocessing data...
+2023-07-23 20:16:44,675 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/app.py', reloading
+2023-07-23 20:16:50,739 - WARNING -  * Debugger is active!
+2023-07-23 20:16:50,740 - INFO -  * Debugger PIN: 527-688-614
+2023-07-23 20:31:17,430 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/__init__.py', reloading
+2023-07-23 20:31:17,431 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/__init__.py', reloading
+2023-07-23 20:31:17,432 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/api.py', reloading
+2023-07-23 20:31:17,433 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/frame.py', reloading
+2023-07-23 20:31:17,436 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/generic.py', reloading
+2023-07-23 20:31:17,439 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/base.py', reloading
+2023-07-23 20:31:17,441 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/accessor.py', reloading
+2023-07-23 20:31:17,444 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/indexing.py', reloading
+2023-07-23 20:31:17,448 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/arraylike.py', reloading
+2023-07-23 20:31:17,452 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/_typing.py', reloading
+2023-07-23 20:31:17,454 - INFO -  * Detected change in '/usr/lib/python3.8/typing.py', reloading
+2023-07-23 20:31:17,469 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/series.py', reloading
+2023-07-23 20:31:17,508 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/common.py', reloading
+2023-07-23 20:31:17,511 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/_libs/__init__.py', reloading
+2023-07-23 20:31:17,694 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/strings/__init__.py', reloading
+2023-07-23 20:31:17,695 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/strings/accessor.py', reloading
+2023-07-23 20:31:17,713 - INFO -  * Detected change in '/usr/lib/python3.8/types.py', reloading
+2023-07-23 20:31:17,719 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/indexes/__init__.py', reloading
+2023-07-23 20:31:17,720 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/indexes/api.py', reloading
+2023-07-23 20:31:17,722 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/indexes/multi.py', reloading
+2023-07-23 20:31:17,723 - INFO -  * Detected change in '/home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/lib/python3.8/site-packages/pandas/core/indexes/base.py', reloading
+2023-07-23 20:31:24,383 - WARNING -  * Debugger is active!
+2023-07-23 20:31:24,384 - INFO -  * Debugger PIN: 527-688-614
+2023-07-23 20:36:18,274 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/__init__.py', reloading
+2023-07-23 20:36:18,275 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/app.py', reloading
+2023-07-23 20:36:18,275 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/otomoto_scoring_batch.py', reloading
+2023-07-23 20:36:25,181 - WARNING -  * Debugger is active!
+2023-07-23 20:36:25,182 - INFO -  * Debugger PIN: 527-688-614
+2023-07-23 20:36:26,891 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/app.py', reloading
+2023-07-23 20:36:26,892 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/otomoto_scoring_batch.py', reloading
+2023-07-23 20:36:33,985 - WARNING -  * Debugger is active!
+2023-07-23 20:36:33,986 - INFO -  * Debugger PIN: 527-688-614
+2023-07-23 20:36:37,009 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/app.py', reloading
+2023-07-23 20:36:37,010 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/otomoto_scoring_batch.py', reloading
+2023-07-23 20:36:43,973 - WARNING -  * Debugger is active!
+2023-07-23 20:36:43,973 - INFO -  * Debugger PIN: 527-688-614
+2023-07-23 20:36:47,113 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/app.py', reloading
+2023-07-23 20:36:47,115 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/otomoto_scoring_batch.py', reloading
+2023-07-23 20:36:53,803 - WARNING -  * Debugger is active!
+2023-07-23 20:36:53,803 - INFO -  * Debugger PIN: 527-688-614
+2023-07-23 20:36:55,912 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/app.py', reloading
+2023-07-23 20:36:55,914 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/otomoto_scoring_batch.py', reloading
+2023-07-23 20:37:02,560 - WARNING -  * Debugger is active!
+2023-07-23 20:37:02,561 - INFO -  * Debugger PIN: 527-688-614
+2023-07-23 20:37:04,515 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/app.py', reloading
+2023-07-23 20:37:04,517 - INFO -  * Detected change in '/home/konradballegro/scoring_batch/otomoto_scoring_batch.py', reloading

@@ -21,6 +21,7 @@ isort = "*"
 seaborn = "*"
 ydata-profiling = "*"
 explainerdashboard = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.8"
