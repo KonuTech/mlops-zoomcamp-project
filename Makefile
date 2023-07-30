@@ -1,7 +1,8 @@
 setup:
 	make java-install && \
 	make spark-install && \
-	make pyspark-install
+	make pyspark-install && \
+	make install-dependencies
 
 java-install:
 	mkdir -p spark

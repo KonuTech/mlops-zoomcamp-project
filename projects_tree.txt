@@ -1,0 +1,91 @@
+.
+├── Makefile
+├── Pipfile
+├── README.md
+├── data
+│   ├── metadata
+│   │   ├── header_en.txt
+│   │   ├── header_pl.txt
+│   │   ├── manufacturers.txt
+│   │   └── manufacturers_batch.txt
+│   ├── preprocessed
+│   │   ├── offers_filtered.csv
+│   │   └── offers_preprocessed.csv
+│   ├── raw
+│   │   ├── abarth.csv
+│   │   ├── acura.csv
+│   │   ├── aixam.csv
+│   │   ├── nissan.csv
+│   │   └── offers.csv
+│   ├── scored
+│   │   ├── offers_scored.csv
+│   │   ├── offers_scored_current.csv
+│   │   └── offers_scored_reference.csv
+│   └── training
+│       └── offers.csv
+├── models
+│   └── xgb.model
+├── monitoring
+│   ├── config
+│   │   └── config.py
+│   ├── otomoto_monitoring.py
+│   ├── reports
+│   │   ├── model_performance.html
+│   │   └── target_drift.html
+│   └── src
+│       └── utils
+│           ├── data.py
+│           └── reports.py
+├── notebooks
+│   ├── explainer_xgb.ipynb
+│   ├── outputs
+│   │   └── reports
+│   │       ├── profiling_filtered.html
+│   │       └── xgb_explainer.html
+│   ├── profiling.ipynb
+│   └── spark_test.ipynb
+├── otomoto_scraping_flow-deployment.yaml
+├── otomoto_training_flow-deployment.yaml
+├── projects_tree.txt
+├── requirements.txt
+├── scoring_batch
+│   ├── __init__.py
+│   ├── app.log
+│   ├── app.py
+│   ├── config
+│   │   └── config.json
+│   └── otomoto_scoring_batch.py
+├── scraping
+│   ├── logs
+│   │   └── app.log
+│   ├── otomoto_scraping.py
+│   ├── scrapers
+│   │   ├── __init__.py
+│   │   ├── get_offers.py
+│   │   └── offers_scraper.py
+│   └── utils
+│       └── logger.py
+├── streamlit
+│   ├── app.py
+│   ├── static
+│   │   └── logo.png
+│   └── utils
+│       └── ui.py
+├── tests
+│   ├── __init__.py
+│   ├── config
+│   │   └── config.json
+│   ├── data
+│   │   ├── preprocessed
+│   │   │   ├── nissan_preprocessed.csv
+│   │   │   └── offers_preprocessed.csv
+│   │   ├── raw
+│   │   │   └── nissan.csv
+│   │   └── scored
+│   │       └── offers_scored.csv
+│   └── model_test.py
+├── training
+│   ├── config
+│   │   └── config.json
+│   └── otomoto_training.py
+└── tree.txt
