@@ -1,5 +1,6 @@
 """
-This script performs the training and evaluation of a machine learning model using data scraped from otomoto.pl .
+This script performs the training and evaluation
+of a machine learning model using data scraped from otomoto.pl .
 
 The following steps are performed in this script:
 
@@ -10,7 +11,8 @@ The following steps are performed in this script:
 5. Preprocess the data by cleaning and transforming the columns.
 6. Perform feature engineering to create additional features.
 7. Split the data into train, validation, and test sets.
-8. Perform feature selection using Recursive Feature Elimination with Cross-Validation (RFECV) and XGBoost.
+8. Perform feature selection using Recursive Feature Elimination
+with Cross-Validation (RFECV) and XGBoost.
 9. Perform hyperparameter tuning using GridSearchCV on XGBoost.
 10. Train the final model using the selected features and hyperparameters.
 11. Evaluate the model on the test set.
@@ -27,13 +29,13 @@ from typing import Dict, List, Tuple
 
 import mlflow
 import numpy as np
-import pandas as pd
-import pyspark
+# import pandas as pd
+# import pyspark
 from google.cloud import storage
 from prefect import flow, task
 from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql.functions import col, regexp_replace, when
-from sklearn.feature_selection import RFE, RFECV
+from sklearn.feature_selection import RFECV
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.pipeline import Pipeline
@@ -45,7 +47,7 @@ os.environ[
     "GOOGLE_APPLICATION_CREDENTIALS"
 ] = "/home/konradballegro/.ssh/ny-rides-konrad-b5129a6f2e66.json"
 CONFIG_PATH = "/home/konradballegro/training/config/config.json"
-
+TRACKING_SERVER_HOST = "34.77.180.77"
 
 with open(CONFIG_PATH, encoding="UTF-8") as json_file:
     config = json.load(json_file)
@@ -61,7 +63,6 @@ SPARK_SESSION_NAME = config["SPARK_SESSION_NAME"]
 HEADER = config["HEADER"]
 INFER_SCHEMA = config["INFER_SCHEMA"]
 FILE_PATH = config["FILE_PATH"]
-# FILE_PREPROCESSED_PATH = config["FILE_PREPROCESSED_PATH"]
 TARGET_NAME = config["TARGET_NAME"]
 TARGET_OUTPUT_DISTRIBUTION = config["TARGET_OUTPUT_DISTRIBUTION"]
 DISTINCT_COLUMNS = config["DISTINCT_COLUMNS"]
@@ -70,18 +71,12 @@ DOOR_COLUMNS = config["DOOR_COLUMNS"]
 BODY_COLUMNS = config["BODY_COLUMNS"]
 FUEL_COLUMNS = config["FUEL_COLUMNS"]
 BRAND_COLUMNS = config["BRAND_COLUMNS"]
-# YEAR_COLUMNS = config["YEAR_COLUMNS"]
 REMAINDER_SIZE = config["REMAINDER_SIZE"]
 TEST_SIZE = config["TEST_SIZE"]
 RANDOM_STATE = config["RANDOM_STATE"]
 MODEL_PATH = config["MODEL_PATH"]
 REGRESSOR_GRID = config["REGRESSOR_GRID"]
 METRIC = config["METRIC"]
-# X_TEST_PATH = config["X_TEST_PATH"]
-# Y_TEST_PATH = config["Y_TEST_PATH"]
-# Y_PRED_PATH = config["Y_PRED_PATH"]
-# CURRENT_PATH = config["CURRENT_PATH"]
-
 
 # Create logger
 logger = logging.getLogger(__name__)
@@ -93,7 +88,8 @@ formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 @task(retries=0, retry_delay_seconds=2)
 def files_download(bucket_name: str, source_path: str, destination_path: str) -> None:
     """
-    Downloads the "offers.csv" file from the specified Google Cloud Storage bucket to the local destination path.
+    Downloads the "offers.csv" file from the specified
+    Google Cloud Storage bucket to the local destination path.
 
     Args:
         bucket_name (str): The name of the Google Cloud Storage bucket.
@@ -104,7 +100,7 @@ def files_download(bucket_name: str, source_path: str, destination_path: str) ->
         None
 
     """
-    logger.info(f"Downloading file from bucket '{bucket_name}' to '{destination_path}'")
+    logger.info("Downloading file from bucket '%s' to '%s'", bucket_name, destination_path)
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(source_path)
@@ -149,10 +145,10 @@ def data_read(
         file_path (str): The path of the file to read.
 
     Returns:
-        df (DataFrame): The Spark DataFrame containing the read data.
+        data_frame (DataFrame): The Spark DataFrame containing the read data.
 
     """
-    logger.info(f"Reading data from file: '{file_path}'")
+    logger.info("Reading data from file: '%s'", file_path)
     return (
         spark_session.read.option("header", header)
         .option("inferSchema", infer_schema)
@@ -161,53 +157,53 @@ def data_read(
 
 
 @task(retries=0, retry_delay_seconds=2)
-def data_filter(df) -> DataFrame:
+def data_filter(data_frame) -> DataFrame:
     """
     Filters the data based on specified conditions.
 
     Args:
-        df (DataFrame): The input Spark DataFrame.
+        data_frame (DataFrame): The input Spark DataFrame.
 
     Returns:
-        filtered_df (DataFrame): The filtered Spark DataFrame.
+        filtered_data_frame (DataFrame): The filtered Spark DataFrame.
 
     """
     logger.info("Filtering data...")
     conditions = [
-        (df["Currency"] == "PLN"),
-        (df["Country of origin"] == "Polska"),
-        df["Accident-free"].isNotNull(),
-        df["Price"].isNotNull(),
-        df["Offer from"].isNotNull(),
-        df["Condition"].isNotNull(),
-        (df["Condition"] == "Używane"),
-        df["Vehicle brand"].isNotNull(),
-        df["Year of production"].isNotNull(),
-        df["Mileage"].isNotNull(),
-        df["Fuel type"].isNotNull(),
-        df["Power"].isNotNull(),
-        df["Gearbox"].isNotNull(),
-        df["Body type"].isNotNull(),
-        df["Number of doors"].isNotNull(),
+        (data_frame["Currency"] == "PLN"),
+        (data_frame["Country of origin"] == "Polska"),
+        data_frame["Accident-free"].isNotNull(),
+        data_frame["Price"].isNotNull(),
+        data_frame["Offer from"].isNotNull(),
+        data_frame["Condition"].isNotNull(),
+        (data_frame["Condition"] == "Używane"),
+        data_frame["Vehicle brand"].isNotNull(),
+        data_frame["Year of production"].isNotNull(),
+        data_frame["Mileage"].isNotNull(),
+        data_frame["Fuel type"].isNotNull(),
+        data_frame["Power"].isNotNull(),
+        data_frame["Gearbox"].isNotNull(),
+        data_frame["Body type"].isNotNull(),
+        data_frame["Number of doors"].isNotNull(),
     ]
     logger.info("Data filtered")
-    return df.filter(reduce(lambda a, b: a & b, conditions))
+    return data_frame.filter(reduce(lambda a, b: a & b, conditions))
 
 
 @task(retries=0, retry_delay_seconds=2)
-def data_preprocess(df: DataFrame) -> DataFrame:
+def data_preprocess(data_frame: DataFrame) -> DataFrame:
     """
     Preprocesses the data by cleaning and transforming the columns.
 
     Args:
-        df (DataFrame): The input Spark DataFrame.
+        data_frame (DataFrame): The input Spark DataFrame.
 
     Returns:
-        cleaned_df (DataFrame): The preprocessed Spark DataFrame.
+        cleaned_data_frame (DataFrame): The preprocessed Spark DataFrame.
 
     """
     logger.info("Preprocessing data...")
-    df_cleaned = df.select(
+    data_frame_cleaned = data_frame.select(
         col("Price").cast("float").alias("Price"),
         "Offer from",
         "Condition",
@@ -229,12 +225,12 @@ def data_preprocess(df: DataFrame) -> DataFrame:
         "Epoch",
     )
     logger.info("Data preprocessed")
-    return df_cleaned
+    return data_frame_cleaned
 
 
 @task(retries=0, retry_delay_seconds=2)
 def features_engineer(
-    df: DataFrame,
+    data_frame: DataFrame,
     distinct_columns: List[str],
     columns_to_drop: List[str],
     brand_columns: List[str],
@@ -246,8 +242,9 @@ def features_engineer(
         Performs feature engineering to create additional features based on the input DataFrame.
 
         Args:
-            df (DataFrame): The input Spark DataFrame.
-            distinct_columns (list): A list of columns to perform feature engineering on distinct values.
+            data_frame (DataFrame): The input Spark DataFrame.
+            distinct_columns (list): A list of columns
+            to perform feature engineering on distinct values.
             columns_to_drop (list): A list of columns to drop from the DataFrame.
             brand_columns (list): A list of columns representing different vehicle brands.
             fuel_columns (list): A list of columns representing different fuel types.
@@ -255,51 +252,47 @@ def features_engineer(
             door_columns (list): A list of columns representing different number of doors.
 
     Returns:
-        features_df (DataFrame): Pandas DataFrame with additional engineered features.
+        features_data_frame (DataFrame): Pandas DataFrame with additional engineered features.
 
     """
     logger.info("Performing feature engineering...")
     for column in distinct_columns:
         distinct_values = (
-            df.select(column).distinct().rdd.flatMap(lambda x: x).collect()
+            data_frame.select(column).distinct().rdd.flatMap(lambda x: x).collect()
         )
         for value in distinct_values:
             column_name = f"{column.replace(' ', '_')}_{value.replace(' ', '_')}"
-            df = df.withColumn(column_name, when(df[column] == value, 1).otherwise(0))
+            data_frame = data_frame.withColumn(
+                column_name,
+                when(data_frame[column] == value, 1).otherwise(0)
+                )
 
-    df = df.drop(*columns_to_drop).filter(df["Price"].isNotNull())
-
-    df_pd = df.toPandas()
-
-    # Price per Mileage
-    # df_pd["price_per_mileage"] = df_pd["Price"] / df_pd["Mileage"]
-
-    # Power-to-Price Ratio
-    # df_pd["power_to_price_ratio"] = df_pd["Power"] / df_pd["Price"]
+    data_frame = data_frame.drop(*columns_to_drop).filter(data_frame["Price"].isNotNull())
+    data_frame_pd = data_frame.toPandas()
 
     # Number of Brands
-    df_pd["brand_count"] = df_pd[brand_columns].sum(axis=1)
-    df_pd["brand_ratio"] = df_pd[brand_columns].sum(axis=1) / len(brand_columns)
+    data_frame_pd["brand_count"] = data_frame_pd[brand_columns].sum(axis=1)
+    data_frame_pd["brand_ratio"] = data_frame_pd[brand_columns].sum(axis=1) / len(brand_columns)
 
     # Fuel Type Count
-    df_pd["fuel_type_count"] = df_pd[fuel_columns].sum(axis=1)
-    df_pd["fuel_type_ratio"] = df_pd[fuel_columns].sum(axis=1) / len(fuel_columns)
+    data_frame_pd["fuel_type_count"] = data_frame_pd[fuel_columns].sum(axis=1)
+    data_frame_pd["fuel_type_ratio"] = data_frame_pd[fuel_columns].sum(axis=1) / len(fuel_columns)
 
     # Body Type Count
-    df_pd["body_type_count"] = df_pd[body_columns].sum(axis=1)
-    df_pd["body_type_ratio"] = df_pd[body_columns].sum(axis=1) / len(body_columns)
+    data_frame_pd["body_type_count"] = data_frame_pd[body_columns].sum(axis=1)
+    data_frame_pd["body_type_ratio"] = data_frame_pd[body_columns].sum(axis=1) / len(body_columns)
 
     # Door Count
-    df_pd["door_number_count"] = df_pd[door_columns].sum(axis=1)
-    df_pd["door_number_ratio"] = df_pd[door_columns].sum(axis=1) / len(door_columns)
+    data_frame_pd["door_number_count"] = data_frame_pd[door_columns].sum(axis=1)
+    data_frame_pd["door_number_ratio"] = data_frame_pd[door_columns].sum(axis=1) / len(door_columns)
 
     logger.info("Feature engineering completed")
-    return df_pd
+    return data_frame_pd
 
 
 @task(retries=0, retry_delay_seconds=2)
 def data_split(
-    df: DataFrame,
+    data_frame: DataFrame,
     target_name: str,
     remainder_size: float,
     test_size: float,
@@ -309,7 +302,7 @@ def data_split(
     Splits the data into train, validation, and test sets based on the specified ratios.
 
     Args:
-        df (DataFrame): The input Pandas DataFrame.
+        data_frame (DataFrame): The input Pandas DataFrame.
         target_name (str): The name of target column.
         remainder_size (float): The ratio of validation and test data.
         test_size (float): The ratio of test data.
@@ -326,8 +319,8 @@ def data_split(
     """
     logger.info("Splitting data into train and test sets...")
 
-    y = df[target_name].to_numpy().reshape(-1, 1)
-    X = df.loc[:, ~df.columns.isin([target_name])]
+    y = data_frame[target_name].to_numpy().reshape(-1, 1)
+    X = data_frame.loc[:, ~data_frame.columns.isin([target_name])]
     X_train, X_remain, y_train, y_remain = train_test_split(
         X, y, test_size=remainder_size, random_state=random_state
     )
@@ -443,7 +436,7 @@ def hyperparameters_gridsearch(
     results = {}
 
     for regressor_label, regressor in regressors.items():
-        logger.info(f"Now training: {regressor_label}")
+        logger.info("Now training: %s", regressor_label)
 
         steps = [
             ("scaler", scaler),
@@ -452,7 +445,7 @@ def hyperparameters_gridsearch(
         ]
         pipeline = Pipeline(steps=steps)
         param_grid = parameters[regressor_label]
-        print(f"PARAM GRID:, {param_grid}")
+        logger.info("PARAM GRID: %s", param_grid)
 
         gscv = GridSearchCV(
             pipeline,
@@ -489,10 +482,10 @@ def hyperparameters_gridsearch(
             "Val": scoring,
         }
 
-        logger.info(f"Validation results for {regressor_label}:")
-        logger.info(f"  - Best Parameters: {best_params}")
-        logger.info(f"  - Train Score: {best_score:.4f}")
-        logger.info(f"  - Validation Score: {scoring:.4f}")
+        logger.info("Validation results for %s:", regressor_label)
+        logger.info("  - Best Parameters: %s", best_params)
+        logger.info("  - Train Score: %.4f", best_score)
+        logger.info("  - Validation Score: %.4f", scoring)
 
         results[regressor_label] = hyperparameters
 
@@ -522,10 +515,9 @@ def model_train(
 
     Returns:
         model: The trained machine learning model.
-
     """
     logger.info("Training the model...")
-    
+
     # Create the pipeline
     steps = [
         ("scaler", scaler),
@@ -552,12 +544,11 @@ def model_train(
     mae_train = mean_absolute_error(y_train, y_pred_train)
     r2_train = r2_score(y_train, y_pred_train)
 
-    logger.info("Model training completed")
-    logger.info(f"Training Set Metrics:")
-    logger.info(f"MSE: {mse_train:.4f}")
-    logger.info(f"RMSE: {rmse_train:.4f}")
-    logger.info(f"MAE: {mae_train:.4f}")
-    logger.info(f"R^2: {r2_train:.4f}")
+    logger.info("Training Set Metrics:")
+    logger.info("MSE: %.4f", mse_train)
+    logger.info("RMSE: %.4f", rmse_train)
+    logger.info("MAE: %.4f", mae_train)
+    logger.info("R^2: %.4f", r2_train)
 
     return model
 
@@ -582,9 +573,14 @@ def model_save(model: XGBRegressor, model_path: str) -> None:
 
 
 @flow
-def otomoto_training_flow():
-    TRACKING_SERVER_HOST = "34.77.180.77"
-    mlflow.set_tracking_uri(f"http://{TRACKING_SERVER_HOST}:5000")
+def otomoto_training_flow(tracking_server_host=TRACKING_SERVER_HOST):
+    """
+    The main Prefect flow for training and evaluating a machine learning model.
+
+    Returns:
+        None
+    """
+    mlflow.set_tracking_uri(f"http://{tracking_server_host}:5000")
     mlflow.set_experiment("otomoto-used-car-price-prediction")
 
     with mlflow.start_run():
@@ -612,13 +608,13 @@ def otomoto_training_flow():
         )
 
         # Filter data
-        data_filtered = data_filter(df=data_input)
+        data_filtered = data_filter(data_frame=data_input)
 
         # Preprocess data
-        data_preprocessed = data_preprocess(df=data_filtered)
+        data_preprocessed = data_preprocess(data_frame=data_filtered)
 
         data_engineered = features_engineer(
-            df=data_preprocessed,
+            data_frame=data_preprocessed,
             distinct_columns=DISTINCT_COLUMNS,
             columns_to_drop=COLUMNS_TO_DROP,
             brand_columns=BRAND_COLUMNS,
@@ -630,7 +626,7 @@ def otomoto_training_flow():
         # train_data, test_data = data_split(data_engineered, TEST_SIZE, RANDOM_STATE)
 
         X_train, X_val, X_test, y_train, y_val, y_test = data_split(
-            df=data_engineered,
+            data_frame=data_engineered,
             target_name=TARGET_NAME,
             remainder_size=REMAINDER_SIZE,
             test_size=TEST_SIZE,
