@@ -1,82 +1,3 @@
-git push -u origin main
-git submodule add https://github.com/DataTalksClub/mlops-zoomcamp.git mlops-zoomcamp
-cd /home/konradballegro/mlops-zoomcamp/03-orchestration
-ls
-cp 3.5 ..
-cp 3.5 -r ..
-cd
-ls
-cd orchestration/
-ls -lah
-python3 orchestrate.py
-cd
-ls -lah
-rm -r mlops-zoomcamp/
-git status
-git init
-git status
-git clone https://github.com/DataTalksClub/mlops-zoomcamp.git
-git init
-git status
-git add orchestration/
-git status
-git add .prefect/
-git commit "third commit"
-git commit -m "third commit"
-git push -u origin main
-cd orchestration/
-touch create_gs_bucket_block.py
-vim create_gs_bucket_block.py 
-cat create_
-cat create_gs_bucket_block.py 
-prefect block ls
-gcloud auth login
-gcloud auth application-default login
-gcloud config set project ny-rides-konrad
-gcloud
-gcloud config
-gcloud config list
-ls
-touch upload_folder_to_gs.py
-vim upload_folder_to_gs.py 
-cat upload_folder_to_gs.py 
-ls
-python3 upload_folder_to_gs.py 
-python3 upload_folder_to_gs.py mlops-zoomcamp data data
-touch orchestrate_gs.py
-vim orchestrate_gs.py 
-cat orchestrate_gs.py
-prefect deployment build -n mlops-gs-test -p default-agent-pool -q mlops-gs orchestrate_gs.py:main_flow
-pip list
-pipenv install prefect_gcp
-cd
-ls -lah
-pipenv install prefect_gcp
-pip list
-cd orchestration/
-ls -lah
-prefect deployment build -n mlops-gs-test -p default-agent-pool -q mlops-gs orchestrate_gs.py:main_flow
-prefect deployment build -n mlops-gs-test -p default-agent-pool -q mlops-gs orchestrate_gs.py:main_flow_gs
-prefect worker start -p zoompool
-python3 orchestrate_gs.py
-prefect workers
-prefect --help
-prefect work-pool
-prefect work-pool create zoompool
-pip list
-python3 orchestrate.py
-python3 orchestrate_gs.py
-touch test_load_from_gs.py
-vim test_load_from_gs.py 
-ls
-python3 test_load_from_gs.py 
-pipenv uninstall prefect_gcp
-pip uninstall prefect_gcp
-python3 orchestrate_gs.py
-python3 orchestrate.py
-prefect deployment build -n mlops-gs-test -p default-agent-pool -q mlops-gs orchestrate_gs.py:main_flow_gs
-python3 orchestrate_gs.py
-git status
 git add .gitignore .prefect
 cd
 git add .gitignore .prefect
@@ -129,10 +50,10 @@ pipenv --venv
 pipenv --envs
 pipenv update
 pipenv install notebook
-pip freeze > requirements.txt 
+pip freeze > requirements.txt
 cd orchestration/
 ls
-python3 orchestrate_gs.py 
+python3 orchestrate_gs.py
 cd
 jupyter notebook
 pipenv shell
@@ -144,12 +65,12 @@ ls -lah
 ls -las
 source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
 pip list
-python3 orchestration/orchestrate_gs.py 
+python3 orchestration/orchestrate_gs.py
 cd orchestration/
-python3 orchestrate_gs.py 
+python3 orchestrate_gs.py
 ls
 python3 lr.py
-python3 orchestrate_gs.py 
+python3 orchestrate_gs.py
 python3 lr.py
 cd
 git status
@@ -158,7 +79,7 @@ git status
 git add orchestration/
 git status
 ls
-rm mlflow.db 
+rm mlflow.db
 ls
 git status
 git add temp
@@ -169,7 +90,7 @@ git push -u origin main
 cd orchestration/
 ls
 rm -rf mlruns
-rm mlflow.db 
+rm mlflow.db
 git status
 git add orchestrate
 cd
@@ -179,28 +100,28 @@ git status
 git commit -m "fifth commit"
 git push -u origin main
 cd orchestration/
-python3 orchestrate_gs.py 
+python3 orchestrate_gs.py
 cd
 git clone https://github.com/DataTalksClub/mlops-zoomcamp.git
 pip list
 pip freeze > requirements.txt
 cd mlops-zoomcamp/04-deployment/web-service-mlflow/
 ls
-flask --run predict.py 
-flask --app predict.py 
+flask --run predict.py
+flask --app predict.py
 flask run
-python3 predict.py 
+python3 predict.py
 cd
 cd web-service/
 ls -lah
 python3 test.py
-python3 predict.py 
+python3 predict.py
 python3 test.py
 cd
 git status
-git add requirements.txt 
-git add requirements_old.txt 
-git add Pipfile 
+git add requirements.txt
+git add requirements_old.txt
+git add Pipfile
 git add mlops-zoomcamp/
 git add scoring-batch/
 git add web-service/
@@ -219,7 +140,7 @@ pip list
 python3 test.py
 pip list
 python3 test.py
-cd 
+cd
 mkdir web-service
 cd web-service
 ls
@@ -241,7 +162,7 @@ mkdir outputs
 mkdir inputs
 cd
 cd orchestration/
-python orchestrate_gs.py 
+python orchestrate_gs.py
 cd
 git status
 git add notebooks
@@ -254,13 +175,13 @@ git push
 git status
 htop
 git status
-git add .bash_history 
+git add .bash_history
 git add mlops-zoomcamp/
 git add notebooks/
 git status
 git add notebooks/
 git status
-git add .gitignore 
+git add .gitignore
 git commit -m "tenth commit"
 git push
 git checkout -- /home/konradballegro/notebooks/outputs/predictions.parquet
@@ -282,7 +203,7 @@ git rm notebooks/outputs/predictions.parquet
 git push
 git reset HEAD~
 git status
-git add predictions.parquet 
+git add predictions.parquet
 cd
 git push
 git status
@@ -297,7 +218,7 @@ git status
 git push
 git reset HEAD~
 git status
-git add notebooks/starter.ipynb 
+git add notebooks/starter.ipynb
 git commit -m "tenth commit"
 git status
 git push
@@ -345,15 +266,15 @@ git add .
 git status
 git reset
 git status
-git add Makefile 
-git add .bash_history 
-git add .gitignore 
-git add Pipfile 
+git add Makefile
+git add .bash_history
+git add .gitignore
+git add Pipfile
 git add mlops-zoomcamp/
 git add orchestration/
-git add requirements.txt 
+git add requirements.txt
 git status
-git add .gitignore 
+git add .gitignore
 git commit -m "eleventh commit"
 git push
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
@@ -364,7 +285,7 @@ nano .bashrc
 spark-shell
 source .bashrc
 which java
-make add-java 
+make add-java
 which java
 java --version
 export JAVA_HOME="${HOME}/spark/jdk-11.0.2"
@@ -413,7 +334,7 @@ spark-shell
 cd %SPARK_HOME%/bin
 echo $PATH
 echo $PYTHONPATH
-echo $SPARK_HOME 
+echo $SPARK_HOME
 java --version
 export JAVA_HOME="${HOME}/spark/jdk-11.0.2"
 export PATH="${JAVA_HOME}/bin:${PATH}"
@@ -446,12 +367,12 @@ spark-shell
 spark-version
 which spark
 which java
-make add-java 
+make add-java
 which java
 java --version
-make add-java 
+make add-java
 java --version
-make add-java 
+make add-java
 make add-java
 which java
 export JAVA_HOME="${HOME}/spark/jdk-11.0.2"
@@ -470,25 +391,25 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 make add-java
 which java
 java --version
-make pyspark-install 
+make pyspark-install
 spark-shell
 export JAVA_HOME="${HOME}/spark/jdk-11.0.2" && export PATH="${JAVA_HOME}/bin:${PATH}" && java --version && which java
 spark-sehll
 spark-shell
-make spark-add 
+make spark-add
 spark-shell
 export SPARK_HOME="${HOME}/spark/spark-3.3.2-bin-hadoop3"
 export PATH="${SPARK_HOME}/bin:${PATH}"
 spark-shell
-make spark-add 
+make spark-add
 spark-shell
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 spark-shell
-make spark-add 
+make spark-add
 spark-shell
-make java-add 
+make java-add
 spark-shell
-make spark-add 
+make spark-add
 spark-shell
 printenv
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
@@ -496,7 +417,7 @@ spark-shell
 make
 make java-add
 spark-shell
-make java-install 
+make java-install
 spark-shell
 make spark-install
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
@@ -516,17 +437,17 @@ printenv
 jupyter notebook
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 git status
-git add .bash_history 
-git add .bashrc 
-git add .gitignore 
-git add Makefile 
+git add .bash_history
+git add .bashrc
+git add .gitignore
+git add Makefile
 git add mlops-zoomcamp/
 git status
-git add .gitignore 
+git add .gitignore
 git status
-git add .gitignore 
-git add notebooks/spark_test.ipynb 
-git add .gitignore 
+git add .gitignore
+git add notebooks/spark_test.ipynb
+git add .gitignore
 git status
 git commit -m "installed spark"
 git push
@@ -541,7 +462,7 @@ ls
 jupyter notebook
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 pip list
-make pyspark-install 
+make pyspark-install
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 ls
 make
@@ -549,8 +470,8 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 jupyter notebook
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 make
-make spark-install 
-make pyspark-install 
+make spark-install
+make pyspark-install
 make
 java which
 which java
@@ -576,10 +497,10 @@ git status
 git ls -lah notebooks
 ls -lah notebooks
 git status
-git add .bash_history 
+git add .bash_history
 git add .bashrc
 git add .env
-git add Makefile 
+git add Makefile
 git add mlops-zoomcamp/
 git add notebooks/
 git status
@@ -608,7 +529,7 @@ python3 main.py
 cd ..
 cd
 git status
-git add Pipfile 
+git add Pipfile
 git add mlops-zoomcamp/
 git add scripts/
 git commit -m "added scraper"
@@ -625,7 +546,7 @@ cd ..
 python3 main.py
 cd
 git status
-git add .bash_history 
+git add .bash_history
 git ad mlops-zoomcamp/
 git add mlops-zoomcamp/
 git add scripts
@@ -639,7 +560,7 @@ cd /home/konradballegro/scripts/scraper/
 python3 main.py
 cd
 git status
-git add .bash_history 
+git add .bash_history
 git add mlops-zoomcamp/
 git add scripts/
 git status
@@ -712,12 +633,12 @@ ls
 ls -lah
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 git status
-git add Pipfile 
+git add Pipfile
 git add notebooks/
 git commit -m "added notebooks"
 git push
 git status
-git add requirements.txt 
+git add requirements.txt
 git add scripts/scraper/inputs/manufacturers.txt
 git status
 git .bash_history
@@ -822,7 +743,7 @@ cd /home/konradballegro/notebooks/outputs/models
 ls -lah
 cd
 git status
-git add .bash_history mlops-zoomcamp notebooks/champion_selection.ipynb notebooks/explainer.ipynb notebooks/variable_selection.ipynb 
+git add .bash_history mlops-zoomcamp notebooks/champion_selection.ipynb notebooks/explainer.ipynb notebooks/variable_selection.ipynb
 git status
 git commit -m "trained a regressor v01"
 git push
@@ -832,7 +753,7 @@ cd /home/konradballegro/notebooks/outputs/reports
 ls -lah
 git add notebooks/explainer_xgb.ipynb notebooks/outputs/reports/xgb_explainer.html
 git status
-cd 
+cd
 git status
 git add notebooks/outputs/reports/xgb_explainer.html notebooks/explainer_xgb.ipynb notebooks/outputs/models/ notebooks/outputs/reports/xgb_explainer.html
 git status
@@ -865,7 +786,7 @@ git add orchestration/modules/
 git add orchestration/utils/
 git status
 git add orchestration/orchestrate_training.py
-git add .bash_history notebooks/champion_selection.ipynb notebooks/explainer_xgb.ipynb 
+git add .bash_history notebooks/champion_selection.ipynb notebooks/explainer_xgb.ipynb
 git commit -m "added orchestrate_training"
 git push
 git pull
@@ -970,15 +891,15 @@ git add scripts
 git status
 git add orchestration/
 git status
-git add .bash_history 
-git add .prefect/prefect.db 
+git add .bash_history
+git add .prefect/prefect.db
 git status
 git commit -m "added first tasks to otomoto training flow"
 git push
 git status
 git add orchestration/
 git status
-git add requirements_old.txt 
+git add requirements_old.txt
 git commit -m "added otomoto scraping flow"
 git push
 git status
@@ -995,7 +916,7 @@ git add orchestration/data/inputs/manufacturers copy.txt
 git status
 git add orchestration/data/inputs/manufacturers copy.txt
 git status
-git add .gitignore 
+git add .gitignore
 git status
 git commit -m "changes"
 git push
@@ -1004,65 +925,65 @@ ls
 black otomoto_training.py
 prefect deployment build -n otomoto-scraping -p default-agent-pool -q otomoto-scraping otomoto_scrap_data.py:otomoto_scraping_flow
 prefect deployment build -n otomoto-scraping -p default-agent-pool -q otomoto-scraping otomoto_scraping.py:otomoto_scraping_flow
-python3 otomoto_scraping.py 
-python3 otomoto_training.py 
-python3 otomoto_scraping.py 
-python3 otomoto_training.py 
+python3 otomoto_scraping.py
+python3 otomoto_training.py
+python3 otomoto_scraping.py
+python3 otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 black otomoto_training.py
-isort otomoto_training.py 
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
 black otomoto_training.py
-isort otomoto_training.py 
+isort otomoto_training.py
 black otomoto_training.py
-isort otomoto_training.py 
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 black otomoto_training.py
-isort otomoto_training.py 
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
 black otomoto_training.py
-isort otomoto_training.py 
+isort otomoto_training.py
 black otomoto_training.py
-isort otomoto_training.py 
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
-python3 otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
+python3 otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 . /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
 ls
 prefect server start
@@ -1076,25 +997,25 @@ prefect deployment build -n otomoto-price-prediction -p default-agent-pool -q to
 prefect deployment build -n otomoto-price-prediction -p default-agent-pool -q tomoto-price-prediction orchestrate_training.py:otomoto_training_flow
 prefect deployment build -n otomoto-price-prediction -p default-agent-pool -q omoto-price-prediction orchestrate_training.py:otomoto_training_flow
 prefect deployment build -n otomoto-price-prediction -p default-agent-pool -q omoto-price-prediction otomoto_training.py:otomoto_training_flow
-python3 otomoto_training.py 
+python3 otomoto_training.py
 python3 lr.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 prefect server stop
 prefect server --help
-python3 otomoto_training.py 
+python3 otomoto_training.py
 ls -lah
-python3 otomoto_training.py 
+python3 otomoto_training.py
 ls
 ls -lah
-black otomoto_scrap_data.py 
+black otomoto_scrap_data.py
 prefect deployment build -n otomoto-scrap-data -p default-agent-pool -q otomoto-scrap-data otomoto_scrap_data.py:otomoto_scrap_data_flow
-python3 otomoto_scrap_data.py 
+python3 otomoto_scrap_data.py
 ls -lah
 git status
 git add temp
-git add orchestrate_s3.py 
+git add orchestrate_s3.py
 git status
-python3 otomoto_scrap_data.py 
+python3 otomoto_scrap_data.py
 cd
 jupyter notebook
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
@@ -1126,30 +1047,30 @@ git commit -m "otomoto_training about right"
 git push
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 cd orchestration/
-python3 otomoto_scrap_data.py 
-python3 otomoto_training.py 
+python3 otomoto_scrap_data.py
+python3 otomoto_training.py
 isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+python3 otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
-black otomoto_training.py
-isort otomoto_training.py
-black otomoto_training.py
-python3 otomoto_training.py 
-isort otomoto_training.py
+python3 otomoto_training.py
 black otomoto_training.py
 isort otomoto_training.py
 black otomoto_training.py
+python3 otomoto_training.py
 isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+isort otomoto_training.py
 black otomoto_training.py
-python3 otomoto_training.py 
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
 python3 otomoto_training.py
 isort otomoto_training.py
 black otomoto_training.py
@@ -1202,7 +1123,7 @@ pipenv install --dev flake8
 touch .flake8
 pipenv uninstall flake8
 git status
-git add .bash_history .prefect/prefect.db notebooks/explainer_xgb.ipynb notebooks/explainer_xgb.ipynb notebooks/outputs/reports/xgb_explainer.html orchestration/otomoto_training.py 
+git add .bash_history .prefect/prefect.db notebooks/explainer_xgb.ipynb notebooks/explainer_xgb.ipynb notebooks/outputs/reports/xgb_explainer.html orchestration/otomoto_training.py
 git status
 git commit -m "added docstrings to otomoto_training"
 git push
@@ -1234,17 +1155,17 @@ cd orchestration/
 ls
 python3 otomoto_training.py
 ls
-isort otomoto_scraping.py 
-black otomoto_scraping.py 
+isort otomoto_scraping.py
+black otomoto_scraping.py
 cd /home/konradballegro/orchestration/modules/scrapers
 ls -lah
-isort get_offers.py 
-black get_offers.py 
-isort offers_scraper.py 
-black offers_scraper.py 
+isort get_offers.py
+black get_offers.py
+isort offers_scraper.py
+black offers_scraper.py
 cd ..
 ls -lah
-python3 otomoto_scraping.py 
+python3 otomoto_scraping.py
 ls
 python3 orchestrate.py
 python3 orchestrate_gd.py
@@ -1271,10 +1192,10 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/python3.8
 cd orchestration/
 ls
-python3 otomoto_training.py 
-isort otomoto_training.py 
-black otomoto_training.py 
-python3 otomoto_training.py 
+python3 otomoto_training.py
+isort otomoto_training.py
+black otomoto_training.py
+python3 otomoto_training.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 pip list
 pipenv install streamlit
@@ -1418,7 +1339,7 @@ psql -h 0.0.0.0 -U admin
 psql -l
 psql --help
 psql --list
-psql 
+psql
 psql \?
 psql -h
 sudo apt-get install postgresql
@@ -1439,9 +1360,9 @@ sudo -i -u postgres
 psql
 sudo -i -u postgres
 git status
-git add .bash_history .prefect/prefect.db Pipfile requirements.txt orchestration/config/config.json 
+git add .bash_history .prefect/prefect.db Pipfile requirements.txt orchestration/config/config.json
 git status
-orchestration/data/green_tripdata_2021-01.parquet orchestration/data/green_tripdata_2021-02.parquet orchestration/data/outputs/abarth.csv orchestration/data/outputs/acura.csv orchestration/data/outputs/offers.csv 
+orchestration/data/green_tripdata_2021-01.parquet orchestration/data/green_tripdata_2021-02.parquet orchestration/data/outputs/abarth.csv orchestration/data/outputs/acura.csv orchestration/data/outputs/offers.csv
 orchestration/data/green_tripdata_2021-01.parquet orchestration/data/green_tripdata_2021-02.parquet orchestration/data/outputs/abarth.csv orchestration/data/outputs/acura.csv orchestration/data/outputs/offers.csv
 git add orchestration/data/green_tripdata_2021-01.parquet orchestration/data/green_tripdata_2021-02.parquet orchestration/data/outputs/abarth.csv orchestration/data/outputs/acura.csv orchestration/data/outputs/offers.csv
 git status
@@ -1467,7 +1388,7 @@ git status
 git commit -m "monitoring init commit"
 git push
 git status
-git add orchestration/config/config.json orchestration/models/xgb.model orchestration/otomoto_training.py 
+git add orchestration/config/config.json orchestration/models/xgb.model orchestration/otomoto_training.py
 git status
 git add .gitignore monitoring/
 git status
@@ -1537,7 +1458,7 @@ git push
 git status
 git add monitoring/otomoto_monitoring.py scoring-event/ temp/Pipfile_copy temp/requirements_copy.txt
 git status
-git add .gitignore 
+git add .gitignore
 git status
 git commit -m "added scoring-event"
 git push
@@ -1584,7 +1505,7 @@ python3 otomoto_scoring.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 cd scoring-event/
 ls -lah
-python3 predict.py 
+python3 predict.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 cd monitoring/
 uvicorn app:app
@@ -1598,13 +1519,13 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 ls
 mkdir scraping
 ls -lah
-python3 training/otomoto_training.py 
-python3 scraping/otomoto_scraping.py 
-python3 training/otomoto_training.py 
-isort scoring-event/app.py 
-black scoring-event/app.py 
+python3 training/otomoto_training.py
+python3 scraping/otomoto_scraping.py
+python3 training/otomoto_training.py
+isort scoring-event/app.py
+black scoring-event/app.py
 black scoring-event/config/config.json
-python3 training/otomoto_training.py 
+python3 training/otomoto_training.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 cd monitoring/
 ls -lah
@@ -1632,7 +1553,7 @@ git status
 git addd requirements_copy.txt scoring-event/scoring.log streamlit_app/
 git add requirements_copy.txt scoring-event/scoring.log streamlit_app/
 git status
-git add web-service 
+git add web-service
 git status
 git commit -m "added scoring of single evnet usinf Flask; projects restructure"
 git push
@@ -1650,8 +1571,8 @@ git status
 git add streamlit_app/
 git add monitoring/
 git status
-git add requirements_copy.txt 
-git add .gitignore 
+git add requirements_copy.txt
+git add .gitignore
 git status
 git commit -m "projects restructure"
 git push
@@ -1661,13 +1582,13 @@ git add streamlit/
 git add training/
 git commit -m "added scoring of an event"
 git push
-python3 scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py
 black scoring-event/config.json
 black scoring-event/config/config.json
 black scoring-event/app.py
 isort scoring-event/app.py
 black scoring-event/app.py
-python3 scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py
 git status
 git add .bash_history models/xgb.model scoring-event/app.py scoring-event/otomoto_scoring_event.py training/otomoto_training.py scoring-event/config/ scoring-event/test_data_preprocess.csv scoring-event/test_features_engineer.csv
 git status
@@ -1702,8 +1623,8 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 cd
 git status
-git add .bash_history 
-git add models/xgb.model 
+git add .bash_history
+git add models/xgb.model
 git add monitoring/
 git status
 git add data/inputs/header_en.txt
@@ -1718,7 +1639,7 @@ git add data/inputs/offers.txt -f
 git add data/inputs/offers.csv -f
 git add data/inputs/iveco.csv -f
 git status
-git add scoring-event 
+git add scoring-event
 git add
 git status
 git add scoring-batch/
@@ -1726,50 +1647,50 @@ git status
 git commit -m "added scoring-batch module"
 git push
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
-python3 scoring-event/otomoto_scoring_event.py 
-isort scoring-event/otomoto_scoring_event.py 
-black scoring-event/otomoto_scoring_event.py 
-isort scoring-event/otomoto_scoring_event.py 
-black scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_event.py 
-isort scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_event.py 
-black scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_event.py 
-isort scoring-event/otomoto_scoring_event.py 
-black scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_event.py 
-isort scoring-event/otomoto_scoring_event.py 
-black scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_event.py 
-isort scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_event.py 
-black scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_event.py 
-isort scoring-event/otomoto_scoring_event.py 
-black scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_event.py 
-black scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py
+isort scoring-event/otomoto_scoring_event.py
+black scoring-event/otomoto_scoring_event.py
+isort scoring-event/otomoto_scoring_event.py
+black scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_event.py
+isort scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_event.py
+black scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_event.py
+isort scoring-event/otomoto_scoring_event.py
+black scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_event.py
+isort scoring-event/otomoto_scoring_event.py
+black scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_event.py
+isort scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_event.py
+black scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_event.py
+isort scoring-event/otomoto_scoring_event.py
+black scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_event.py
+black scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_event.py
 ls -lah
-python3 scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py
 cd /home/konradballegro/data/inputs
 ls -lah
 cd
-python3 scoring-event/otomoto_scoring_event.py 
+python3 scoring-event/otomoto_scoring_event.py
 cd /home/konradballegro/data/inputs
 ls -lah
 cd
-python3 scoring-event/otomoto_scoring_event.py 
-python3 scoring-event/otomoto_scoring_batch.py 
-python3 scoring-batch/otomoto_scoring_batch.py 
-isort scoring-batch/otomoto_scoring_batch.py 
-black scoring-batch/otomoto_scoring_batch.py 
-isort scoring-batch/otomoto_scoring_batch.py 
-black scoring-batch/otomoto_scoring_batch.py 
-python3 scoring-batch/otomoto_scoring_batch.py 
-python3 scoring-batch/app.py 
-python3 scoring-batch/otomoto_scoring_batch.py 
+python3 scoring-event/otomoto_scoring_event.py
+python3 scoring-event/otomoto_scoring_batch.py
+python3 scoring-batch/otomoto_scoring_batch.py
+isort scoring-batch/otomoto_scoring_batch.py
+black scoring-batch/otomoto_scoring_batch.py
+isort scoring-batch/otomoto_scoring_batch.py
+black scoring-batch/otomoto_scoring_batch.py
+python3 scoring-batch/otomoto_scoring_batch.py
+python3 scoring-batch/app.py
+python3 scoring-batch/otomoto_scoring_batch.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 python3 scoring-event/app.py
 python3 scoring-batch/app.py
@@ -1783,7 +1704,7 @@ streamlit run streamlit:app.py
 cd streamlit/
 streamlit run streamlit:app.py
 cd
-cd 
+cd
 streamlit run app:app
 streamlit run app:app.py
 cd streamlit/
@@ -1799,10 +1720,10 @@ streamlit run app.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 cd monitoring/
 ls -lah
-uvicorn otomoto_monitoring.py 
+uvicorn otomoto_monitoring.py
 uvicorn otomoto_monitoring:app
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
-python3 training/otomoto_training.py 
+python3 training/otomoto_training.py
 . /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
 pip list
 prefect server start
@@ -1813,49 +1734,49 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 ls -lah
 python3 scoring-batch/app.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
-python3 scoring-batch/otomoto_scoring_event.py 
-python3 scoring-batch/otomoto_scoring_batch.py 
+python3 scoring-batch/otomoto_scoring_event.py
+python3 scoring-batch/otomoto_scoring_batch.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
-python3 training/otomoto_training.py 
+python3 training/otomoto_training.py
 cd
 git status
 git add .bash_history
-git add data/inputs/iveco.csv 
-git add data/inputs/offers.csv 
-git add models/xgb.model 
+git add data/inputs/iveco.csv
+git add data/inputs/offers.csv
+git add models/xgb.model
 git add scoring-batch/app.py
-git add scoring-batch/otomoto_scoring_batch.py 
+git add scoring-batch/otomoto_scoring_batch.py
 git commit -m "improved otomotomo_scoring.batch.py"
 git push
 git status
-python3 training/otomoto_training.py 
+python3 training/otomoto_training.py
 git status
-git add models/xgb.model 
-git add monitoring/data/current/offers_current.csv 
-git add monitoring/data/reference/y_pred.csv 
+git add models/xgb.model
+git add monitoring/data/current/offers_current.csv
+git add monitoring/data/reference/y_pred.csv
 git status
-git add training/config/config.json 
-git add training/otomoto_training.py 
+git add training/config/config.json
+git add training/otomoto_training.py
 git commit -m "improved hyperparameters_gridsearch"\
 git commit
 git push
 git status
-python3 training/otomoto_training.py 
+python3 training/otomoto_training.py
 git status
-git add models/xgb.model 
-git add training/otomoto_training.py 
+git add models/xgb.model
+git add training/otomoto_training.py
 git commit -m "improved otomoto_training.py"
 git push
-python3 training/otomoto_training.py 
+python3 training/otomoto_training.py
 git status
-git add models/xgb.model 
-git add monitoring/data/reference/offers_reference.csv 
+git add models/xgb.model
+git add monitoring/data/reference/offers_reference.csv
 git add scoring-batch/app.py
-git add scoring-batch/config/config.json 
-git add scoring-batch/test_features_engineer.csv 
-git add training/otomoto_training.py 
+git add scoring-batch/config/config.json
+git add scoring-batch/test_features_engineer.csv
+git add training/otomoto_training.py
 git status
-git add data/inputs/offers.csv 
+git add data/inputs/offers.csv
 git commit -m "improved otomoto_scoring_batch"
 git push
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
@@ -1867,7 +1788,7 @@ prefect server start
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 prefect server start
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
-python3 scoring-batch/otomoto_scoring_batch.py 
+python3 scoring-batch/otomoto_scoring_batch.py
 python3 scoring-batch/otomoto_scoring_batch.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 python3 /home/konradballegro/scraping/otomoto_scraping.py
@@ -1881,18 +1802,18 @@ source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 python3 /home/konradballegro/training/otomoto_training.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 git status
-git add .bash_history 
+git add .bash_history
 git add data/inputs/
 git status
-git add monitoring/config/config.py 
-git add scoring-batch/config/config.json 
-git add training/config/config.json 
-git add training/otomoto_training.py 
+git add monitoring/config/config.py
+git add scoring-batch/config/config.json
+git add training/config/config.json
+git add training/otomoto_training.py
 git status
-git add data/raw/abarth.csv 
+git add data/raw/abarth.csv
 git status
-git add data/raw/iveco.csv 
-git add data/raw/offers.csv 
+git add data/raw/iveco.csv
+git add data/raw/offers.csv
 git status
 git add scraping/otomoto_scraping.py
 git add scraping/scrapers/
@@ -1931,13 +1852,13 @@ git commit -m "added appending for scoring-batch"
 git push
 . /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
 pip list
-python3 scoring-batch/app.py 
+python3 scoring-batch/app.py
 pipenv shell
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
-python3 scoring-batch/otomoto_scoring_batch.py 
+python3 scoring-batch/otomoto_scoring_batch.py
 git status
-git add .bash_history 
+git add .bash_history
 git add data/raw/offers.csv
 git add scoring-batch/
 git status
@@ -1952,7 +1873,7 @@ git status
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 ping 192.168.0.241
 cd
-python3 scoring-batch/app.py 
+python3 scoring-batch/app.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 cd streamlit/
 streamlit run app.py
@@ -1962,22 +1883,22 @@ pipenv shell
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 python3 /home/konradballegro/scoring-batch/otomoto_scoring_batch.py
 . /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
-python3 scoring-batch/app.py 
+python3 scoring-batch/app.py
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
 pipenv shell
 python3 scoring_batch/otomoto_scoring_batch.py
-python3 tests/model_test.py 
+python3 tests/model_test.py
 python3 scoring_batch/otomoto_scoring_batch.py
 cd
 git status
 git add .bash_history
 git add data/raw/
 git status
-git add Pipfile 
+git add Pipfile
 git add data/preprocessed/
 git add monitoring/
 git status
-git add scoring-batch 
+git add scoring-batch
 git status
 git add training/
 git status
@@ -1998,3 +1919,82 @@ pip list
 pipenv install dev pytest
 pipenv install pytest --dev
 prefect server start
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+python3 scoring_batch/otomoto_scoring_batch.py
+python3 scraping/otomoto_scraping.py 
+python3 scoring_batch/otomoto_scoring_batch.py
+python3 scraping/otomoto_scraping.py 
+python3 scoring_batch/otomoto_scoring_batch.py
+git status
+python3 scraping/otomoto_scraping.py 
+git status
+git add .pylintrc
+git status
+git add training/otomoto_training.py
+git commit -m "fixed some linting"
+git satus
+git status
+git add .pylintrc 
+git commit -m "fixed some linting"
+git status
+git add .pre-commit-config.yaml 
+git commit -m "fixed some linting"
+git add .pre-commit-config.yaml 
+git commit -m "fixed some linting"
+git add .pre-commit-config.yaml 
+git commit -m "fixed some linting"
+git push
+git status
+cd scraping/
+ls -lah
+prefect project init
+prefect init
+prefect worker start -t process -p local-work
+prefect --help
+prefect --version
+prefect deployment
+prefect deployment inspect
+prefect deployment --help
+prefect deployment inspect otomoto_scraping_flow-deployment.yaml 
+prefect deployment inspect otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment inspect otomoto_scraping:otomoto_scraping_flow
+prefect deployment inspect otomoto-scraping:otomoto-scraping-flow
+prefect deployment build -n otomoto-scraping -p default-agent-pool -q otomoto-scraping otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+cd
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q scraping otomoto_scraping.py:otomoto_scraping_flow
+cd scraping/
+ls -lah
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping -p default-agent-pool otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build 
+prefect deployment build --help
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+prefect deploy otomoto_scraping.py:otomoto_scraping_flow -n otomoto_scraping
+prefect deployment build
+prefect deployment build otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping -q otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+cd
+prefect deployment build -n otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+cd scraping/
+prefect deployment build -n otomoto-scraping -p default-agent-pool -q otomoto-scraping otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto-scraping -p default-agent-pool -q otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping scraping/otomoto_scraping.py:otomoto_scraping_flow
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping .scraping/otomoto_scraping.py:otomoto_scraping_flow
+cd
+prefect deployment build -n otomoto_scraping -p default-agent-pool -q otomoto_scraping scraping/otomoto_scraping.py:otomoto_scraping_flow
+prefect work-pool ls
+prefect work-pool preview
+prefect worker start -p default-agent-pool
+prefect worker start -p "default-agent-pool"
+prefect --help
+prefect work-pool --help
+prefect work-pool resume "default-agent-pool"
+prefect work-pool create "scraping-pool"
+prefect agent start -p "scraping-pool"

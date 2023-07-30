@@ -29,6 +29,7 @@ from typing import Dict, List, Tuple
 
 import mlflow
 import numpy as np
+
 # import pandas as pd
 # import pyspark
 from google.cloud import storage
@@ -100,7 +101,9 @@ def files_download(bucket_name: str, source_path: str, destination_path: str) ->
         None
 
     """
-    logger.info("Downloading file from bucket '%s' to '%s'", bucket_name, destination_path)
+    logger.info(
+        "Downloading file from bucket '%s' to '%s'", bucket_name, destination_path
+    )
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(source_path)
@@ -236,7 +239,7 @@ def features_engineer(
     brand_columns: List[str],
     fuel_columns: List[str],
     body_columns: List[str],
-    door_columns: List[str]
+    door_columns: List[str],
 ) -> DataFrame:
     """
         Performs feature engineering to create additional features based on the input DataFrame.
@@ -263,28 +266,37 @@ def features_engineer(
         for value in distinct_values:
             column_name = f"{column.replace(' ', '_')}_{value.replace(' ', '_')}"
             data_frame = data_frame.withColumn(
-                column_name,
-                when(data_frame[column] == value, 1).otherwise(0)
-                )
+                column_name, when(data_frame[column] == value, 1).otherwise(0)
+            )
 
-    data_frame = data_frame.drop(*columns_to_drop).filter(data_frame["Price"].isNotNull())
+    data_frame = data_frame.drop(*columns_to_drop).filter(
+        data_frame["Price"].isNotNull()
+    )
     data_frame_pd = data_frame.toPandas()
 
     # Number of Brands
     data_frame_pd["brand_count"] = data_frame_pd[brand_columns].sum(axis=1)
-    data_frame_pd["brand_ratio"] = data_frame_pd[brand_columns].sum(axis=1) / len(brand_columns)
+    data_frame_pd["brand_ratio"] = data_frame_pd[brand_columns].sum(axis=1) / len(
+        brand_columns
+    )
 
     # Fuel Type Count
     data_frame_pd["fuel_type_count"] = data_frame_pd[fuel_columns].sum(axis=1)
-    data_frame_pd["fuel_type_ratio"] = data_frame_pd[fuel_columns].sum(axis=1) / len(fuel_columns)
+    data_frame_pd["fuel_type_ratio"] = data_frame_pd[fuel_columns].sum(axis=1) / len(
+        fuel_columns
+    )
 
     # Body Type Count
     data_frame_pd["body_type_count"] = data_frame_pd[body_columns].sum(axis=1)
-    data_frame_pd["body_type_ratio"] = data_frame_pd[body_columns].sum(axis=1) / len(body_columns)
+    data_frame_pd["body_type_ratio"] = data_frame_pd[body_columns].sum(axis=1) / len(
+        body_columns
+    )
 
     # Door Count
     data_frame_pd["door_number_count"] = data_frame_pd[door_columns].sum(axis=1)
-    data_frame_pd["door_number_ratio"] = data_frame_pd[door_columns].sum(axis=1) / len(door_columns)
+    data_frame_pd["door_number_ratio"] = data_frame_pd[door_columns].sum(axis=1) / len(
+        door_columns
+    )
 
     logger.info("Feature engineering completed")
     return data_frame_pd
@@ -500,7 +512,7 @@ def model_train(
     selected_features: List[str],
     hyperparameters: Dict,
     scaler: StandardScaler,
-    transformer: QuantileTransformer
+    transformer: QuantileTransformer,
 ) -> XGBRegressor:
     """
     Trains the final model using the selected features and hyperparameters.
@@ -522,7 +534,7 @@ def model_train(
     steps = [
         ("scaler", scaler),
         ("transformer", transformer),
-        ("regressor", XGBRegressor(**hyperparameters["XGBoost"]["Best Parameters"]))
+        ("regressor", XGBRegressor(**hyperparameters["XGBoost"]["Best Parameters"])),
     ]
     pipeline = Pipeline(steps=steps)
 
@@ -650,7 +662,7 @@ def otomoto_training_flow(tracking_server_host=TRACKING_SERVER_HOST):
             metric=METRIC,
             selected_features=selected_features,
             scaler=scaler,
-            transformer=transformer
+            transformer=transformer,
         )
 
         # Train the final model
@@ -660,7 +672,7 @@ def otomoto_training_flow(tracking_server_host=TRACKING_SERVER_HOST):
             selected_features=selected_features,
             hyperparameters=hyperparameters,
             scaler=scaler,
-            transformer=transformer
+            transformer=transformer,
         )
 
         # Save the model

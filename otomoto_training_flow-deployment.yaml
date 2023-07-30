@@ -1,15 +1,22 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'otomoto-training-flow'
 ###
-name: otomoto-price-prediction
-description: null
-version: f264c3a6e610e2afe4fc7680fe1589d0
+name: otomoto_training
+description: |-
+  The main Prefect flow for training and evaluating a machine learning model.
+
+  Returns:
+      None
+version: 9e2e395aa03764035e111ae54e141b24
 # The work queue that will handle this deployment's runs
-work_queue_name: omoto-price-prediction
-work_pool_name: default-agent-pool
+work_queue_name: otomoto_training
+work_pool_name: training-pool
 tags: []
 parameters: {}
-schedule: null
+schedule:
+  cron: 0 10 * * 1
+  timezone: null
+  day_or: true
 is_schedule_active: null
 infra_overrides: {}
 infrastructure:
@@ -29,12 +36,16 @@ infrastructure:
 flow_name: otomoto-training-flow
 manifest_path: null
 storage: null
-path: /home/konradballegro/training
-entrypoint: otomoto_training.py:otomoto_training_flow
+path: /home/konradballegro
+entrypoint: training/otomoto_training.py:otomoto_training_flow
 parameter_openapi_schema:
   title: Parameters
   type: object
-  properties: {}
+  properties:
+    tracking_server_host:
+      title: tracking_server_host
+      default: 34.77.180.77
+      position: 0
   required: null
   definitions: null
-timestamp: '2023-06-24T12:18:14.161924+00:00'
+timestamp: '2023-07-30T17:04:01.215685+00:00'

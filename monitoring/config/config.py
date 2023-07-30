@@ -1,6 +1,8 @@
-from typing import Dict, Text
+"""
+Helper config
+"""
+from typing import Dict
 
-# DATABASE_URI: Text = "postgresql://admin:admin@localhost:5432/monitoring_db"
 DATA_COLUMNS: Dict = {
     "target_col": "Price",
     "prediction_col": "predictions",
@@ -87,10 +89,10 @@ DATA_COLUMNS: Dict = {
         "Number_of_doors_3",
         "Number_of_doors_5",
         "Number_of_doors_4",
-        "Number_of_doors_2"
+        "Number_of_doors_2",
     ],
 }
-DATA_COLUMNS["columns"] = (
-    DATA_COLUMNS["num_features"] +
-    [DATA_COLUMNS["target_col"], DATA_COLUMNS["prediction_col"]]
-)
+DATA_COLUMNS["columns"] = DATA_COLUMNS["num_features"] + [
+    DATA_COLUMNS["target_col"],
+    DATA_COLUMNS["prediction_col"],
+]
