@@ -21,3 +21,7 @@ spark-install:
 pyspark-install:
 	echo 'export PYTHONPATH="${SPARK_HOME}/python/:$PYTHONPATH"' >> ~/.bashrc
 	echo 'export PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH"' >> ~/.bashrc
+
+install-dependencies:
+	pip install --upgrade pip
+	pip install -r requirements.txt

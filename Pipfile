@@ -22,6 +22,7 @@ seaborn = "*"
 ydata-profiling = "*"
 explainerdashboard = "*"
 pytest = "*"
+pre-commit = "*"
 
 [requires]
 python_version = "3.8"

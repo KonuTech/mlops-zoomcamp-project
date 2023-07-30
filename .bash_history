@@ -1,37 +1,3 @@
-python3 orchestrate.py
-prefect deploy orchestrate.py:main_flow -n taxi_local_data
-prefect deployment orchestrate.py:main_flow -n taxi_local_data
-prefect deploy orchestrate.py:main_flow -n taxi_local_data
-pip list
-prefect deploy orchestrate.py:main_flow -n taxi_local_data
-prefect --help
-prefect worker start -p zoompool
-prefect work-pool start -p zoompool
-pip list
-prefect --version
-prefect deployment build -n mlops-test -p default-agent-pool -q mlops orchestrate.py:main_flow
-pipenv install -U xgboost
-pipenv install xgboost
-pip install xgboost
-pip list
-prefect deployment build -n mlops-test -p default-agent-pool -q mlops orchestrate.py:main_flow
-python3 orchestrate.py
-git add mlops-zoomcamp
-cd ..
-git add mlops-zoomcamp
-ls
-cd
-ls
-git add mlops-zoomcamp/
-git rm --cached mlops-zoomcamp/
-git status
-git add mlops-zoomcamp/
-git status
-git add .bash_history 
-git add .prefect/
-git status
-git add mlops-zoomcamp
-git commit -m "second commit"
 git push -u origin main
 git submodule add https://github.com/DataTalksClub/mlops-zoomcamp.git mlops-zoomcamp
 cd /home/konradballegro/mlops-zoomcamp/03-orchestration
@@ -1998,3 +1964,37 @@ python3 /home/konradballegro/scoring-batch/otomoto_scoring_batch.py
 . /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
 python3 scoring-batch/app.py 
 source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pipenv shell
+python3 scoring_batch/otomoto_scoring_batch.py
+python3 tests/model_test.py 
+python3 scoring_batch/otomoto_scoring_batch.py
+cd
+git status
+git add .bash_history
+git add data/raw/
+git status
+git add Pipfile 
+git add data/preprocessed/
+git add monitoring/
+git status
+git add scoring-batch 
+git status
+git add training/
+git status
+git add scoring_batch/
+git add scraping/
+git add tests/
+git status
+git add scoring_batch/app.log
+git status
+git add scoring_batch/app.log
+git status
+git commit -m "added unit tests"
+git push
+git status
+python3 scoring_batch/app.py
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+pip list
+pipenv install dev pytest
+pipenv install pytest --dev
+prefect server start
