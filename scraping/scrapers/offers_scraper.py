@@ -1,3 +1,22 @@
+"""
+Manufacturer Scraper Module
+
+This module provides functionality to scrape data related to car offers from www.otomoto.pl.
+It scrapes data for each manufacturer listed in a file and saves the scraped data into CSV files.
+
+Classes:
+    ManufacturerScraper: Class for scraping data related to offers of cars from www.otomoto.pl.
+
+Functions:
+    get_manufacturers: Gets a list of manufacturers from a static file.
+    get_links: Gets links of car offers from a web page.
+    scrap_manufacturer: Scrapes manufacturer data from otomoto.pl.
+    scrap_all_manufacturers: Loops over the list of manufacturer names
+    to scrape data for each one of them.
+    dump_data: Appends offers data and stores it as a static CSV file.
+
+"""
+
 import os
 import time
 
@@ -26,7 +45,7 @@ class ManufacturerScraper:
 
     def __init__(
         self,
-        path_data_directory=PATH_DATA,
+        # path_data_directory,
         path_manufacturers_file=PATH_MANUFACTURERS_FILE,
     ):
         self.path_manufacturers_file = os.path.join(
@@ -54,8 +73,8 @@ class ManufacturerScraper:
         :param i:       web page number
         :return:        a list of links
         """
-        console_logger.info(f"Scraping page: {i}")
-        file_logger.info(f"Scraping page: {i}")
+        console_logger.info("Scraping page: %s", i)
+        file_logger.info("Scraping page: %s", i)
 
         with requests.Session() as session:
             response = session.get(f"{path}?page={i}")
@@ -66,8 +85,8 @@ class ManufacturerScraper:
         car_links_section = soup.find("main", attrs={"data-testid": "search-results"})
 
         if car_links_section is None:
-            console_logger.warning(f"No car links found on page {i}")
-            file_logger.warning(f"No car links found on page {i}")
+            console_logger.warning("No car links found on page %s", i)
+            file_logger.warning("No car links found on page %s", i)
             return []
 
         links = [
@@ -75,8 +94,8 @@ class ManufacturerScraper:
             for x in car_links_section.find_all("article")
         ]
 
-        console_logger.info(f"Found {len(links)} links")
-        file_logger.info(f"Found {len(links)} links")
+        console_logger.info("Found %s links", len(links))
+        file_logger.info("Found %s links", len(links))
 
         return links
 
@@ -88,8 +107,8 @@ class ManufacturerScraper:
         """
         manufacturer = manufacturer.strip()
 
-        console_logger.info(f"Start of scraping the manufacturer: {manufacturer}")
-        file_logger.info(f"Start of scraping the manufacturer: {manufacturer}")
+        console_logger.info("Start of scraping the manufacturer: %s", manufacturer)
+        file_logger.info("Start of scraping the manufacturer: %s", manufacturer)
 
         # Clear the list of offers
         self.offers.clear_list()
@@ -108,18 +127,20 @@ class ManufacturerScraper:
                 ].text
             )
 
-        except Exception as e:
-            file_logger.error(f"Error {e} while searching for last_page_num")
+        except requests.exceptions.RequestException as request_exc:
+            file_logger.error("Error during HTTP request: %s", request_exc)
+            last_page_num = 1
+
+        except Exception as other_exc:
+            file_logger.error("Unexpected error: %s", other_exc)
             last_page_num = 1
 
         last_page_num = min(last_page_num, 1000)
 
-        console_logger.info(f"Manufacturer has: {last_page_num} subpages")
-        file_logger.info(f"Manufacturer has: {last_page_num} subpages")
+        console_logger.info("Manufacturer has: %s subpages", last_page_num)
+        file_logger.info("Manufacturer has: %s subpages", last_page_num)
 
-        pages = range(1, last_page_num + 1)
-
-        for p, page in enumerate(pages):
+        for page in range(1, last_page_num + 1):
             links = self.get_links(path=url, i=page)
             self.offers.get_offers(links=links)
 
@@ -128,8 +149,8 @@ class ManufacturerScraper:
         # Save the list of offers
         self.offers.save_offers(manufacturer=manufacturer)
 
-        console_logger.info(f"End of scraping the manufacturer: {manufacturer}")
-        file_logger.info(f"End of scraping the manufacturer: {manufacturer}")
+        console_logger.info("End of scraping the manufacturer: %s", manufacturer)
+        file_logger.info("End of scraping the manufacturer: %s", manufacturer)
 
     def scrap_all_manufacturers(self) -> None:
         """
@@ -139,11 +160,13 @@ class ManufacturerScraper:
         console_logger.info("Starting scraping cars...")
         file_logger.info("Starting scraping cars...")
 
-        for m, manufacturer in enumerate(self.manufacturers):
+        for manufacturer in self.manufacturers:
             csv_file_path = os.path.join("data", "raw", f"{manufacturer}.csv")
             if os.path.isfile(csv_file_path):
-                console_logger.info(f"Skipping scraping for {manufacturer}. CSV file already exists.")
-                file_logger.info(f"Skipping scraping for {manufacturer}. CSV file already exists.")
+                console_logger.info(
+                    "Skipping scraping for %s. CSV exists.", manufacturer
+                )
+                file_logger.info("Skipping scraping for %s. CSV exists.", manufacturer)
             else:
                 self.scrap_manufacturer(manufacturer=manufacturer)
 
@@ -170,24 +193,30 @@ class ManufacturerScraper:
         else:
             previous_data = pd.DataFrame()
 
-        for f, filename in enumerate(filenames):
+        for filename in filenames:
             try:
                 data = pd.read_csv(filename)
                 data.columns = self.offers.header_en
 
                 # Append unique rows to the output file
-                unique_rows = data[~data['ID'].isin(previous_data['ID'])]
+                unique_rows = data[~data["ID"].isin(previous_data["ID"])]
                 unique_rows.to_csv(
                     output_file_path,
                     mode="a",
                     index=False,
                     header=not os.path.isfile(output_file_path),
-                    encoding="utf-8"
+                    encoding="utf-8",
                 )
                 previous_data = previous_data.append(unique_rows, ignore_index=True)
 
-            except Exception as e:
-                file_logger.error(f"Error {e} while searching for {filename}")
+            except pd.errors.EmptyDataError as empty_data_exc:
+                file_logger.error("Empty data error: %s", empty_data_exc)
 
-        console_logger.info(f"Appended data saved as {OUTPUT_NAME}")
-        file_logger.info(f"Appended data saved as {OUTPUT_NAME}")
+            except pd.errors.ParserError as parser_exc:
+                file_logger.error("Parser error: %s", parser_exc)
+
+            except Exception as other_exc:
+                file_logger.error("Unexpected error: %s", other_exc)
+
+        console_logger.info("Appended data saved as %s", OUTPUT_NAME)
+        file_logger.info("Appended data saved as %s", OUTPUT_NAME)

@@ -1,15 +1,22 @@
+"""
+This script provides a Streamlit web application
+to display model performance and target drift reports
+using data from a FastAPI server.
+"""
+
 import os
 from typing import Text
 
 import requests
-import streamlit as st
-
+from requests.exceptions import HTTPError, RequestException
 from utils.ui import (
     display_header,
     display_report,
     display_sidebar_header,
     set_page_container_style,
 )
+
+import streamlit as st
 
 if __name__ == "__main__":
     set_page_container_style()
@@ -35,9 +42,10 @@ if __name__ == "__main__":
             request_url += f"/monitor-target?window_size={window_size}"
             REPORT_NAME = "Target drift"
         if REPORT_SELECTED:
-            resp: requests.Response = requests.get(request_url)
+            resp: requests.Response = requests.get(request_url, timeout=10)
             display_header(REPORT_NAME, window_size)
             display_report(resp.content)
-        print("hello world")
-    except Exception as e:
-        st.error(e)
+    except HTTPError as http_ex:
+        st.error(f"HTTP Error: {http_ex}")
+    except RequestException as req_ex:
+        st.error(f"Request Exception: {req_ex}")

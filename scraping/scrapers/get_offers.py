@@ -1,3 +1,22 @@
+"""
+Offers Scraper Module
+
+This module provides functionality to scrape offers related to car manufacturers.
+It can download data from URLs, store the scraped data, and clear the stored data.
+
+Classes:
+    OfferScraper: Class for scraping offers related to manufacturer name.
+
+Functions:
+    get_header: Gets a list of column names from the given header file path.
+    new_line: Generates a new line of batch data.
+    download_url: Downloads offer data from a given URL.
+    get_offers: Fetches a row of data for each offer link per manufacturer.
+    save_offers: Stores scraped offers per manufacturer as a static CSV file.
+    clear_list: Clears the stored manufacturer list.
+
+"""
+
 import os
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -24,7 +43,7 @@ class OfferScraper:
 
     def __init__(
         self,
-        path_data_directory=PATH_DATA,
+        # path_data_directory=PATH_DATA,
         path_header_file_pl=PATH_HEADER_FILE_PL,
         path_header_file_en=PATH_HEADER_FILE_EN,
         max_threads=MAX_THREADS,
@@ -68,7 +87,7 @@ class OfferScraper:
         :return:            a dictionary of offer's features
         """
         try:
-            file_logger.info(f"Fetching {url_path}")
+            file_logger.info("Fetching %s", url_path)
 
             with requests.Session() as session:
                 response = session.get(url_path)
@@ -87,19 +106,18 @@ class OfferScraper:
             values = soup.find_all("li", class_="parameter-feature-item")
             batch.update({value.text.strip(): 1 for value in values})
 
-            price = "".join(
-                soup.find("span", class_="offer-price__number")
-                .text.strip()
-                .split()[:-1]
-            )
+            price_element = soup.find("span", class_="offer-price__number")
+            price = price_element.text.strip() if price_element else ""
             batch["Cena"] = price
 
-            currency = soup.find("span", class_="offer-price__currency").text.strip()
+            currency_element = soup.find("span", class_="offer-price__currency")
+            currency = currency_element.text.strip() if currency_element else ""
             batch["Waluta"] = currency
 
-            price_details = soup.find(
-                "span", class_="offer-price__details"
-            ).text.strip()
+            price_details_element = soup.find("span", class_="offer-price__details")
+            price_details = (
+                price_details_element.text.strip() if price_details_element else ""
+            )
             batch["Szczegóły ceny"] = price_details
 
             batch["url_path"] = url_path
@@ -114,8 +132,14 @@ class OfferScraper:
 
             return batch
 
-        except Exception as e:
-            file_logger.error(f"Error {e} while fetching {url_path}")
+        except requests.RequestException as req_error:
+            file_logger.error("Error %s while fetching %s", req_error, url_path)
+            return {}
+        except ValueError as value_error:
+            file_logger.error(
+                "ValueError %s while processing %s", value_error, url_path
+            )
+            return {}
 
     def get_offers(self, links: list) -> None:
         """
@@ -134,9 +158,9 @@ class OfferScraper:
         :param manufacturer:    car manufacturer name
         :return:                None
         """
-        file_logger.info(f"Saving {manufacturer} offers")
-        file_logger.info(f"Found {len(self.manufacturer)} offers")
-        console_logger.info(f"Found {len(self.manufacturer)} offers")
+        file_logger.info("Saving %s offers", manufacturer)
+        file_logger.info("Found %s offers", len(self.manufacturer))
+        console_logger.info("Found %s offers", len(self.manufacturer))
 
         file_path = os.path.join(
             self.path_data_directory, f"{manufacturer.strip()}.csv"
@@ -144,28 +168,30 @@ class OfferScraper:
 
         if os.path.isfile(file_path):
             # Load existing CSV file
-            existing_df = pd.read_csv(file_path)
+            existing_data_frame = pd.read_csv(file_path)
 
             # Filter out duplicates based on 'id' column
-            existing_ids = existing_df["id"].tolist()
+            existing_ids = existing_data_frame["id"].tolist()
             new_rows = [
                 row for row in self.manufacturer if row["id"] not in existing_ids
             ]
-            new_df = pd.DataFrame(new_rows)
+            new_data_frame = pd.DataFrame(new_rows)
 
             # Append new rows to existing data
-            df = pd.concat([existing_df, new_df], ignore_index=True)
+            data_frame = pd.concat(
+                [existing_data_frame, new_data_frame], ignore_index=True
+            )
         else:
             # Create new DataFrame if the file doesn't exist
-            df = pd.DataFrame(self.manufacturer)
+            data_frame = pd.DataFrame(self.manufacturer)
 
         # Drop duplicates based on 'id' column
-        df.drop_duplicates(subset="id", inplace=True)
+        data_frame.drop_duplicates(subset="id", inplace=True)
 
         # Save the DataFrame to a CSV file
-        df.to_csv(file_path, index=False)
+        data_frame.to_csv(file_path, index=False)
 
-        file_logger.info(f"Saved {manufacturer} offers")
+        file_logger.info("Saved %s offers", manufacturer)
 
     def clear_list(self) -> None:
         """
