@@ -1,92 +1,3 @@
-git add .gitignore .prefect
-cd
-git add .gitignore .prefect
-git add Pipfile
-git add create_s3_bucket_block.py
-git add mlglow.db
-git add mlflow.db
-git add main_flow_gs-deployment.yaml
-git add orchestration/
-git status
-git add .gitconfig
-git commit -m "third commit"
-git push -u origin main
-pip list
-source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
-git status
-git add requirements.txt web-service/
-git status
-git add .prefect/
-git status
-git commit -m "sixth commit"
-git push -u origin master
-git status
-git push
-pipenv lock
-mkdir scoring-batch
-ls
-rm scoring-batch/
-mkdir batch-scoring
-ls
-rm mlruns
-rm -r mlruns
-git status
-git add web-service/
-git add scoring-batch/
-git status
-git commit -m "seventh commit"
-git push -u origin main
-git status
-pipenv
-pipenv --dev
-pipenv lock --dev
-pipenv --graph
-pipenv graph
-pipenv check
-pipenv
-pipenv lock
-pipenv --virtual
-pipenv --venv
-pipenv --envs
-pipenv update
-pipenv install notebook
-pip freeze > requirements.txt
-cd orchestration/
-ls
-python3 orchestrate_gs.py
-cd
-jupyter notebook
-pipenv shell
-. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
-cd notebooks/
-ls
-cd outputs/
-ls -lah
-ls -las
-source .virtualenvs/konradballegro-pfUEMlPh/bin/activate
-pip list
-python3 orchestration/orchestrate_gs.py
-cd orchestration/
-python3 orchestrate_gs.py
-ls
-python3 lr.py
-python3 orchestrate_gs.py
-python3 lr.py
-cd
-git status
-git add .bash_history .prefect/ lr.py
-git status
-git add orchestration/
-git status
-ls
-rm mlflow.db
-ls
-git status
-git add temp
-git status
-git commit -m "fourth commit"
-git branch -M main
-git push -u origin main
 cd orchestration/
 ls
 rm -rf mlruns
@@ -1998,3 +1909,92 @@ prefect work-pool --help
 prefect work-pool resume "default-agent-pool"
 prefect work-pool create "scraping-pool"
 prefect agent start -p "scraping-pool"
+source /home/konradballegro/.virtualenvs/konradballegro-pfUEMlPh/bin/activate
+git status
+black streamlit/app.py
+black streamlit/utils/ui.py
+black monitoring/src/utils/reports.py 
+black monitoring/src/utils/data.py 
+black monitoring/otomoto_monitoring.py 
+isort monitoring/otomoto_monitoring.py 
+isort monitoring/src/utils/data.py 
+isort streamlit/utils/ui.py
+isort streamlit/app.py
+black streamlit/app.py
+isort streamlit/app.py
+prefect server start
+. /home/konradballegro/.local/share/virtualenvs/konradballegro-pfUEMlPh/bin/activate
+ls -lah
+pipenv install pre-commit --dev
+ls .git/
+ls -lah
+ls .git/hooks/
+less .git/hooks/pre-commit
+less .git/hooks/pre-commit.sample
+vim .git/hooks/pre-commit
+vim .git/hooks/pre-commit.sample
+pre-commit
+git status
+pre-commit
+pre-commit --help
+pre-commit sample-config
+pre-commit sample-config > .pre-commit-config.yaml
+less .git/hooks/pre-commit
+pre-commit install
+git status
+got add .bash_history 
+git status
+git add .bash_history 
+git add Makefile 
+git add Pipfile 
+git add .pre-commit-config.yaml 
+git status
+git commit -m "added pre-commit hooks"
+git status
+git commit -m "modified by pre-commit default hooks"
+git status
+git log
+git status
+git add .pre-commit-config.yaml 
+git status
+git commit -m "added pre-commit hooks"
+pre-commit autoupdate
+git commit -m "added pre-commit hooks"
+git add .pre-commit-config.yaml 
+git status
+git commit -m "added pre-commit hooks"
+git status
+git add .pre-commit-config.yaml 
+git commit -m "added pre-commit hooks"
+git add .pre-commit-config.yaml 
+git commit -m "added pre-commit hooks"
+git add .pre-commit-config.yaml 
+git commit -m "added pre-commit hooks"
+git add .pre-commit-config.yaml 
+git commit -m "added pre-commit hooks"
+git add .pre-commit-config.yaml 
+git commit -m "added pre-commit hooks"
+python
+git add .pre-commit-config.yaml 
+git commit -m "added pre-commit hooks"
+git status
+git add .pre-commit-config.yaml 
+git status
+git commit -m "added pre-commit hooks"
+git add .pre-commit-config.yaml 
+git status
+git commit -m "added pre-commit hooks"
+git add .pre-commit-config.yaml 
+git commit -m "added pre-commit hooks"
+git add .pre-commit-config.yaml 
+git commit -m "added pre-commit hooks"
+git add .pre-commit-config.yaml 
+git status
+git commit -m "added pre-commit hooks"
+git status
+git add scoring_batch/app.py
+git commit -m "added pre-commit hooks"
+git status
+git commit -m "added pre-commit hooks"
+cd monitoring
+uvicorn otomoto_monitoring:app

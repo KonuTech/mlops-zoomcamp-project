@@ -8,7 +8,7 @@ The goal of the project is to apply what has been learned during the MLOps Zoomc
 
 ## Dataset
 
-The dataset used to feed the MLOps pipeline has been scraped from [otomoto.pl](https://www.otomoto.pl/). It contains data of used cards offers from the following [manufacturers](https://github.com/KonuTech/mlops-zoomcamp-project/blob/main/data/metadata/manufacturers.txt) . The dataset is updated (scraped) weekly and is characterized by the following [features](https://github.com/KonuTech/mlops-zoomcamp-project/blob/main/data/metadata/header_en.txt) . The data used for training is available at the following [public GCP URL](https://storage.googleapis.com/mlops-zoomcamp/data/training/offers.csv) (offers.csv file of 85MB). Before training the data was [cleaned and preprocessed](https://github.com/KonuTech/mlops-zoomcamp-project/blob/main/training/otomoto_training.py). Feature enginering was also applied.
+The dataset used to feed the MLOps pipeline has been scraped from [otomoto.pl](https://www.otomoto.pl/). It contains data of used car offers from the following [manufacturers](https://github.com/KonuTech/mlops-zoomcamp-project/blob/main/data/metadata/manufacturers.txt). The dataset is updated (scraped) weekly and is characterized by the following [features](https://github.com/KonuTech/mlops-zoomcamp-project/blob/main/data/metadata/header_en.txt). The data used for training is available at the following [public GCP URL](https://storage.googleapis.com/mlops-zoomcamp/data/training/offers.csv) (offers.csv file of 85MB). Before training the data was [cleaned and preprocessed](https://github.com/KonuTech/mlops-zoomcamp-project/blob/main/training/otomoto_training.py). Feature enginering was also applied.
 
 ## MLOps pipeline
 
@@ -17,7 +17,7 @@ The dataset used to feed the MLOps pipeline has been scraped from [otomoto.pl](h
 | Name | Scope |
 | --- | --- |
 | Google Compute Engine | Remote processing units |
-| Google Cloud Storage | Storage space for data and trained models |
+| Google Cloud Storage Bucket | Storage space for data and trained models |
 | Jupyter Notebooks | Exploratory data analysis and pipeline prototyping |
 | PySpark | Data preprocessing |
 | Pandas | Feature engineering |
@@ -41,7 +41,7 @@ TODO: a high-level schema of an architecture
 
 ### Steps to run the project
 
-The MLOps pipeline is fully dockerised and can be easily deployed via the following steps:
+At the moment, the MLOps pipeline is not dockerized. The work over the project's content will continue during [Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) and [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) courses from [DataTalks.Club](https://datatalks.club/):
 
 1. Clone the [mlops-zoomcamp-project](https://github.com/KonuTech/mlops-zoomcamp-project) repository:
 
@@ -57,63 +57,109 @@ The MLOps pipeline is fully dockerised and can be easily deployed via the follow
     $ make setup
     ```
 
-6. Launch the MLOps pipeline:
-
-    ```
-    $ make run
-    ```
-
-    Once ready, the following services will be available:
+6. Run services (details below):
 
     | Service | Port | Interface | Description |
     | --- | --- | --- | --- |
-    | Web Application | 80 | 0.0.0.0 | Prediction web service (see picture below) |
-    | Prefect | 4200 | 127.0.0.1 | Training workflow orchestration |
-    | MLFlow | 5000 | 127.0.0.1 | Experiment tracking and model registry |
-    | MinIO | 9001 | 127.0.0.1 | S3-equivalent bucket management |
-    | Evidently | 8085 | 127.0.0.1 | Data and target drift report generation (`/dashboard` route) |
-    | Grafana | 3000 | 127.0.0.1 | Data and target drift real-time dashboards |
+    | Prefect | 4200 | 127.0.0.1 | Data scraping and training workflow orchestration |
+    | MLFlow | 5000 | 0.0.0.0 | Experiment tracking and model registry |
+    | Flask Web Application | 80 | 0.0.0.0 | Batch prediction web service |
+    | Fast API Web Application | 80 | 0.0.0.0 | Batch prediction web service |
+    | Evidently | 8085 | 127.0.0.1 | Data drift and target drift report generation |
 
 
-    <img src="images/webservice.png" width="100%"/>
+<img src="images/webservice.png" width="60%"/>
 
+### Data scraping
+Launch Prefect Server:
+
+    ```
+    $ prefect server start
+    ```
+Trigger the process manually or wait until the scheduled one will start:
+
+    ```
+    $ python3 .scraping/otomoto_scraping.py
+    ```
+On my side, the process of data scraping is scheduled to start each Saturday at 10:00 AM.
 
 ### Training
 
-Once the MLOps pipeline has been started, the prediction web service can already work thanks to a default pre-trained model available in the Docker image. In order to enable pipeline training workflow it is necessary to create a scheduled Prefect deployment via:
+Create a Google Cloud Storage Bucket for training artifacts and create a Tracking Server with the help of the following [blog](https://kargarisaac.github.io/blog/mlops/data%20engineering/2022/06/15/MLFlow-on-GCP.html) .
+
+Run your VM instances:
+
+<img src="static/tracking_server_03.jpg" width="60%"/>
+
+Lunch your Mlflow Tracking server (don't mind the credentials - the project is turned off):
+
+    ```bash
+    $ mlflow server -h 0.0.0.0 -p 5000
+    --backend-store-uri postgresql://admin:admin@10.74.208.3:5432/mlflow_db
+    --default-artifact-root gs://mlops-zoomcamp
+    ```
+
+<img src="static/tracking_server_01.jpg" width="60%"/>
+
+Check if your MLFlow app is up and runing:
+
+<img src="static/tracking_server_04.jpg" width="60%"/>
+
+Now launch Prefect Server:
 
 ```
-$ make deployment
+$ prefect server start
 ```
 
-The training workflow will be then automatically executed every day. It will download the latest dataset (if the Kaggle credentials have been provided), search the best model in terms of accuracy among XGBoost, Support Vector Machine and Random Forest and finally will store it in the model registry. It is worth noting the training workflow can also be immediately executed without waiting the next schedule:
+Trigger the process manually or wait until the scheduled one starts. The training process uses data previously scraped, which is now stored on Google Cloud Storage Bucket:
 
+    ```
+    $ python3 .training/otomoto_training.py
+    ```
+
+Below screen shows successful training run:
+
+<img src="static/tracking_server_06.jpg" width="60%"/>
+
+On my side, the process of training is scheduled to start each Monday at 10:00 AM. By default, the GUI of Prefect marks scheduled instances with yellow dots:
+
+<img src="static/tracking_server_05.jpg" width="60%"/>
+
+Once the updated model is ready, it can be moved to production by MLOps model registry. All training artifacts are stored on Google Cloud Storage Bucket.
+
+<img src="static/tracking_server_02.jpg" width="60%"/>
+
+### Batch prediction
+
+To perform Batch prediction using a model stored as an artifact on Google Cloud Storage Bucket, we first need to run the Flask app:
 ```
-$ make train
+$ python3 ./scoring_batch/app.py
 ```
-
-Once the updated model is ready, it can be moved to production by restarting the pipeline:
-
+Now, we can perform a batch scoring. Run:
 ```
-$ make restart
+$ python3 ./scoring_batch/otomoto_scoring_batch.py
 ```
+At the moment, I use a file ./data/metadata/manufacturers.txt as a means to provide the name of a manufacturer for:
+ * scraping a new batch of data from otomoto.pl
+ * scoring that data by applying pre-trained model.
 
-the web service will automatically connect to the registry and get the most updated model. If the model is still not available, it will continue to use the default one.
-
+The new batch of scraped and scored data can be used  to produce reports of Target Drift and Data Drift.
 
 ### Monitoring
 
-It is possible to generate simulated traffic via:
-
+For monitoring purposes I am using Evidently AI. At the moment I am tracking [Target Drift](https://github.com/KonuTech/mlops-zoomcamp-project/blob/main/monitoring/reports/model_performance.html) and [Data Drift](https://github.com/KonuTech/mlops-zoomcamp-project/blob/main/monitoring/reports/model_performance.html) (use the links to download static .html reports). First, to create reports run FastAPI app:
 ```
-$ make generate-traffic
+$ cd ./monitoring
+$ uvicorn otomoto_monitoring:app
 ```
+Now, launch Streamlit app:
+```
+$ cd ./streamlit
+$ streamlit run ./app.py
+```
+Check the app under 127.0.0.1:8501:
 
-Then, the prediction service can be monitored via:
-
-- Grafana (in real-time): `http://127.0.0.1:3000`
-- Evidently (for report generation): `http://127.0.0.1:8085/dashboard`
-
+<img src="static/tracking_server_07.jpg" width="60%"/>
 
 ------------
 
@@ -210,7 +256,7 @@ Project Structure
     │   └── otomoto_training.py
     └── tree.txt
 
-### The space for an improvement:
+### The space for improvement includes:
 * Containerization of all apps
 * CI/CD techniques
 * Terraform
@@ -218,7 +264,7 @@ Project Structure
 * A dashboard where users can input values for a prediction
 * Retraining of a model if any drifts are detected
 
-I will add the above improvements along with the next iterations of the [Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) and [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) courses from [DataTalks.Club](https://datatalks.club/). The learning is not stopping here.
+I will add the above improvements along with the next iterations of the [Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) and [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) courses from [DataTalks.Club](https://datatalks.club/). The learning does not stop here.
 
 ### Peer review criterias - a self assassment:
 * Problem description
